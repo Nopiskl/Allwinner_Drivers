@@ -4,6 +4,31 @@
 
 本文只做日志、实验结果和源码分析，没有继续修改开发板。当前开发板已在本轮故障中硬锁，后续操作仍应通过 `l0` 测试项和 `l0r` rescue 项进行。
 
+## 原厂 FAE 最终口径（阅读本文前先看）
+
+后续取得的原厂信息对早期判断作了关键修正，本文采用以下最终口径：
+
+1. BSP 1.4.6 使用的也是旧 sunxi DRM，并不是只有 `disp2` 才经过测试；原厂当时主要在 Android/SurfaceFlinger/HWC 用户态验证，而不是 Debian+X11。
+2. 1.4.6 DRM 的产品定位是试用版本。原厂确认双 MIPI、LVDS 等以 `TCON-LCD + TCON-LCD` 为主的组合正常，但 `TCON-LCD + TCON-TV` 配合存在问题。DSI 走 TCON-LCD，HDMI 走 TCON-TV，本机正好进入已知薄弱拓扑。
+3. DE 有独立于各输出 TCON 的更新和完成时序，所以部分函数“默认 complete”是厂商硬件模型，不是单独的错误。旧版真正的问题是：RCQ/scanout 地址尚未可靠锁存时也可能被当作 complete，DRM 随后解除旧 framebuffer 的 IOMMU 映射，而 DE 仍在扫描旧地址。
+4. FAE 所说的新驱动接入 extcon、每次 CRTC 变化都刷新，主要修正连接状态、mode/timing 与完成判断的一致性；它不是 framebuffer 锁存器，也不能单独解释修复。BSP 1.4.8 同时收紧了 DE352 的 DFS/RCQ-control 更新路径，停止不适用的 force-by-AHB 强写，并调整 RCQ update 条件。
+5. Radxa 官方 DSI 屏和本机 Meizu E3 都表现为 1.4.6 出现同类问题、1.4.8 不再复现。这一跨面板证据说明根因属于旧 DRM/DE 混合 TCON 路径，而不是 Meizu 面板初始化、`reg = <1>`、背光、触摸或 GPU。
+
+完整故障链可以压缩为：
+
+```text
+HDMI 开机存在，SDDM 登录后切换到 Plasma
+  -> TCON-LCD + TCON-TV 两个独立完成域参与双 CRTC 重建
+  -> 1.4.6 试用版 DRM/DE 未可靠确认某一路 RCQ/scanout 已切换
+  -> DE 自有完成路径仍返回 complete
+  -> atomic cleanup 解除旧 framebuffer 的 IOMMU 映射
+  -> DE0 继续读取旧地址
+  -> IOMMU PageTable Invalid 中断风暴
+  -> RCU 饥饿，HDMI、DSI 和内核一起冻结
+```
+
+Android 同样走 DRM，因此“Android 没复现”不能证明旧 DRM 正确。首要原因是原厂主测的双 MIPI/LVDS 拓扑没有进入 `TCON-LCD + TCON-TV` 已知问题路径；其次，Android HWC 的 validate/present、BufferQueue/gralloc 引用和 acquire/release fence 通常使旧 buffer 保活更久、提交形态也比 SDDM 到 Plasma 的整套 root framebuffer 重建稳定。这个用户态差异只能作为降低触发率和严重度的次级掩蔽因素，不能替代旧 BSP 显示驱动根因。
+
 ## 一、结论先行
 
 这次实验已经把问题从“DSI 面板、设备树或 GPU 可能有问题”收窄到了一个很具体的内核故障：
