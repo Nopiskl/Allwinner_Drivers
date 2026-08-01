@@ -1,61 +1,40 @@
-# Radxa Cubie A7A 旧 5.15 双屏登录硬锁：实验与源码级根因分析
+# Radxa Cubie A7A Meizu E3 显示适配与旧 BSP 双屏硬锁根因分析
 
-日期：2026-08-01
+更新日期：2026-08-02
 
-本文只做日志、实验结果和源码分析，没有继续修改开发板。当前开发板已在本轮故障中硬锁，后续操作仍应通过 `l0` 测试项和 `l0r` rescue 项进行。
+本文综合整个适配周期的设备树、背光、触摸、单/双显示实验、串口日志、原厂 FAE 信息，以及 BSP 1.4.6/1.4.8 最终源码。后取得的原厂信息优先于早期猜测；已被后续证据否定或收窄的判断不会继续作为前提。
 
-## 原厂 FAE 最终口径（阅读本文前先看）
+文中使用四种证据等级：
 
-后续取得的原厂信息对早期判断作了关键修正，本文采用以下最终口径：
+- **实验/日志事实：**开发板上实际复现，或能由原始串口、DRM 状态直接核对。
+- **原厂事实：**FAE 明确提供的产品定位、测试范围和硬件时序信息。
+- **源码事实：**当前归档的 BSP 最终源码可以直接确认。
+- **机制推断：**能同时解释日志、实验矩阵和源码，但仍需单变量补丁或寄存器追踪才能确定具体子机制。
 
-1. BSP 1.4.6 使用的也是旧 sunxi DRM，并不是只有 `disp2` 才经过测试；原厂当时主要在 Android/SurfaceFlinger/HWC 用户态验证，而不是 Debian+X11。
-2. 1.4.6 DRM 的产品定位是试用版本。原厂确认双 MIPI、LVDS 等以 `TCON-LCD + TCON-LCD` 为主的组合正常，但 `TCON-LCD + TCON-TV` 配合存在问题。DSI 走 TCON-LCD，HDMI 走 TCON-TV，本机正好进入已知薄弱拓扑。
-3. DE 有独立于各输出 TCON 的更新和完成时序，所以部分函数“默认 complete”是厂商硬件模型，不是单独的错误。旧版真正的问题是：RCQ/scanout 地址尚未可靠锁存时也可能被当作 complete，DRM 随后解除旧 framebuffer 的 IOMMU 映射，而 DE 仍在扫描旧地址。
-4. FAE 所说的新驱动接入 extcon、每次 CRTC 变化都刷新，主要修正连接状态、mode/timing 与完成判断的一致性；它不是 framebuffer 锁存器，也不能单独解释修复。BSP 1.4.8 同时收紧了 DE352 的 DFS/RCQ-control 更新路径，停止不适用的 force-by-AHB 强写，并调整 RCQ update 条件。
-5. Radxa 官方 DSI 屏和本机 Meizu E3 都表现为 1.4.6 出现同类问题、1.4.8 不再复现。这一跨面板证据说明根因属于旧 DRM/DE 混合 TCON 路径，而不是 Meizu 面板初始化、`reg = <1>`、背光、触摸或 GPU。
+本文先列已知事实，再给结论，之后才逐级展开内核调用链。
 
-完整故障链可以压缩为：
+## 一、已知事实
 
-```text
-HDMI 开机存在，SDDM 登录后切换到 Plasma
-  -> TCON-LCD + TCON-TV 两个独立完成域参与双 CRTC 重建
-  -> 1.4.6 试用版 DRM/DE 未可靠确认某一路 RCQ/scanout 已切换
-  -> DE 自有完成路径仍返回 complete
-  -> atomic cleanup 解除旧 framebuffer 的 IOMMU 映射
-  -> DE0 继续读取旧地址
-  -> IOMMU PageTable Invalid 中断风暴
-  -> RCU 饥饿，HDMI、DSI 和内核一起冻结
-```
+### 1.1 适配本身已经确认的事实
 
-Android 同样走 DRM，因此“Android 没复现”不能证明旧 DRM 正确。首要原因是原厂主测的双 MIPI/LVDS 拓扑没有进入 `TCON-LCD + TCON-TV` 已知问题路径；其次，Android HWC 的 validate/present、BufferQueue/gralloc 引用和 acquire/release fence 通常使旧 buffer 保活更久、提交形态也比 SDDM 到 Plasma 的整套 root framebuffer 重建稳定。这个用户态差异只能作为降低触发率和严重度的次级掩蔽因素，不能替代旧 BSP 显示驱动根因。
+- Meizu E3 面板为 1080×2160 MIPI-DSI 屏，适配对象是 Radxa Cubie A7A / Allwinner A733。
+- `v001-reg1` overlay 按 Radxa 官方 A7A Display graph 补入 `dsi0/ports/port@1 reg = <1>`。面板能完成初始化并正常显示，因此该 graph 修正是有效适配，不是运行期硬锁的原因。
+- SGM37604A 背光驱动能正常控制背光；Samsung SEC 触摸及 X11 输出映射也曾验证可用。决定性硬锁交叉实验没有安装或加载触摸驱动，所以触摸不在故障变量中。
+- T4 / Linux 6.6 环境使用同一最初 overlay 方向并加入背光、触摸后，DSI 能长时间运行，没有出现旧系统的 DE IOMMU fault → RCU stall 链。
+- T4 上观察到的窗口拖影属于 GPU/EGL/KWin 合成路径的相邻问题：画面异常但内核仍能调度，与旧 5.15 的整机硬锁不是同一故障。
 
-## 一、结论先行
+### 1.2 原厂 FAE 最终澄清
 
-这次实验已经把问题从“DSI 面板、设备树或 GPU 可能有问题”收窄到了一个很具体的内核故障：
+- BSP 1.4.6 使用的也是旧 DRM；不能再描述成“原厂旧系统只走 disp2”。当时主要在 Android/SurfaceFlinger/HWC 用户态验证，而不是 Debian+X11。
+- 1.4.6 DRM 的产品定位是试用版本。原厂确认双 MIPI、LVDS 等同类 LCD-TCON 路径正常，但 `TCON-LCD + TCON-TV` 配合存在问题。
+- 1.4.8 才是原厂转入稳定验证的新 DRM 路径；双 DSI、DSI+LVDS/RGB 以及包含 eDP 的产品组合在该版本验证稳定。
+- DE 有自己的更新和完成时序，因此部分函数按设计必须默认 complete。这个设计事实不能被简化成“所有提交都必须等待通用 CRTC vblank”。
+- 新驱动完整接入 extcon；CRTC 发生变化时会刷新相关状态。extcon/刷新解决的是连接、mode/timing 与完成判断的一致性。
+- Radxa 官方 DSI 屏在 1.4.6 也遇到同类问题，切换到 1.4.8 后解决；Meizu E3 呈现相同版本边界。
 
-> 本机 `5.15.147-21-a733 #21` 所用的 sunxi DRM/DE 在 HDMI+DSI 登录切换期间，没有可靠地保证新的 RCQ/scanout 地址已经被显示硬件接受，就允许 DRM 释放旧 framebuffer。旧 framebuffer 的 IOMMU 映射随后被删除，但 DE0 仍继续扫描旧地址，于是产生连续的 `PageTable Invalid` 中断。中断风暴占用 CPU，RCU 无法调度，最后表现为 HDMI、DSI 和整个系统同时冻结。
+这些原厂事实排除了两个早期错误前提：Android 并没有绕开 DRM；原厂也不是在 1.4.6 上完成了 Debian+X11 混合 TCON 的稳定性验证。
 
-这里的“旧地址仍被扫描”不是推测：旧故障日志中的驱动自带 framebuffer 跟踪记录显示，`0xf4000000` 对应的旧 framebuffer 已经被标为 `map:0` 并记录了 `unmap_ts`，之后 DE0 又访问了这个 framebuffer 范围内的 `0xf5697000`，继而反复访问基地址 `0xf4000000`。本次冷启动登录故障则以相同形式反复访问另一块旧地址 `0xfa000000`。
-
-目前可作如下定性：
-
-| 判断 | 置信度 | 说明 |
-|---|---:|---|
-| DE0 正在读取已经解除 IOMMU 映射的旧 scanout framebuffer | 100% | 驱动 map/unmap 追踪、故障地址范围和 IOMMU 日志直接互证 |
-| 本机 #21 故障属于 sunxi DRM/DE 的 atomic、RCQ 完成判定与 framebuffer 生命周期同步 | 95% | 源码中存在明确的完成错误不上传、跳过 vblank 等待、立即清理旧 FB 的组合缺口；该判断不外推为所有 v1.4.6 产品均会失败 |
-| 1.4.6 试用版 DRM 的 `TCON-LCD + TCON-TV` 混合提交是首要拓扑触发条件 | 很高 | 原厂明确说明双 MIPI、LVDS 路径正常而 LCD-TCON 与 TV-TCON 配合有问题；A733 DTS 和 TCON 驱动又证明 DSI/LVDS/RGB 与 HDMI 分属两套时序、IRQ 和扫描线判定路径；与单 DSI、单 HDMI、冷启动双屏和桌面后热插实验矩阵完全一致 |
-| HDMI 开机存在、SDDM 切换到 Plasma 的双 CRTC 重配置是主要放大窗口 | 90% | 同一内核、DTBO 和背光下，单 DSI 与桌面后热插 HDMI 均通过，只有冷启动双屏登录稳定复现 |
-| v1.4.8 阻止了 DE352 上不受支持的 DFS/共享 RCQ-control 强写 | 源码差异确定；故障因果高 | DE352 两版都未声明 `support_dfs`；1.4.6 却无条件 dirty DFS shadow，并在每个 CRTC flush 时把无 display 偏移的整块 RCQ control 强写到 disp0；1.4.8 先按能力返回且取消 force-by-AHB。Radxa 官方屏与本机屏均表现为 1.4.6 复现、1.4.8 消失，显著提高版本级因果置信度；具体由哪一项子改动解决仍需单变量 A/B |
-| v1.4.8 删除 `current_line > 0` 的 RCQ control 整寄存器直写 | 中高 | A733/DE352 直接调用该函数；新版只在 DE busy 条件成立后做 read-modify-write，避免绕过条件并覆盖同寄存器其他位 |
-| 静态 RTMX line-buffer 写法能解释两版稳定性差异 | 低 | 当前归档的 BSP 1.4.6 与 BSP 1.4.8 源码都采用 disp0=`0x2000`、disp1=`0x1000`；这是共有实现，不是判别变量 |
-| PVR GPU 内核驱动是硬锁的主要根因 | 低于 10% | 故障 master 是 DE0，不是 GPU；新旧系统 PVR 版本一致；GPU 主要负责提高提交频率、暴露内核错误 |
-| `reg = <1>`、面板初始化、背光或触摸导致本次硬锁 | 接近 0% | SDDM 和单 DSI 已正常显示；故障发生在图形会话切换后的 DE 内存访问阶段 |
-
-因此，当前不能再把问题归因于“DSI 一启用就必然异常”，也不能简单称为 GPU 绘制错误。更精确的说法是：
-
-> DSI 经 `TCON-LCD`、HDMI 经 `TCON-TV`。1.4.6 试用版 DRM 在二者参与同一次登录重配置时，未可靠协调两套独立的时序/完成域，显著扩大了 DE/RCQ 同步漏洞；真正令内核失效的是显示控制器读取已解除映射的 framebuffer。
-
-## 二、本次实验为什么具有决定性
+### 1.3 受控交叉实验
 
 本轮严格保持以下变量不变：
 
@@ -77,7 +56,11 @@ Android 同样走 DRM，因此“Android 没复现”不能证明旧 DRM 正确�
 
 这个对照也解释了为什么过去看起来“有时正常、有时卡死”：决定结果的不是串口最后显示的文本，也不是简单的“有没有 DSI”，而是显示硬件正在扫描哪块 framebuffer、登录时双 CRTC 的提交先后顺序、RCQ 在相应 vblank/忙闲窗口是否真正完成。这个窗口具有竞争性，所以旧系统早期表现为概率故障；当前流程把 HDMI 从启动前就接入，并固定在登录时重建双屏布局，因而命中率明显提高。
 
-## 三、本次冷启动硬锁的直接证据
+补充版本对照：T4/6.6 在同一 panel/overlay 方向下未进入旧故障链；因此问题不能归结为 Meizu 面板私有初始化序列。
+
+### 1.4 直接内核日志事实
+
+#### 1.4.1 冷启动 HDMI+DSI 登录硬锁
 
 原始串口文件：
 
@@ -107,7 +90,7 @@ SHA-256：
 
 这三点很重要：本次内核不是先因为 NULL 指针直接 panic，也不能把 `atomic_flush timeout` 当成每次故障的必要起点。第一个可见的内核级致命事件就是 DE0 对无效映射的访问。
 
-## 四、旧原始日志直接证明了“释放后仍扫描”
+#### 1.4.2 旧原始日志证明“释放后仍扫描”
 
 更早的原始日志：
 
@@ -137,441 +120,82 @@ SHA-256：
 - 但无 timeout 时仍能发生旧 FB 被释放后继续扫描；
 - 真正根因是“硬件完成状态和 FB 生命周期不一致”，timeout 只是其中一种可见症状。
 
-## 五、源码中的完整因果链
+### 1.5 已知事实的边界
 
-以下行号基于工作区 `radxa-allwinner-bsp` 的旧 v1.4.6 系源码。工作区 `radxa-kernel-a733` 的 worktree 内容曾被清理，但相应 Linux 5.15 DRM core 已通过 Git object 核对。
+- 日志能 100% 证明 DE0 在访问无效、且历史追踪中已经解除映射的 scanout 地址。
+- 源码能直接证明旧驱动存在 RCQ 失败无法上传、page-flip 仍完成、跳过标准 vblank wait 并立即 cleanup old plane 的生命周期缺口。
+- “共享 force-by-AHB 覆盖 disp0 RCQ update 是哪一次故障的唯一漏切原因”仍属于高置信度机制推断；需要 B1/B2/B3 单变量内核实验或实际 OVL/RCQ 寄存器 readback 才能最终拆分贡献。
 
-### 5.1 plane update 把 framebuffer DMA 地址写入 DE shadow/RCQ
+## 二、最终结论
 
-文件：
+这次实验已经把问题从“DSI 面板、设备树或 GPU 可能有问题”收窄到了一个很具体的内核故障：
 
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/hardware/lowlevel_de/ovl/de_ovl.c`
+> 本机 `5.15.147-21-a733 #21` 所用的 sunxi DRM/DE 在 HDMI+DSI 登录切换期间，没有可靠地保证新的 RCQ/scanout 地址已经被显示硬件接受，就允许 DRM 释放旧 framebuffer。旧 framebuffer 的 IOMMU 映射随后被删除，但 DE0 仍继续扫描旧地址，于是产生连续的 `PageTable Invalid` 中断。中断风暴占用 CPU，RCU 无法调度，最后表现为 HDMI、DSI 和整个系统同时冻结。
 
-- 约 245～264、574～586 行：从 GEM framebuffer 得到 DMA/paddr。
-- 约 273～303、588～603 行：把地址写到 overlay layer 的 `top_laddr*` 等 shadow 寄存器。
-- `ovl_set_block_dirty()` 把相应寄存器块标为 dirty，等待 RCQ 提交到硬件。
+这里的“旧地址仍被扫描”不是推测：旧故障日志中的驱动自带 framebuffer 跟踪记录显示，`0xf4000000` 对应的旧 framebuffer 已经被标为 `map:0` 并记录了 `unmap_ts`，之后 DE0 又访问了这个 framebuffer 范围内的 `0xf5697000`，继而反复访问基地址 `0xf4000000`。本次冷启动登录故障则以相同形式反复访问另一块旧地址 `0xfa000000`。
 
-文件：
+目前可作如下定性：
 
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_crtc.c`
+| 判断 | 置信度 | 说明 |
+|---|---:|---|
+| DE0 正在读取已经解除 IOMMU 映射的旧 scanout framebuffer | 100% | 驱动 map/unmap 追踪、故障地址范围和 IOMMU 日志直接互证 |
+| 本机 #21 故障属于 sunxi DRM/DE 的 atomic、RCQ 完成判定与 framebuffer 生命周期同步 | 95% | 源码中存在明确的完成错误不上传、跳过 vblank 等待、立即清理旧 FB 的组合缺口；该判断不外推为所有 v1.4.6 产品均会失败 |
+| 1.4.6 试用版 DRM 的 `TCON-LCD + TCON-TV` 混合提交是首要拓扑触发条件 | 很高 | 原厂明确说明双 MIPI、LVDS 路径正常而 LCD-TCON 与 TV-TCON 配合有问题；A733 DTS 和 TCON 驱动又证明 DSI/LVDS/RGB 与 HDMI 分属两套时序、IRQ 和扫描线判定路径；与单 DSI、单 HDMI、冷启动双屏和桌面后热插实验矩阵完全一致 |
+| HDMI 开机存在、SDDM 切换到 Plasma 的双 CRTC 重配置是主要放大窗口 | 90% | 同一内核、DTBO 和背光下，单 DSI 与桌面后热插 HDMI 均通过，只有冷启动双屏登录稳定复现 |
+| v1.4.8 阻止了 DE352 上不受支持的 DFS/共享 RCQ-control 强写 | 源码差异确定；故障因果高 | DE352 两版都未声明 `support_dfs`；1.4.6 却无条件 dirty DFS shadow，并在每个 CRTC flush 时把无 display 偏移的整块 RCQ control 强写到 disp0；1.4.8 先按能力返回且取消 force-by-AHB。Radxa 官方屏与本机屏均表现为 1.4.6 复现、1.4.8 消失，显著提高版本级因果置信度；具体由哪一项子改动解决仍需单变量 A/B |
+| v1.4.8 删除 `current_line > 0` 的 RCQ control 整寄存器直写 | 中高 | A733/DE352 直接调用该函数；新版只在 DE busy 条件成立后做 read-modify-write，避免绕过条件并覆盖同寄存器其他位 |
+| 静态 RTMX line-buffer 写法能解释两版稳定性差异 | 低 | 当前归档的 BSP 1.4.6 与 BSP 1.4.8 源码都采用 disp0=`0x2000`、disp1=`0x1000`；这是共有实现，不是判别变量 |
+| PVR GPU 内核驱动是硬锁的主要根因 | 低于 10% | 故障 master 是 DE0，不是 GPU；新旧系统 PVR 版本一致；GPU 主要负责提高提交频率、暴露内核错误 |
+| `reg = <1>`、面板初始化、背光或触摸导致本次硬锁 | 接近 0% | SDDM 和单 DSI 已正常显示；故障发生在图形会话切换后的 DE 内存访问阶段 |
 
-- `sunxi_plane_atomic_update()` 约 525～555 行调用 `sunxi_de_channel_update()`，并调用 framebuffer debug trace。
+因此，当前不能再把问题归因于“DSI 一启用就必然异常”，也不能简单称为 GPU 绘制错误。更精确的说法是：
 
-因此日志中的 `paddr` 就是准备交给显示引擎扫描的地址；它不是单纯的用户态渲染缓存记录。
+> DSI 经 `TCON-LCD`、HDMI 经 `TCON-TV`。1.4.6 试用版 DRM 在二者参与同一次登录重配置时，未可靠协调两套独立的时序/完成域，显著扩大了 DE/RCQ 同步漏洞；真正令内核失效的是显示控制器读取已解除映射的 framebuffer。
 
-### 5.2 v1.4.6 的 RCQ flush 有完成语义缺陷
+### 2.1 根因必须分成四层
 
-文件：
+| 层级 | 本次定位 | 证据性质 |
+|---|---|---|
+| 直接致死原因 | DE0 继续扫描已经 IOMMU unmap 的旧 framebuffer | 日志直接证明 |
+| 内核安全缺口 | DE/RCQ 完成语义与 DRM framebuffer 生命周期不同步；失败不能上传，old FB 又被立即 cleanup | 源码直接证明 |
+| 首要拓扑触发器 | 1.4.6 试用 DRM 的 `TCON-LCD + TCON-TV` 混合重配置 | 原厂信息、DTS/驱动拓扑和实验矩阵共同证明 |
+| 最可能底层机制 | DE352 不支持 DFS 却 dirty 共享 RCQ-control shadow；每路 flush 的 force-by-AHB 固定写 disp0，再叠加旧 RCQ update 条件 | 两版源码差异与全部现象吻合；具体子项仍需单变量 A/B |
 
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/hardware/lowlevel_de/sunxi_de.c`
-
-`sunxi_de_atomic_begin()` 约 559～563 行基本为空，原本可能用于关闭/整理 RCQ update 的调用被注释：
-
-```c
-// de_top_set_rcq_update(engine->top_hdl, hwde->id, 0);
-```
-
-`sunxi_de_atomic_flush()` 约 689～785 行在 DE352/RCQ_MODE 路径中执行：
-
-1. `check_update_finished(hwde)` 清理或读取前一状态；
-2. v1.4.6 调用 `de_top_update_force_by_ahb(engine->top_hdl)`；
-3. 调用 `de_top_set_rcq_update(..., hwde->id, 1)` 请求更新；
-4. 以 2 ms 间隔、最多 50 ms 轮询 `check_update_finished()`；
-5. 超时时只打印 `sunxi_de_atomic_flush timeout`；
-6. 函数返回类型是 `void`，不能把失败传回 DRM atomic helper。
-
-也就是说，即使它明确知道 50 ms 内没有完成，调用者仍会把这次提交当作正常完成。
-
-本机旧 `5.15.147-21-a733 #21` 的二进制反汇编还直接确认：
-
-- `sunxi_de_atomic_flush`：`ffff8000088e7894`
-- `de_top_update_force_by_ahb`：`ffff8000088e94b0`
-- `ffff8000088e7ab4` 存在到后者的 `bl`
-
-所以“旧 #21 内核含 force-by-AHB 行为”不是仅依据仓库分支推断，而是已由实际运行内核二进制验证。
-
-### 5.3 CRTC 无条件宣布 page flip 完成
-
-同一文件 `sunxi_drm_crtc.c`：
-
-- `sunxi_crtc_atomic_flush()` 约 1992～2040 行调用返回 `void` 的 `sunxi_de_atomic_flush()`。
-- 调用返回后约 2035～2040 行无条件调用 `sunxi_crtc_finish_page_flip()`。
-- 注释把这里描述成 “after rcq_finished”，但源码没有成功/失败返回值可供上层判断。
-
-所以即使 RCQ 没有真正把新地址锁存到硬件，DRM event 也可能已经被宣布完成。
-
-### 5.4 厂商 commit tail 明确跳过 vblank 等待并立即清理旧 framebuffer
-
-这是本次源码复核中最关键的生命周期缺口。
-
-文件：
-
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_drv.c`
-
-自定义 atomic commit tail 约 181～204 行的顺序是：
-
-```c
-drm_atomic_helper_commit_modeset_disables(dev, old_state);
-drm_atomic_helper_commit_modeset_enables(dev, old_state);
-drm_atomic_helper_commit_planes(dev, old_state, ...);
-drm_atomic_helper_fake_vblank(old_state);
-drm_atomic_helper_commit_hw_done(old_state);
-/* drm_atomic_helper_wait_for_vblanks(dev, old_state); */
-drm_atomic_helper_cleanup_planes(dev, old_state);
-```
-
-Linux 5.15 DRM core 的标准 `drm_atomic_helper_commit_tail()` 则在清理 old state/old framebuffer 之前调用：
-
-```c
-drm_atomic_helper_wait_for_vblanks(dev, old_state);
-```
-
-DRM core 的注释也说明，等待 flip/vblank 的用途之一就是在释放旧 framebuffer 之前，保证硬件已经不再使用它。
-
-旧 BSP 同时具备以下三个条件：
-
-1. 下层 RCQ flush 失败不能返回错误；
-2. CRTC 无条件发送 page-flip 完成；
-3. commit tail 跳过 vblank 等待，立即 `cleanup_planes()`。
-
-这会形成一个明确的安全漏洞：只要 RCQ 地址切换漏掉、延迟或完成位出现假阳性，上层就会过早放掉 old FB 引用。
-
-需要注意：日志显示硬件在 unmap 后 160 ms 还在读取旧地址，远超正常的一帧等待，所以根本问题不只是“少等一个 vblank”；是 RCQ/DE 实际没有正确切到新地址。跳过等待和错误上传会让这个 RCQ 故障直接演变成 use-after-unmap，而不是被延迟或阻止。
-
-### 5.5 旧 framebuffer 的映射确实会被删除
-
-文件：
-
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_drv.c`
-
-- `sunxi_drm_gem_fb_destroy()` 约 98～102 行先记录 unmap trace，再调用 `drm_gem_fb_destroy()`。
-
-文件：
-
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_debug.c`
-
-- 约 232～270 行记录 FB 指针、DMA 地址、尺寸、pitch 和 `mapped=1`。
-- 约 273～303 行按 FB/地址匹配，并写入 `mapped=0` 和 `unmap_ts`。
-- 约 99～126 行在 IOMMU 异常后打印该环形追踪。
-
-因此旧日志中的 `map:0` 是内核驱动的对象生命周期记录，不是用户态猜测。
-
-文件：
-
-`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_gem.c`
-
-- 约 64～98 行在 GEM 引用归零后解除 dma-buf attachment/mapping，或对本地 CMA 对象执行 `dma_free_wc()`，然后释放 GEM 对象。
-
-文件：
-
-`bsp/radxa-allwinner-bsp/drivers/iommu/sunxi-iommu-v2.c`
-
-- 约 851～885 行的 unmap 删除页表映射，并使 TLB/PTW 失效。
-
-所以一旦旧 FB 引用被 cleanup 路径释放，对应 IOVA 就不再合法；DE 继续读取时必然进入 PageTable Invalid。
-
-### 5.6 为什么故障会变成中断风暴和 RCU stall
-
-同一 IOMMU 文件约 1345～1418 行：
-
-- 读取并打印 L1/L2 PageTable Invalid；
-- 通过 `sunxi_iova_invalid_helper()` 找到 master 名称；
-- 打印 `Bug is in DE0 module`；
-- 清 TLB/PTW 和 fault status；
-- IRQ handler 返回 `IRQ_HANDLED`。
-
-处理函数只清除本次 fault，没有停止仍在使用旧地址的 DE。因此下一次扫描又 fault，再次进入 IRQ。约 40.42 次/秒的持续异常最终让 CPU6 上 RCU grace-period 线程长期得不到调度，出现 RCU stall；系统其他任务、SSH、桌面和两块屏幕于是一起失去响应。
-
-这也解释了“串口每次最后一行不同”：真正的硬锁发生在异步显示提交和中断路径，普通启动日志只是当时最后来得及输出的内容。卡在 Wi-Fi、桌面、鼠标或某一行 systemd 日志，不代表该行对应模块是根因。
-
-## 六、为什么只报 DE0，但 HDMI 和 DSI 都冻结
-
-A733 的设备树并不是两个完全独立的显示引擎：
-
-文件：
-
-`bsp/radxa-allwinner-bsp/configs/linux-5.15/sun60iw2p1.dtsi`
-
-- IOMMU masters 表中 DE 使用 id 8，名称为 `DE0`。
-- display-engine-v352 节点使用 `iommus = <&mmu_aw 8 1>`。
-- 同一个 DE 节点下面有 `port@0` 和 `port@1`，分别供应两条显示输出路径。
-
-运行时路由为：
-
-- DSI：DRM DE-0 → tcon0；
-- HDMI：DRM DE-1 → TV-TCON（A733 DTS 标签为 `tcon3`）；`tcon4` 对应 eDP。
-
-日志里的 IOMMU `DE0` 指的是物理 DE352/IOMMU master，而不是在说“只有 DRM CRTC 0 与故障相关、CRTC 1 完全独立”。两个 CRTC 共享同一个显示引擎、TOP/RCQ 资源和扩展桌面的 framebuffer 体系。一条 scanout 地址出错并形成 IOMMU IRQ 风暴后，整个 DE 和内核调度都受影响，所以两屏一起冻结是必然结果。
-
-## 七、为什么双屏登录尤其容易触发
-
-SDDM 登录界面正常说明：
-
-- U-Boot、DT graph、panel probe 和背光已工作；
-- DE 能建立一组初始双输出状态；
-- 故障不是“开机完全无法初始化 DSI”。
-
-登录 Plasma 时，KWin/KScreen/X 会更换桌面布局、root pixmap、scanout buffer 和 plane/CRTC 状态。这里不必假设 X server 被替换；即使同一个 X server，用户会话也会产生一轮密集的 framebuffer 分配、atomic commit 和旧 buffer 回收。双输出要求两个 CRTC 在共享 DE TOP/RCQ 上协调完成，使旧 BSP 的时序缺口更容易暴露。
-
-而“先进入单 DSI 桌面，再热插 HDMI”没有经历完全相同的 SDDM → Plasma 双输出所有权和 framebuffer 交接顺序，因此能正常不矛盾。它证明双屏稳态可用，却不能证明所有双屏 atomic transition 都安全。
-
-## 八、BSP 1.4.6 中与双输出高度相关的源码风险
-
-### 8.1 共享 DE TOP block 的 RCQ header 归属不清
-
-`sunxi_de.c` 的 `de_rtmx_init_rcq()` 会把同一个 `detop_hdl->block` 加入每个 display 的 RCQ block 列表。初始化 display 0、再初始化 display 1 时，每个底层 `reg_blk->rcq_hd` 都被重新赋值。因为 DE TOP 是单例，最后一次初始化可能覆盖共享 TOP block 的单个 `rcq_hd` 回指。
-
-这意味着双 CRTC 同时使用共享 TOP 时，dirty 标记究竟属于哪一路 RCQ header 存在明确的设计歧义。更关键的是，这个 TOP block 的 `reg_addr` 在 `de_top_create()` 中只按
-`de_reg_base + rcq_ctl_offset` 建立，没有加入 display 的 `0x40` 偏移；它实际指向 disp0
-RCQ control。旧 BSP 又在**每个** CRTC flush 中调用 `de_top_update_force_by_ahb()`，所以
-flush disp1 时也可能根据共享/后绑定的 dirty header，把整块 shadow 强写到 disp0 控制寄存器。
-
-这与实验现象高度一致：单 DSI 只有一条 RCQ 控制流，顺序写后通常还能完成；双屏登录时
-disp0/disp1 连续 flush，disp1 路径可能改写 disp0 的 RCQ control，导致 disp0 的新 OVL
-地址没有锁存，而软件仍继续释放 old FB。它仍需寄存器追踪完成最后一步实证，但已经是
-两个 BSP 源码差异中最具体的直接机制。
-
-### 8.2 静态 RTMX line-buffer 是两版共有实现，不是版本差异
-
-直接比较当前归档的 BSP 1.4.6 与 BSP 1.4.8 源码，二者的
-`de_top_set_rtmx_enable()` 都采用静态 line-buffer 分配：disp0=`0x2000`、
-disp1=`0x1000`，都没有在此函数内执行动态单/双屏分配和 not-busy 等待。
-
-这段实现本身仍可能是共享 DE 的脆弱点，但由于两版相同，它不能解释“旧版高概率失败、
-1.4.8 几乎不失败”。后续版本判断只以两个 BSP 最终源码树的行为差异为依据。
-
-## 九、v1.4.8/T4 与本机 #21 的关键差异
-
-以下只比较工作区归档的 BSP 1.4.6 与 BSP 1.4.8 最终源码。能确定的是两版功能实现
-如何不同，以及这些差异与实测故障链是否吻合。
-
-### 9.1 v1.4.8 不再在 DE352 上执行错误的 DFS/force-by-AHB 路径
-
-两个 BSP 的 DE352 描述都没有设置 `.support_dfs = 1`，即该功能对 A733/DE352 不受支持。
-但 BSP 1.4.6 的 `de_top_freq_div_apply()` 没有能力检查：
-
-```c
-reg->bits.m = m;
-reg->bits.n = n;
-de_top_set_block_dirty(priv, DE_RCQ_CTL_REG_BLK, 1);
-```
-
-而 `engine->de_devfreq_auto` 默认打开，所以每次 RCQ flush 都会走到这段代码。紧接着旧版调用：
-
-```c
-de_top_update_force_by_ahb(engine->top_hdl);
-```
-
-该函数不是按当前 `hwde->id` 更新，而是把共享 `reg_blks[0]` 的整个 32 位 shadow 写入
-其固定 `reg_addr`；这个地址对应没有 display 偏移的 disp0 RCQ control。因此它不只写
-m/n，还可能覆盖同一寄存器中的 `rcq_update` 等位。
-
-BSP 1.4.8 的 `de_top_freq_div_apply()` 首先执行：
-
-```c
-if (!hdl->private->dsc->support_dfs)
-        return 0;
-```
-
-所以在 DE352 上根本不会设置 `dfs_en`，也不会 dirty 共享 RCQ-control block。同时新版
-`sunxi_de_atomic_flush()` 停用了：
-
-```c
-// de_top_update_force_by_ahb(engine->top_hdl);
-```
-
-两层保护叠加后，A733 的每路 flush 不再无条件改写共享/disp0 RCQ control。这是目前解释
-1.4.8 几乎不再出现故障的首要 BSP 差异。
-
-旧版双 CRTC 的危险顺序可以具体写成：
+### 2.2 完整故障链
 
 ```text
-flush(disp0): force(shared shadow -> disp0 RCQ_CTL)
-              RMW disp0.RCQ_UPDATE = 1
-
-flush(disp1): force(shared shadow -> disp0 RCQ_CTL)
-              RMW disp1.RCQ_UPDATE = 1
+Meizu E3 overlay、面板与背光正常初始化
+        ↓
+HDMI 从开机即存在，SDDM 初始双屏状态建立成功
+        ↓
+登录 Plasma 时重建 3000×2160 root framebuffer 和双 CRTC 状态
+        ↓
+TCON-LCD 与 TCON-TV 在各自时序域中被逐个 atomic_flush
+        ↓
+1.4.6 DE352 的共享 RCQ/DFS/force 路径制造地址漏切或完成状态失配
+        ↓
+DE 自有完成路径仍被视作 complete，page flip/commit 被宣布完成
+        ↓
+厂商 commit tail 跳过标准 vblank wait，cleanup old planes
+        ↓
+旧 framebuffer destroy，IOMMU 映射被删除
+        ↓
+DE0 仍扫描旧 IOVA
+        ↓
+PageTable Invalid 中断约 40.42 次/秒持续发生
+        ↓
+RCU grace-period 线程饥饿，HDMI、DSI、SSH、心跳一起冻结
 ```
 
-第二次 force 仍写 disp0，而且 per-display RMW 并不会同步更新那份共享 shadow 中的
-`rcq_update` 位，所以它可能把 disp0 刚发出的 update 恢复成 shadow 中的旧值。若硬件
-已在两次写之间锁存 disp0 请求，则双屏正常；若尚未锁存，请求被覆盖，disp0 继续使用
-旧 OVL 地址。这一“是否赶在第二次 force 前锁存”的窗口，能够同时解释旧版的概率性、
-单 DSI 正常、冷启动双屏登录高概率失败和桌面后热插有时正常。
+### 2.3 版本结论
 
-### 9.2 v1.4.8 重写了 `de_top_set_rcq_update()` 的触发逻辑
+- 工程上可以判断 BSP 1.4.8 已解决或避开本次实际触发链；依据是两块不同 panel 的同一版本边界、原厂稳定验证、本机 T4 实测以及可见的 DE/RCQ/CRTC 状态改动。
+- 不能把改善简单归因于 Linux 通用内核从 5.15 升到 6.6；关键判别变量位于 Allwinner BSP 显示驱动。
+- 也不能声称 1.4.8 已形式化消灭所有 stale-FB 风险：其 `sunxi_de_atomic_flush()` 仍为 `void`，厂商 tail 仍没有恢复通用 vblank wait。新版更像把主触发路径修到稳定，而非建立了完整的失败传播和 old-FB 保活防线。
 
-旧版本逻辑除 busy 判断外，还在 `current_line > 0` 时直接 `writel(1, reg_base)`，绕过
-read-modify-write。新版本移除了这个 fallback，只在 `de_top_query_de_busy_state()` 满足
-条件时请求更新，并始终保留寄存器中其他控制位。
+## 三、A733 显示拓扑与双 CRTC 事务
 
-A733/DE352 的 `rcq_wait_line` 在两个版本中都为默认 `false`，所以这项变化会直接作用于
-本机任务上下文中的 `de_top_set_rcq_update()`。新版代码还支持在真正声明 DFS 能力的
-SoC 上把 m/n 与 update 合并到同一次 RMW；但 DE352 因 `support_dfs=false` 不进入该
-分支。对 A733 真正生效的是：不再写 DFS 位、取消跨 display 的 force-by-AHB，以及
-RCQ update 不再采用 current-line fallback 整寄存器直写。
-
-### 9.3 新版扫描线判断存在，但不是 A733 的直接稳定原因
-
-v1.4.8 确实为 `RCQ_MODE && rcq_wait_line` 平台增加了“当前扫描线 +
-`ver_front_porch`”判断，并在 CRTC atomic check 中缓存 `adjusted_mode`。这段逻辑用于
-vblank IRQ 判断是否应完成 page flip，防止 IRQ 已延迟到下一帧 active region 时误发
-上一帧 fence/event；它不是 `de_top_set_rcq_update()` 的触发条件。
-
-但 A733 使用的 `de352_data` 在 BSP 1.4.6 与 1.4.8 中都没有设置
-`rcq_wait_line=true`；设置该标志的是 DE210。因此 A733 会继续读取通用 DE busy 位，
-不会进入上述 timing 分支。DSI 从 `.mode_set` 改用 `.atomic_mode_set`、使用本次 atomic
-state 的 `adjusted_mode`，有助于模式状态一致性，但不能作为本机 1.4.8 稳定的主解释。
-
-### 9.4 HDMI 路径还有次要稳健性改进
-
-v1.4.8 还更新了 HDMI EDID 的读取、校验和释放方式，分开保存 boot state 与实际 HPD
-enable 状态，并加强输出模式选择的错误处理。这些变化可以降低 EDID 生命周期错误、
-启动时 HPD 状态不一致或异常 mode list 导致的额外 modeset。
-
-但它们不是本次硬锁的首要解释：旧日志的直接故障 master 是 DE0，且真正闭合的因果链
-是 old framebuffer unmap 后仍被 scanout。HDMI 改进主要减少触发次数；停止 DE352
-不支持的 DFS/共享控制寄存器写入，以及收紧 RCQ update，才直接作用于 A733 硬件是否
-正确锁存新地址。
-
-### 9.5 v1.4.8 没有完全修复生命周期安全缺口
-
-需要避免过度结论。v1.4.8 中仍然存在：
-
-- `sunxi_de_atomic_flush()` 返回 `void`；
-- 50 ms 超时只打印日志，不能向上层返回失败；
-- `sunxi_crtc_finish_page_flip()` 仍会在 flush 返回后执行；
-- 自定义 commit tail 仍注释掉 `drm_atomic_helper_wait_for_vblanks()`，随后清理 old planes。
-
-所以 T4/6.6 表现稳定更可能是因为新版 DE TOP/RCQ 和双输出时序避免了“硬件仍扫旧地址”这个触发事件，而不是 framebuffer 生命周期错误处理已经从结构上完全封死。
-
-此外，两个 BSP 中 `sunxi-iommu-v2.c`、`sunxi_drm_gem.c`、`sunxi_drm_debug.c` 和
-`de_ovl.c` 没有对应差异；`sunxi_drm_gem_fb_destroy()`、注释掉 vblank wait 后立即
-`cleanup_planes()` 的关键顺序也相同。这排除了“1.4.8 只是屏蔽 IOMMU fault 或延后
-unmap，所以表面看起来稳定”的解释。若新版仍生成相同 stale scanout，原来的 fault
-处理链仍然存在；当前没有出现致命链，更像是错误 RCQ 地址状态不再被制造出来。
-
-换言之：
-
-- v1.4.8/T4 对主触发点有明显缓解或修复；
-- 但如果将来在另一种边界条件下 RCQ 仍漏切，现有上层错误处理仍可能过早释放旧 FB；
-- 这也是后续补丁不能只追求“不再复现”，还应补充可靠完成语义的原因。
-
-这也解释了为什么应描述为“1.4.8 中问题几乎不存在”，而不是“1.4.8 已从形式上证明绝不可能发生”：新版显著降低了 RCQ 漏切概率，但 flush 失败上传、vblank 等待和 old-FB 保活这三层兜底仍未完整建立。目前的稳定性来自主竞态窗口被收窄，加上实际测试尚未命中剩余边界，而不是所有生命周期缺口都已消失。
-
-### 9.6 原厂测试范围与 Radxa 官方屏证据的最终修正
-
-最新澄清后的正确事实是：原厂在 1.4.6 上使用的也是旧 DRM 驱动，但验证用户态主要是
-Android/SurfaceFlinger/HWC；不能再写成“1.4.6 已在 Debian+X11 双输出中验证稳定”。原厂
-进一步确认：1.4.6 的 DRM 属于试用版本，双 MIPI 与 LVDS 一类 `TCON-LCD` 路径没有问题，
-但 `TCON-LCD + TCON-TV` 配合存在已知问题。1.4.8 才是转入稳定验证的新 DRM 路径，双
-DSI、DSI+LVDS/RGB 以及包含 eDP 的产品组合在该版本验证稳定。Radxa 官方 DSI 屏在旧
-1.4.6 DRM 上也遇到与本机同类问题，换到 1.4.8 后解决。
-
-这组证据比之前的推断更有判别力：
-
-- Meizu E3 与 Radxa 官方屏跨两个 panel 都能在旧版触发，排除本机面板初始化序列、
-  `reg = <1>`、背光和触摸为通用主因；
-- 同一类问题随 1.4.8 消失，强力支持问题位于 1.4.6 sunxi DRM/DE 共同路径；
-- 单 DSI、单 HDMI、双 MIPI/DSI+LVDS 正常而 HDMI+DSI 异常，正好按同类 `TCON-LCD`
-  与异类 `TCON-LCD + TCON-TV` 分界；这比笼统的“HDMI 动态性较强”更接近主触发条件；
-- 1.4.6 Android 稳定只说明 Android 的提交形态和 buffer 生命周期较少把漏洞升级成致命
-  fault，且原厂已经把 LCD-TCON/TV-TCON 配合列为试用版已知问题，不能证明旧 DRM 的
-  完成语义对所有用户态都安全；
-- 1.4.8 的稳定性不能笼统归因于 Linux 6.6 版本号，因为有直接可见的 BSP 显示驱动变化。
-
-### 9.7 FAE 信息与源码如何闭合完整根因
-
-#### 9.7.1 “DE 有自己的时序，部分函数必须默认 complete”的正确含义
-
-FAE 的说明解释了 sunxi DRM 为什么没有完全照搬通用 DRM 的 vblank 完成模型。驱动调用链
-确实是：
-
-```text
-sunxi_de_atomic_flush() 由 DE/RCQ 自己判断更新完成
-        ↓
-sunxi_crtc_finish_page_flip()
-        ↓
-drm_atomic_helper_fake_vblank() / commit_hw_done()
-        ↓
-跳过通用 wait_for_vblanks()
-        ↓
-cleanup old planes
-```
-
-因此“默认 complete”本身是厂商硬件模型的设计选择，不应简单改成“所有提交强等标准
-CRTC vblank”。但该设计有一个不可妥协的前提：**DE 自己报告 complete 时，新 RCQ 地址
-必须已经被硬件可靠接受，或者旧 framebuffer 必须继续保活。**
-
-1.4.6 的实际问题不是“使用了 DE 自有时序”这件事，而是 DE 请求、状态刷新和 complete
-之间存在失配，且上层没有安全兜底。`sunxi_de_atomic_flush()` 返回 `void`；RCQ timeout
-只打印日志；`sunxi_crtc_finish_page_flip()` 仍会完成 event；custom commit tail 随即清理
-old plane。即使某些函数按硬件设计必须默认 complete，也不能允许 complete 早于真实
-scanout 地址交接。
-
-#### 9.7.2 1.4.6 中能够制造“假完成/旧地址继续扫描”的具体路径
-
-A733 使用 DE352/RCQ_MODE。两版 DE352 都没有声明 `support_dfs`，但 1.4.6：
-
-1. `de_top_freq_div_apply()` 无条件修改 m/n，并 dirty RCQ-control shadow；
-2. 每个 CRTC flush 都执行 `de_top_update_force_by_ahb()`；
-3. 被强写 block 的 `reg_addr` 没有 `disp * 0x40` 偏移，固定落在 disp0 RCQ control；
-4. `de_top_set_rcq_update()` 的旧 fallback 可整寄存器 `writel(1)`，循环耗尽也返回 0；
-5. `check_update_finished()` 读取并清除 RCQ finish 状态；它能证明硬件报告某次 RCQ
-   transaction finished，却不能证明本次预期的 OVL 地址 block 未被遗漏/覆盖且已成为
-   实际 scanout；
-6. flush 失败不能上传，old FB 又由 custom tail 迅速 cleanup。
-
-双 CRTC 顺序执行时可能形成：
-
-```text
-disp0 plane 写入新地址并 set update
-        ↓
-disp1 flush 再用共享 shadow 强写 disp0 control
-        ↓
-disp0 请求可能已锁存，也可能被覆盖/漏发
-        ↓
-完成位看起来已经清零，软件按 DE 规则宣布 complete
-        ↓
-旧 FB destroy/unmap，但 disp0 仍扫描旧地址
-```
-
-这同时解释“有的故障先打印 atomic_flush timeout、有的完全没有 timeout”：显式 timeout
-表示没有等到 finish；无 timeout 的故障则说明不能把 RCQ finish 状态等同于“预期的新
-scanout 地址已经生效”，可能是错误/被覆盖的 shadow 内容完成了一次 RCQ transaction。
-
-#### 9.7.3 extcon 与“每次 CRTC 变化都刷新”解决的是状态一致性
-
-extcon 本身不是 framebuffer 锁存器，也不会让两个 CRTC 共用一个 vblank。它的作用是把
-外部连接/拔插状态同步给连接器消费者，并配合 DRM hotplug 重新探测、重建显示状态。这样
-HDMI/外部输出发生变化时，不再只改变输出侧状态而让 CRTC/DE 继续沿用旧 mode/timing。
-
-1.4.8 最终源码还直接新增：
-
-```c
-if (crtc_state->mode_changed || crtc_state->connectors_changed)
-        drm_mode_to_sunxi_video_timings(&crtc_state->adjusted_mode,
-                                        &scrtc->timings);
-```
-
-CRTC 中断随后调用：
-
-```c
-busy = sunxi_de_query_de_busy(scrtc->sunxi_de, &scrtc->timings);
-```
-
-DSI/LVDS/RGB 也从旧 `.mode_set` 改为 `.atomic_mode_set`，直接从本次
-`crtc_state->adjusted_mode` 保存输出 mode。它们与 FAE 所说的“CRTC 有变化就刷新”一致：
-连接状态、DRM atomic state 与 DE 时序不再长期分离。
-
-需要保留一个源码边界：两个 BSP 最终树中都能看到受 `CONFIG_EXTCON` 控制的 HDMI/eDP
-extcon 代码，因此“源码中出现 extcon”本身不是唯一版本差异。FAE 所说的“新驱动接入”
-还可能包含 1.4.8 实际内核配置、设备树和用户态监听的完整接线。能够从两个最终源码树直接
-确认的新增项，是 CRTC mode/connector change 时的 timing refresh 以及新的 atomic mode
-capture。对 A733/DE352 而言 `rcq_wait_line=false`，所以不能把 timing-aware busy 分支单独
-称为全部根因修复；它与 RCQ/DFS 改动共同保证状态一致。
-
-#### 9.7.4 `TCON-LCD + TCON-TV` 为什么是首要拓扑触发条件
+### 3.1 TCON-LCD 与 TCON-TV 不是名称差异
 
 A733 设备树和驱动把输出明确分成两类：
 
@@ -613,7 +237,8 @@ TV-TCON 变成同一硬件时钟、同一 vblank 或一个 group-latch。helper 
 制造错误锁存的底层机制，X11 立即销毁旧 FB 是把错误升级为 IOMMU 风暴的生命周期条件，
 HDMI HPD/登录 modeset 是提高命中率的放大器。**
 
-#### 9.7.5 为什么一个 X11 大桌面仍不是硬件同步事务
+
+### 3.2 为什么 3000×2160 大桌面仍不是硬件 group-latch
 
 本机 3000×2160 root framebuffer 只统一了 X11 坐标空间。Linux 5.15 与 6.6 的
 `drm_atomic_helper_commit_planes()` 在关键顺序上都是先更新 plane，再逐个 CRTC 调用
@@ -623,153 +248,63 @@ SDDM 两屏正常表示初始 enable 最终成功；当时没有一个即将被�
 后的 root-FB/布局交接才同时具备“旧 FB 正在扫描、两个 CRTC 连续 flush、HDMI 可能改变
 connector/mode、旧 FB 最后引用释放”。静态登录画面正常并不能证明下一次交接安全。
 
-#### 9.7.6 为什么旧 Android 同样走 DRM，却没有暴露致命故障
+逻辑上的一次 DRM atomic state 只保证软件状态整体校验和提交顺序；它不自动赋予两个不同 TCON 一个共同的物理锁存边沿。这个区别正是“登录界面两屏都正常”与“登录后下一次交接硬锁”能够同时成立的原因。
 
-Android 与 X11 都能调用 DRM atomic，但上层提交和 buffer 生命周期不同。
+## 四、逐级内核调用链与源码
 
-Android 的 SurfaceFlinger/HWC 为每个物理 display 执行 validate/present，使用 acquire、
-release 和 present fence 管理 buffer。release fence 的定义就是“旧 buffer 已不再被 HWC/
-显示使用”之后才能交回 producer；常见 drm_hwcomposer 还会等待上一帧 present fence，再
-清理上一帧资源。BufferQueue/gralloc 通常维护可循环复用的双/三缓冲池，而不是在每一次
-桌面交接后立即销毁整个物理 framebuffer 对象。
+以下旧版代码来自 `bsp/radxa-allwinner-bsp/`（BSP 1.4.6）；标准 DRM helper 来自 `bsp/radxa-kernel-a733/`。行号以当前归档文件为准。
 
-因此旧 DRM 即使偶尔漏掉一次 RCQ update，在 Android 上更可能表现为：
-
-- 旧 gralloc buffer 仍有 SurfaceFlinger/HWC/BufferQueue 引用，IOVA 仍合法；
-- 多显示一帧旧内容，下一次 present/RCQ 可能自愈；
-- buffer 被归还池中等待复用，而不是马上 RMFB 并解除映射；
-- 原厂主要量产/验证的双 MIPI、LVDS 等同类 LCD-TCON 拓扑本就避开了已知的混合 TCON
-  缺口；Android 产品路径又缺少本机 HDMI+SDDM→Plasma 的动态重建窗口。
-
-X11/Plasma 本次则确实销毁了 3000×2160 old FB；驱动日志记录 `map:0/unmap_ts` 后，DE0
-继续访问它。也就是说 Android 稳定主要是**没有把潜伏的地址漏切升级为 use-after-unmap**，
-而不是 Android 绕过了 DRM 或证明旧驱动没有缺陷。即使 Android 的 fence 被错误地提前
-signal，长期 gralloc buffer pool 仍可能让地址保持映射，只产生短暂旧帧而不触发 IOMMU。
-
-这部分关于 Android 通用 fence/BufferQueue 语义由 AOSP 文档和 drm_hwcomposer 实现支持；
-工作区没有原厂具体 HWC 源码，因此“其实际 HWC 是否逐帧等待哪个 out-fence”不能写成已
-核实事实。但同类 TCON 拓扑、buffer pool 与无 SDDM 会话切换已经足以显著降低复现条件。
-
-#### 9.7.7 1.4.8 为什么可以认为已经解决/避免本问题
-
-1.4.8 同时收紧了两类条件：
-
-- **DE/RCQ 层：**按 `support_dfs=false` 跳过不支持的 DFS，停用固定强写 disp0 control 的
-  force-by-AHB，并重写 RCQ update；
-- **状态层：**extcon/hotplug 完整接线、CRTC change 时刷新 adjusted timing、输出驱动使用
-  atomic mode state，并改进 HDMI boot/HPD/EDID 状态管理。
-
-原厂在 1.4.8 已稳定验证包含 `TCON-LCD + TCON-TV` 的产品组合；Radxa 官方屏与 Meizu E3
-跨 panel 都从“1.4.6 同类故障”变为“1.4.8 稳定”，再加上本机
-6.6/T4 长时间无 IOMMU/RCU 链，已经足以在工程上判断：**1.4.8 避免或解决了本次实际
-触发路径。**仍需谨慎的是，1.4.8 的 `sunxi_de_atomic_flush()` 仍返回 `void`、custom tail
-仍跳过标准 vblank wait，所以它更像把 DE 自有完成语义和状态刷新修到可用，而不是从形式
-上加入了一层永不可能 use-after-unmap 的通用保护。
-
-#### 9.7.8 整轮适配与故障的最终调用链
+先给出函数级主链，后面的每一节按此顺序展开：
 
 ```text
-Meizu E3 overlay/面板/背光成功初始化
-        ↓
-单 DSI、HDMI-only 均正常，证明物理链路不是充分故障条件
-        ↓
-旧 1.4.6 试用版 DRM 在 HDMI 开机存在时进入
-TCON-LCD + TCON-TV 的双 CRTC 登录重配置
-        ↓
-X11 3000×2160 old FB 被新 root FB 替换
-        ↓
-两种 TCON 使用不同 vblank/扫描线/启动延迟，helper 又逐 CRTC flush
-        ↓
-旧版 DE352 DFS/共享 RCQ-control 强写、RCQ update/状态刷新竞态
-        ↓
-某一路新 scanout 地址没有可靠锁存，但 DE 自有完成路径仍默认 complete
-        ↓
-page-flip/commit 被宣布完成，custom tail cleanup old planes
-        ↓
-X11 释放 old FB，驱动记录 map:0/unmap_ts
-        ↓
-DE0 继续扫描 old IOVA（日志直接证明）
-        ↓
-IOMMU PageTable Invalid 中断风暴
-        ↓
-RCU stall，HDMI、DSI、SSH、心跳同时冻结
+sunxi_drm_atomic_helper_commit_tail()
+  -> drm_atomic_helper_commit_modeset_disables/enables()
+  -> drm_atomic_helper_commit_planes()
+       -> sunxi_plane_atomic_update()
+            -> sunxi_de_channel_update()
+                 -> de_ovl.c 写入 framebuffer DMA shadow
+       -> sunxi_crtc_atomic_flush()             [逐个 CRTC]
+            -> sunxi_de_atomic_flush()
+                 -> de_top_freq_div_apply()
+                 -> de_top_update_force_by_ahb() [1.4.6]
+                 -> de_top_set_rcq_update()
+                 -> check_update_finished()
+            -> sunxi_crtc_finish_page_flip()
+  -> drm_atomic_helper_fake_vblank()/commit_hw_done()
+  -> 跳过 drm_atomic_helper_wait_for_vblanks()
+  -> drm_atomic_helper_cleanup_planes()
+       -> sunxi_drm_gem_fb_destroy()
+            -> GEM/dma-buf/CMA 释放与 IOMMU unmap
+  -> DE 若仍读取旧 IOVA，则进入 sunxi_iommu_irq()
 ```
 
-背光低亮/延迟点亮、触摸映射和新系统 GPU/KWin 拖影属于相邻但独立的问题；它们不能解释
-DE0 对已解除映射 scanout 的 DMA 访问。随机停在不同日志/鼠标画面，也只是 IRQ/RCU
-硬锁发生时各 CPU 和显示 scanout 所处位置不同。
+### 4.1 FAE 所说的 DE 自有 complete 应如何理解
 
-## 十、GPU 在这里扮演什么角色
+FAE 的说明解释了 sunxi DRM 为什么没有完全照搬通用 DRM 的 vblank 完成模型。驱动调用链
+确实是：
 
-GPU 和 DE/DRM 的职责需要分开：
+```text
+sunxi_de_atomic_flush() 由 DE/RCQ 自己判断更新完成
+        ↓
+sunxi_crtc_finish_page_flip()
+        ↓
+drm_atomic_helper_fake_vblank() / commit_hw_done()
+        ↓
+跳过通用 wait_for_vblanks()
+        ↓
+cleanup old planes
+```
 
-1. GPU/PVR 根据 KWin、Xorg、应用的命令绘制窗口内容到 buffer。
-2. DRM/KMS 把某个 buffer 选为 framebuffer/plane。
-3. DE 从该 framebuffer 的 DMA 地址读取像素，送到 DSI 或 HDMI。
+因此“默认 complete”本身是厂商硬件模型的设计选择，不应简单改成“所有提交强等标准
+CRTC vblank”。但该设计有一个不可妥协的前提：**DE 自己报告 complete 时，新 RCQ 地址
+必须已经被硬件可靠接受，或者旧 framebuffer 必须继续保活。**
 
-GPU 可以通过动画、合成和双屏布局增加 buffer 轮换和 atomic commit 的频率，因此它能成为“触发负载”。但即使 GPU 提交得再快，内核 DRM 也必须保证 DE 不再使用 old FB 后才能解除其映射。
-
-当前反对 GPU 为主根因的证据：
-
-- 旧系统和 T4 都报告 PVR `24.2.6603887`、BVNC `36.56.104.183`。
-- 硬锁日志中出错的 IOMMU master 是显示引擎 `DE0`，不是 GPU master。
-- 故障地址与 DRM scanout framebuffer 的 map/unmap 追踪吻合。
-- T4 上的 EGLConfig/KWin compositor 异常能造成拖影或残帧，但没有产生 DE IOMMU fault → RCU stall 链。
-
-因此应把两类问题分开：
-
-- T4 的拖影：更像用户态 EGL/KWin 合成路径失效，画面难看但内核仍运行。
-- 旧 5.15 的硬锁：DE 读取已解除映射的 scanout，引发 IOMMU 中断风暴和 RCU stall。
-
-## 十一、对之前结论的更新
-
-### 已被本次实验确认
-
-1. `reg = <1>` 是遵循官方 A7A DSI graph 的必要修正，且它能正常驱动面板；它不是运行期硬锁根因。
-2. 背光、触摸和面板初始化不是本次 hard lock 的根因。
-3. 主根因属于旧 sunxi DRM/DE，而非 PVR GPU 内核驱动。
-4. 两屏冻结是一个共享 DE/IOMMU/调度故障，不要求 DE1 自己也报告页表错误。
-5. 每次卡死在不同屏幕页面或不同串口最后一行，是异步竞争和整机中断/RCU 失速的外部表现。
-
-### 被本次实验收窄或修正
-
-1. 不能再把历史上所谓“DSI-only 卡死”当成有效单 DSI 证据；当时有错误拓扑、残留 workaround 或其他 DTS 变量。本轮严格单 DSI 连续通过。
-2. 双屏本身不是充分条件；桌面后热插双屏可稳定运行。
-3. 最危险路径是 HDMI 开机存在时，从 SDDM 切到 Plasma 所引发的双 CRTC/FB 重配置。
-4. `atomic_flush timeout` 不是必要前兆；最核心事实是旧 framebuffer 在 unmap 后仍被 DE 使用。
-5. 首次主动 DSI off/on 的 `displl clk unable to lock` 是另一处时钟切换脆弱性，但它成功恢复且没有进入 stale-FB/IOMMU 链，不能解释本次登录硬锁。
-
-## 十二、下一步应如何精确验证，而不是继续猜 DTS
-
-后续不要再改面板初始化、I²C、触摸或背光。保持当前 `v001-reg1` overlay 和已验证的 SGM 背光，把变量限定在旧内核 DRM/DE 源码。
-
-结合 v1.4.6/v1.4.8 最终源码快照，建议按以下顺序验证。每一步单独构建、保留 `l0r` rescue，并在 HDMI 开机连接条件下做至少 10～20 次冷启动登录：
-
-1. **B1：只给旧版 `de_top_freq_div_apply()` 加 `support_dfs` 检查。** DE352 直接返回而不 dirty RCQ-control shadow；这是最小、最贴合 SoC 能力声明的单变量修正。
-2. **B2：只停用 `de_top_update_force_by_ahb()`。** 这是旧 #21 与 BSP 1.4.8 最明确、且已在 #21 二进制中确认旧行为存在的差异；用于区分“错误 DFS dirty”与“整寄存器 AHB 强写”各自贡献。
-3. **B3：只采用新版 RCQ 触发条件。** 删除 `current_line > 0` 时的整寄存器 `writel(1)` fallback，始终在确认 DE busy 条件后执行 read-modify-write。B1、B2、B3 先分别测试，再做组合测试。
-4. **D：补齐生命周期保护。** 让 RCQ flush 返回真实成功/失败；只有确认 update/至少一个可靠 vblank 后才完成 page flip 和释放 old FB。恢复等待时要注意多 CRTC deadlock/timeout 设计，不能仅机械取消注释。
-5. **增加只读追踪。** 对每个 CRTC 记录：atomic 序号、old/new FB DMA、DFS m/n、RCQ request、finish status、current line、vblank counter、实际 OVL address register readback、FB destroy/unmap 时间。
-6. **C：RTMX 动态 line-buffer 仅作为低优先级实验。** 因为 BSP 1.4.6 与 BSP 1.4.8 最终源码都采用静态实现，它不再是解释两版差异的判别变量；只有在 B1～B3 仍无法降低复现率时才单独测试。
-
-判定标准不能只看“画面亮了”，应同时要求：
-
-- 串口无 PageTable Invalid；
-- 无 `sunxi_de_atomic_flush timeout`；
-- 无 RCU stall；
-- DE0/DE1 debug `err=0`；
-- SDDM → Plasma 登录、注销、再次登录均通过；
-- 冷启动双屏 10～20 次无复现；
-- 单 DSI 和桌面后热插 HDMI 不发生回归。
-
-如果 B1 单项有效，说明根因核心是不支持 DFS 的 DE352 被错误 dirty；如果 B2 单项有效，说明 force-by-AHB 整寄存器/跨 display 覆盖更关键；如果 B3 单项有效，说明 current-line fallback 是主要漏切窗口。若只有组合有效，则说明稳定性来自三项 RCQ 控制行为共同收敛。如果这些改动只能降低概率，而 D 才完全消除 stale-FB，则说明新版主要是规避触发，真正安全修复仍必须落在完成语义和 framebuffer 保活上。
-
-## 十三、关键源码原文与日志逐段对照
-
-本节保留构成结论所需的最小源码闭环。旧版代码来自工作区归档的 BSP 1.4.6
-源码树；新版对照来自 BSP 1.4.8 源码树。行号以当前工作区文件为准。
-
-### 13.1 framebuffer 地址进入硬件 shadow register
+1.4.6 的实际问题不是“使用了 DE 自有时序”这件事，而是 DE 请求、状态刷新和 complete
+之间存在失配，且上层没有安全兜底。`sunxi_de_atomic_flush()` 返回 `void`；RCQ timeout
+只打印日志；`sunxi_crtc_finish_page_flip()` 仍会完成 event；custom commit tail 随即清理
+old plane。即使某些函数按硬件设计必须默认 complete，也不能允许 complete 早于真实
+scanout 地址交接。
+### 4.2 framebuffer 地址进入硬件 shadow register
 
 `drivers/drm/sunxi_device/hardware/lowlevel_de/ovl/de_ovl.c:245-275`：
 
@@ -812,7 +347,7 @@ frame->data[index].name = fb->obj[0]->name;
 
 日志中的地址与驱动实际提交给 DE 的 scanout DMA 地址来自同一对象。
 
-### 13.2 旧 RCQ flush：失败只打印，不能向上传递
+### 4.3 旧 RCQ flush：失败只打印，不能向上传递
 
 `sunxi_de.c:716-769`：
 
@@ -855,7 +390,7 @@ void sunxi_de_atomic_flush(...)
 本次冷启动没有打印 timeout，说明还存在完成位假阳性、旧地址未真正锁存或双路
 状态交错等路径；但一旦发生显式 timeout，这个接口同样没有办法阻止上层清理旧 FB。
 
-### 13.3 旧 `de_top_set_rcq_update()` 也不能报告“根本没有发出 update”
+### 4.4 旧 `de_top_set_rcq_update()` 也不能报告“根本没有发出 update”
 
 `de_top.c:1080-1103`：
 
@@ -889,7 +424,7 @@ return 0;
 `current_line > 0` 时绕过 read-modify-write，直接 `writel(1, reg_base)`。因此这里
 既缺少可靠错误码，也有扫描时刻相关的特殊写法。
 
-### 13.4 CRTC 把 RCQ 返回等同于 page flip 完成
+### 4.5 CRTC 把 RCQ 返回等同于 page flip 完成
 
 `sunxi_drm_crtc.c:2030-2040`：
 
@@ -908,7 +443,7 @@ sunxi_crtc_finish_page_flip(crtc->dev, scrtc);
 注释假设已经 `rcq_finished`，但调用接口没有提供这一保证。此处会发送 vblank event
 并清除 event，从 DRM/fence 角度把这一帧视为完成。
 
-### 13.5 厂商 atomic commit tail 随后立即回收 old plane
+### 4.6 厂商 atomic commit tail 随后立即回收 old plane
 
 `sunxi_drm_drv.c:181-200` 原文：
 
@@ -962,7 +497,7 @@ void drm_atomic_helper_commit_tail(struct drm_atomic_state *old_state)
 窗口。这是源码确认的额外风险面，但 v1.4.8 仍保留该顺序，所以它更像放大器，
 不能单独解释为什么新版当前没有复现。
 
-### 13.6 framebuffer destroy 与日志 `map:0` 是同一条释放路径
+### 4.7 framebuffer destroy 与日志 `map:0` 是同一条释放路径
 
 `sunxi_drm_drv.c:98-102`：
 
@@ -990,7 +525,7 @@ if (frame->data[i].fb == fb &&
 TLB/PTW。因此旧日志中的 `map:0` 不是推测性标签，而是 framebuffer destroy 路径
 在真正释放映射前留下的内核时间戳。
 
-### 13.7 IOMMU handler 为什么不能自愈
+### 4.8 IOMMU handler 为什么不能自愈
 
 `drivers/iommu/sunxi-iommu-v2.c:1345-1418` 的关键部分：
 
@@ -1015,7 +550,39 @@ handler 清除 fault 状态并返回，却没有 disable/mask/stop 仍在读取�
 于是本次日志第 496 行第一次 L2 fault 后，紧接着连续出现 `0xfa000000`；第 3908、
 14098 行最终报告 CPU6 RCU stall。这正是源码所允许的循环行为。
 
-### 13.8 v1.4.8 的精确差异
+日志只点名 DE0，并不意味着 HDMI 与 DSI 是两个独立故障。DE0 是本次仍持有旧地址的 DMA master；持续 IRQ 占用 CPU、阻塞 RCU 和 atomic/display 工作后，DE1、用户态、SSH 与心跳同样无法继续推进，所以两块屏幕会一起冻结，而 DE1 不必再产生一次页表错误。
+
+### 4.9 日志—函数—故障后果闭环
+
+| 阶段 | 源码位置 | 原始日志证据 | 确定的含义 |
+|---|---|---|---|
+| 提交 scanout | `de_ovl.c`、`sunxi_drm_debug.c` | 旧日志 6065～6068 行记录 `f400 map:0`、`fc00 map:1` | 驱动已经提交新 FB，并记录旧 FB 状态 |
+| old FB 被销毁 | `sunxi_drm_drv.c:98-102`、`sunxi_drm_debug.c:273-303` | `f400 unmap-ts:218562308519` | 软件生命周期已结束，映射进入释放路径 |
+| DE 仍读 old FB | `sunxi_de.c`、`de_top.c`、OVL address register | 旧日志 432～438 行访问 `f5697000`，继而 `f4000000` | RCQ/硬件实际地址没有跟随软件状态完成切换 |
+| 页表异常循环 | `sunxi-iommu-v2.c:1345-1418` | 本次日志 496 行起，3537 次 DE0 invalid-address | handler 清 fault 但 DE 继续重试 |
+| 整机失去调度 | 同一 IRQ 循环持续占用 CPU6 | 本次日志 3908、14098 行 RCU stall | 两屏、SSH、心跳一起冻结是后果，不是多个独立故障 |
+
+这一调用链解释了为什么串口每次停在不同一行、屏幕有时停在日志、有时停在鼠标或桌面：真正的失效发生在异步 DMA/IRQ/RCU 路径，普通启动输出只是硬锁发生前最后来得及显示或打印的内容。
+
+## 五、BSP 1.4.6 与 1.4.8 的关键差异
+
+本节只比较两个 BSP 最终源码树，不依赖 Radxa 仓库的提交次数来代替功能分析。
+
+### 5.1 旧版共享 DE TOP/RCQ block 的危险条件
+
+`sunxi_de.c` 的 `de_rtmx_init_rcq()` 会把同一个 `detop_hdl->block` 加入每个 display 的 RCQ block 列表。初始化 display 0、再初始化 display 1 时，每个底层 `reg_blk->rcq_hd` 都被重新赋值。因为 DE TOP 是单例，最后一次初始化可能覆盖共享 TOP block 的单个 `rcq_hd` 回指。
+
+这意味着双 CRTC 同时使用共享 TOP 时，dirty 标记究竟属于哪一路 RCQ header 存在明确的设计歧义。更关键的是，这个 TOP block 的 `reg_addr` 在 `de_top_create()` 中只按
+`de_reg_base + rcq_ctl_offset` 建立，没有加入 display 的 `0x40` 偏移；它实际指向 disp0
+RCQ control。旧 BSP 又在**每个** CRTC flush 中调用 `de_top_update_force_by_ahb()`，所以
+flush disp1 时也可能根据共享/后绑定的 dirty header，把整块 shadow 强写到 disp0 控制寄存器。
+
+这与实验现象高度一致：单 DSI 只有一条 RCQ 控制流，顺序写后通常还能完成；双屏登录时
+disp0/disp1 连续 flush，disp1 路径可能改写 disp0 的 RCQ control，导致 disp0 的新 OVL
+地址没有锁存，而软件仍继续释放 old FB。它仍需寄存器追踪完成最后一步实证，但已经是
+两个 BSP 源码差异中最具体的直接机制。
+
+### 5.2 v1.4.8 对 DE352 DFS/RCQ-control 路径的精确修正
 
 v1.4.8 的 `sunxi_de.c:731`：
 
@@ -1115,7 +682,85 @@ v1.4.8 新增的 adjusted timing/扫描线 page-flip 判断不会进入 DE352 �
 v1.4.8 也仍注释 `drm_atomic_helper_wait_for_vblanks()`。因此新版是强力规避/缓解
 触发点，不是完整的生命周期安全修复。
 
-### 13.9 RTMX line-buffer 对比
+### 5.3 extcon、CRTC change refresh 与 atomic mode state
+
+extcon 本身不是 framebuffer 锁存器，也不会让两个 CRTC 共用一个 vblank。它的作用是把
+外部连接/拔插状态同步给连接器消费者，并配合 DRM hotplug 重新探测、重建显示状态。这样
+HDMI/外部输出发生变化时，不再只改变输出侧状态而让 CRTC/DE 继续沿用旧 mode/timing。
+
+1.4.8 最终源码还直接新增：
+
+```c
+if (crtc_state->mode_changed || crtc_state->connectors_changed)
+        drm_mode_to_sunxi_video_timings(&crtc_state->adjusted_mode,
+                                        &scrtc->timings);
+```
+
+CRTC 中断随后调用：
+
+```c
+busy = sunxi_de_query_de_busy(scrtc->sunxi_de, &scrtc->timings);
+```
+
+DSI/LVDS/RGB 也从旧 `.mode_set` 改为 `.atomic_mode_set`，直接从本次
+`crtc_state->adjusted_mode` 保存输出 mode。它们与 FAE 所说的“CRTC 有变化就刷新”一致：
+连接状态、DRM atomic state 与 DE 时序不再长期分离。
+
+需要保留一个源码边界：两个 BSP 最终树中都能看到受 `CONFIG_EXTCON` 控制的 HDMI/eDP
+extcon 代码，因此“源码中出现 extcon”本身不是唯一版本差异。FAE 所说的“新驱动接入”
+还可能包含 1.4.8 实际内核配置、设备树和用户态监听的完整接线。能够从两个最终源码树直接
+确认的新增项，是 CRTC mode/connector change 时的 timing refresh 以及新的 atomic mode
+capture。对 A733/DE352 而言 `rcq_wait_line=false`，所以不能把 timing-aware busy 分支单独
+称为全部根因修复；它与 RCQ/DFS 改动共同保证状态一致。
+### 5.4 新版扫描线判断存在，但不是 A733 的直接稳定原因
+
+v1.4.8 确实为 `RCQ_MODE && rcq_wait_line` 平台增加了“当前扫描线 +
+`ver_front_porch`”判断，并在 CRTC atomic check 中缓存 `adjusted_mode`。这段逻辑用于
+vblank IRQ 判断是否应完成 page flip，防止 IRQ 已延迟到下一帧 active region 时误发
+上一帧 fence/event；它不是 `de_top_set_rcq_update()` 的触发条件。
+
+但 A733 使用的 `de352_data` 在 BSP 1.4.6 与 1.4.8 中都没有设置
+`rcq_wait_line=true`；设置该标志的是 DE210。因此 A733 会继续读取通用 DE busy 位，
+不会进入上述 timing 分支。DSI 从 `.mode_set` 改用 `.atomic_mode_set`、使用本次 atomic
+state 的 `adjusted_mode`，有助于模式状态一致性，但不能作为本机 1.4.8 稳定的主解释。
+
+### 5.5 HDMI 路径还有次要稳健性改进
+
+v1.4.8 还更新了 HDMI EDID 的读取、校验和释放方式，分开保存 boot state 与实际 HPD
+enable 状态，并加强输出模式选择的错误处理。这些变化可以降低 EDID 生命周期错误、
+启动时 HPD 状态不一致或异常 mode list 导致的额外 modeset。
+
+但它们不是本次硬锁的首要解释：旧日志的直接故障 master 是 DE0，且真正闭合的因果链
+是 old framebuffer unmap 后仍被 scanout。HDMI 改进主要减少触发次数；停止 DE352
+不支持的 DFS/共享控制寄存器写入，以及收紧 RCQ update，才直接作用于 A733 硬件是否
+正确锁存新地址。
+
+### 5.6 v1.4.8 没有完全修复生命周期安全缺口
+
+需要避免过度结论。v1.4.8 中仍然存在：
+
+- `sunxi_de_atomic_flush()` 返回 `void`；
+- 50 ms 超时只打印日志，不能向上层返回失败；
+- `sunxi_crtc_finish_page_flip()` 仍会在 flush 返回后执行；
+- 自定义 commit tail 仍注释掉 `drm_atomic_helper_wait_for_vblanks()`，随后清理 old planes。
+
+所以 T4/6.6 表现稳定更可能是因为新版 DE TOP/RCQ 和双输出时序避免了“硬件仍扫旧地址”这个触发事件，而不是 framebuffer 生命周期错误处理已经从结构上完全封死。
+
+此外，两个 BSP 中 `sunxi-iommu-v2.c`、`sunxi_drm_gem.c`、`sunxi_drm_debug.c` 和
+`de_ovl.c` 没有对应差异；`sunxi_drm_gem_fb_destroy()`、注释掉 vblank wait 后立即
+`cleanup_planes()` 的关键顺序也相同。这排除了“1.4.8 只是屏蔽 IOMMU fault 或延后
+unmap，所以表面看起来稳定”的解释。若新版仍生成相同 stale scanout，原来的 fault
+处理链仍然存在；当前没有出现致命链，更像是错误 RCQ 地址状态不再被制造出来。
+
+换言之：
+
+- v1.4.8/T4 对主触发点有明显缓解或修复；
+- 但如果将来在另一种边界条件下 RCQ 仍漏切，现有上层错误处理仍可能过早释放旧 FB；
+- 这也是后续补丁不能只追求“不再复现”，还应补充可靠完成语义的原因。
+
+这也解释了为什么应描述为“1.4.8 中问题几乎不存在”，而不是“1.4.8 已从形式上证明绝不可能发生”：新版显著降低了 RCQ 漏切概率，但 flush 失败上传、vblank 等待和 old-FB 保活这三层兜底仍未完整建立。目前的稳定性来自主竞态窗口被收窄，加上实际测试尚未命中剩余边界，而不是所有生命周期缺口都已消失。
+
+### 5.7 RTMX line-buffer 不是两版判别变量
 
 当前归档的 BSP 1.4.6 与 BSP 1.4.8 均使用无 busy 检查的静态写入：
 
@@ -1131,54 +776,160 @@ else if (disp == 1)
 两版源码对照结果相同。因此它是两版共有行为，不是解释“旧 #21 高频失败、1.4.8
 几乎不失败”的差异项，也不作为首要 A/B 变量。
 
-### 13.10 日志—函数—故障后果对照表
+### 5.8 为什么可以把 1.4.8 视为工程解决方案
 
-| 阶段 | 源码位置 | 原始日志证据 | 确定的含义 |
-|---|---|---|---|
-| 提交 scanout | `de_ovl.c`、`sunxi_drm_debug.c` | 旧日志 6065～6068 行记录 `f400 map:0`、`fc00 map:1` | 驱动已经提交新 FB，并记录旧 FB 状态 |
-| old FB 被销毁 | `sunxi_drm_drv.c:98-102`、`sunxi_drm_debug.c:273-303` | `f400 unmap-ts:218562308519` | 软件生命周期已结束，映射进入释放路径 |
-| DE 仍读 old FB | `sunxi_de.c`、`de_top.c`、OVL address register | 旧日志 432～438 行访问 `f5697000`，继而 `f4000000` | RCQ/硬件实际地址没有跟随软件状态完成切换 |
-| 页表异常循环 | `sunxi-iommu-v2.c:1345-1418` | 本次日志 496 行起，3537 次 DE0 invalid-address | handler 清 fault 但 DE 继续重试 |
-| 整机失去调度 | 同一 IRQ 循环持续占用 CPU6 | 本次日志 3908、14098 行 RCU stall | 两屏、SSH、心跳一起冻结是后果，不是多个独立故障 |
+1.4.8 同时收紧了两类条件：
 
-## 十四、最终回答
+- **DE/RCQ 层：**按 `support_dfs=false` 跳过不支持的 DFS，停用固定强写 disp0 control 的
+  force-by-AHB，并重写 RCQ update；
+- **状态层：**extcon/hotplug 完整接线、CRTC change 时刷新 adjusted timing、输出驱动使用
+  atomic mode state，并改进 HDMI boot/HPD/EDID 状态管理。
 
-本次实验并没有推翻此前“旧 BSP DRM/DE 是主因”的判断，反而把它从概率性判断推进到了可复核的源码级因果链：
+原厂在 1.4.8 已稳定验证包含 `TCON-LCD + TCON-TV` 的产品组合；Radxa 官方屏与 Meizu E3
+跨 panel 都从“1.4.6 同类故障”变为“1.4.8 稳定”，再加上本机
+6.6/T4 长时间无 IOMMU/RCU 链，已经足以在工程上判断：**1.4.8 避免或解决了本次实际
+触发路径。**仍需谨慎的是，1.4.8 的 `sunxi_de_atomic_flush()` 仍返回 `void`、custom tail
+仍跳过标准 vblank wait，所以它更像把 DE 自有完成语义和状态刷新修到可用，而不是从形式
+上加入了一层永不可能 use-after-unmap 的通用保护。
 
-```text
-HDMI 开机存在 + SDDM 登录 Plasma
-        ↓
-TCON-LCD + TCON-TV 两个独立时序域参与同一双 CRTC 状态重建
-        ↓
-1.4.6 试用版 DRM 逐 CRTC flush，旧 DE/RCQ 地址切换没有被可靠确认
-        ↓
-flush 失败无法上传，page flip 仍被宣布完成
-        ↓
-commit tail 跳过 vblank 等待，cleanup old planes
-        ↓
-旧 framebuffer 被 destroy / IOMMU unmap
-        ↓
-DE0 仍扫描旧 DMA 地址
-        ↓
-PageTable Invalid 约 40 次/秒
-        ↓
-CPU6 RCU stall，HDMI、DSI、SSH、心跳一起冻结
-```
+需要特别区分：FAE 所说“新驱动接入 extcon”是完整产品配置和状态链路的信息；两个最终源码树里都能找到受 `CONFIG_EXTCON` 控制的 HDMI/eDP 代码，因此不能仅凭“源码中出现 extcon”判断版本。能直接从源码确认的新增关键行为，是 CRTC mode/connector change 时刷新 timing，以及输出侧改用本次 atomic mode state；它们与 DE/RCQ 修正共同生效。
 
-目前能够确切命名的是本机 #21 的故障类别和生命周期断点，不能把它泛化成“v1.4.6 多显示不可用”。原厂信息和 A733 源码共同把首要拓扑触发条件进一步限定为 1.4.6 试用版 DRM 的 `TCON-LCD + TCON-TV` 混合提交；双 MIPI、DSI+LVDS/RGB 的同类 LCD-TCON 组合不在这一范围。两个 BSP 源码树表明，1.4.8 几乎不再复现的最合理解释是：它尊重 DE352 的 `support_dfs=false`，不再 dirty 不适用的 DFS/RCQ-control shadow；同时停用会把整块 shadow 固定强写到 disp0 的 force-by-AHB，并删除旧版 `current_line > 0` 时的整寄存器直写 fallback。这些变化配合 CRTC timing refresh、atomic mode capture 与 extcon/hotplug 接线，收紧了两个 TCON 时序域在登录切换期间的 RCQ 控制状态。静态 RTMX 代码两版共有，timing-aware 分支又不适用于 DE352，二者都不是本机的首要版本差异。下一步若需要定位最小修复，可按 B1/B2/B3 拆分 A/B；产品方案则应直接使用 1.4.8 新 DRM，最后仍以 D 类完成语义和 old-FB 保活作为结构性防御目标。
+## 六、Android 同样走 DRM，为什么原厂较少暴露
 
-原厂 1.4.6 验证使用的是旧 DRM + Android，而不是此前误记的 Debian+X11。Android HWC
-通过 BufferQueue/gralloc 与 acquire/release/present fence 保留、循环使用显示 buffer，
-原厂主要验证的双 MIPI、LVDS 等同类 LCD-TCON 产品又没有本机 SDDM→Plasma 的 root-FB
-销毁窗口，因此旧 RCQ 漏切更可能只表现
-为短暂旧帧，而不会立即解除当前 scanout 的 IOMMU 映射。Radxa 官方屏也在 1.4.6 遇到
-同类问题并由 1.4.8 解决，说明这不是 Meizu panel 特有问题，而是旧 sunxi DRM/DE 路径。
+Android 与 X11 都能调用 DRM atomic，但上层提交和 buffer 生命周期不同。
 
-一个 3000×2160 X framebuffer 也没有提供双 CRTC 硬件同步：5.15 和 6.6 的 DRM helper
-都会逐个 CRTC 调用 `atomic_flush()`，两个输出分别在自己的 vblank/RCQ 边沿锁存。SDDM
-两屏同时正常只证明初始状态成功，不证明登录后的下一次 FB 交接具备 group-latch。版本上，
-现有证据支持“1.4.8 已在工程上解决/避免这条实际触发链”，其主要依据是 sunxi DE/RCQ、
-CRTC timing refresh、atomic mode capture 与 extcon/hotplug 状态接线的组合变化，而不是
-Linux 通用 DRM 的 5.15 与 6.6 版本号本身。FAE 所说“DE 自有时序、部分函数默认
-complete”解释了厂商 completion 模型；旧版错误在于实际 RCQ/scanout 未交接时仍可能
-进入 complete 且无 old-FB 保活兜底。
+Android 的 SurfaceFlinger/HWC 为每个物理 display 执行 validate/present，使用 acquire、
+release 和 present fence 管理 buffer。release fence 的定义就是“旧 buffer 已不再被 HWC/
+显示使用”之后才能交回 producer；常见 drm_hwcomposer 还会等待上一帧 present fence，再
+清理上一帧资源。BufferQueue/gralloc 通常维护可循环复用的双/三缓冲池，而不是在每一次
+桌面交接后立即销毁整个物理 framebuffer 对象。
+
+因此旧 DRM 即使偶尔漏掉一次 RCQ update，在 Android 上更可能表现为：
+
+- 旧 gralloc buffer 仍有 SurfaceFlinger/HWC/BufferQueue 引用，IOVA 仍合法；
+- 多显示一帧旧内容，下一次 present/RCQ 可能自愈；
+- buffer 被归还池中等待复用，而不是马上 RMFB 并解除映射；
+- 原厂主要量产/验证的双 MIPI、LVDS 等同类 LCD-TCON 拓扑本就避开了已知的混合 TCON
+  缺口；Android 产品路径又缺少本机 HDMI+SDDM→Plasma 的动态重建窗口。
+
+X11/Plasma 本次则确实销毁了 3000×2160 old FB；驱动日志记录 `map:0/unmap_ts` 后，DE0
+继续访问它。也就是说 Android 稳定主要是**没有把潜伏的地址漏切升级为 use-after-unmap**，
+而不是 Android 绕过了 DRM 或证明旧驱动没有缺陷。即使 Android 的 fence 被错误地提前
+signal，长期 gralloc buffer pool 仍可能让地址保持映射，只产生短暂旧帧而不触发 IOMMU。
+
+这部分关于 Android 通用 fence/BufferQueue 语义由 AOSP 文档和 drm_hwcomposer 实现支持；
+工作区没有原厂具体 HWC 源码，因此“其实际 HWC 是否逐帧等待哪个 out-fence”不能写成已
+核实事实。但同类 TCON 拓扑、buffer pool 与无 SDDM 会话切换已经足以显著降低复现条件。
+
+因此应按优先级解释：
+
+1. **首要原因是测试拓扑不同。**原厂 1.4.6 主测的双 MIPI/LVDS 主要属于同类 LCD-TCON，避开了已知的 LCD+TV 缺口。
+2. **其次是用户态提交窗口不同。**Android 没有 SDDM→Plasma 的整套 root-FB 销毁和布局重建。
+3. **最后才是 buffer 生命周期的掩蔽作用。**HWC/BufferQueue/fence 往往让旧 gralloc buffer 保持映射更久，可能把漏切表现降级为旧帧而不是立即 IOMMU fault。
+
+## 七、GPU、背光、触摸及其他相邻现象
+
+### 7.1 GPU 的角色
+
+GPU 和 DE/DRM 的职责需要分开：
+
+1. GPU/PVR 根据 KWin、Xorg、应用的命令绘制窗口内容到 buffer。
+2. DRM/KMS 把某个 buffer 选为 framebuffer/plane。
+3. DE 从该 framebuffer 的 DMA 地址读取像素，送到 DSI 或 HDMI。
+
+GPU 可以通过动画、合成和双屏布局增加 buffer 轮换和 atomic commit 的频率，因此它能成为“触发负载”。但即使 GPU 提交得再快，内核 DRM 也必须保证 DE 不再使用 old FB 后才能解除其映射。
+
+当前反对 GPU 为主根因的证据：
+
+- 旧系统和 T4 都报告 PVR `24.2.6603887`、BVNC `36.56.104.183`。
+- 硬锁日志中出错的 IOMMU master 是显示引擎 `DE0`，不是 GPU master。
+- 故障地址与 DRM scanout framebuffer 的 map/unmap 追踪吻合。
+- T4 上的 EGLConfig/KWin compositor 异常能造成拖影或残帧，但没有产生 DE IOMMU fault → RCU stall 链。
+
+因此应把两类问题分开：
+
+- T4 的拖影：更像用户态 EGL/KWin 合成路径失效，画面难看但内核仍运行。
+- 旧 5.15 的硬锁：DE 读取已解除映射的 scanout，引发 IOMMU 中断风暴和 RCU stall。
+
+### 7.2 已被受控实验确认
+
+1. `reg = <1>` 是遵循官方 A7A DSI graph 的必要修正，且它能正常驱动面板；它不是运行期硬锁根因。
+2. 背光、触摸和面板初始化不是本次 hard lock 的根因。
+3. 主根因属于旧 sunxi DRM/DE，而非 PVR GPU 内核驱动。
+4. 两屏冻结是一个共享 DE/IOMMU/调度故障，不要求 DE1 自己也报告页表错误。
+5. 每次卡死在不同屏幕页面或不同串口最后一行，是异步竞争和整机中断/RCU 失速的外部表现。
+
+### 7.3 被受控实验收窄或修正
+
+1. 不能再把历史上所谓“DSI-only 卡死”当成有效单 DSI 证据；当时有错误拓扑、残留 workaround 或其他 DTS 变量。本轮严格单 DSI 连续通过。
+2. 双屏本身不是充分条件；桌面后热插双屏可稳定运行。
+3. 最危险路径是 HDMI 开机存在时，从 SDDM 切到 Plasma 所引发的双 CRTC/FB 重配置。
+4. `atomic_flush timeout` 不是必要前兆；最核心事实是旧 framebuffer 在 unmap 后仍被 DE 使用。
+5. 首次主动 DSI off/on 的 `displl clk unable to lock` 是另一处时钟切换脆弱性，但它成功恢复且没有进入 stale-FB/IOMMU 链，不能解释本次登录硬锁。
+
+### 7.4 其他现象不能混入硬锁根因
+
+- **背光偶尔很低或延迟点亮：**属于 SGM37604A 供电、初始化时序、默认亮度或桌面亮度状态问题。它会影响可见性，但不能制造 DE0 对已 unmap IOVA 的读取。现有证据不足以把低亮度进一步归到某一个唯一子原因。
+- **触摸坐标或鼠标不在手机屏：**属于输入驱动与 X11 输出映射。决定性硬锁实验没有加载触摸，故它不在因果链中。
+- **T4 窗口拖影：**属于 GPU/EGL/KWin 重绘或合成问题；没有 IOMMU/RCU 链，系统仍可交互。
+- **黑屏但有鼠标、蓝色/灰白画面：**可能是登录交接中 scanout、合成器或 modeset 的不同中间状态；只有同时出现 DE IOMMU fault/RCU stall 时，才能归入本篇硬锁。
+- **心跳灯熄灭、SSH/串口业务停止：**是 IRQ 风暴和 RCU 饥饿后的整机后果，不是第二个独立电源或网络故障。
+
+## 八、下一步验证与修复策略
+
+后续不要再改面板初始化、I²C、触摸或背光。保持当前 `v001-reg1` overlay 和已验证的 SGM 背光，把变量限定在旧内核 DRM/DE 源码。
+
+结合 v1.4.6/v1.4.8 最终源码快照，建议按以下顺序验证。每一步单独构建、保留 `l0r` rescue，并在 HDMI 开机连接条件下做至少 10～20 次冷启动登录：
+
+1. **B1：只给旧版 `de_top_freq_div_apply()` 加 `support_dfs` 检查。** DE352 直接返回而不 dirty RCQ-control shadow；这是最小、最贴合 SoC 能力声明的单变量修正。
+2. **B2：只停用 `de_top_update_force_by_ahb()`。** 这是旧 #21 与 BSP 1.4.8 最明确、且已在 #21 二进制中确认旧行为存在的差异；用于区分“错误 DFS dirty”与“整寄存器 AHB 强写”各自贡献。
+3. **B3：只采用新版 RCQ 触发条件。** 删除 `current_line > 0` 时的整寄存器 `writel(1)` fallback，始终在确认 DE busy 条件后执行 read-modify-write。B1、B2、B3 先分别测试，再做组合测试。
+4. **D：补齐生命周期保护。** 让 RCQ flush 返回真实成功/失败；只有确认 update/至少一个可靠 vblank 后才完成 page flip 和释放 old FB。恢复等待时要注意多 CRTC deadlock/timeout 设计，不能仅机械取消注释。
+5. **增加只读追踪。** 对每个 CRTC 记录：atomic 序号、old/new FB DMA、DFS m/n、RCQ request、finish status、current line、vblank counter、实际 OVL address register readback、FB destroy/unmap 时间。
+6. **C：RTMX 动态 line-buffer 仅作为低优先级实验。** 因为 BSP 1.4.6 与 BSP 1.4.8 最终源码都采用静态实现，它不再是解释两版差异的判别变量；只有在 B1～B3 仍无法降低复现率时才单独测试。
+
+判定标准不能只看“画面亮了”，应同时要求：
+
+- 串口无 PageTable Invalid；
+- 无 `sunxi_de_atomic_flush timeout`；
+- 无 RCU stall；
+- DE0/DE1 debug `err=0`；
+- SDDM → Plasma 登录、注销、再次登录均通过；
+- 冷启动双屏 10～20 次无复现；
+- 单 DSI 和桌面后热插 HDMI 不发生回归。
+
+如果 B1 单项有效，说明根因核心是不支持 DFS 的 DE352 被错误 dirty；如果 B2 单项有效，说明 force-by-AHB 整寄存器/跨 display 覆盖更关键；如果 B3 单项有效，说明 current-line fallback 是主要漏切窗口。若只有组合有效，则说明稳定性来自三项 RCQ 控制行为共同收敛。如果这些改动只能降低概率，而 D 才完全消除 stale-FB，则说明新版主要是规避触发，真正安全修复仍必须落在完成语义和 framebuffer 保活上。
+
+产品路径的优先级高于定位最小补丁：实际部署应使用 1.4.8 新 DRM；B1/B2/B3 仅用于解释旧 1.4.6 的最小故障机制。任何旧内核实验都必须保留无测试 overlay 的 `l0r` rescue 项，并通过串口确认菜单。
+
+## 九、证据与源码索引
+
+### 9.1 决定性日志
+
+- 冷启动 HDMI+DSI 登录硬锁：`test_files/mainline/06_old_kernel_dual_display_crosscheck/log/serial-COM4.log`
+- 旧 framebuffer `map:0/unmap_ts` 后仍被扫描：`test_files/codexline/02_rk_reference_pushpull_validation/log/serial-v003-boot.log`
+- 实验说明：`test_files/mainline/06_old_kernel_dual_display_crosscheck/docs/cold-boot-login-freeze.analysis.md`
+
+### 9.2 关键旧 BSP 源码
+
+- plane/CRTC：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_crtc.c`
+- OVL 地址：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/hardware/lowlevel_de/ovl/de_ovl.c`
+- DE flush：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/hardware/lowlevel_de/sunxi_de.c`
+- DE TOP/RCQ：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/hardware/lowlevel_de/de_top.c`
+- TCON：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_device/sunxi_tcon.c`
+- atomic tail/FB destroy：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_drv.c`
+- FB trace/GEM：`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_debug.c`、`bsp/radxa-allwinner-bsp/drivers/drm/sunxi_drm_gem.c`
+- IOMMU：`bsp/radxa-allwinner-bsp/drivers/iommu/sunxi-iommu-v2.c`
+- A733 拓扑：`bsp/radxa-allwinner-bsp/configs/linux-5.15/sun60iw2p1.dtsi`
+
+### 9.3 新版与标准 DRM 对照
+
+- BSP 1.4.8 同路径源码：`bsp/radxa-allwinner-bsp-v1.4.8/`
+- Linux DRM helper：`bsp/radxa-kernel-a733/drivers/gpu/drm/drm_atomic_helper.c`
+- 上游来源、分支与固定 commit：`BSP_PROVENANCE.md`
+
+## 十、最终工程判断
+
+这次适配已经证明 Meizu E3 panel、官方 graph 方向、背光和触摸可以在 A733 上工作。旧系统的致命问题不在面板，而在 BSP 1.4.6 试用版 DRM 处理 `TCON-LCD + TCON-TV` 双 CRTC 登录重配置时，DE/RCQ 实际锁存、complete 语义与 framebuffer 生命周期没有形成可靠闭环。X11 销毁旧 root framebuffer 后，DE0 继续读取已解除映射的地址，IOMMU 中断风暴最终拖死 RCU。
+
+原厂 FAE 信息不是推翻这条结论，而是把范围进一步限定清楚：DE 自有 complete 是设计前提，错误在于旧版没有保证 complete 与真实 scanout 交接一致；extcon/CRTC 刷新是新版状态一致性的一部分；1.4.6 的 Android 验证没有覆盖本机 Debian+X11 混合 TCON 的高风险事务。BSP 1.4.8 通过 DE352 DFS/RCQ 修正和输出状态刷新共同避开了实际故障链，因此是当前正确的产品基线。
