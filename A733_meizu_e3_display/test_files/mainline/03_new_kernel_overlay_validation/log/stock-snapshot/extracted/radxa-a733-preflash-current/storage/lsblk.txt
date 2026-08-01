@@ -1,0 +1,10 @@
+COMMAND: lsblk -a -o NAME,PATH,TYPE,SIZE,LOG-SEC,PHY-SEC,FSTYPE,FSVER,LABEL,UUID,PARTUUID,MOUNTPOINTS
+
+NAME        PATH           TYPE  SIZE LOG-SEC PHY-SEC FSTYPE FSVER LABEL  UUID                                 PARTUUID                             MOUNTPOINTS
+mmcblk1     /dev/mmcblk1   disk 29.7G     512     512                                                                                               
+├─mmcblk1p1 /dev/mmcblk1p1 part   16M     512     512 vfat   FAT16 config 9C87-D5CB                            12924494-a0be-47cf-9a0e-5d4ba07b04a0 /config
+├─mmcblk1p2 /dev/mmcblk1p2 part  300M     512     512 vfat   FAT16 efi    9C88-2853                            c2604404-f73f-4621-ac35-75ca79341be2 /boot/efi
+└─mmcblk1p3 /dev/mmcblk1p3 part 29.4G     512     512 ext4   1.0   rootfs 653db195-501c-4b19-a720-2fc8f1382665 f99459e4-8a67-458d-9583-691beadc1095 /
+zram0       /dev/zram0     disk  1.9G    4096    4096 swap   1            796b6c4e-3f0e-4916-a6ea-4692d842c492                                      [SWAP]
+
+EXIT_CODE=0

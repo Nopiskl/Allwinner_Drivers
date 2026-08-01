@@ -1,0 +1,137 @@
+=== HEALTH AFTER PLASMA LOGIN ===
+2026-07-31T06:27:38,195718403+00:00
+ 06:27:38 up 3 min,  1 user,  load average: 0.03, 0.12, 0.06
+3 1000 radxa seat0 
+7 1000 radxa       
+=== FAULT COUNTS ===
+sunxi_de_atomic_flush timeout=0
+L1 PageTable Invalid=0
+L2 PageTable Invalid=0
+Bug is in DE=0
+rcu.*stall=0
+NULL pointer=0
+kernel panic=0
+=== DRM ===
+--- /sys/class/drm/card0-HDMI-A-1
+connected
+enabled
+--- /sys/class/drm/card0-Writeback-1
+unknown
+disabled
+=== KSCREEN FILES ===
+2026-07-31 05:59:02.3413370500 /home/radxa/.local/share/kscreen/outputs/b5350822fc24a835e633b5bf90f2b56d
+2026-07-31 05:59:02.3453370500 /home/radxa/.local/share/kscreen/2246337e8c2a9b36189a068fcdae231f
+2026-07-31 06:20:28.7295100080 /home/radxa/.local/share/kscreen/2fbadc0619c73e25f783ced00624a1b6
+2026-07-31 06:20:28.7295100080 /home/radxa/.local/share/kscreen/outputs/3237f6c5b1af29212d6042742a6581e1
+--- /home/radxa/.local/share/kscreen/2fbadc0619c73e25f783ced00624a1b6
+[
+    {
+        "enabled": true,
+        "id": "3237f6c5b1af29212d6042742a6581e1",
+        "metadata": {
+            "fullname": "xrandr-UGREEN-UHD-20240314",
+            "name": "HDMI-1"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "primary": true,
+        "rotation": 1,
+        "scale": 1
+    }
+]
+--- /home/radxa/.local/share/kscreen/outputs/3237f6c5b1af29212d6042742a6581e1
+{
+    "id": "3237f6c5b1af29212d6042742a6581e1",
+    "metadata": {
+        "fullname": "xrandr-UGREEN-UHD-20240314",
+        "name": "HDMI-1"
+    },
+    "mode": {
+        "refresh": 60,
+        "size": {
+            "height": 1080,
+            "width": 1920
+        }
+    },
+    "rotation": 1,
+    "scale": 1
+}
+--- /home/radxa/.local/share/kscreen/outputs/b5350822fc24a835e633b5bf90f2b56d
+{
+    "id": "DSI-1",
+    "metadata": {
+        "name": "DSI-1"
+    },
+    "mode": {
+        "refresh": 59.361228942871094,
+        "size": {
+            "height": 2160,
+            "width": 1080
+        }
+    },
+    "rotation": 1,
+    "scale": 1
+}
+--- /home/radxa/.local/share/kscreen/2246337e8c2a9b36189a068fcdae231f
+[
+    {
+        "enabled": true,
+        "id": "DSI-1",
+        "metadata": {
+            "name": "DSI-1"
+        },
+        "mode": {
+            "refresh": 59.361228942871094,
+            "size": {
+                "height": 2160,
+                "width": 1080
+            }
+        },
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "primary": true,
+        "rotation": 1,
+        "scale": 1
+    },
+    {
+        "enabled": true,
+        "id": "3237f6c5b1af29212d6042742a6581e1",
+        "metadata": {
+            "fullname": "xrandr-UGREEN-UHD-20240314",
+            "name": "HDMI-1"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "pos": {
+            "x": 1080,
+            "y": 0
+        },
+        "primary": false,
+        "rotation": 1,
+        "scale": 1
+    }
+]
+=== SESSION PROCESSES ===
+    706 Fri Jul 31 06:24:00 2026 Sl   kwin_x11        /usr/bin/kwin_x11
+    747 Fri Jul 31 06:24:01 2026 Sl   plasmashell     /usr/bin/plasmashell
+    783 Fri Jul 31 06:24:01 2026 S    radxa-tp-mon    /bin/bash /usr/bin/radxa-tp-mon
+    792 Fri Jul 31 06:24:01 2026 S    radxa-tp-mon    /bin/bash /usr/bin/radxa-tp-mon
+    857 Fri Jul 31 06:24:02 2026 Sl   kscreen_backend /usr/lib/aarch64-linux-gnu/libexec/kf5/kscreen_backend_launcher
+
+===== STDERR =====

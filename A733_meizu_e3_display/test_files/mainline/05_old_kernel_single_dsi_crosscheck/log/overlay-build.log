@@ -1,0 +1,84 @@
+KVER=5.15.147-21-a733
+KDIR=/usr/src/linux-headers-5.15.147-21-a733
+BASE=/usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+762e7511ad78c39844b2396298e38a2a1c789e486f2c83397acc10ce953cc74e  /tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso
+2c8028a5498abece4f97ff9b8cdab60e9717141a505304b2879273ecef511dcd  /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+CPP_OK
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:105.5-15: Warning (reg_format): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:155.4-14: Warning (reg_format): /fragment@3/__overlay__/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:165.3-13: Warning (reg_format): /fragment@3/__overlay__/panel@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:168.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:170.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:175.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:177.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:62.25-109.4: Warning (unit_address_vs_reg): /fragment@0/__overlay__/dsi_panel@1: node has a unit name, but no reg property
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (pci_device_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (simple_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:104.26-107.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:104.26-107.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:154.20-159.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:154.20-159.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:162.17-182.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:162.17-182.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:167.21-173.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:167.21-173.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:169.29-172.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:169.29-172.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:174.22-180.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:174.22-180.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:176.32-179.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:176.32-179.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (avoid_unnecessary_addr_size): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo: Warning (unique_unit_address): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:154.20-159.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:154.20-159.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:167.21-173.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:167.21-173.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:174.22-180.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:174.22-180.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:104.26-107.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:104.26-107.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:169.29-172.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:169.29-172.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:176.32-179.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso:176.32-179.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#size-cells' is -1, must be 0
+DTC_OK
+FDTOVERLAY_OK
+DSI_PATH=/soc@3000000/dsi0@5506000
+DSI_STATUS=okay
+DSI_PORT1_REG=1
+SGM_COMPAT=sgmicro,sgm37604a
+SGM_DEFAULT=Usage: read values from device tree
+	fdtget <options> <dt file> [<node> <property>]...
+	fdtget -p <options> <dt file> [<node> ]...
+
+Each value is printed on a new line.
+<type>	s=string, i=int, u=unsigned, x=hex
+	Optional modifier prefix:
+		hh or b=byte, h=2 byte, l=4 byte (default)
+
+Options: -[t:pld:hV]
+  -t, --type <arg>    Type of data
+  -p, --properties    List properties for each node
+  -l, --list          List subnodes for each node
+  -d, --default <arg> Default value to display when the property is missing
+  -h, --help          Print this help and exit
+  -V, --version       Print version and exit
+
+Error: invalid type string
+SGM_DEFAULT=2000
+TOUCH_STATUS=okay
+HDMI_PATH=/soc@3000000/hdmi0@5520000
+HDMI_STATUS=okay
+49e81150cdd984c85440618ebc5f53b59217ca1e49e69b6d09e2496327af856c  /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.pp.dts
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+502fc5d193c591cba003b90847d1b46dbb570f699a457b7ae13a3ced0a923458  /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.merged.dtb
+  4424 /tmp/cubie-a7a-meizu-e3-display-v001-reg1.dtso
+  4783 /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.pp.dts
+  6464 /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+199866 /tmp/cubie-a7a-meizu-e3-display-v001-reg1-5.15.merged.dtb
+215537 total
+VALIDATION_COMPLETE

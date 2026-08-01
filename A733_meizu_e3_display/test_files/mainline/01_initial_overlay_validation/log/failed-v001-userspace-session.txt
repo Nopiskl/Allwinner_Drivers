@@ -1,0 +1,858 @@
+===== COMMS =====
+30-systemd-envi
+accounts-daemon
+adduser
+alsactl
+apt-get
+avahi-daemon
+backlighthelper
+bluetoothd
+chfn
+chpasswd
+dbus-daemon
+deb-systemd-inv
+fsck.vfat
+fstrim
+groupadd
+haveged
+hostnamectl
+irqbalance
+kactivitymanage
+kglobalaccel5
+kscreen_backend
+locale-gen
+logger
+login
+mkswap
+NetworkManager
+obexd
+openssh-server.
+packagekitd
+polkitd
+pulseaudio
+resize2fs
+rsetup
+rtkit-daemon
+sddm
+sddm-greeter
+sddm-helper
+sensors
+sshd
+ssh-keygen
+sudo
+systemctl
+(systemd)
+systemd
+systemd-fsckd
+systemd-hostnam
+systemd-journal
+systemd-logind
+systemd-network
+systemd-resolve
+systemd-sysuser
+systemd-timesyn
+systemd-udevd
+udisksd
+upowerd
+useradd
+usermod
+wpa_supplicant
+===== UNITS =====
+accounts-daemon.service
+alsa-restore.service
+avahi-daemon.service
+bluetooth.service
+dbus.service
+fstrim.service
+haveged.service
+init.scope
+irqbalance.service
+lm-sensors.service
+NetworkManager.service
+packagekit.service
+polkit.service
+rsetup.service
+rtkit-daemon.service
+sddm.service
+serial-getty@ttyAS0.service
+session-10.scope
+session-11.scope
+session-12.scope
+session-13.scope
+session-14.scope
+session-15.scope
+session-16.scope
+session-17.scope
+session-1.scope
+session-3.scope
+session-5.scope
+session-6.scope
+session-7.scope
+session-8.scope
+session-9.scope
+ssh.service
+systemd-fsck@dev-disk-by\x2duuid-A7A8\x2dC9FB.service
+systemd-fsck@dev-disk-by\x2duuid-A7A9\x2d19D5.service
+systemd-fsckd.service
+systemd-hostnamed.service
+systemd-journald.service
+systemd-logind.service
+systemd-networkd.service
+systemd-resolved.service
+systemd-sysusers.service
+systemd-timesyncd.service
+systemd-udevd.service
+udisks2.service
+upower.service
+user@1000.service
+user@112.service
+wpa_supplicant.service
+zramswap.service
+===== RELEVANT JOURNAL FIELDS =====
+--- _COMM=Xorg
+--- _COMM=lightdm
+--- _COMM=xfsettingsd
+--- _COMM=xfce4-session
+--- _COMM=xfdesktop
+--- _COMM=xfwm4
+--- _COMM=xrandr
+--- _SYSTEMD_UNIT=lightdm.service
+--- SYSLOG_IDENTIFIER=lightdm
+===== SESSION FILES =====
+-rw------- 1 radxa radxa 67059 Jul 31 06:25 /home/radxa/.xsession-errors
+-rw-r--r-- 1 root  root  41652 Jul 31 06:20 /var/log/Xorg.0.log
+-rw-r--r-- 1 root  root  37449 Jul 31 06:20 /var/log/Xorg.0.log.old
+--- /home/radxa/.xsession-errors
+Xsession: X session started for radxa at Mon 13 Apr 2026 07:27:28 AM UTC
+WARNING: tempfile is deprecated; consider using mktemp instead.
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/radxa/.Xauthority
+localuser:radxa being added to access control list
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/libexec/kf5/klauncher'
+kdeinit5: Launched KLauncher, pid = 2006, result = 0
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+kdeinit5: opened connection to :0
+kdeinit5: Got SETENV 'XCURSOR_SIZE=24' from launcher.
+kdeinit5: Got SETENV 'GTK_RC_FILES=/etc/gtk/gtkrc:/home/radxa/.gtkrc:/home/radxa/.config/gtkrc' from launcher.
+kdeinit5: Got SETENV 'GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/radxa/.gtkrc-2.0:/home/radxa/.config/gtkrc-2.0' from launcher.
+org.kde.plasma.session: process job  "kcminit_startup" finished with exit code  0
+bluedevil: Created
+Installing the delayed initialization callback.
+System timezone has been changed, new timezone is "Etc/UTC"
+Qt: Session management error: networkIdsList argument is NULL
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/2054,unix/radxa-cubie-a7a:/tmp/.ICE-unix/2054' from launcher.
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/2054,unix/radxa-cubie-a7a:/tmp/.ICE-unix/2054' from launcher.
+/usr/bin/iceauth:  creating new authority file /run/user/1000/ICEauthority
+kcm_touchpad: Using X11 backend
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/baloo_file.desktop" ("/usr/bin/baloo_file")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/polkit-kde-authentication-agent-1")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.plasmashell.desktop" ("/usr/bin/plasmashell")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xembedsniproxy.desktop" ("/usr/bin/xembedsniproxy")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kaccess.desktop" ("/usr/bin/kaccess")
+Baloo File Indexing has been disabled
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/gmenudbusmenuproxy.desktop" ("/usr/bin/gmenudbusmenuproxy")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/pulseaudio.desktop" ("/usr/bin/start-pulseaudio-x11")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.discover.notifier.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/DiscoverNotifier")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xdg-user-dirs.desktop" ("/usr/bin/xdg-user-dirs-update")
+Xlib XKB extension major= 1  minor= 0
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/kdeconnectd")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.korgac.desktop" ("/usr/bin/korgac")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-map-tp.desktop" ("/usr/bin/radxa-map-tp")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-tp-mon.desktop" ("/usr/bin/radxa-tp-mon")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/powerdevil.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/org_kde_powerdevil")
+unable to find device goodix-ts
+unable to find device pointer:Goodix Capacitive TouchScreen
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/at-spi-dbus-bus.desktop" ("/usr/libexec/at-spi-bus-launcher", "--launch-immediately")
+New PolkitAgentListener  0xaaab0c048000
+Adding new listener  PolkitQt1::Agent::Listener(0xaaab0c0566c0) for  0xaaab0c048000
+Listener online
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kup-daemon.desktop" ("/usr/bin/kup-daemon")
+Authentication agent result: true
+unable to find device keyboard:Goodix Capacitive TouchScreen
+unable to find device fts_ts
+OpenGL vendor string:                   Imagination Technologies
+OpenGL renderer string:                 PowerVR B-Series BXM-4-64
+OpenGL version string:                  OpenGL ES 3.2 build 24.2@6603887
+OpenGL shading language version string: OpenGL ES GLSL ES 3.20 build 24.2@6603887
+Driver:                                 Unknown
+Driver version:                         0.0
+GPU class:                              Unknown
+OpenGL version:                         3.2
+GLSL version:                           3.20
+X server version:                       1.21.1
+Linux kernel version:                   5.15.147
+Requires strict binding:                yes
+GLSL shaders:                           yes
+Texture NPOT support:                   yes
+Virtual Machine:                        no
+X server XKB extension major= 1  minor= 0
+org.kde.powerdevil: No outputs have backlight property
+org.kde.powerdevil: Xrandr not supported, trying ddc, helper
+kup.daemon: "Kup is not enabled, enable it from the system settings module. You can do that by running kcmshell5 kup"
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+org.kde.powerdevil: org.kde.powerdevil.backlighthelper.brightness failed
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 795, resource id: 46137348, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 803, resource id: 50331652, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 807, resource id: 50331653, major code: 18 (ChangeProperty), minor code: 0
+org.kde.powerdevil: Handle button events action could not check for screen configuration
+org.kde.powerdevil: The profile  "AC" tried to activate "DimDisplay" a non-existent action. This is usually due to an installation problem, a configuration problem, or because the action is not supported
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.appmenubar
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.emptyPanel
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.defaultPanel
+kf.plasma.quick: Applet preload policy set to 1
+Cyclic dependency detected between "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml" and "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml"
+QDBusConnection: name 'org.kde.kglobalaccel' had owner '' but we thought it was ':1.12'
+kf.modemmanagerqt: Failed enumerating MM objects: "org.freedesktop.DBus.Error.ServiceUnknown" 
+ "The name org.freedesktop.ModemManager1 was not provided by any .service files"
+Delayed initialization.
+Reloading the khotkeys configuration
+Version 2 File!
+Loaded defaults from "/usr/share/khotkeys/defaults.khotkeys"
+true
+Imported file "/usr/share/khotkeys/defaults.khotkeys"
+Version 2 File!
+Imported file "/usr/share/khotkeys/kde32b1.khotkeys"
+Version 2 File!
+Imported file "/usr/share/khotkeys/konqueror_gestures_kde321.khotkeys"
+Version 2 File!
+Imported file "/usr/share/khotkeys/konsole.khotkeys"
+bluedevil: ObexManager operational changed false
+bluedevil: Bluetooth operational changed true
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+bluedevil: Agent registered
+bluedevil: Requested default Agent
+Registering ":1.21/StatusNotifierItem" to system tray
+Registering ":1.31/StatusNotifierItem" to system tray
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+evaluating startup script: "/usr/share/plasma/shells/org.kde.plasma.desktop/contents/layout.js"
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.defaultPanel
+bluedevil: ObexManager operational changed true
+bluedevil: ObexAgent registered
+Activity added twice "f84ea23c-05dd-44c2-834c-bb479b530743"
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/homeworld-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper-withlogo" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-inksplat-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/wallpapers/Next" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/spacefun-theme/wallpaper" is a directory. Use addDir!
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so'
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+Plasma Shell startup completed
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 2412, resource id: 4194320, major code: 18 (ChangeProperty), minor code: 0
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+trying to show an empty dialog
+file:///usr/share/plasma/plasmoids/org.kde.panel/contents/ui/main.qml:30:1: QML DropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:544:5: QML Label: Binding loop detected for property "height"
+org.kde.klipper: Failed to load history resource. Clipboard history cannot be read. :  History file does not exist
+Cyclic dependency detected between "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/Globals.qml" and "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationHeader.qml"
+libkcups: CUPS-Get-Printers last error: 1030 No destinations added.
+libkcups: Get-Jobs last error: 0 successful-ok
+libkcups: Get-Jobs last error: 0 successful-ok
+libkcups: Create-Printer-Subscriptions last error: 0 successful-ok
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+Registering "org.kde.StatusNotifierHost-2068" as system tray
+file:///usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/CompactRepresentation.qml:53:17: Unable to assign [undefined] to int
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+trying to show an empty dialog
+libkcups: 0
+libkcups: 0
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+KAStatsFavoritesModel::setFavorites is ignored
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaaae2476dd0)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaaae24792f0)
+file:///usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/ui/FullRepresentation.qml:356: ReferenceError: headerSeparator is not defined
+trying to show an empty dialog
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 3807, resource id: 31457346, major code: 20 (GetProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 3808, resource id: 31457346, major code: 15 (QueryTree), minor code: 0
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaaae23f1fa0)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaaae26d36f0)
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaaae2888ec0)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaaae1ee6440)
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components.3/ComboBox.qml:74:9: Unable to assign [undefined] to QQmlComponent*
+file:///usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/PopupDialog.qml:91:17: Unable to assign [undefined] to QString
+plasma-nm: Last scan finished  7870 ms ago and last request scan was sent  0 ms ago, Skipping scanning interface: "wlan0"
+plasma-nm: Rescheduling a request scan for "wlan0" in 2129
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+trying to show an empty dialog
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components/ModelContextMenu.qml:38:1: QML ModelContextMenu: Accessible must be attached to an Item
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 5015, resource id: 31457364, major code: 15 (QueryTree), minor code: 0
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:468:13: QML Loader: Binding loop detected for property "sourceComponent"
+plasma-nm: Unhandled active connection state change:  1
+plasma-nm: Unhandled active connection state change:  1
+plasma-nm: virtual void SecretAgent::SaveSecrets(const NMVariantMapMap&, const QDBusObjectPath&)
+plasma-nm: Path: "/org/freedesktop/NetworkManager/Settings/3"
+kf.quickcharts.deprecated: ValueHistorySource is deprecated (since 5.78 ): Use HistoryProxySource instead
+kf.quickcharts.deprecated: Note: Instantiated from "...plasma/plasmoids/org.kde.plasma.networkmanagement/contents/ui/TrafficMonitor.qml"
+kf.quickcharts.deprecated: ValueHistorySource is deprecated (since 5.78 ): Use HistoryProxySource instead
+kf.quickcharts.deprecated: Note: Instantiated from "...plasma/plasmoids/org.kde.plasma.networkmanagement/contents/ui/TrafficMonitor.qml"
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/ExpandableListItem.qml:314: TypeError: Cannot read property 'width' of null
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/tags.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/tags.so'
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+kdeinit5: PID 2486 terminated.
+kdeinit5: PID 2505 terminated.
+kdeinit5: PID 3462 terminated.
+kdeinit5: PID 2924 terminated.
+kdeinit5: PID 2785 terminated.
+Qt: Session management error: networkIdsList argument is NULL
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/homeworld-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper-withlogo" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-inksplat-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/wallpapers/Next" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/spacefun-theme/wallpaper" is a directory. Use addDir!
+qt.virtualkeyboard.hunspell: Hunspell dictionary is missing for "en_US" . Search paths ("/usr/share/qt5/qtvirtualkeyboard/hunspell", "/usr/share/hunspell", "/usr/share/myspell/dicts")
+klauncher: Exiting on signal 15
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+The X11 connection broke (error 1). Did the X11 server die?
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+bluedevil: Destroyed
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+QDBusAbstractAdaptor: Cannot relay signal KDEDModule::moduleDeleted(KDEDModule*): Pointers are not supported: KDEDModule*
+The X11 connection broke: I/O error (code 1)
+XIO:  fatal IO error 2 (No such file or directory) on X server ":0"
+      after 28 requests (28 known processed) with 0 events remaining.
+Xsession: X session started for radxa at Fri 31 Jul 2026 05:58:57 AM UTC
+WARNING: tempfile is deprecated; consider using mktemp instead.
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/radxa/.Xauthority
+localuser:radxa being added to access control list
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/libexec/kf5/klauncher'
+kdeinit5: Launched KLauncher, pid = 702, result = 0
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+kdeinit5: opened connection to :0
+kdeinit5: Got SETENV 'XCURSOR_SIZE=24' from launcher.
+kdeinit5: Got SETENV 'GTK_RC_FILES=/etc/gtk/gtkrc:/home/radxa/.gtkrc:/home/radxa/.config/gtkrc' from launcher.
+kdeinit5: Got SETENV 'GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/radxa/.gtkrc-2.0:/home/radxa/.config/gtkrc-2.0' from launcher.
+org.kde.plasma.session: process job  "kcminit_startup" finished with exit code  0
+bluedevil: Created
+Installing the delayed initialization callback.
+kcm_touchpad: Using X11 backend
+Qt: Session management error: networkIdsList argument is NULL
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/761,unix/radxa-cubie-a7a:/tmp/.ICE-unix/761' from launcher.
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/761,unix/radxa-cubie-a7a:/tmp/.ICE-unix/761' from launcher.
+/usr/bin/iceauth:  creating new authority file /run/user/1000/ICEauthority
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kaccess.desktop" ("/usr/bin/kaccess")
+QDBusConnection: name 'org.kde.kglobalaccel' had owner '' but we thought it was ':1.12'
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.plasmashell.desktop" ("/usr/bin/plasmashell")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/baloo_file.desktop" ("/usr/bin/baloo_file")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xembedsniproxy.desktop" ("/usr/bin/xembedsniproxy")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/polkit-kde-authentication-agent-1")
+Xlib XKB extension major= 1  minor= 0
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/gmenudbusmenuproxy.desktop" ("/usr/bin/gmenudbusmenuproxy")
+Baloo File Indexing has been disabled
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.discover.notifier.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/DiscoverNotifier")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/pulseaudio.desktop" ("/usr/bin/start-pulseaudio-x11")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/kdeconnectd")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xdg-user-dirs.desktop" ("/usr/bin/xdg-user-dirs-update")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/powerdevil.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/org_kde_powerdevil")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.korgac.desktop" ("/usr/bin/korgac")
+kf.modemmanagerqt: Failed enumerating MM objects: "org.freedesktop.DBus.Error.ServiceUnknown" 
+ "The name org.freedesktop.ModemManager1 was not provided by any .service files"
+Delayed initialization.
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-tp-mon.desktop" ("/usr/bin/radxa-tp-mon")
+Reloading the khotkeys configuration
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-map-tp.desktop" ("/usr/bin/radxa-map-tp")
+Version 2 File!
+OpenGL vendor string:                   Imagination Technologies
+OpenGL renderer string:                 PowerVR B-Series BXM-4-64
+OpenGL version string:                  OpenGL ES 3.2 build 24.2@6603887
+OpenGL shading language version string: OpenGL ES GLSL ES 3.20 build 24.2@6603887
+Driver:                                 Unknown
+Driver version:                         0.0
+GPU class:                              Unknown
+OpenGL version:                         3.2
+GLSL version:                           3.20
+X server version:                       1.21.1
+Linux kernel version:                   5.15.147
+Requires strict binding:                yes
+GLSL shaders:                           yes
+Texture NPOT support:                   yes
+Virtual Machine:                        no
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/at-spi-dbus-bus.desktop" ("/usr/libexec/at-spi-bus-launcher", "--launch-immediately")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kup-daemon.desktop" ("/usr/bin/kup-daemon")
+unable to find device goodix-ts
+true
+unable to find device pointer:Goodix Capacitive TouchScreen
+Imported file "/usr/share/khotkeys/defaults.khotkeys"
+Imported file "/usr/share/khotkeys/kde32b1.khotkeys"
+Imported file "/usr/share/khotkeys/konqueror_gestures_kde321.khotkeys"
+Imported file "/usr/share/khotkeys/konsole.khotkeys"
+unable to find device keyboard:Goodix Capacitive TouchScreen
+unable to find device fts_ts
+X server XKB extension major= 1  minor= 0
+New PolkitAgentListener  0xaaaaca9f1e00
+Adding new listener  PolkitQt1::Agent::Listener(0xaaaacaa06490) for  0xaaaaca9f1e00
+Listener online
+Authentication agent result: true
+bluedevil: ObexManager operational changed false
+org.kde.powerdevil: No outputs have backlight property
+org.kde.powerdevil: Xrandr not supported, trying ddc, helper
+bluedevil: Bluetooth operational changed true
+bluedevil: Agent registered
+bluedevil: Requested default Agent
+kup.daemon: "Kup is not enabled, enable it from the system settings module. You can do that by running kcmshell5 kup"
+Registering ":1.28/StatusNotifierItem" to system tray
+kscreen.kded: PowerDevil SuspendSession action not available!
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 843, resource id: 46137348, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 847, resource id: 50331652, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 855, resource id: 50331653, major code: 18 (ChangeProperty), minor code: 0
+bluedevil: ObexManager operational changed true
+bluedevil: ObexAgent registered
+org.kde.powerdevil: Handle button events action could not check for screen configuration
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.appmenubar
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.emptyPanel
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.defaultPanel
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+Registering ":1.32/StatusNotifierItem" to system tray
+kf.plasma.quick: Applet preload policy set to 1
+Cyclic dependency detected between "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml" and "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml"
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/homeworld-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper-withlogo" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-inksplat-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/wallpapers/Next" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/spacefun-theme/wallpaper" is a directory. Use addDir!
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so'
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+trying to show an empty dialog
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+file:///usr/share/plasma/plasmoids/org.kde.panel/contents/ui/main.qml:30:1: QML DropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:544:5: QML Label: Binding loop detected for property "height"
+trying to show an empty dialog
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+org.kde.klipper: Failed to load history resource. Clipboard history cannot be read. :  History file does not exist
+Cyclic dependency detected between "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/Globals.qml" and "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationHeader.qml"
+libkcups: CUPS-Get-Printers last error: 1030 No destinations added.
+libkcups: Get-Jobs last error: 0 successful-ok
+libkcups: Get-Jobs last error: 0 successful-ok
+libkcups: Create-Printer-Subscriptions last error: 0 successful-ok
+Registering "org.kde.StatusNotifierHost-770" as system tray
+file:///usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/CompactRepresentation.qml:53:17: Unable to assign [undefined] to int
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+Plasma Shell startup completed
+Plasma Shell startup completed
+Plasma Shell startup completed
+libkcups: 0
+libkcups: 0
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 2768, resource id: 4194325, major code: 18 (ChangeProperty), minor code: 0
+KAStatsFavoritesModel::setFavorites is ignored
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaab0e33f120)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaab0e2effb0)
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaab0e340c50)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaab0e3979d0)
+file:///usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/ui/FullRepresentation.qml:356: ReferenceError: headerSeparator is not defined
+trying to show an empty dialog
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+file:///usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/PopupDialog.qml:91:17: Unable to assign [undefined] to QString
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components.3/ComboBox.qml:74:9: Unable to assign [undefined] to QQmlComponent*
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components/ModelContextMenu.qml:38:1: QML ModelContextMenu: Accessible must be attached to an Item
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+trying to show an empty dialog
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+kdeinit5: PID 1720 terminated.
+kdeinit5: PID 1737 terminated.
+kdeinit5: PID 1261 terminated.
+kdeinit5: PID 1387 terminated.
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4011, resource id: 39845984, major code: 20 (GetProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4013, resource id: 39845984, major code: 25 (SendEvent), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4014, resource id: 39845984, major code: 25 (SendEvent), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4015, resource id: 39845982, major code: 20 (GetProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4016, resource id: 39845982, major code: 15 (QueryTree), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4082, resource id: 39845984, major code: 20 (GetProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4083, resource id: 39845984, major code: 15 (QueryTree), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4151, resource id: 39845995, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4152, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4153, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4154, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4155, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4159, resource id: 39845995, major code: 3 (GetWindowAttributes), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 9 (BadDrawable), sequence: 4160, resource id: 39845995, major code: 14 (GetGeometry), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4161, resource id: 39845995, major code: 8 (MapWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4162, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4166, resource id: 39846013, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4167, resource id: 39845995, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4168, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4169, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4170, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4171, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4175, resource id: 39846013, major code: 3 (GetWindowAttributes), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4177, resource id: 39846013, major code: 8 (MapWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4178, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 4179, resource id: 39846013, major code: 12 (ConfigureWindow), minor code: 0
+Xsession: X session started for radxa at Fri 31 Jul 2026 06:20:24 AM UTC
+WARNING: tempfile is deprecated; consider using mktemp instead.
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/radxa/.Xauthority
+localuser:radxa being added to access control list
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/libexec/kf5/klauncher'
+kdeinit5: Launched KLauncher, pid = 684, result = 0
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+kdeinit5: opened connection to :0
+kdeinit5: Got SETENV 'XCURSOR_SIZE=24' from launcher.
+kdeinit5: Got SETENV 'GTK_RC_FILES=/etc/gtk/gtkrc:/home/radxa/.gtkrc:/home/radxa/.config/gtkrc' from launcher.
+kdeinit5: Got SETENV 'GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/radxa/.gtkrc-2.0:/home/radxa/.config/gtkrc-2.0' from launcher.
+org.kde.plasma.session: process job  "kcminit_startup" finished with exit code  0
+bluedevil: Created
+Installing the delayed initialization callback.
+kcm_touchpad: Using X11 backend
+Qt: Session management error: networkIdsList argument is NULL
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/732,unix/radxa-cubie-a7a:/tmp/.ICE-unix/732' from launcher.
+kdeinit5: Got SETENV 'SESSION_MANAGER=local/radxa-cubie-a7a:@/tmp/.ICE-unix/732,unix/radxa-cubie-a7a:/tmp/.ICE-unix/732' from launcher.
+/usr/bin/iceauth:  creating new authority file /run/user/1000/ICEauthority
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/polkit-kde-authentication-agent-1")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kaccess.desktop" ("/usr/bin/kaccess")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xembedsniproxy.desktop" ("/usr/bin/xembedsniproxy")
+QDBusConnection: name 'org.kde.kglobalaccel' had owner '' but we thought it was ':1.12'
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/baloo_file.desktop" ("/usr/bin/baloo_file")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.plasmashell.desktop" ("/usr/bin/plasmashell")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/xdg-user-dirs.desktop" ("/usr/bin/xdg-user-dirs-update")
+Xlib XKB extension major= 1  minor= 0
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/gmenudbusmenuproxy.desktop" ("/usr/bin/gmenudbusmenuproxy")
+Baloo File Indexing has been disabled
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/kdeconnectd")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/pulseaudio.desktop" ("/usr/bin/start-pulseaudio-x11")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.discover.notifier.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/DiscoverNotifier")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/org.kde.korgac.desktop" ("/usr/bin/korgac")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/at-spi-dbus-bus.desktop" ("/usr/libexec/at-spi-bus-launcher", "--launch-immediately")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-map-tp.desktop" ("/usr/bin/radxa-map-tp")
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/radxa-tp-mon.desktop" ("/usr/bin/radxa-tp-mon")
+New PolkitAgentListener  0xaaab08701600
+Adding new listener  PolkitQt1::Agent::Listener(0xaaab08715cd0) for  0xaaab08701600
+Listener online
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/powerdevil.desktop" ("/usr/lib/aarch64-linux-gnu/libexec/org_kde_powerdevil")
+OpenGL vendor string:                   Imagination Technologies
+OpenGL renderer string:                 PowerVR B-Series BXM-4-64
+OpenGL version string:                  OpenGL ES 3.2 build 24.2@6603887
+OpenGL shading language version string: OpenGL ES GLSL ES 3.20 build 24.2@6603887
+Driver:                                 Unknown
+Driver version:                         0.0
+GPU class:                              Unknown
+OpenGL version:                         3.2
+GLSL version:                           3.20
+X server version:                       1.21.1
+Linux kernel version:                   5.15.147
+Requires strict binding:                yes
+GLSL shaders:                           yes
+Texture NPOT support:                   yes
+Virtual Machine:                        no
+unable to find device goodix-ts
+kf.modemmanagerqt: Failed enumerating MM objects: "org.freedesktop.DBus.Error.ServiceUnknown" 
+ "The name org.freedesktop.ModemManager1 was not provided by any .service files"
+unable to find device pointer:Goodix Capacitive TouchScreen
+org.kde.plasma.session: Starting autostart service  "/etc/xdg/autostart/kup-daemon.desktop" ("/usr/bin/kup-daemon")
+unable to find device keyboard:Goodix Capacitive TouchScreen
+Authentication agent result: true
+Delayed initialization.
+unable to find device fts_ts
+Reloading the khotkeys configuration
+Version 2 File!
+true
+Imported file "/usr/share/khotkeys/defaults.khotkeys"
+Imported file "/usr/share/khotkeys/kde32b1.khotkeys"
+Imported file "/usr/share/khotkeys/konqueror_gestures_kde321.khotkeys"
+Imported file "/usr/share/khotkeys/konsole.khotkeys"
+X server XKB extension major= 1  minor= 0
+bluedevil: ObexManager operational changed false
+bluedevil: Bluetooth operational changed true
+bluedevil: Agent registered
+bluedevil: Requested default Agent
+kup.daemon: "Kup is not enabled, enable it from the system settings module. You can do that by running kcmshell5 kup"
+org.kde.powerdevil: No outputs have backlight property
+org.kde.powerdevil: Xrandr not supported, trying ddc, helper
+kscreen.kded: PowerDevil SuspendSession action not available!
+Registering ":1.29/StatusNotifierItem" to system tray
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 793, resource id: 46137348, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 801, resource id: 50331652, major code: 18 (ChangeProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 805, resource id: 50331653, major code: 18 (ChangeProperty), minor code: 0
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+org.kde.powerdevil: org.kde.powerdevil.backlighthelper.brightness failed
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.appmenubar
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.emptyPanel
+kf.coreaddons: Expected JSON property "X-Plasma-ContainmentCategories" to be a string list. Treating it as a list with a single entry: "panel" org.kde.plasma.desktop.defaultPanel
+bluedevil: ObexManager operational changed true
+bluedevil: ObexAgent registered
+Registering ":1.32/StatusNotifierItem" to system tray
+org.kde.powerdevil: Handle button events action could not check for screen configuration
+org.kde.powerdevil: The profile  "AC" tried to activate "DimDisplay" a non-existent action. This is usually due to an installation problem, a configuration problem, or because the action is not supported
+org.kde.powerdevil: org.kde.powerdevil.chargethresholdhelper.getthreshold failed "Charge thresholds not supported"
+kf.plasma.quick: Applet preload policy set to 1
+Cyclic dependency detected between "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml" and "file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/kirigami.2/styles/org.kde.desktop.plasma/Units.qml"
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/homeworld-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/futureprototype-theme/wallpaper-withlogo" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-inksplat-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/joy-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/lines-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/moonlight-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/wallpapers/Next" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/wallpaper" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/softwaves-theme/lockscreen" is a directory. Use addDir!
+kf.coreaddons: KDirWatch: "/usr/share/desktop-base/spacefun-theme/wallpaper" is a directory. Use addDir!
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/desktop.so'
+qt.svg: <input>:406:376: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:407:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:408:393: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:409:130: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:410:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:411:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:412:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:129: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:379: Could not add child element to parent element because the types are incorrect.
+qt.svg: <input>:413:631: Could not add child element to parent element because the types are incorrect.
+Plasma Shell startup completed
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 1664, resource id: 4194320, major code: 18 (ChangeProperty), minor code: 0
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+trying to show an empty dialog
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+file:///usr/share/plasma/plasmoids/org.kde.panel/contents/ui/main.qml:30:1: QML DropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:483:13: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:524:9: QML Label: Binding loop detected for property "height"
+file:///usr/share/plasma/plasmoids/org.kde.plasma.digitalclock/contents/ui/DigitalClock.qml:544:5: QML Label: Binding loop detected for property "height"
+trying to show an empty dialog
+org.kde.klipper: Failed to load history resource. Clipboard history cannot be read. :  History file does not exist
+Cyclic dependency detected between "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/Globals.qml" and "file:///usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/NotificationHeader.qml"
+libkcups: CUPS-Get-Printers last error: 1030 No destinations added.
+libkcups: Create-Printer-Subscriptions last error: 0 successful-ok
+libkcups: Get-Jobs last error: 0 successful-ok
+libkcups: Get-Jobs last error: 0 successful-ok
+Registering "org.kde.StatusNotifierHost-747" as system tray
+file:///usr/share/plasma/plasmoids/org.kde.plasma.battery/contents/ui/CompactRepresentation.qml:53:17: Unable to assign [undefined] to int
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+libkcups: 0
+libkcups: 0
+trying to show an empty dialog
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+file:///usr/share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml:146:19: QML Loader: Binding loop detected for property "height"
+KAStatsFavoritesModel::setFavorites is ignored
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaaad74be350)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaaad74c7de0)
+Entry is not valid "kontact.desktop" QSharedPointer(0xaaaad74bf970)
+Entry is not valid "ktp-contactlist.desktop" QSharedPointer(0xaaaad7511bd0)
+file:///usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/ui/FullRepresentation.qml:356: ReferenceError: headerSeparator is not defined
+trying to show an empty dialog
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components.3/ComboBox.qml:74:9: Unable to assign [undefined] to QQmlComponent*
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/components/ModelContextMenu.qml:38:1: QML ModelContextMenu: Accessible must be attached to an Item
+file:///usr/lib/aarch64-linux-gnu/qt5/qml/org/kde/plasma/extras/PlasmoidHeading.qml:56:5: Unable to assign [undefined] to int
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+Both point size and pixel size set. Using pixel size.
+trying to show an empty dialog
+file:///usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/PopupDialog.qml:91:17: Unable to assign [undefined] to QString
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 3196, resource id: 33554521, major code: 20 (GetProperty), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 3197, resource id: 33554521, major code: 15 (QueryTree), minor code: 0
+kdeinit5: Got EXEC_NEW '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so' from launcher.
+kdeinit5: preparing to launch '/usr/lib/aarch64-linux-gnu/qt5/plugins/kf5/kio/file.so'
+
+===== STDERR =====

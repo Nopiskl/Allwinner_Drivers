@@ -1,0 +1,26 @@
+echo __JOURNAL_BEGIN__; journalctl --list-boots --no-pager; echo __KERNEL_FILTER__; journalctl -b -1 -k --no-pager -o short-monotonic | grep -iE "dsi|drm|display|panel|backlight|sec_ts|sgm|iommu|atomic_flush|tcon|hdmi|rcu.*stall|NULL pointer|panic|fail|error" | tail -n 1200; echo __USER_FILTER__; journalctl -b -1 --no-pager -o short-monotonic | grep -iE "lightdm|sddm|plasma|kwin|Xorg|display-manager|plymouth|drm|timeout|failed" | tail -n 900; echo __JOURNAL_''DONE__
+[?2004l__JOURNAL_BEGIN__
+[0;1;39mHint: You are currently not seeing messages from other users and the system.[0m
+[0;1;39m      Users in groups 'adm', 'systemd-journal' can see all messages.[0m
+[0;1;39m      Pass -q to turn off this notice.[0m
+-4 3b937b882fc44317a0b07cace95a1975 Mon 2026-04-13 07:19:09 UTC???Fri 2026-07-31 05:57:13 UTC
+-3 798c7d7583c444b4a785f04b608f4be9 Fri 2026-07-31 05:58:57 UTC???Fri 2026-07-31 05:59:07 UTC
+-2 7363d425323144ed89955bb88f20c3a9 Fri 2026-07-31 05:59:12 UTC???Fri 2026-07-31 06:20:09 UTC
+-1 068d17387e14463eadfac186e293a526 Fri 2026-07-31 06:20:24 UTC???Fri 2026-07-31 06:41:33 UTC
+ 0 e011cb29c8a24bcbabb4ff5d511f30db Fri 2026-07-31 06:45:18 UTC???Fri 2026-07-31 06:45:19 UTC
+__KERNEL_FILTER__
+[0;1;39mHint: You are currently not seeing messages from other users and the system.[0m
+[0;1;39m      Users in groups 'adm', 'systemd-journal' can see all messages.[0m
+[0;1;39m      Pass -q to turn off this notice.[0m
+__USER_FILTER__
+[0;1;39mHint: You are currently not seeing messages from other users and the system.[0m
+[0;1;39m      Users in groups 'adm', 'systemd-journal' can see all messages.[0m
+[0;1;39m      Pass -q to turn off this notice.[0m
+[   20.731586] radxa-cubie-a7a sddm-helper[616]: Adding cookie to "/home/radxa/.Xauthority"
+[   23.124051] radxa-cubie-a7a dbus-daemon[629]: [session uid=1000 pid=629] Activating service name='org.kde.ActivityManager' requested by ':1.10' (uid=1000 pid=706 comm="/usr/bin/kwin_x11 ")
+[   23.199128] radxa-cubie-a7a dbus-daemon[629]: [session uid=1000 pid=629] Activating via systemd: service name='org.kde.kglobalaccel' unit='plasma-kglobalaccel.service' requested by ':1.9' (uid=1000 pid=697 comm="/usr/bin/kded5 ")
+[ 1074.105580] radxa-cubie-a7a systemd[608]: plasma-kglobalaccel.service: Succeeded.
+[ 1074.118618] radxa-cubie-a7a systemd[608]: pulseaudio.service: Failed with result 'exit-code'.
+[ 1074.171669] radxa-cubie-a7a systemd[608]: obex.service: Failed with result 'exit-code'.
+__JOURNAL_DONE__
+[?2004hradxa@radxa-cubie-a7a:~$ 

@@ -1,0 +1,41 @@
+COMMAND: sh -c 
+    date -Is
+    hostnamectl 2>/dev/null || true
+    uname -a
+    cat /etc/os-release
+    uptime
+    id
+    printf "\n/proc/cmdline:\n"
+    cat /proc/cmdline
+    printf "\nboot_id:\n"
+    cat /proc/sys/kernel/random/boot_id
+
+
+2026-07-31T08:35:52+00:00
+   Static hostname: radxa-cubie-a7a
+         Icon name: computer
+        Machine ID: fcd948330a8d48cca3e93751b25625aa
+           Boot ID: d6ce9f3406dd4d67927a1b927270e582
+  Operating System: Debian GNU/Linux 11 (bullseye)
+            Kernel: Linux 5.15.147-21-a733
+      Architecture: arm64
+Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+ 08:35:52 up 12 min,  1 user,  load average: 0.05, 0.06, 0.06
+uid=0(root) gid=0(root) groups=0(root)
+
+/proc/cmdline:
+root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+
+boot_id:
+d6ce9f34-06dd-4d67-927a-1b927270e582
+
+EXIT_CODE=0

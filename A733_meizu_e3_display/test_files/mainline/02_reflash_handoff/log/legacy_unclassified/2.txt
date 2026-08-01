@@ -1,0 +1,216 @@
+Retrieving file: /boot/dtbo/cubie-a7a-meizu-e3-dsi-only-debug.dtbo
+512 bytes read in 46 ms (10.7 KiB/s)
+[13.756]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[13.765]The storage not support sample function
+[13.854]mac addr => 08:51:49:58:40:32
+[13.857]mac addr => 08:51:49:58:40:33
+[13.862]no battery, disabled battery functons
+[13.869]update dts
+stop sunxi USB-DRD ok...
+stop sunxi USB1-Host ok...
+[13.898]Starting kernel ...
+
+[13.900]total: 13900 ms
+
+[13.902][mmc]: MMC Device 2 not found
+[13.906][mmc]: mmc 2 not find, so not exit
+NOTICE:  [SCP] :wait arisc ready....
+NOTICE:  [SCP] :arisc version: [d463b9da43dc50320f21ba51c6c51afe2db20d83]
+NOTICE:  [SCP] :arisc startup ready
+NOTICE:  [SCP] :arisc startup notify message feedback
+NOTICE:  [SCP] :sunxi-arisc driver is starting
+NOTICE:  BL3-1: Next image address = 0x40200000
+NOTICE:  BL3-1: Next image spsr = 0x3c5
+[    0.000000][    T0] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000][    T0] Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000][    T0] random: crng init done
+[    0.000000][    T0] Machine model: sun60iw2
+[    0.000000][    T0] printk: bootconsole [earlycon0] enabled
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.082281][    T1] iommu_master csi_iommu: attach fail:-517
+[    0.082342][    T1] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.228896][    T1] sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.228911][    T1] sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.229183][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin
+[    0.229187][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin
+[    0.229213][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin
+[    0.229216][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin
+[    0.294745][    T1] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.333051][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.343195][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.353295][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.363369][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.373454][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.383544][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.393633][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.403729][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.413855][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.421542][    T1] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.423882][    T1] sunxi:sunxi_sidefuse init success!
+[    0.423887][    T1] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.445883][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.455992][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.466079][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.476150][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.486259][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.496345][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.506445][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.516581][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.526697][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.536831][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.546961][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.557069][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.567214][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.577414][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.579064][    T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.596890][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.606988][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.617085][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.627192][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.637275][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.647365][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.657469][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.667564][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.677631][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.687728][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.696990][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.707681][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.742932][    C0] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.757706][  T106] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.928481][    T9] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.935939][    T9] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.942858][    T9] sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.951145][    T9] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.959627][    T9] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.968568][    T9] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.977180][    T9] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.985485][    T9] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.991753][    T9] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    1.002119][    T9] sunxi-ufs-pltfm 4520000.ufs: last intr at 924082 us, last intr status=0x404
+[    1.011893][    T9] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.021474][    T9] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.032821][    T9] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.040864][    T9] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.048835][    T9] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.056862][    T9] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.064843][    T9] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.072815][    T9] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.080809][    T9] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.088791][    T9] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.098700][    T9] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.106624][    T9] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.114545][    T9] host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.122466][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.129605][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.136743][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.145002][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.152124][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.159343][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.167438][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.174852][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 925395 us
+[    1.183921][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.192114][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.199720][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.207425][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 415113 us
+[    1.215714][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.223128][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.230637][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    2.904513][  T106] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    3.283844][  T169] rtc-hym8563 14-0051: hctosys: unable to read the hardware clock
+[  OK  ] Finished Tell Plymouth To Write Out Runtime Data.
+[  OK  ] Finished Coldplug All udev Devices.
+[  OK  ] Finished Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Create Volatile Files and Directories.
+[  OK  ] Started Rule-based Manager for Device Events and Files.
+[  OK  ] Started Entropy Daemon based on the HAVEGE algorithm.
+         Starting Show Plymouth Boot Screen...
+         Starting Network Name Resolution...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password Requests to Plymouth Directory Watch.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Created slice system-systemd\x2dbacklight.slice.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Reached target System Time Synchronized.
+         Starting Load/Save Screen Backlight Brightness of backlight:backlight0...
+[  OK  ] Found device /dev/ttyAS0.
+[  OK  ] Finished Load/Save Screen Backlight Brightness of backlight:backlight0.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started local-apt-repository.path.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Periodic ext4 Online Metadata Check for All Filesystems.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Refres[    6.315959][  T302] sunxipart: failed to parse sunxi_gpt!
+h fwupd metadata regularly.
+[  OK  ] Started Daily man-db regeneration.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Timers.
+[  OK  ] Reached target Hardware activated USB gadget.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+[    6.542263][  T301] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.552799][  T309] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    6.564900][  T301] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.574712][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+         Starting Remove Stale Online ext4 Metadata Che[    6.589743][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+ck Snapshots...
+[    6.602903][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.623283][    T9] sunxi:sound-codec-hdmi:[ERR]: 86 sunxi_hdmi_extcon_init(): get extcon dev failed
+[    6.633667][    T9] sunxi:sound-codec-hdmi:[ERR]: 398 sunxi_codec_component_probe(): hdmi extcon init failed
+[    6.644813][    T9] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[    6.733267][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[  OK  ] Started irqbalance daemon.
+[    6.858243][  T106] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+[    6.858248][  T106] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+         Starting Initialize hardware monitoring sensors...
+[    6.908419][  T106] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[  OK  ] Started rsetup configuration service.
+         Starting RealtimeKit Scheduling Policy Service...
+         Starting User Login Management...
+         Starting WPA supplicant...
+         Starting Linux zramswap setup...
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Finished Remove Stale Online ext4 Metadata Check Snapshots.
+[  OK  ] Finished Initialize hardware monitoring sensors.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Network Manager.
+[  OK  ] Started RealtimeKit Scheduling Policy Service.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started User Login Management.
+[  OK  ] Created slice system-systemd\x2dfsck.slice.
+[  OK  ] Reached target Network.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Reached target Radxa USB OTG services.
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Starting Network Manager Wait Online...
+         Starting CUPS Scheduler...
+         Starting OpenBSD Secure Shell server...
+         Starting Load/Save Screen Backlight Brightness of backlight:sgm37604a...
+         Starting File System Check on /dev/disk/by-uuid/A7A8-C9FB...
+         Starting Hostname Service...
+         Starting Permit User Sessions...
+[  OK  ] Finished Linux zramswap setup.
+[  OK  ] Finished Load/Save Screen Backlight Brightness of backlight:sgm37604a.
+[  OK  ] Finished Permit User Sessions.
+         Starting Hold until boot process finishes up...
+         Starting Terminate Plymouth Boot Screen...
+[  OK  ] Started File System Check Daemon to report status.
+[    9.970509][  T294] ieee80211 phy0:
+[    9.970509][  T294] *******************************************************
+[    9.970509][  T294] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+[    9.970509][  T294] *******************************************************
+

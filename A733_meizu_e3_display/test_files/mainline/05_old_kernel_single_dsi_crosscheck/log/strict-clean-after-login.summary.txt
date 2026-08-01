@@ -1,0 +1,101 @@
+=== identity ===
+Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64 GNU/Linux
+2a2e4660-b03a-4fa7-9673-0296ed6deaf5
+up 1 minute
+=== isolation guards ===
+disabled
+lrwxrwxrwx 1 root root 9 Jul 31 17:50 /etc/udev/rules.d/60-hdmi-hotplug.rules -> /dev/null
+NO_TOGGLE_LOG
+NO_HOTPLUG_LOG
+=== sessions ===
+3 1000 radxa seat0 
+6 1000 radxa       
+    465      96 sddm            /usr/bin/sddm
+    521      96 X               /usr/bin/X -nolisten tcp -auth /var/run/sddm/{e66e46b5-ddb7-4880-8b8a-58f734362612} -background none -noreset -displayfd 17 -seat seat0 vt7
+    616      65 sddm-helper     /usr/lib/aarch64-linux-gnu/sddm/sddm-helper --socket /tmp/sddm-auth77a21a82-6139-47c0-ac8d-72c123f3693c --id 1 --start /usr/bin/startplasma-x11 --user radxa
+    714      63 kwin_x11        /usr/bin/kwin_x11
+    756      62 plasmashell     /usr/bin/plasmashell
+   1149      59 desktop.so      desktop.so [kdeinit5] desktop local:/run/user/1000/klauncheruJPcHs.1.slave-socket local:/run/user/1000/plasmashellhJvyHO.1.slave-socket
+   1554      55 file.so         file.so [kdeinit5] file local:/run/user/1000/klauncheruJPcHs.1.slave-socket local:/run/user/1000/plasmashellfepbbj.2.slave-socket
+   1565      55 file.so         file.so [kdeinit5] file local:/run/user/1000/klauncheruJPcHs.1.slave-socket local:/run/user/1000/plasmashellmeQkZz.3.slave-socket
+=== xrandr ===
+Screen 0: minimum 320 x 200, current 1080 x 2160, maximum 8192 x 8192
+DSI-1 connected primary 1080x2160+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1080x2160     59.36*+
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+=== backlight ===
+backlight0: brightness=73
+actual_brightness=73
+max_brightness=255
+bl_power=0
+sgm37604a: brightness=2000
+actual_brightness=2000
+max_brightness=4095
+bl_power=0
+=== DRM ===
+card0-DSI-1 status=connected
+card0-DSI-1 enabled=enabled
+card0-HDMI-A-1 status=disconnected
+card0-HDMI-A-1 enabled=disabled
+card0-Writeback-1 status=unknown
+card0-Writeback-1 enabled=disabled
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=164
+				paddr=0x00000000fd000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+plane[120]: plane-0-vch2(1)
+	crtc=(null)
+	fb=0
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+crtc[100]: DE-0
+	enable=1
+	active=1
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0 irqcnt=6052 err=0
+crtc[126]: DE-1
+	enable=0
+	active=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+connector[147]: DSI-1
+	crtc=DE-0
+connector[149]: HDMI-A-1
+	crtc=(null)
+=== fatal signatures ===
+=== display error/signature tail ===
+[    0.773017] [drm] start DSI-1 monitor monitoring, interval: 100ms
+[    1.791307] [drm] DSI-1 connection detected
+[    1.791420] [drm] DSI-1: Configuration mode 1080x2160@59Hz
+[    1.828373] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    2.600824] [drm] DSI-1: Configuration complete
+[    5.510254] sgm37604a: loading out-of-tree module taints kernel.
+[    6.314086] pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[    6.314127] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[    6.314132] pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[    6.318628] pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[    6.318648] pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[    6.318738] pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[    6.319496] pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[    6.319516] pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[    6.319598] PVR_K:  327: Read BVNC 36.56.104.183 from HW device registers
+[    6.319626] PVR_K:  327: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[    6.369144] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    8.217687] PVR_K:  521: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[    8.223756] PVR_K:  521: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[    9.091144] [drm] sunxi_de_atomic_flush de 1 not enable, skip

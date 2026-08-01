@@ -1,0 +1,4 @@
+linux-image-5.15.147-21-a733	5.15.147-21
+linux-image-radxa-a733	5.15.147-21
+meizu-e3-dkms	0.1.10
+radxa-overlays-dkms	0.2.18

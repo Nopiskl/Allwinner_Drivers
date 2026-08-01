@@ -1,0 +1,24 @@
+* text=auto
+
+*.c text eol=lf
+*.h text eol=lf
+*.dts text eol=lf
+*.dtsi text eol=lf
+*.dtso text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.md text eol=lf
+
+*.deb binary
+*.dtb binary
+*.dtbo binary
+*.fdt binary
+*.epro2 binary
+*.bmp binary
+*.xwd binary
+*.gz binary
+A733_meizu_e3_display/test_files/**/log/** binary
+A733_meizu_e3_display/bsp/** whitespace=-trailing-space,-space-before-tab
+A733_meizu_e3_display/deb/** whitespace=-trailing-space,-space-before-tab
+A733_meizu_e3_display/test_files/** whitespace=-trailing-space,-space-before-tab

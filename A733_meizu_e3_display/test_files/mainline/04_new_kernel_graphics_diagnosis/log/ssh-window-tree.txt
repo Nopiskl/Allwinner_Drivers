@@ -1,0 +1,15 @@
+
+xwininfo: Window id: 0x400009 "Quick Settings  — System Settings"
+
+  Root window id: 0x7b (the root window) (has no name)
+  Parent window id: 0x120001a (has no name)
+     0 children.
+
+
+xwininfo: Window id: 0x120001a (has no name)
+
+  Root window id: 0x7b (the root window) (has no name)
+  Parent window id: 0x1200019 (has no name)
+     1 child:
+     0x400009 "Quick Settings  — System Settings": ("systemsettings" "systemsettings")  930x819+0+0  +1761+209
+

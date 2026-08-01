@@ -1,0 +1,9 @@
+e8d8a13917b2216821c81ab806d844120af9b5355b9f67b805af5c15b4de9441  meizu-e3-drivers-t4-0.1.10.tar.gz
+455face3938bfc2affabbb6b62da2fe62de1aa77bb70852ad9e67fd43e8b8c85  meizu-e3-drivers-t4-0.1.10/drivers/sec_ts/sec_ts_main.c
+56e1b8f3edf08edc600c8016a2d859f51f938b566675253065ce8787c8af332e  meizu-e3-drivers-t4-0.1.10/drivers/backlight/sgm37604a.c
+16bd313bb7701dfe2a7a9d8f81db025a6705f424f4d8a2d9242af2fdb4bb499c  meizu-e3-map-touch-once
+1e07d0fe82572e7e547d88d4d44acaff96dce80eeae5d7b3aee43d7143400421  meizu-e3-map-touch.desktop
+147ab3e6f5c6084b445b5fde3e6897eb6405d6a64dc5e9006dd740312b5d57e7  90-meizu-e3-map-touch.conf
+f91444a6c6e00f5241214a72838f346cdca6042ca0fcb523ae5a784889a5ae4a  meizu-e3-drivers.conf
+489c1090ef8a50fb0e70aa5aad005469f82ab4e69af76d5ca69daf75c0ca724a  meizu-e3-sec-ts-quarantine.conf
+0f35f64b2a8aec2dc94335b34461d4acafd7986d5f583de9dcff9ae949de525a  ../post-driver-install-snapshot/radxa-a733-preflash-current.tar.gz

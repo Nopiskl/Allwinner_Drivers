@@ -1,0 +1,16 @@
+
+===== serial capture 2026-07-31T17:09:23.3338535+08:00 COM4 115200-8-N-1 =====
+===== command sent (recorded locally only) =====
+printf '\n__T4_NETWORK_PROBE_BEGIN__\n'; date -Is; hostname; hostname -I; ip -4 -brief address; uname -a; cat /proc/cmdline; printf '__T4_NETWORK_PROBE_END__\n'
+printf '\n__T4_NETWORK_PROBE_BEGIN__\n'; date -Is; hostname; hostname -I; ip -4 -brief address; uname -a; cat /proc/cmdline; printf '__T4_NETWORK_PROBEE_END__\n'
+[?2004l
+__T4_NETWORK_PROBE_BEGIN__
+2026-07-31T09:09:23+00:00
+radxa-cubie-a7a
+192.168.0.103 
+[36mlo               [0mUNKNOWN        [35m127.0.0.1[0m/8 
+[36mwlan0            [0m[32mUP             [0m[35m192.168.0.103[0m/24 
+Linux radxa-cubie-a7a 6.6.98-3-aw2511 #3 SMP Thu Jun 11 12:38:49 UTC 2026 aarch64 GNU/Linux
+root=UUID=653db195-501c-4b19-a720-2fc8f1382665 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr= mac1_addr= quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+__T4_NETWORK_PROBE_END__
+[?2004hradxa@radxa-cubie-a7a:~$ 

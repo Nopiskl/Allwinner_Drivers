@@ -1,0 +1,63 @@
+=== identity ===
+77788ee9-677b-4b93-8009-3f3ca551a0f0
+up 2 minutes
+=== display ===
+Screen 0: minimum 320 x 200, current 1080 x 2160, maximum 8192 x 8192
+DSI-1 connected primary 1080x2160+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1080x2160     59.36*+
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+=== backlight ===
+backlight0 73
+73
+255
+0
+sgm37604a 2000
+2000
+4095
+0
+=== fatal signatures ===
+=== DRM compact state ===
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=166
+				paddr=0x00000000fd000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+plane[120]: plane-0-vch2(1)
+	crtc=(null)
+	fb=0
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+crtc[100]: DE-0
+	enable=1
+	active=1
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0 irqcnt=8452 err=0
+crtc[126]: DE-1
+	enable=0
+	active=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+connector[147]: DSI-1
+	crtc=DE-0
+connector[149]: HDMI-A-1
+	crtc=(null)
+=== HDMI-related units ===
+hdmi-toggle-once.service                   enabled         enabled
+=== matching unit text ===
+/etc/systemd/system/multi-user.target.wants/hdmi-toggle-once.service
+/lib/systemd/system/hdmi-toggle-once.service
+=== failed units ===

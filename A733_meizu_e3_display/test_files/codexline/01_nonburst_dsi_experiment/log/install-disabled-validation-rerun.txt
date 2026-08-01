@@ -1,0 +1,26 @@
+=== package ===
+meizu-e3-dkms 0.1.10 install ok installed
+=== DKMS ===
+meizu-e3-dkms, 0.1.10, 5.15.147-21-a733, aarch64: installed
+=== overlay files and hashes ===
+cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+cubie-a7a-meizu-e3-display-v002.dtbo.disabled
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /boot/dtbo/cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+b05d2220b31452a46ffb83940f349d1827be0d4c8e352f36b9e04fb9b0db3be2  /boot/dtbo/cubie-a7a-meizu-e3-display-v002.dtbo.disabled
+=== active overlay invariant ===
+all-active-dtbo-count=0
+meizu-active-dtbo-count=0
+extlinux-fdtoverlays=none
+=== installed overlay exactness ===
+v002-dtbo=exact-offline-match
+=== installed modules ===
+/lib/modules/5.15.147-21-a733/updates/dkms/sec_ts.ko.xz
+/lib/modules/5.15.147-21-a733/updates/dkms/sgm37604a.ko.xz
+=== extlinux labels ===
+14:label l0
+20:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+22:label l0r
+27:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+=== current display fault counts ===
+0
+RC 0

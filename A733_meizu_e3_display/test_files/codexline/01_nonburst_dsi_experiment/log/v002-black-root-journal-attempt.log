@@ -1,0 +1,8 @@
+echo __ROOTJ_BEGIN__; sudo -n journalctl --list-boots --no-pager; echo __BOOTID__; cat /proc/sys/kernel/random/boot_id; echo __PREV_KERNEL__; sudo -n journalctl -b -1 -k --no-pager -o short-monotonic | grep -iE "dsi|drm|display|panel|backlight|sec_ts|sgm|iommu|atomic_flush|tcon|hdmi|rcu.*stall|NULL pointer|panic|fail|error" | tail -n 1500; echo __ROOTJ_''DONE__
+[?2004l__ROOTJ_BEGIN__
+sudo: a password is required
+__BOOTID__
+e011cb29-c8a2-4bcb-abb4-ff5d511f30db
+__PREV_KERNEL__
+sudo: a password is required
+__ROOTJ_DONE__

@@ -1,0 +1,170 @@
+[Fri Jul 31 05:34:55 2026] platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+[Fri Jul 31 05:34:55 2026] iommu: Default domain type: Translated 
+[Fri Jul 31 05:34:55 2026] sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[Fri Jul 31 05:34:55 2026] [drm] [DSI-PANEL] panel_dsi_init start
+[Fri Jul 31 05:34:55 2026] [drm] [DSI-PANEL] dsi driver regsiter finsh
+[Fri Jul 31 05:34:55 2026] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[Fri Jul 31 05:34:55 2026] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[Fri Jul 31 05:34:55 2026] [drm] [TCON] sunxi_tcon_probe start
+[Fri Jul 31 05:34:55 2026] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[Fri Jul 31 05:34:55 2026] [drm] [TCON] sunxi_tcon_probe ret = 0
+[Fri Jul 31 05:34:55 2026] [drm] [TCON] sunxi_tcon_probe start
+[Fri Jul 31 05:34:55 2026] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[Fri Jul 31 05:34:55 2026] [drm] [TCON] sunxi_tcon_probe ret = 0
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_drm_platform_probe start
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_drm_match_add start
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_drm_match_add finish
+[Fri Jul 31 05:34:55 2026] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[Fri Jul 31 05:34:55 2026] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[Fri Jul 31 05:34:55 2026] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[Fri Jul 31 05:34:55 2026] [drm] de use no display sys
+[Fri Jul 31 05:34:55 2026] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_drm_bind start
+[Fri Jul 31 05:34:55 2026] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 05:34:55 2026] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 05:34:55 2026] [drm] [SUNXI-DE] sunxi_de_bind start
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_de_bind crtc init for de 0 ok
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_de_bind crtc init for de 1 ok
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[Fri Jul 31 05:34:55 2026] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi drv init dts done
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi drv enable resource done
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi drv init resource done
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[Fri Jul 31 05:34:55 2026] rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[Fri Jul 31 05:34:55 2026] input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: drm hdmi connector create finish
+[Fri Jul 31 05:34:55 2026] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 05:34:55 2026] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 05:34:55 2026] [drm] start HDMI-A-1 monitor monitoring, interval: 100ms
+[Fri Jul 31 05:34:55 2026] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[Fri Jul 31 05:34:55 2026] [drm] sunxi_drm_bind ok
+[Fri Jul 31 05:34:56 2026] usb 1-1.4: Product: AIC Wlan
+[Fri Jul 31 05:34:56 2026] usb 1-1.4: Manufacturer: aicsemi
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[Fri Jul 31 05:34:57 2026] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[Fri Jul 31 05:34:57 2026] [drm] HDMI-A-1 connection detected
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: cec drv clock enable done
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi cec drv enable finish
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: drm get edid support modes: 48
+[Fri Jul 31 05:34:57 2026] [drm] HDMI-A-1: Configuration mode 1920x1080@60Hz
+[Fri Jul 31 05:34:57 2026] pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 05:34:57 2026] pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 05:34:57 2026] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:34:57 2026] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 05:34:57 2026] [drm] sunxi_de_enable index 0
+[Fri Jul 31 05:34:57 2026] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 05:34:57 2026] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 05:34:57 2026] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 05:34:58 2026] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 05:34:58 2026] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:34:58 2026] [drm] HDMI-A-1: Configuration complete
+[Fri Jul 31 05:35:01 2026] systemd[1]: Starting Load Kernel Module drm...
+[Fri Jul 31 05:35:01 2026] systemd[1]: modprobe@drm.service: Succeeded.
+[Fri Jul 31 05:35:01 2026] systemd[1]: Finished Load Kernel Module drm.
+[Fri Jul 31 05:35:02 2026] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[Fri Jul 31 05:35:02 2026] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[Fri Jul 31 05:35:02 2026] aic_bluetooth_mod_init 
+[Fri Jul 31 05:35:02 2026] Aic high speed USB device detected
+[Fri Jul 31 05:35:02 2026] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+[Fri Jul 31 05:35:02 2026] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+[Fri Jul 31 05:35:02 2026] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+[Fri Jul 31 05:35:02 2026] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt btmode[4]:5
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt btport[4]:1
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt uart_baud[4]:1500000
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt uart_flowctrl[4]:1
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt lpm_enable[4]:0
+[Fri Jul 31 05:35:02 2026] aicbt_patch_table_load bt tx_pwr[4]:6F2F
+[Fri Jul 31 05:35:02 2026] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[Fri Jul 31 05:35:02 2026] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+[Fri Jul 31 05:35:02 2026] AICWFDBG(LOGERROR)	Read FW mem: 00120198
+[Fri Jul 31 05:35:02 2026] AICWFDBG(LOGERROR)	120198=177158
+[Fri Jul 31 05:35:02 2026] AICWFDBG(LOGERROR)	1201a0=177c00
+[Fri Jul 31 05:35:02 2026] usbcore: registered new interface driver aic_load_fw
+[Fri Jul 31 05:35:03 2026] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[Fri Jul 31 05:35:03 2026] aicwf_usb_disconnect enter 
+[Fri Jul 31 05:35:03 2026] aicwf_bus_deinit
+[Fri Jul 31 05:35:03 2026] exit aicwf_bus_deinit
+[Fri Jul 31 05:35:04 2026] usb 1-1.4: Product: AIC 8800D80
+[Fri Jul 31 05:35:04 2026] usb 1-1.4: Manufacturer: AICSemi
+[Fri Jul 31 05:35:04 2026] aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[Fri Jul 31 05:35:04 2026] aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[Fri Jul 31 05:35:04 2026] aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: drm get edid support modes: 48
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: drm get edid support modes: 48
+[Fri Jul 31 05:35:04 2026] aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+[Fri Jul 31 05:35:04 2026] aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+[Fri Jul 31 05:35:04 2026] aic_btusb: RELEASE DATE: 2023_1211_1958 
+[Fri Jul 31 05:35:04 2026] aic_btusb: btusb_probe: usb_interface 00000000637a17bd, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+[Fri Jul 31 05:35:04 2026] aicwf_usb_chipmatch USE AIC8800D80
+[Fri Jul 31 05:35:04 2026] aic_btusb: firmware_info_init: Auto suspend is disabled
+[Fri Jul 31 05:35:04 2026] aic_btusb: btusb_probe: download begining...
+[Fri Jul 31 05:35:04 2026] aic_btusb: btusb_probe: download ending...
+[Fri Jul 31 05:35:04 2026] usbcore: registered new interface driver aic_btusb
+[Fri Jul 31 05:35:04 2026] aic_btusb: btusb_open: Start
+[Fri Jul 31 05:35:04 2026] aic_btusb: btusb_open: End
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[Fri Jul 31 05:35:04 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:05 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:05 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:05 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:35:05 2026] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 05:35:06 2026] usbcore: registered new interface driver aic8800_fdrv
+[Fri Jul 31 05:35:06 2026] AICWFDBG(LOGERROR)	p2p dev addr=f2 ab 5c e1 db 2f
+[Fri Jul 31 05:35:07 2026] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: dw audio get n = 6272
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: dw audio get n = 6272
+[Fri Jul 31 05:35:07 2026] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 05:35:12 2026] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: dw audio get n = 6272
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: dw audio get n = 6272
+[Fri Jul 31 05:35:30 2026] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 05:35:36 2026] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 05:43:53 2026] [drm] sunxi-hdmi: drm get edid support modes: 48
+[Fri Jul 31 05:43:55 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:43:55 2026] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 05:43:55 2026] [drm] sunxi-hdmi: drm get edid support modes: 48
+
+=== STDERR ===
+
+RC=0

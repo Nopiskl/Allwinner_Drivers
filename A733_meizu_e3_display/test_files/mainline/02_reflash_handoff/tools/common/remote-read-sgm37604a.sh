@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+for reg in 0x10 0x11 0x19 0x1a 0x1b 0x1f; do
+	printf '%s=' "$reg"
+	i2cget -f -y 0 0x36 "$reg"
+done

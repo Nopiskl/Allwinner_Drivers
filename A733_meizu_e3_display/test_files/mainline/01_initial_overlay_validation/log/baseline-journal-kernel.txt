@@ -1,0 +1,1306 @@
+-- Journal begins at Mon 2026-04-13 07:18:40 UTC, ends at Fri 2026-07-31 05:53:16 UTC. --
+[    0.000000] radxa-a733 kernel: Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] radxa-a733 kernel: Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000] radxa-a733 kernel: random: crng init done
+[    0.000000] radxa-a733 kernel: Machine model: sun60iw2
+[    0.000000] radxa-a733 kernel: printk: bootconsole [earlycon0] enabled
+[    0.000000] radxa-a733 kernel: efi: UEFI not found.
+[    0.000000] radxa-a733 kernel: Zone ranges:
+[    0.000000] radxa-a733 kernel:   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000] radxa-a733 kernel:   DMA32    empty
+[    0.000000] radxa-a733 kernel:   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+[    0.000000] radxa-a733 kernel: Movable zone start for each node
+[    0.000000] radxa-a733 kernel: Early memory node ranges
+[    0.000000] radxa-a733 kernel:   node   0: [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] radxa-a733 kernel: Initmem setup node 0 [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] radxa-a733 kernel: cma: Reserved 16 MiB at 0x00000000ff000000
+[    0.000000] radxa-a733 kernel: psci: probing for conduit method from DT.
+[    0.000000] radxa-a733 kernel: psci: PSCIv1.1 detected in firmware.
+[    0.000000] radxa-a733 kernel: psci: Using standard PSCI v0.2 function IDs
+[    0.000000] radxa-a733 kernel: psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] radxa-a733 kernel: psci: SMC Calling Convention v1.2
+[    0.000000] radxa-a733 kernel: percpu: Embedded 29 pages/cpu s78360 r8192 d32232 u118784
+[    0.000000] radxa-a733 kernel: pcpu-alloc: s78360 r8192 d32232 u118784 alloc=29*4096
+[    0.000000] radxa-a733 kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] radxa-a733 kernel: Detected VIPT I-cache on CPU0
+[    0.000000] radxa-a733 kernel: CPU features: detected: GIC system register CPU interface
+[    0.000000] radxa-a733 kernel: CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+[    0.000000] radxa-a733 kernel: CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] radxa-a733 kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] radxa-a733 kernel: Kernel command line: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+[    0.000000] radxa-a733 kernel: Unknown kernel command line parameters "splash earlycon mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 cgroup_enable=memory cgroup_memory=1", will be passed to user space.
+[    0.000000] radxa-a733 kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] radxa-a733 kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] radxa-a733 kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] radxa-a733 kernel: software IO TLB: mapped [mem 0x00000000fb000000-0x00000000ff000000] (64MB)
+[    0.000000] radxa-a733 kernel: Memory: 3949560K/4194304K available (11776K kernel code, 2910K rwdata, 4180K rodata, 3776K init, 481K bss, 228360K reserved, 16384K cma-reserved)
+[    0.000000] radxa-a733 kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] radxa-a733 kernel: ftrace: allocating 38759 entries in 152 pages
+[    0.000000] radxa-a733 kernel: ftrace: allocated 152 pages with 3 groups
+[    0.000000] radxa-a733 kernel: trace event string verifier disabled
+[    0.000000] radxa-a733 kernel: rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] radxa-a733 kernel: rcu:         RCU event tracing is enabled.
+[    0.000000] radxa-a733 kernel:         Trampoline variant of Tasks RCU enabled.
+[    0.000000] radxa-a733 kernel:         Rude variant of Tasks RCU enabled.
+[    0.000000] radxa-a733 kernel:         Tracing variant of Tasks RCU enabled.
+[    0.000000] radxa-a733 kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] radxa-a733 kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] radxa-a733 kernel: GICv3: 256 SPIs implemented
+[    0.000000] radxa-a733 kernel: GICv3: 0 Extended SPIs implemented
+[    0.000000] radxa-a733 kernel: GICv3: Distributor has no Range Selector support
+[    0.000000] radxa-a733 kernel: Root IRQ handler: gic_handle_irq
+[    0.000000] radxa-a733 kernel: GICv3: 16 PPIs implemented
+[    0.000000] radxa-a733 kernel: GICv3: CPU0: found redistributor 0 region 0:0x0000000003460000
+[    0.000000] radxa-a733 kernel: ITS: No ITS available, not enabling LPIs
+[    0.000000] radxa-a733 kernel: AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: ccu will stop clk in init process
+[    0.000000] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: ccu: sunxi ccu init OK
+[    0.000000] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: sunxi ccu common driver version: 1.2.4
+[    0.000000] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 1.0.15
+[    0.000000] radxa-a733 kernel: arch_timer: cp15 timer(s) running at 24.00MHz (virt).
+[    0.000000] radxa-a733 kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000000] radxa-a733 kernel: sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000253] radxa-a733 kernel: sunxi:timer_sun50i:[INFO]: sun50i timer init:0xffffff00000002, driver version: 1.1.3
+[    0.000262] radxa-a733 kernel: clocksource: timer: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+[    0.001577] radxa-a733 kernel: Console: colour dummy device 80x25
+[    0.001589] radxa-a733 kernel: printk: console [tty1] enabled
+[    0.001594] radxa-a733 kernel: printk: bootconsole [earlycon0] disabled
+[    0.001624] radxa-a733 kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.001636] radxa-a733 kernel: pid_max: default: 32768 minimum: 301
+[    0.001689] radxa-a733 kernel: LSM: Security Framework initializing
+[    0.001772] radxa-a733 kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.001791] radxa-a733 kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.003818] radxa-a733 kernel: rcu: Hierarchical SRCU implementation.
+[    0.004996] radxa-a733 kernel: EFI services will not be available.
+[    0.005414] radxa-a733 kernel: smp: Bringing up secondary CPUs ...
+[    0.005958] radxa-a733 kernel: Detected VIPT I-cache on CPU1
+[    0.005998] radxa-a733 kernel: GICv3: CPU1: found redistributor 100 region 0:0x0000000003480000
+[    0.006040] radxa-a733 kernel: CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    0.006639] radxa-a733 kernel: Detected VIPT I-cache on CPU2
+[    0.006671] radxa-a733 kernel: GICv3: CPU2: found redistributor 200 region 0:0x00000000034a0000
+[    0.006704] radxa-a733 kernel: CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    0.007263] radxa-a733 kernel: Detected VIPT I-cache on CPU3
+[    0.007290] radxa-a733 kernel: GICv3: CPU3: found redistributor 300 region 0:0x00000000034c0000
+[    0.007318] radxa-a733 kernel: CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    0.007904] radxa-a733 kernel: Detected VIPT I-cache on CPU4
+[    0.007928] radxa-a733 kernel: GICv3: CPU4: found redistributor 400 region 0:0x00000000034e0000
+[    0.007955] radxa-a733 kernel: CPU4: Booted secondary processor 0x0000000400 [0x412fd050]
+[    0.008503] radxa-a733 kernel: Detected VIPT I-cache on CPU5
+[    0.008527] radxa-a733 kernel: GICv3: CPU5: found redistributor 500 region 0:0x0000000003500000
+[    0.008553] radxa-a733 kernel: CPU5: Booted secondary processor 0x0000000500 [0x412fd050]
+[    0.009096] radxa-a733 kernel: CPU features: detected: Spectre-v4
+[    0.009100] radxa-a733 kernel: CPU features: detected: Spectre-BHB
+[    0.009104] radxa-a733 kernel: Detected PIPT I-cache on CPU6
+[    0.009119] radxa-a733 kernel: GICv3: CPU6: found redistributor 600 region 0:0x0000000003520000
+[    0.009135] radxa-a733 kernel: CPU6: Booted secondary processor 0x0000000600 [0x414fd0b1]
+[    0.009666] radxa-a733 kernel: Detected PIPT I-cache on CPU7
+[    0.009684] radxa-a733 kernel: GICv3: CPU7: found redistributor 700 region 0:0x0000000003540000
+[    0.009700] radxa-a733 kernel: CPU7: Booted secondary processor 0x0000000700 [0x414fd0b1]
+[    0.009758] radxa-a733 kernel: smp: Brought up 1 node, 8 CPUs
+[    0.009776] radxa-a733 kernel: SMP: Total of 8 processors activated.
+[    0.009782] radxa-a733 kernel: CPU features: detected: 32-bit EL0 Support
+[    0.009786] radxa-a733 kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.009791] radxa-a733 kernel: CPU features: detected: Common not Private translations
+[    0.009795] radxa-a733 kernel: CPU features: detected: CRC32 instructions
+[    0.009800] radxa-a733 kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.009804] radxa-a733 kernel: CPU features: detected: Privileged Access Never
+[    0.009807] radxa-a733 kernel: CPU features: detected: RAS Extension Support
+[    0.009812] radxa-a733 kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.009886] radxa-a733 kernel: CPU: All CPU(s) started at EL1
+[    0.009920] radxa-a733 kernel: alternatives: patching kernel code
+[    0.011695] radxa-a733 kernel: devtmpfs: initialized
+[    0.021796] radxa-a733 kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.021808] radxa-a733 kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.022070] radxa-a733 kernel: pinctrl core: initialized pinctrl subsystem
+[    0.022253] radxa-a733 kernel: DMI not present or invalid.
+[    0.022404] radxa-a733 kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.023316] radxa-a733 kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    0.023464] radxa-a733 kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.023704] radxa-a733 kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.023730] radxa-a733 kernel: audit: initializing netlink subsys (disabled)
+[    0.023880] radxa-a733 kernel: audit: type=2000 audit(0.024:1): state=initialized audit_enabled=0 res=1
+[    0.024013] radxa-a733 kernel: thermal_sys: Registered thermal governor 'fair_share'
+[    0.024017] radxa-a733 kernel: thermal_sys: Registered thermal governor 'step_wise'
+[    0.024019] radxa-a733 kernel: thermal_sys: Registered thermal governor 'user_space'
+[    0.024021] radxa-a733 kernel: thermal_sys: Registered thermal governor 'power_allocator'
+[    0.024339] radxa-a733 kernel: thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+[    0.024381] radxa-a733 kernel: thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+[    0.024488] radxa-a733 kernel: thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+[    0.024518] radxa-a733 kernel: thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+[    0.024548] radxa-a733 kernel: thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+[    0.024584] radxa-a733 kernel: cpuidle: using governor menu
+[    0.024680] radxa-a733 kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.024806] radxa-a733 kernel: ASID allocator initialised with 65536 entries
+[    0.033080] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: sunxi rtc-ccu version: 0.5.5
+[    0.044318] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: rtc_ccu: sunxi ccu init OK
+[    0.049631] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: cpupll_ccu: sunxi ccu init OK
+[    0.049634] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: sunxi pll_cpu driver version: 0.0.5
+[    0.050083] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: r_ccu: sunxi ccu init OK
+[    0.050087] radxa-a733 kernel: sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 0.5.6
+[    0.050788] radxa-a733 kernel: sunxi:pin:[INFO]: sunxi pinctrl version: 0.6.8
+[    0.054852] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+[    0.054857] radxa-a733 kernel: sunxi:pin:[INFO]: sunxi pinctrl core driver version: 1.4.9
+[    0.055083] radxa-a733 kernel: sunxi:pin:[INFO]: sunxi r-pinctrl version: 0.0.2
+[    0.055785] radxa-a733 kernel: sunxi:pin-7025000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+[    0.059590] radxa-a733 kernel: platform 5730000.tcon3: Fixing up cyclic dependency with 5000000.de
+[    0.059687] radxa-a733 kernel: platform 5731000.tcon4: Fixing up cyclic dependency with 5000000.de
+[    0.059780] radxa-a733 kernel: platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+[    0.063816] radxa-a733 kernel: HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.063821] radxa-a733 kernel: HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.063824] radxa-a733 kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.063827] radxa-a733 kernel: HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.066191] radxa-a733 kernel: sunxi:pin-7025000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+[    0.077478] radxa-a733 kernel: iommu: Default domain type: Translated 
+[    0.077481] radxa-a733 kernel: iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.077551] radxa-a733 kernel: vgaarb: loaded
+[    0.077687] radxa-a733 kernel: SCSI subsystem initialized
+[    0.077721] radxa-a733 kernel: usbcore: registered new interface driver usbfs
+[    0.077734] radxa-a733 kernel: usbcore: registered new interface driver hub
+[    0.077747] radxa-a733 kernel: usbcore: registered new device driver usb
+[    0.077862] radxa-a733 kernel: mc: Linux media interface: v0.10
+[    0.077871] radxa-a733 kernel: videodev: Linux video capture interface: v2.00
+[    0.081961] radxa-a733 kernel: sun6i-dma 4601000.dma-controller: sunxi dma probed, driver version: 1.2.6
+[    0.082161] radxa-a733 kernel: iommu_master csi_iommu: attach fail:-517
+[    0.082172] radxa-a733 kernel: fbcon: Taking over console
+[    0.082221] radxa-a733 kernel: sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.083323] radxa-a733 kernel: sunxi-twi 7083000.twi: supply twi not found, using dummy regulator
+[    0.083866] radxa-a733 kernel: sunxi:axp2101-13-0036:[INFO]: AXP20x variant AXP8191 found
+[    0.086477] radxa-a733 kernel: axp8191-dcdc1: supplied by regulator-dummy
+[    0.089789] radxa-a733 kernel: axp8191-dcdc2: supplied by regulator-dummy
+[    0.093772] radxa-a733 kernel: axp8191-dcdc3: supplied by regulator-dummy
+[    0.097785] radxa-a733 kernel: axp8191-dcdc4: supplied by regulator-dummy
+[    0.101784] radxa-a733 kernel: axp8191-dcdc5: supplied by regulator-dummy
+[    0.105787] radxa-a733 kernel: axp8191-dcdc6: supplied by regulator-dummy
+[    0.109791] radxa-a733 kernel: axp8191-dcdc7: supplied by regulator-dummy
+[    0.113790] radxa-a733 kernel: axp8191-dcdc8: supplied by regulator-dummy
+[    0.117796] radxa-a733 kernel: axp8191-dcdc9: supplied by regulator-dummy
+[    0.121703] radxa-a733 kernel: axp8191-dc1sw1: supplied by axp8191-dcdc1
+[    0.121886] radxa-a733 kernel: axp8191-dc1sw2: supplied by axp8191-dcdc1
+[    0.122357] radxa-a733 kernel: axp8191-aldo1: supplied by regulator-dummy
+[    0.125964] radxa-a733 kernel: axp8191-aldo2: supplied by regulator-dummy
+[    0.126309] radxa-a733 kernel: axp8191-aldo3: supplied by regulator-dummy
+[    0.126659] radxa-a733 kernel: axp8191-aldo4: supplied by regulator-dummy
+[    0.127007] radxa-a733 kernel: axp8191-aldo5: supplied by regulator-dummy
+[    0.127351] radxa-a733 kernel: axp8191-aldo6: supplied by regulator-dummy
+[    0.127702] radxa-a733 kernel: axp8191-bldo1: supplied by regulator-dummy
+[    0.128047] radxa-a733 kernel: axp8191-bldo2: supplied by regulator-dummy
+[    0.128393] radxa-a733 kernel: axp8191-bldo3: supplied by regulator-dummy
+[    0.128743] radxa-a733 kernel: axp8191-bldo4: supplied by regulator-dummy
+[    0.129092] radxa-a733 kernel: axp8191-bldo5: supplied by regulator-dummy
+[    0.129279] radxa-a733 kernel: axp8191-cldo1: supplied by regulator-dummy
+[    0.133973] radxa-a733 kernel: axp8191-cldo2: supplied by regulator-dummy
+[    0.134161] radxa-a733 kernel: axp8191-cldo3: supplied by regulator-dummy
+[    0.137981] radxa-a733 kernel: axp8191-cldo4: supplied by regulator-dummy
+[    0.138168] radxa-a733 kernel: axp8191-cldo5: supplied by regulator-dummy
+[    0.141829] radxa-a733 kernel: axp8191-dldo1: supplied by regulator-dummy
+[    0.145990] radxa-a733 kernel: axp8191-dldo2: supplied by regulator-dummy
+[    0.146344] radxa-a733 kernel: axp8191-dldo3: supplied by regulator-dummy
+[    0.146697] radxa-a733 kernel: axp8191-dldo4: supplied by regulator-dummy
+[    0.147057] radxa-a733 kernel: axp8191-dldo5: supplied by regulator-dummy
+[    0.147248] radxa-a733 kernel: axp8191-dldo6: supplied by regulator-dummy
+[    0.149834] radxa-a733 kernel: axp8191-eldo1: supplied by regulator-dummy
+[    0.153836] radxa-a733 kernel: axp8191-eldo2: supplied by regulator-dummy
+[    0.157999] radxa-a733 kernel: axp8191-eldo3: supplied by regulator-dummy
+[    0.158363] radxa-a733 kernel: axp8191-eldo4: supplied by regulator-dummy
+[    0.158720] radxa-a733 kernel: axp8191-eldo5: supplied by regulator-dummy
+[    0.158916] radxa-a733 kernel: axp8191-eldo6: supplied by regulator-dummy
+[    0.161711] radxa-a733 kernel: axp8191-rtcldo: supplied by regulator-dummy
+[    0.161838] radxa-a733 kernel: axp8191-temp-ctrl: Failed to locate of_node [id: 0]
+[    0.162995] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163025] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163056] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163084] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163115] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163143] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163173] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163202] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163233] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163261] radxa-a733 kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.164453] radxa-a733 kernel: sunxi:axp2101-13-0036:[INFO]: AXP20X driver loaded
+[    0.164502] radxa-a733 kernel: sunxi:twi_sunxi-7083000.twi:[INFO]: v2.6.9 probe success
+[    0.164774] radxa-a733 kernel: sunxi-twi 7084000.twi: supply twi not found, using dummy regulator
+[    0.164998] radxa-a733 kernel: sunxi:twi_sunxi-7084000.twi:[INFO]: v2.6.9 probe success
+[    0.165074] radxa-a733 kernel: sunxi-twi 7085000.twi: supply twi not found, using dummy regulator
+[    0.165345] radxa-a733 kernel: sunxi:twi_sunxi-7085000.twi:[INFO]: v2.6.9 probe success
+[    0.166019] radxa-a733 kernel: sunxi:pwm-2527000.pwm:[INFO]: pwmchip probe success
+[    0.166329] radxa-a733 kernel: sunxi:pwm-2528000.pwm:[INFO]: pwmchip probe success
+[    0.166665] radxa-a733 kernel: sunxi:pwm-7023000.pwm:[INFO]: pwmchip probe success
+[    0.166961] radxa-a733 kernel: clocksource: Switched to clocksource arch_sys_counter
+[    0.179832] radxa-a733 kernel: sunxi_usb_udc 4100000.udc-controller: sunxi:sunxi_usb_udc UDC Inner DMA Feature - wordaddr: 1, extend: enabled
+[    0.180108] radxa-a733 kernel: NET: Registered PF_INET protocol family
+[    0.180232] radxa-a733 kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.181440] radxa-a733 kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.181472] radxa-a733 kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.181479] radxa-a733 kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.181697] radxa-a733 kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    0.182088] radxa-a733 kernel: TCP: Hash tables configured (established 32768 bind 32768)
+[    0.182210] radxa-a733 kernel: MPTCP token hash table entries: 4096 (order: 4, 98304 bytes, linear)
+[    0.182245] radxa-a733 kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.182321] radxa-a733 kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.182437] radxa-a733 kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.182454] radxa-a733 kernel: PCI: CLS 0 bytes, default 64
+[    0.182775] radxa-a733 kernel: Trying to unpack rootfs image as initramfs...
+[    0.191523] radxa-a733 kernel: hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.191894] radxa-a733 kernel: kvm [1]: HYP mode not available
+[    0.192324] radxa-a733 kernel: Initialise system trusted keyrings
+[    0.192397] radxa-a733 kernel: workingset: timestamp_bits=46 max_order=20 bucket_order=0
+[    0.218817] radxa-a733 kernel: Key type asymmetric registered
+[    0.218823] radxa-a733 kernel: Asymmetric key parser 'x509' registered
+[    0.218878] radxa-a733 kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    0.218987] radxa-a733 kernel: io scheduler mq-deadline registered
+[    0.218989] radxa-a733 kernel: io scheduler kyber registered
+[    0.220647] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.0.auto: DMA mask not set
+[    0.220895] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.1.auto: DMA mask not set
+[    0.221089] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.2.auto: DMA mask not set
+[    0.221340] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.3.auto: DMA mask not set
+[    0.221528] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.4.auto: DMA mask not set
+[    0.221716] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.5.auto: DMA mask not set
+[    0.221910] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.6.auto: DMA mask not set
+[    0.222096] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.7.auto: DMA mask not set
+[    0.222285] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.8.auto: DMA mask not set
+[    0.222501] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.9.auto: DMA mask not set
+[    0.222685] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.10.auto: DMA mask not set
+[    0.222768] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.11.auto: DMA mask not set
+[    0.222840] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.12.auto: DMA mask not set
+[    0.222912] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.13.auto: DMA mask not set
+[    0.223000] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.14.auto: DMA mask not set
+[    0.223082] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.15.auto: supply bldo1 not found, using dummy regulator
+[    0.223140] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.16.auto: supply bldo2 not found, using dummy regulator
+[    0.223189] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.17.auto: supply bldo3 not found, using dummy regulator
+[    0.223232] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.18.auto: supply bldo4 not found, using dummy regulator
+[    0.223276] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.19.auto: supply bldo5 not found, using dummy regulator
+[    0.223325] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.20.auto: supply cldo1 not found, using dummy regulator
+[    0.223373] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.21.auto: supply cldo2 not found, using dummy regulator
+[    0.223419] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.22.auto: supply cldo3 not found, using dummy regulator
+[    0.223463] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.23.auto: supply cldo4 not found, using dummy regulator
+[    0.223508] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.24.auto: supply cldo5 not found, using dummy regulator
+[    0.223550] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.25.auto: DMA mask not set
+[    0.223768] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.26.auto: DMA mask not set
+[    0.223850] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.27.auto: DMA mask not set
+[    0.223922] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.28.auto: DMA mask not set
+[    0.223983] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.29.auto: DMA mask not set
+[    0.224041] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.30.auto: DMA mask not set
+[    0.224240] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.31.auto: DMA mask not set
+[    0.224428] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.32.auto: DMA mask not set
+[    0.224636] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.33.auto: DMA mask not set
+[    0.224718] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.34.auto: DMA mask not set
+[    0.224793] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.35.auto: DMA mask not set
+[    0.224870] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.36.auto: DMA mask not set
+[    0.225061] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.37.auto: DMA mask not set
+[    0.225123] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.38.auto: DMA mask not set
+[    0.225140] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.38.auto: supply dc1sw1 not found, using dummy regulator
+[    0.225193] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.39.auto: DMA mask not set
+[    0.225206] radxa-a733 kernel: reg-virt-consumer reg-virt-consumer.39.auto: supply dc1sw2 not found, using dummy regulator
+[    0.225756] radxa-a733 kernel: cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.226404] radxa-a733 kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.226409] radxa-a733 kernel: ehci-pci: EHCI PCI platform driver
+[    0.226422] radxa-a733 kernel: ehci-platform: EHCI generic platform driver
+[    0.226512] radxa-a733 kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.226518] radxa-a733 kernel: ohci-pci: OHCI PCI platform driver
+[    0.226529] radxa-a733 kernel: ohci-platform: OHCI generic platform driver
+[    0.226866] radxa-a733 kernel: i2c_dev: i2c /dev entries driver
+[    0.227977] radxa-a733 kernel: ledtrig-cpu: registered to indicate activity on CPUs
+[    0.228027] radxa-a733 kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    0.228074] radxa-a733 kernel: usbcore: registered new interface driver usbhid
+[    0.228076] radxa-a733 kernel: usbhid: USB HID core driver
+[    0.228127] radxa-a733 kernel: sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.228141] radxa-a733 kernel: sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.228375] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228380] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228387] radxa-a733 kernel: uart-ng 2500000.uart: there is not valid maps for state default
+[    0.228426] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228429] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228434] radxa-a733 kernel: uart-ng 2500000.uart: there is not valid maps for state sleep
+[    0.228661] radxa-a733 kernel: uart-ng uart-ng0: supply uart not found, using dummy regulator
+[    0.228728] radxa-a733 kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the TX DMA channel!
+[    0.228730] radxa-a733 kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the RX DMA channel!
+[    0.228767] radxa-a733 kernel: uart-ng0: ttyAS0 at MMIO 0x2500000 (irq = 420, base_baud = 1500000) is a SUNXI
+[    0.228777] radxa-a733 kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: console setup baud 115200 parity n bits 8, flow n
+[    0.290990] radxa-a733 kernel: printk: console [ttyAS0] enabled
+[    0.292145] radxa-a733 kernel: NSI_PMU 2020000.nsi-controller: Get support-ecc failed
+[    0.293070] radxa-a733 kernel: sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.293724] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+[    0.293923] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: ctl-spec-caps 328
+[    0.293981] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vmmc regulator found
+[    0.293983] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vqmmc regulator found
+[    0.293985] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vdmmc regulator found
+[    0.293987] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd33sw regulator found
+[    0.293989] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd18sw regulator found
+[    0.293990] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq33sw regulator found
+[    0.293992] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq18sw regulator found
+[    0.293994] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.301925] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get uart0 pinstate,check if needed
+[    0.301928] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get pin bias hs pinstate,check if needed
+[    0.302597] radxa-a733 kernel: sunxi-mmc 4022000.sdmmc: sunxi:sunxi_mmc_host***ctl-cmdq-md*** 20
+[    0.302907] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: cq_host:ffff0000c11e1a80, mmc:ffff0000c0d77000, host:ffff0000c0d77580
+[    0.302920] radxa-a733 kernel: mmc1: CQHCI version 0.00
+[    0.303017] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.314946] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.327662] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.327755] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: detmode:alway in(non removable)
+[    0.328164] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+[    0.328378] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ctl-spec-caps 428
+[    0.329866] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vqmmc regulator found
+[    0.329870] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vdmmc regulator found
+[    0.330344] radxa-a733 kernel: sunxi-mmc 4020000.sdmmc: Got CD GPIO
+[    0.330375] radxa-a733 kernel: sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostcd-set-debounce is 0x1
+[    0.330383] radxa-a733 kernel: sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostexecute tuning in kernel, retune_period=3600
+[    0.330593] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.330613] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[    0.330708] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.332028] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm OD pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.332923] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.342143] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.342177] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000080
+[    0.342204] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.343029] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.352250] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.352288] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000282
+[    0.352309] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.352317] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.353139] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.362346] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.362376] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000484
+[    0.362402] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.363225] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.372432] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.372463] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000686
+[    0.372490] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.373036] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.373122] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: detmode:gpio irq
+[    0.373313] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.373473] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Sunxi ufs driver version 0.0.16 2025.1.20 10:40
+[    0.382525] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.382557] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000888
+[    0.382582] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.383158] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: freq-table-hz property not specified
+[    0.383167] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    0.383175] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+[    0.383180] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq-max-microamp
+[    0.383185] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq2-max-microamp
+[    0.383390] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.384263] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.392616] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.392653] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000a8a
+[    0.392679] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.393236] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: fore use int ref 26m
+[    0.393534] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.402755] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.402787] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000c8c
+[    0.402811] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.403110] radxa-a733 kernel: scsi host0: ufshcd
+[    0.403631] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.412845] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.412853] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.412888] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000e8e
+[    0.412913] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.413734] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.419902] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.420384] radxa-a733 kernel: sunxi:g2d_sunxi:[INFO]: [G2D]: rcq version initialized.major:241
+[    0.420388] radxa-a733 kernel: sunxi:g2d_sunxi:[INFO]: [G2D]: g2d_module_init
+[    0.420449] radxa-a733 kernel: [drm] [DSI-PANEL] panel_dsi_init start
+[    0.420511] radxa-a733 kernel: [drm] [DSI-PANEL] dsi driver regsiter finsh
+[    0.420656] radxa-a733 kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.420719] radxa-a733 kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.421498] radxa-a733 kernel: [drm] [TCON] sunxi_tcon_probe start
+[    0.421563] radxa-a733 kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.421684] radxa-a733 kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.421763] radxa-a733 kernel: [drm] [TCON] sunxi_tcon_probe start
+[    0.421790] radxa-a733 kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[    0.421842] radxa-a733 kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.421969] radxa-a733 kernel: [drm] sunxi_drm_platform_probe start
+[    0.421971] radxa-a733 kernel: [drm] sunxi_drm_match_add start
+[    0.422698] radxa-a733 kernel: [drm] sunxi_drm_match_add finish
+[    0.422995] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.423029] radxa-a733 kernel: sunxi:sunxi_sidefuse init success!
+[    0.423051] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001090
+[    0.428793] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.428835] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.428875] radxa-a733 kernel: sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.429645] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.446894] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.446974] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001292
+[    0.447006] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.447478] radxa-a733 kernel: sunxi-cadence-combophy 6c00000.serdes: Sub System Version v2.0.0
+[    0.447823] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.447834] radxa-a733 kernel: sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: resistance calibration supported - enabled, mode - V2
+[    0.447901] radxa-a733 kernel: sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: phy provider register success
+[    0.457054] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.457116] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001494
+[    0.457146] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.457848] radxa-a733 kernel: sunxi-cadence-combophy 6c00000.serdes: combophy0 set power ON
+[    0.457950] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.467168] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.467193] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001696
+[    0.467216] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.468070] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.477284] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.477316] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001898
+[    0.477339] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.478161] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.487384] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.487417] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001a9a
+[    0.487441] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.488270] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.489564] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.497480] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[    0.497481] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.497486] radxa-a733 kernel: sunxi:pin-2000000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+[    0.497514] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001c9c
+[    0.497540] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.498369] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.507584] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.507616] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001e9e
+[    0.507643] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.508466] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.517681] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.517717] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000020a0
+[    0.517742] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.517740] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.518563] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.527790] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.527822] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000022a2
+[    0.527848] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.528668] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.531281] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[    0.537869] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 1
+[    0.537899] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.537931] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000024a4
+[    0.537957] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.538075] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: hcc params 0x0118ffc5 hci version 0x120 quirks 0x0000000000010010
+[    0.538107] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: irq 491, io mem 0x06a00000
+[    0.538175] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[    0.538180] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 2
+[    0.538187] radxa-a733 kernel: xhci-hcd xhci-hcd.40.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    0.538254] radxa-a733 kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+[    0.538260] radxa-a733 kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.538264] radxa-a733 kernel: usb usb1: Product: xHCI Host Controller
+[    0.538267] radxa-a733 kernel: usb usb1: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+[    0.538270] radxa-a733 kernel: usb usb1: SerialNumber: xhci-hcd.40.auto
+[    0.538726] radxa-a733 kernel: hub 1-0:1.0: USB hub found
+[    0.538740] radxa-a733 kernel: hub 1-0:1.0: 1 port detected
+[    0.538777] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.538879] radxa-a733 kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.548014] radxa-a733 kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+[    0.548018] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.548020] radxa-a733 kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.548024] radxa-a733 kernel: usb usb2: Product: xHCI Host Controller
+[    0.548028] radxa-a733 kernel: usb usb2: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+[    0.548031] radxa-a733 kernel: usb usb2: SerialNumber: xhci-hcd.40.auto
+[    0.548058] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000026a6
+[    0.548086] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.548453] radxa-a733 kernel: hub 2-0:1.0: USB hub found
+[    0.548468] radxa-a733 kernel: hub 2-0:1.0: 1 port detected
+[    0.548908] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.549773] radxa-a733 kernel: sunxi:dwc3_sunxi_plat-12.usbc2:[INFO]: DesignWare USB3 Allwinner Glue Layer Driver(v1.0.23 2024-11-25 14:00)
+[    0.558151] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.558187] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000028a8
+[    0.558213] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.558754] radxa-a733 kernel: sunxi_gpadc_init(): 1806: gpadc class register success
+[    0.558840] radxa-a733 kernel: sunxi-gpadc 2521000.gpadc: warn: sample rate not set
+[    0.558845] radxa-a733 kernel: sunxi-gpadc 2521000.gpadc: sunxi_gpadc_dts_parse: warn: keyadc not select
+[    0.559018] radxa-a733 kernel: input: sunxi-gpadc0/channel0/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input0
+[    0.559033] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.559256] radxa-a733 kernel: input: sunxi-gpadc0/channel1/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input1
+[    0.559650] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.568285] radxa-a733 kernel: mmc0: host does not support reading read-only switch, assuming write-enable
+[    0.568307] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.568371] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002aaa
+[    0.568412] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.568573] radxa-a733 kernel: input: sunxi-gpadc0/channel2/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input2
+[    0.568899] radxa-a733 kernel: input: sunxi-gpadc0/channel3/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input3
+[    0.569104] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing LEGACY(SDR12) dt B
+[    0.569190] radxa-a733 kernel: input: sunxi-gpadc0/channel4/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input4
+[    0.569215] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.569469] radxa-a733 kernel: input: sunxi-gpadc0/channel5/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input5
+[    0.578444] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.578462] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.578520] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002cac
+[    0.578529] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.578545] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.578742] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.578854] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: used kernel tuning, delay = 0
+[    0.578900] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: change sample method
+[    0.578902] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: start tuning, tuning clk = 200000000  opcode=19
+[    0.578905] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ----speed mode = 6
+[    0.579110] radxa-a733 kernel: input: sunxi-gpadc0/channel6/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input6
+[    0.579327] radxa-a733 kernel: input: sunxi-gpadc0/channel7/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input7
+[    0.579366] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.579607] radxa-a733 kernel: sunxi-gpadc 2521000.gpadc: sunxi_gpadc probe success
+[    0.588603] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.588646] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002eae
+[    0.588679] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.589512] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.590410] radxa-a733 kernel: sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.598742] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.608118] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000030b0
+[    0.608146] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.608329] radxa-a733 kernel: axp2101-pek axp2101-pek.0: DMA mask not set
+[    0.608949] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.618180] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.618210] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000032b2
+[    0.618235] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.619040] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.628290] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.628331] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000034b4
+[    0.628360] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.629163] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.638388] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.638413] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000036b6
+[    0.638436] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.639240] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.648457] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.648493] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000038b8
+[    0.648516] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.649319] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.649543] radxa-a733 kernel: input: axp8191-pek as /devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+[    0.658533] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.658559] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003aba
+[    0.658583] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.659398] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.668669] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.668711] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003cbc
+[    0.668739] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.668916] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.668924] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (408000000)
+[    0.669008] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669012] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (720000000)
+[    0.669081] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669091] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (792000000)
+[    0.669253] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669256] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1008000000)
+[    0.669324] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669326] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1104000000)
+[    0.669388] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669391] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1200000000)
+[    0.669457] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669467] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1296000000)
+[    0.669530] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.669533] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1392000000)
+[    0.669543] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.669577] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678741] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1416000000)
+[    0.678787] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.678808] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678811] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1512000000)
+[    0.678813] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003ebe
+[    0.678837] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.678862] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678865] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1608000000)
+[    0.678924] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678927] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1704000000)
+[    0.678999] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.679002] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1800000000)
+[    0.679116] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.679119] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (728000000)
+[    0.679378] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.679381] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1092000000)
+[    0.679496] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.679499] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1300000000)
+[    0.679641] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.679661] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.680318] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.688823] radxa-a733 kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1586000000)
+[    0.688864] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.688892] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sunxi v4p5x/v4p6x retry give up!
+[    0.688897] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.699596] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.699903] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.707498] radxa-a733 kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm OFF vdd 0 width 1 timing LEGACY(SDR12) dt B
+[    0.707569] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (408000000)
+[    0.707653] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.707665] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (720000000)
+[    0.707738] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.707741] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (792000000)
+[    0.707906] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.707909] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1008000000)
+[    0.707975] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.707985] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1200000000)
+[    0.708052] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708054] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1296000000)
+[    0.708121] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708124] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1392000000)
+[    0.708189] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708192] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1512000000)
+[    0.708255] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708258] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1608000000)
+[    0.708325] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708327] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1704000000)
+[    0.708392] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708395] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1800000000)
+[    0.708457] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708459] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1896000000)
+[    0.708627] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708630] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1920000000)
+[    0.708690] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708692] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1944000000)
+[    0.708757] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708760] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1992000000)
+[    0.708886] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.708889] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (728000000)
+[    0.709103] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.709106] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1300000000)
+[    0.709356] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.709359] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1586000000)
+[    0.709469] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.709480] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1690000000)
+[    0.709744] radxa-a733 kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.709747] radxa-a733 kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1976000000)
+[    0.709916] radxa-a733 kernel: cpu cpu0: EM: OPP:416000 is inefficient
+[    0.710116] radxa-a733 kernel: cpu cpu0: EM: created perf domain
+[    0.710397] radxa-a733 kernel: cpu cpu6: EM: OPP:1014000 is inefficient
+[    0.710402] radxa-a733 kernel: cpu cpu6: EM: OPP:416000 is inefficient
+[    0.710524] radxa-a733 kernel: cpu cpu6: EM: created perf domain
+[    0.714026] radxa-a733 kernel: sunxi:sun55iw3_devfreq:[INFO]: F0:400000000, F1:800000000, F2:1200000000, F3:2400000000, up:50, down:30
+[    0.715194] radxa-a733 kernel: [ADDR_MGT] addr_mgt_probe: module version: v1.0.11
+[    0.715634] radxa-a733 kernel: [ADDR_MGT] addr_mgt_probe: success.
+[    0.715890] radxa-a733 kernel: NET: Registered PF_INET6 protocol family
+[    0.717040] radxa-a733 kernel: Segment Routing with IPv6
+[    0.717056] radxa-a733 kernel: In-situ OAM (IOAM) with IPv6
+[    0.717081] radxa-a733 kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.717354] radxa-a733 kernel: NET: Registered PF_PACKET protocol family
+[    0.717627] radxa-a733 kernel: Key type dns_resolver registered
+[    0.718180] radxa-a733 kernel: registered taskstats version 1
+[    0.718192] radxa-a733 kernel: Loading compiled-in X.509 certificates
+[    0.719119] radxa-a733 kernel: Key type .fscrypt registered
+[    0.719122] radxa-a733 kernel: Key type fscrypt-provisioning registered
+[    0.735520] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.746271] radxa-a733 kernel: sunxi iommu: irq = 16
+[    0.746338] radxa-a733 kernel: sunxi iommu: irq = 17
+[    0.759997] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.771716] radxa-a733 kernel: sunxi:twi_sunxi-2510000.twi:[INFO]: v2.6.9 probe success
+[    0.771951] radxa-a733 kernel: g2d 5440000.g2d: Adding to iommu group 0
+[    0.773073] radxa-a733 kernel: sunxi-display-engine 5000000.de: Adding to iommu group 0
+[    0.773401] radxa-a733 kernel: [drm] de use no display sys
+[    0.773902] radxa-a733 kernel: sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[    0.773917] radxa-a733 kernel: [drm] sunxi_drm_bind start
+[    0.774143] radxa-a733 kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.774209] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[    0.774225] radxa-a733 kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.774260] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[    0.774267] radxa-a733 kernel: [drm] [SUNXI-DE] sunxi_de_bind start
+[    0.774300] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[    0.774618] radxa-a733 kernel: [drm] sunxi_de_bind crtc init for de 0 ok
+[    0.774667] radxa-a733 kernel: [drm] sunxi_de_bind crtc init for de 1 ok
+[    0.775094] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[    0.775282] radxa-a733 kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.775606] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv init dts done
+[    0.776324] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv enable resource done
+[    0.776329] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv init resource done
+[    0.776540] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[    0.776914] radxa-a733 kernel: Registered IR keymap rc-cec
+[    0.776994] radxa-a733 kernel: rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[    0.777088] radxa-a733 kernel: input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[    0.777468] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[    0.778365] radxa-a733 kernel: [drm] sunxi-hdmi: drm hdmi connector create finish
+[    0.778374] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+[    0.778383] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[    0.778401] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[    0.778410] radxa-a733 kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[    0.778456] radxa-a733 kernel: [drm] start HDMI-A-1 monitor monitoring, interval: 100ms
+[    0.778761] radxa-a733 kernel: [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[    0.778773] radxa-a733 kernel: [drm] sunxi_drm_bind ok
+[    0.781633] radxa-a733 kernel: sunxi-pcie 6000000.pcie: host bridge /soc@3000000/pcie@6000000 ranges:
+[    0.781669] radxa-a733 kernel: sunxi-pcie 6000000.pcie:      err 0x0020000000..0x0020ffffff -> 0x0020000000
+[    0.781686] radxa-a733 kernel: sunxi-pcie 6000000.pcie:       IO 0x0021000000..0x0021ffffff -> 0x0021000000
+[    0.781697] radxa-a733 kernel: sunxi-pcie 6000000.pcie:      MEM 0x0022000000..0x0027ffffff -> 0x0022000000
+[    0.798701] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning section: 
+[    0.798709] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [0-19|20] 
+[    0.798712] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [24-63|40] 
+[    0.798714] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: 
+[    0.798716] radxa-a733 kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning result: 24 - 63,  best: 44
+[    0.798902] radxa-a733 kernel: mmc0: new ultra high speed SDR104 SDHC card at address aaaa
+[    0.799347] radxa-a733 kernel: mmcblk0: mmc0:aaaa SD32G 29.7 GiB 
+[    0.802960] radxa-a733 kernel: usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[    0.803358] radxa-a733 kernel:  mmcblk0: p1 p2 p3
+[    0.811102] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.851921] radxa-a733 kernel: Freeing initrd memory: 31828K
+[    0.913744] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.921186] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.928096] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.936486] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.945026] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.954052] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.955410] radxa-a733 kernel: usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[    0.962717] radxa-a733 kernel: usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    0.962720] radxa-a733 kernel: usb 1-1: Product: USB 2.0 Hub
+[    0.962780] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.970386] radxa-a733 kernel: hub 1-1:1.0: USB hub found
+[    0.971275] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.971348] radxa-a733 kernel: hub 1-1:1.0: 4 ports detected
+[    0.979431] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    0.989810] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: last intr at 909510 us, last intr status=0x404
+[    0.999581] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.009163] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.020500] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.028485] radxa-a733 kernel: host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.036391] radxa-a733 kernel: host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.044290] radxa-a733 kernel: host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.052188] radxa-a733 kernel: host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.060086] radxa-a733 kernel: host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.067983] radxa-a733 kernel: host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.075881] radxa-a733 kernel: host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.083778] radxa-a733 kernel: host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.091665] radxa-a733 kernel: host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.099561] radxa-a733 kernel: host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.107460] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.114580] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.121705] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.128816] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.135933] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.143150] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.151243] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.158657] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 910799 us
+[    1.167726] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.175915] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.183520] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.191224] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 415421 us
+[    1.199512] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.206927] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.214436] radxa-a733 kernel: sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    1.362942] radxa-a733 kernel: usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+[    1.565615] radxa-a733 kernel: usb 1-1.2: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[    1.565619] radxa-a733 kernel: usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.565621] radxa-a733 kernel: usb 1-1.2: Product: USB2.1 Hub
+[    1.565622] radxa-a733 kernel: usb 1-1.2: Manufacturer: GenesysLogic
+[    1.570435] radxa-a733 kernel: hub 1-1.2:1.0: USB hub found
+[    1.570757] radxa-a733 kernel: hub 1-1.2:1.0: 4 ports detected
+[    1.750939] radxa-a733 kernel: usb 1-1.4: new high-speed USB device number 4 using xhci-hcd
+[    1.951608] radxa-a733 kernel: usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[    1.951611] radxa-a733 kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.951612] radxa-a733 kernel: usb 1-1.4: Product: AIC Wlan
+[    1.951614] radxa-a733 kernel: usb 1-1.4: Manufacturer: aicsemi
+[    1.951616] radxa-a733 kernel: usb 1-1.4: SerialNumber: 20220103
+[    2.054939] radxa-a733 kernel: usb 1-1.2.3: new full-speed USB device number 5 using xhci-hcd
+[    2.181496] radxa-a733 kernel: usb 1-1.2.3: New USB device found, idVendor=1ea7, idProduct=0066, bcdDevice= 2.00
+[    2.181499] radxa-a733 kernel: usb 1-1.2.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    2.181501] radxa-a733 kernel: usb 1-1.2.3: Product: 2.4G Mouse
+[    2.191968] radxa-a733 kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+[    2.251185] radxa-a733 kernel: hid-generic 0003:1EA7:0066.0001: input: USB HID v1.10 Keyboard [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input0
+[    2.254464] radxa-a733 kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+[    2.254654] radxa-a733 kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+[    2.254777] radxa-a733 kernel: input: 2.4G Mouse Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+[    2.292737] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[    2.311465] radxa-a733 kernel: input: 2.4G Mouse System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+[    2.311649] radxa-a733 kernel: hid-generic 0003:1EA7:0066.0002: input: USB HID v1.10 Mouse [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input1
+[    2.415229] radxa-a733 kernel: usb 1-1.2.4: new full-speed USB device number 6 using xhci-hcd
+[    2.562529] radxa-a733 kernel: usb 1-1.2.4: New USB device found, idVendor=3151, idProduct=3020, bcdDevice= 0.02
+[    2.562550] radxa-a733 kernel: usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.562561] radxa-a733 kernel: usb 1-1.2.4: Product: 2.4G Receiver
+[    2.562568] radxa-a733 kernel: usb 1-1.2.4: Manufacturer: YICHIP
+[    2.582677] radxa-a733 kernel: input: YICHIP 2.4G Receiver as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+[    2.639741] radxa-a733 kernel: hid-generic 0003:3151:3020.0003: input: USB HID v2.00 Keyboard [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input0
+[    2.656321] radxa-a733 kernel: input: YICHIP 2.4G Receiver Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+[    2.656872] radxa-a733 kernel: input: YICHIP 2.4G Receiver System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+[    2.715892] radxa-a733 kernel: input: YICHIP 2.4G Receiver Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+[    2.716308] radxa-a733 kernel: hid-generic 0003:3151:3020.0004: input: USB HID v2.00 Mouse [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input1
+[    2.819278] radxa-a733 kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[    2.819293] radxa-a733 kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[    2.819298] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[    2.819307] radxa-a733 kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.819312] radxa-a733 kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.819317] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[    2.835215] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[    2.851240] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[    2.911840] radxa-a733 kernel: sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    2.919683] radxa-a733 kernel: sunxi:pcie-rc-6000000.pcie:[INFO]: PCIe speed of Gen1
+[    2.920012] radxa-a733 kernel: sunxi-pcie 6000000.pcie: PCI host bridge to bus 0000:00
+[    2.920033] radxa-a733 kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+[    2.920055] radxa-a733 kernel: pci_bus 0000:00: root bus resource [??? 0x20000000-0x20ffffff flags 0x0]
+[    2.920079] radxa-a733 kernel: pci_bus 0000:00: root bus resource [io  0x0000-0xffffff] (bus address [0x21000000-0x21ffffff])
+[    2.920098] radxa-a733 kernel: pci_bus 0000:00: root bus resource [mem 0x22000000-0x27ffffff]
+[    2.920170] radxa-a733 kernel: pci 0000:00:00.0: [1f6d:abcd] type 01 class 0x060400
+[    2.920207] radxa-a733 kernel: pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[    2.920237] radxa-a733 kernel: pci 0000:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+[    2.920369] radxa-a733 kernel: pci 0000:00:00.0: supports D1
+[    2.920384] radxa-a733 kernel: pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    2.934993] radxa-a733 kernel: [drm] HDMI-A-1 connection detected
+[    2.935050] radxa-a733 kernel: [drm] sunxi-hdmi: cec drv clock enable done
+[    2.935079] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi cec drv enable finish
+[    2.935313] radxa-a733 kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+[    2.935359] radxa-a733 kernel: [drm] HDMI-A-1: Configuration mode 1920x1080@60Hz
+[    2.939392] radxa-a733 kernel: Console: switching to colour frame buffer device 240x67
+[    2.942255] radxa-a733 kernel: pci 0000:00:00.0: BAR 0: assigned [mem 0x22000000-0x220fffff]
+[    2.942268] radxa-a733 kernel: pci 0000:00:00.0: BAR 6: assigned [mem 0x22100000-0x2210ffff pref]
+[    2.942275] radxa-a733 kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    2.942328] radxa-a733 kernel: sunxi:pcie-6000000.pcie:[INFO]: driver version: 1.2.4
+[    2.943013] radxa-a733 kernel: pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+[    2.943020] radxa-a733 kernel: pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+[    2.943133] radxa-a733 kernel: pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+[    2.943136] radxa-a733 kernel: pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+[    2.945999] radxa-a733 kernel: sunxi:ehci_sunxi:[INFO]: sunxi-ehci: EHCI SUNXI driver
+[    2.946594] radxa-a733 kernel: sunxi:sunxi_hci:[INFO]: sunxi ehci0-controller don't init wakeup source
+[    2.946600] radxa-a733 kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: probe, pdev->name: 4101000.ehci0-controller, sunxi_ehci: 0xffff8000096a17a8, 0x:ffff80000a10d000, irq_no:1b3
+[    2.946612] radxa-a733 kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: Not init ehci0
+[    2.947177] radxa-a733 kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci1]: probe, pdev->name: 4200000.ehci1-controller, sunxi_ehci: 0xffff8000096a1bd8, 0x:ffff80000a11d000, irq_no:1b5
+[    2.947322] radxa-a733 kernel: sunxi-ehci 4200000.ehci1-controller: supply hci not found, using dummy regulator
+[    2.948598] radxa-a733 kernel: sunxi-ehci 4200000.ehci1-controller: EHCI Host Controller
+[    2.948617] radxa-a733 kernel: sunxi-ehci 4200000.ehci1-controller: new USB bus registered, assigned bus number 3
+[    2.948719] radxa-a733 kernel: sunxi-ehci 4200000.ehci1-controller: irq 437, io mem 0x04200000
+[    2.955046] radxa-a733 kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    2.955105] radxa-a733 kernel: [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[    2.955109] radxa-a733 kernel: [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[    2.955135] radxa-a733 kernel: [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[    2.955145] radxa-a733 kernel: [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[    2.955149] radxa-a733 kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[    2.955163] radxa-a733 kernel: [drm] sunxi_de_enable index 0
+[    2.955239] radxa-a733 kernel: [drm] sunxi_de_enable finish sw en=0
+[    2.955254] radxa-a733 kernel: [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[    2.955323] radxa-a733 kernel: [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[    2.955397] radxa-a733 kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+[    2.963139] radxa-a733 kernel: sunxi-ehci 4200000.ehci1-controller: USB 2.0 started, EHCI 1.00
+[    2.963276] radxa-a733 kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+[    2.963290] radxa-a733 kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.963299] radxa-a733 kernel: usb usb3: Product: EHCI Host Controller
+[    2.963307] radxa-a733 kernel: usb usb3: Manufacturer: Linux 5.15.147-21-a733 ehci_hcd
+[    2.963313] radxa-a733 kernel: usb usb3: SerialNumber: sunxi-ehci
+[    2.963830] radxa-a733 kernel: hub 3-0:1.0: USB hub found
+[    2.963847] radxa-a733 kernel: hub 3-0:1.0: 1 port detected
+[    2.967330] radxa-a733 kernel: sunxi:ohci_sunxi:[INFO]: sunxi-ohci: OHCI SUNXI driver
+[    2.967698] radxa-a733 kernel: sunxi:sunxi_hci:[INFO]: sunxi ohci0-controller don't init wakeup source
+[    2.967703] radxa-a733 kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: probe, pdev->name: 4101400.ohci0-controller, sunxi_ohci: 0xffff8000096a2438
+[    2.967708] radxa-a733 kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: Not init ohci0
+[    2.968023] radxa-a733 kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci1]: probe, pdev->name: 4200400.ohci1-controller, sunxi_ohci: 0xffff8000096a2868
+[    2.968119] radxa-a733 kernel: sunxi-ohci 4200400.ohci1-controller: supply hci not found, using dummy regulator
+[    2.968212] radxa-a733 kernel: sunxi-ohci 4200400.ohci1-controller: OHCI Host Controller
+[    2.968226] radxa-a733 kernel: sunxi-ohci 4200400.ohci1-controller: new USB bus registered, assigned bus number 4
+[    2.968278] radxa-a733 kernel: sunxi-ohci 4200400.ohci1-controller: irq 438, io mem 0x04200400
+[    2.981489] radxa-a733 kernel: [drm] sunxi-hdmi: [top phy]
+[    2.981493] radxa-a733 kernel: [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+[    2.981496] radxa-a733 kernel: [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[    2.981521] radxa-a733 kernel: [drm] sunxi-hdmi: top phy config done
+[    2.981852] radxa-a733 kernel: [drm] sunxi-hdmi: [snps phy]
+[    2.981854] radxa-a733 kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[    2.981858] radxa-a733 kernel: [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[    2.981861] radxa-a733 kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[    2.981864] radxa-a733 kernel: [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[    2.982379] radxa-a733 kernel: [drm] sunxi-hdmi: snps phy state: lock
+[    3.031488] radxa-a733 kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+[    3.031496] radxa-a733 kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.031500] radxa-a733 kernel: usb usb4: Product: OHCI Host Controller
+[    3.031504] radxa-a733 kernel: usb usb4: Manufacturer: Linux 5.15.147-21-a733 ohci_hcd
+[    3.031507] radxa-a733 kernel: usb usb4: SerialNumber: sunxi-ohci
+[    3.031921] radxa-a733 kernel: hub 4-0:1.0: USB hub found
+[    3.031935] radxa-a733 kernel: hub 4-0:1.0: 1 port detected
+[    3.032389] radxa-a733 kernel: [drm] sunxi-hdmi: hdmi drv enable output done
+[    3.032391] radxa-a733 kernel: [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[    3.035465] radxa-a733 kernel: GTP driver init func = goodix_ts_init,line = 3190 
+[    3.035713] radxa-a733 kernel: GTP driver init func = goodix_ts_init,line = 3213 
+[    3.035749] radxa-a733 kernel: GTP driver init func = goodix_ts_init,line = 3215 
+[    3.035768] radxa-a733 kernel: clk: Not disabling unused clocks
+[    3.038284] radxa-a733 kernel: Freeing unused kernel memory: 3776K
+[    3.049617] radxa-a733 kernel: [drm] HDMI-A-1: Configuration complete
+[    3.059230] radxa-a733 kernel: Run /init as init process
+[    3.059239] radxa-a733 kernel:   with arguments:
+[    3.059243] radxa-a733 kernel:     /init
+[    3.059246] radxa-a733 kernel:     splash
+[    3.059250] radxa-a733 kernel:     earlycon
+[    3.059253] radxa-a733 kernel:   with environment:
+[    3.059256] radxa-a733 kernel:     HOME=/
+[    3.059259] radxa-a733 kernel:     TERM=linux
+[    3.059262] radxa-a733 kernel:     mac_addr=08:51:49:58:40:32
+[    3.059266] radxa-a733 kernel:     mac1_addr=08:51:49:58:40:33
+[    3.059269] radxa-a733 kernel:     cgroup_enable=memory
+[    3.059273] radxa-a733 kernel:     cgroup_memory=1
+[    3.302299] radxa-a733 kernel: rtc-hym8563 14-0051: no valid clock/calendar values available
+[    3.302711] radxa-a733 kernel: rtc-hym8563 14-0051: registered as rtc0
+[    3.303035] radxa-a733 kernel: rtc-hym8563 14-0051: no valid clock/calendar values available
+[    3.303047] radxa-a733 kernel: rtc-hym8563 14-0051: hctosys: unable to read the hardware clock
+[    3.479080] radxa-a733 kernel: raid6: neonx8   gen()  3207 MB/s
+[    3.547135] radxa-a733 kernel: raid6: neonx8   xor()  1492 MB/s
+[    3.614999] radxa-a733 kernel: raid6: neonx4   gen()  9032 MB/s
+[    3.683000] radxa-a733 kernel: raid6: neonx4   xor()  7394 MB/s
+[    3.751000] radxa-a733 kernel: raid6: neonx2   gen()  8648 MB/s
+[    3.818997] radxa-a733 kernel: raid6: neonx2   xor()  7234 MB/s
+[    3.887001] radxa-a733 kernel: raid6: neonx1   gen()  7052 MB/s
+[    3.954999] radxa-a733 kernel: raid6: neonx1   xor()  5846 MB/s
+[    4.023000] radxa-a733 kernel: raid6: int64x8  gen()  4268 MB/s
+[    4.091000] radxa-a733 kernel: raid6: int64x8  xor()  2542 MB/s
+[    4.159002] radxa-a733 kernel: raid6: int64x4  gen()  4912 MB/s
+[    4.227001] radxa-a733 kernel: raid6: int64x4  xor()  2553 MB/s
+[    4.295002] radxa-a733 kernel: raid6: int64x2  gen()  4126 MB/s
+[    4.362999] radxa-a733 kernel: raid6: int64x2  xor()  2220 MB/s
+[    4.431001] radxa-a733 kernel: raid6: int64x1  gen()  3385 MB/s
+[    4.499002] radxa-a733 kernel: raid6: int64x1  xor()  1775 MB/s
+[    4.499010] radxa-a733 kernel: raid6: using algorithm neonx4 gen() 9032 MB/s
+[    4.499011] radxa-a733 kernel: raid6: .... xor() 7394 MB/s, rmw enabled
+[    4.499013] radxa-a733 kernel: raid6: using neon recovery algorithm
+[    4.507782] radxa-a733 kernel: xor: measuring software checksum speed
+[    4.508642] radxa-a733 kernel:    8regs           : 11544 MB/sec
+[    4.509355] radxa-a733 kernel:    32regs          : 13848 MB/sec
+[    4.509897] radxa-a733 kernel:    arm64_neon      : 18191 MB/sec
+[    4.509899] radxa-a733 kernel: xor: using function: arm64_neon (18191 MB/sec)
+[    4.572067] radxa-a733 kernel: Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+[    4.708247] radxa-a733 kernel: EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: disabled.
+[    5.300340] radxa-a733 kernel:  mmcblk0: p1 p2 p3
+[    5.495572] radxa-a733 kernel: EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: disabled.
+[    5.808343] radxa-a733 systemd[1]: System time before build time, advancing clock.
+[    5.830250] radxa-a733 systemd[1]: Inserted module 'autofs4'
+[    5.869017] radxa-a733 systemd[1]: systemd 247.3-7+deb11u8 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    5.869423] radxa-a733 systemd[1]: Detected architecture arm64.
+[    5.869448] radxa-a733 systemd[1]: Detected first boot.
+[    5.869941] radxa-a733 systemd[1]: Set hostname to <radxa-a733>.
+[    5.874748] radxa-a733 systemd[1]: Initializing machine ID from random generator.
+[    6.235000] radxa-a733 systemd[1]: Failed to populate /etc with preset unit settings, ignoring: File exists
+[    6.255944] radxa-a733 systemd[1]: /lib/systemd/system/plymouth-start.service:16: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+[    6.330270] radxa-a733 systemd[1]: Queued start job for default target Graphical Interface.
+[    6.331485] radxa-a733 systemd[1]: Created slice system-getty.slice.
+[    6.331860] radxa-a733 systemd[1]: Created slice system-modprobe.slice.
+[    6.332164] radxa-a733 systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    6.332368] radxa-a733 systemd[1]: Created slice User and Session Slice.
+[    6.332469] radxa-a733 systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    6.332708] radxa-a733 systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    6.332801] radxa-a733 systemd[1]: Reached target User and Group Name Lookups.
+[    6.332828] radxa-a733 systemd[1]: Reached target Remote Encrypted Volumes.
+[    6.332838] radxa-a733 systemd[1]: Reached target Remote File Systems.
+[    6.332851] radxa-a733 systemd[1]: Reached target Slices.
+[    6.332873] radxa-a733 systemd[1]: Reached target Swap.
+[    6.333046] radxa-a733 systemd[1]: Listening on fsck to fsckd communication Socket.
+[    6.333117] radxa-a733 systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    6.333295] radxa-a733 systemd[1]: Listening on Journal Audit Socket.
+[    6.333398] radxa-a733 systemd[1]: Listening on Journal Socket (/dev/log).
+[    6.333516] radxa-a733 systemd[1]: Listening on Journal Socket.
+[    6.333664] radxa-a733 systemd[1]: Listening on Network Service Netlink Socket.
+[    6.333828] radxa-a733 systemd[1]: Listening on udev Control Socket.
+[    6.333911] radxa-a733 systemd[1]: Listening on udev Kernel Socket.
+[    6.336328] radxa-a733 systemd[1]: Mounting Huge Pages File System...
+[    6.337585] radxa-a733 systemd[1]: Mounting POSIX Message Queue File System...
+[    6.338906] radxa-a733 systemd[1]: Mounting Kernel Debug File System...
+[    6.340244] radxa-a733 systemd[1]: Mounting Kernel Trace File System...
+[    6.341806] radxa-a733 systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    6.343218] radxa-a733 systemd[1]: Starting Load Kernel Module configfs...
+[    6.344809] radxa-a733 systemd[1]: Starting Load Kernel Module drm...
+[    6.347613] radxa-a733 systemd[1]: Starting Load Kernel Module fuse...
+[    6.356039] radxa-a733 systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    6.356134] radxa-a733 systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    6.358658] radxa-a733 systemd[1]: Starting Journal Service...
+[    6.363771] radxa-a733 systemd[1]: Starting Load Kernel Modules...
+[    6.365565] radxa-a733 systemd[1]: Starting Remount Root and Kernel File Systems...
+[    6.366305] radxa-a733 kernel: fuse: init (API version 7.34)
+[    6.367874] radxa-a733 systemd[1]: Starting Coldplug All udev Devices...
+[    6.370507] radxa-a733 systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    6.371084] radxa-a733 systemd[1]: modprobe@configfs.service: Succeeded.
+[    6.371382] radxa-a733 systemd[1]: Finished Load Kernel Module configfs.
+[    6.371770] radxa-a733 systemd[1]: modprobe@drm.service: Succeeded.
+[    6.372046] radxa-a733 systemd[1]: Finished Load Kernel Module drm.
+[    6.372390] radxa-a733 systemd[1]: modprobe@fuse.service: Succeeded.
+[    6.372641] radxa-a733 systemd[1]: Finished Load Kernel Module fuse.
+[    6.374079] radxa-a733 systemd[1]: Mounting FUSE Control File System...
+[    6.375737] radxa-a733 systemd[1]: Mounting Kernel Configuration File System...
+[    6.382992] radxa-a733 systemd[1]: Mounted Huge Pages File System.
+[    6.383205] radxa-a733 systemd[1]: Mounted POSIX Message Queue File System.
+[    6.383342] radxa-a733 systemd[1]: Mounted Kernel Debug File System.
+[    6.383466] radxa-a733 systemd[1]: Mounted Kernel Trace File System.
+[    6.383582] radxa-a733 systemd[1]: Mounted FUSE Control File System.
+[    6.383694] radxa-a733 systemd[1]: Mounted Kernel Configuration File System.
+[    6.392858] radxa-a733 kernel: EXT4-fs (mmcblk0p3): re-mounted. Opts: (null). Quota mode: disabled.
+[    6.395972] radxa-a733 systemd[1]: Finished Remount Root and Kernel File Systems.
+[    6.398289] radxa-a733 systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    6.398399] radxa-a733 systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    6.400057] radxa-a733 systemd[1]: Starting Load/Save Random Seed...
+[    6.401858] radxa-a733 systemd[1]: Starting Create System Users...
+[    6.406921] radxa-a733 systemd[1]: Finished Load Kernel Modules.
+[    6.410510] radxa-a733 systemd[1]: Starting Apply Kernel Variables...
+[    6.448737] radxa-a733 systemd[1]: Finished Load/Save Random Seed.
+[    6.449062] radxa-a733 systemd[1]: Reached target First Boot Complete.
+[    6.452370] radxa-a733 systemd[1]: Finished Apply Kernel Variables.
+[    6.463716] radxa-a733 systemd[1]: Started Journal Service.
+[    7.232884] radxa-a733 kernel: platform 7023017.s_pwm0: supply pwm not found, using dummy regulator
+[    7.314482] radxa-a733 kernel: sunxi-spi-ng 2540000.spi: supply spi not found, using dummy regulator
+[    7.314726] radxa-a733 kernel: sunxi:spi-2540000.spi:[INFO]: bus num_0 mode_16 freq_8000000
+[    7.314733] radxa-a733 kernel: sunxi:spi-2540000.spi:[INFO]: cs num_1 mode_1
+[    7.343326] radxa-a733 kernel: spi-nor spi0.0: w25q64dw (8192 Kbytes)
+[    7.345780] radxa-a733 kernel: pvrsrvkm: loading out-of-tree module taints kernel.
+[    7.357781] radxa-a733 kernel: sunxi:VE:[INFO]: 2215 sunxi_cedar_init(): sunxi cedar version 1.1
+[    7.358210] radxa-a733 kernel: sunxi:sunxi_usbc:[INFO]: OTG can't find bcten-gpio, use default mode.
+[    7.358416] radxa-a733 kernel: sunxi:sunxi_usbc:[INFO]: get id is fail, -84
+[    7.358888] radxa-a733 kernel: sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[    7.359910] radxa-a733 kernel: sunxipart: failed to parse sunxi_gpt!
+[    7.369782] radxa-a733 kernel: sunxi:VE:[INFO]: 2137 sunxi_cedar_probe(): probe ve
+[    7.371173] radxa-a733 kernel: npu[15b][15b] vipcore, platform driver init
+[    7.371191] radxa-a733 kernel: npu[15b][15b] vipcore, insmod param cpu_physical=0x0
+[    7.371196] radxa-a733 kernel: npu[15b][15b] vipcore, insmod param cpu_physical=0x0
+[    7.371200] radxa-a733 kernel: npu[15b][15b] vipcore, insmod param cpu_physical=0x0
+[    7.371204] radxa-a733 kernel: npu[15b][15b] vipcore, insmod param cpu_physical=0x0
+[    7.371210] radxa-a733 kernel: npu[15b][15b] vipcore, platform device compatible=allwinner,npu
+[    7.375185] radxa-a733 kernel: [sunxi bxm]SysDevInit start!
+[    7.375195] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[    7.375215] radxa-a733 kernel: pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[    7.375217] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[    7.375549] radxa-a733 kernel: npu[15b][15b] vipcore, platform driver device=0xffff0000c1099010
+[    7.375627] radxa-a733 kernel: npu[15b][15b] clock_rate: 26000000
+[    7.375652] radxa-a733 kernel: npu[15b][15b] vipcore irq number is 431.
+[    7.375657] radxa-a733 kernel: npu[15b][15b] npu power domains status: 0
+[    7.375674] radxa-a733 kernel: NPU AXI CLK NULL
+[    7.375708] radxa-a733 kernel: NPU AHB CLK NULL
+[    7.375712] radxa-a733 kernel: NPU TZMA CLK NULL
+[    7.375747] radxa-a733 kernel: npu[15b][15b] EXTRA: 0x, SID: 0x0, max_freq: 1200000000, default_freq: 1200000000
+[    7.375754] radxa-a733 kernel: npu[15b][15b] current dvfs: 0, vf index: 0
+[    7.376213] radxa-a733 kernel: npu[15b][15b] successed to set opp regulator
+[    7.376264] radxa-a733 kernel: npu[15b][15b] Supported vf list: 
+[    7.376274] radxa-a733 kernel: npu[15b][15b]     freq: 492000000, vol: 800000
+[    7.376366] radxa-a733 kernel: npu[15b][15b]     freq: 852000000, vol: 800000
+[    7.376448] radxa-a733 kernel: npu[15b][15b]     freq: 1008000000, vol: 960000
+[    7.376522] radxa-a733 kernel: npu[15b][15b] get freq list and add opp successfully
+[    7.376988] radxa-a733 kernel: sunxi-cedar 1c0e000.ve: supply ve not found, using dummy regulator
+[    7.381370] radxa-a733 kernel: pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[    7.381379] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[    7.381452] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[    7.382462] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[    7.382472] radxa-a733 kernel: pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[    7.382480] radxa-a733 kernel: [sunxi bxm]SysDevInit end!
+[    7.382524] radxa-a733 kernel: PVR_K:  357: Read BVNC 36.56.104.183 from HW device registers
+[    7.382541] radxa-a733 kernel: PVR_K:  357: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[    7.394921] radxa-a733 kernel: npu[15b][15b] target rate: 1008000000, vol: 960000, target_fscale: 100
+[    7.394959] radxa-a733 kernel: npu[15b][15b] npu devfreq added
+[    7.395129] radxa-a733 kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    7.396223] radxa-a733 kernel: npu[15b][15b] successed to register cooling device
+[    7.396237] radxa-a733 kernel: npu[15b][15b] enable aw vip devfreq
+[    7.396267] radxa-a733 kernel: npu[15b][15b] NPU Use VF0000, use freq 1008 MHz
+[    7.396450] radxa-a733 kernel: npu[15b][15b] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[    7.396457] radxa-a733 kernel: npu[15b][15b] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[    7.397844] radxa-a733 kernel: sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[    7.397887] radxa-a733 kernel: npu[15b][15b] Get NPU Regulator Control FAIL!
+[    7.398026] radxa-a733 kernel: npu[15b][15b] Want set npu vol(960000) now vol(800000)
+[    7.398040] radxa-a733 kernel: npu[15b][15b] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[    7.398047] radxa-a733 kernel: npu[15b][15b] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[    7.398094] radxa-a733 kernel: npu[15b][15b] vipcore, device_cnt=1, core_cnt=1
+[    7.398758] radxa-a733 kernel: sunxi:spi-2540000.spi:[INFO]: probe success (Version 2.5.4)
+[    7.399645] radxa-a733 kernel: npu[15b][15b] core_0, request irqline=431, name=vipcore_0
+[    7.399727] radxa-a733 kernel: npu[15b][15b] vipcore, allocate page for video memory, size: 0x400000 bytes
+[    7.399756] radxa-a733 kernel: npu[15b][15b] vipcore, heap_cnt=0, reserved video memory cpu_phy=0x103800000, vip_phy=0x103800000, size=0x400000
+[    7.399835] radxa-a733 kernel: npu[15b][15b] VIPLite driver version 2.0.3.0-AW-2024-05-29
+[    7.401724] radxa-a733 kernel: [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    7.401940] radxa-a733 kernel: sunxi:VE:[INFO]: 2140 sunxi_cedar_probe(): probe ve1
+[    7.404637] radxa-a733 kernel: sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[    7.421743] radxa-a733 kernel: sunxi:VE:[INFO]: 2143 sunxi_cedar_probe(): probe ve2
+[    7.438912] radxa-a733 kernel: sunxi-cedar 1c10000.ve2: supply ve not found, using dummy regulator
+[    7.454788] radxa-a733 kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    7.496599] radxa-a733 kernel: deinterlace 5400000.deinterlace: Adding to iommu group 0
+[    7.496753] radxa-a733 kernel: sunxi:deinterlace:[INFO]: DI probe
+[    7.550200] radxa-a733 kernel: zram: Added device: zram0
+[    7.550470] radxa-a733 kernel: [Awinic] aw87xxx_pa_init:driver version: v2.14.0
+[    7.569219] radxa-a733 kernel: at24 0-0050: supply vcc not found, using dummy regulator
+[    7.597403] radxa-a733 kernel: at24 0-0050: 2048 byte 24c16 EEPROM, writable, 1 bytes/write
+[    7.608040] radxa-a733 kernel: sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[    7.608054] radxa-a733 kernel: sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+[    7.608239] radxa-a733 kernel: sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[    7.608243] radxa-a733 kernel: sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+[    7.609196] radxa-a733 kernel: zram0: detected capacity change from 0 to 4001552
+[    7.663633] radxa-a733 kernel: Adding 2000772k swap on /dev/zram0.  Priority:100 extents:1 across:2000772k SS
+[    7.738116] radxa-a733 kernel: aic_bluetooth_mod_init 
+[    7.738133] radxa-a733 kernel: RELEASE DATE:2026_0123_5f7be68d 
+[    7.748260] radxa-a733 kernel: Aic high speed USB device detected
+[    7.748785] radxa-a733 kernel: chip_id=7, chip_mcu_id = 0
+[    7.748807] radxa-a733 kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+[    7.758775] radxa-a733 kernel: file md5:54b15ce88b3b9ba14bf961e6f90839fc
+[    7.758803] radxa-a733 kernel: ### Upload fw_patch_table_8800d80_u02.bin fw_patch_table, size=1384
+[    7.758897] radxa-a733 kernel: addr_adid 0x201940, addr_patch 0x1e0000
+[    7.758907] radxa-a733 kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+[    7.759539] radxa-a733 kernel: file md5:f546881a81b960d89a672578eb45a809
+[    7.759566] radxa-a733 kernel: ### Upload fw_adid_8800d80_u02.bin firmware, @ = 201940  size=1708
+[    7.760199] radxa-a733 kernel: fw download complete
+[    7.760219] radxa-a733 kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+[    7.761473] radxa-a733 kernel: file md5:f5400db1d64e0150c3232eb53e7f78b6
+[    7.761496] radxa-a733 kernel: ### Upload fw_patch_8800d80_u02.bin firmware, @ = 1e0000  size=32700
+[    7.767862] radxa-a733 kernel: fw download complete
+[    7.767886] radxa-a733 kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+[    7.768784] radxa-a733 kernel: file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+[    7.768806] radxa-a733 kernel: ### Upload fw_patch_8800d80_u02_ext0.bin firmware, @ = 20b43c  size=16136
+[    7.774016] radxa-a733 kernel: fw download complete
+[    7.782454] radxa-a733 kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    7.782497] radxa-a733 kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.785871] radxa-a733 kernel: aicbt_patch_table_load bt btmode[4]:5
+[    7.793050] radxa-a733 kernel: aicbt_patch_table_load bt btport[4]:1
+[    7.793057] radxa-a733 kernel: aicbt_patch_table_load bt uart_baud[4]:1500000
+[    7.793062] radxa-a733 kernel: aicbt_patch_table_load bt uart_flowctrl[4]:1
+[    7.793064] radxa-a733 kernel: aicbt_patch_table_load bt lpm_enable[4]:0
+[    7.793067] radxa-a733 kernel: aicbt_patch_table_load bt tx_pwr[4]:6F2F
+[    7.796054] radxa-a733 kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    7.796103] radxa-a733 kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.816127] radxa-a733 kernel: sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    7.829693] radxa-a733 kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    7.847394] radxa-a733 kernel: sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+[    7.860907] radxa-a733 kernel: sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+[    7.898705] radxa-a733 kernel: patch version - Aug 01 2025 11:05:26 - git a26f071
+[    7.898797] radxa-a733 kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+[    7.904974] radxa-a733 kernel: file md5:280bb388f3b44bf1cbe5ec072ba274da
+[    7.904984] radxa-a733 kernel: ### Upload fmacfw_8800d80_u02.bin firmware, @ = 120000  size=358072
+[    7.909522] radxa-a733 kernel: debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[    7.960425] radxa-a733 kernel: fw download complete
+[    7.960433] radxa-a733 kernel: AICWFDBG(LOGERROR)        Read FW mem: 00120198
+[    7.960485] radxa-a733 kernel: AICWFDBG(LOGERROR)        120198=177158
+[    7.960589] radxa-a733 kernel: AICWFDBG(LOGERROR)        1201a0=177c00
+[    7.966014] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: IRQ eth_wake_irq not found
+[    7.966443] radxa-a733 kernel: sunxi:stmmac-4500000.ethernet:[INFO]: Phy use soc fanout
+[    7.971638] radxa-a733 kernel: usbcore: registered new interface driver aic_load_fw
+[    7.974976] radxa-a733 kernel: app_cmp
+[    7.975170] radxa-a733 kernel: app_cmp
+[    7.975285] radxa-a733 kernel: app_cmp
+[    7.975312] radxa-a733 kernel: app_cmp
+[    7.975408] radxa-a733 kernel: app_cmp
+[    7.975521] radxa-a733 kernel: app_cmp
+[    7.975641] radxa-a733 kernel: app_cmp
+[    7.975729] radxa-a733 kernel: app_cmp
+[    7.975849] radxa-a733 kernel: app_cmp
+[    7.975973] radxa-a733 kernel: app_cmp
+[    7.976098] radxa-a733 kernel: app_cmp
+[    7.976224] radxa-a733 kernel: app_cmp
+[    7.976348] radxa-a733 kernel: app_cmp
+[    7.976442] radxa-a733 kernel: app_cmp
+[    7.976557] radxa-a733 kernel: app_cmp
+[    7.976609] radxa-a733 kernel: app_cmp
+[    7.976726] radxa-a733 kernel: app_cmp
+[    7.976858] radxa-a733 kernel: app_cmp
+[    7.976980] radxa-a733 kernel: app_cmp
+[    8.008764] radxa-a733 kernel: sunxi:stmmac-4500000.ethernet:[INFO]: Not found delay-maps in dts
+[    8.009533] radxa-a733 kernel: sunxi:stmmac-4500000.ethernet:[INFO]: RGMII use internal transmit clock
+[    8.009697] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: User ID: 0x20, Synopsys ID: 0x53
+[    8.009712] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet:         DWMAC4/5
+[    8.009718] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: DMA HW capability register supported
+[    8.009723] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: RX Checksum Offload Engine supported
+[    8.009727] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: TX Checksum insertion supported
+[    8.009730] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: Wake-Up On Lan supported
+[    8.012446] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    8.012462] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: Enabled RFS Flow TC (entries=8)
+[    8.012469] radxa-a733 kernel: dwmac-sunxi 4500000.ethernet: Using 32 bits DMA width
+[    8.020312] radxa-a733 kernel: input: sunxi-ac101b Headphones as /devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+[    8.033431] radxa-a733 kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    8.039377] radxa-a733 kernel: debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[    8.218570] radxa-a733 kernel: usb 1-1.4: USB disconnect, device number 4
+[    8.266735] radxa-a733 kernel: aicwf_usb_disconnect enter 
+[    8.266751] radxa-a733 kernel: aicwf_bus_deinit
+[    8.383022] radxa-a733 kernel: sunxi:sunxi_usbc:[INFO]: insmod_device_driver
+[    8.383242] radxa-a733 kernel: sunxi_usb_udc 4100000.udc-controller: supply udc not found, using dummy regulator
+[    8.383597] radxa-a733 kernel: sunxi:sunxi_usbc:[INFO]: device_chose finished 337!
+[    8.423724] radxa-a733 kernel: maxio_mae0621aQ3C probe PHY_ID: 0x7b744412
+[    8.424816] radxa-a733 kernel: sunxi:stmmac-4500000.ethernet:[INFO]: probe success (Version 0.3.2)
+[    8.766892] radxa-cubie-a7a kernel: q_sz/max:  0 /  8 - next tkn: 559
+[    8.766909] radxa-cubie-a7a kernel: q_sz/max:  0 /  8 - next tkn: 559
+[    8.766928] radxa-cubie-a7a kernel: usb bustx thread will to stop
+[    8.766932] radxa-cubie-a7a kernel: usb bustx thread stop
+[    8.767183] radxa-cubie-a7a kernel: exit aicwf_bus_deinit
+[    8.767331] radxa-cubie-a7a kernel: usb busrx thread will to stop
+[    8.769036] radxa-cubie-a7a kernel: usb busrx thread stop
+[    8.943000] radxa-cubie-a7a kernel: sunxi:sound-ac101b:[INFO]: 386 sunxi_adv_headset_heasphone_det():  headset_basedata:0 key_threshold:17
+[    8.944158] radxa-cubie-a7a kernel: [sound] jack report -> HEADSET
+[    8.960740] radxa-cubie-a7a kernel: MAXIO_PHY_VER: v1.8.1.13 
+[    8.973761] radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: PHY [stmmac-0:01] driver [MAE0621A/B-Q3C(I) Gigabit Ethernet] (irq=POLL)
+[    8.974352] radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[    8.982955] radxa-cubie-a7a kernel: dwmac4: Master AXI performs fixed burst length
+[    8.982985] radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: No Safety Features support found
+[    8.993020] radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[    8.993375] radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: configuring for phy/rgmii link mode
+[    9.098981] radxa-cubie-a7a kernel: usb 1-1.4: new high-speed USB device number 7 using xhci-hcd
+[    9.247913] radxa-cubie-a7a kernel: PVR_K:  596: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[    9.255395] radxa-cubie-a7a kernel: PVR_K:  596: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[    9.299616] radxa-cubie-a7a kernel: usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d81, bcdDevice= 1.00
+[    9.299642] radxa-cubie-a7a kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    9.299652] radxa-cubie-a7a kernel: usb 1-1.4: Product: AIC 8800D80
+[    9.299660] radxa-cubie-a7a kernel: usb 1-1.4: Manufacturer: AICSemi
+[    9.299668] radxa-cubie-a7a kernel: usb 1-1.4: SerialNumber: 20220103
+[    9.307714] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[    9.308447] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[    9.309025] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[    9.409461] radxa-cubie-a7a kernel: Bluetooth: Core ver 2.22
+[    9.409567] radxa-cubie-a7a kernel: NET: Registered PF_BLUETOOTH protocol family
+[    9.409573] radxa-cubie-a7a kernel: Bluetooth: HCI device and connection manager initialized
+[    9.409590] radxa-cubie-a7a kernel: Bluetooth: HCI socket layer initialized
+[    9.409596] radxa-cubie-a7a kernel: Bluetooth: L2CAP socket layer initialized
+[    9.409610] radxa-cubie-a7a kernel: Bluetooth: SCO socket layer initialized
+[    9.409820] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+[    9.410863] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+[    9.412611] radxa-cubie-a7a kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    9.416073] radxa-cubie-a7a kernel: aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+[    9.416089] radxa-cubie-a7a kernel: aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+[    9.416090] radxa-cubie-a7a kernel: aic_btusb: RELEASE DATE: 2023_1211_1958 
+[    9.416203] radxa-cubie-a7a kernel: aic_btusb: btusb_probe: usb_interface 00000000637a17bd, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+[    9.416215] radxa-cubie-a7a kernel: aicwf_usb_chipmatch USE AIC8800D80
+[    9.416218] radxa-cubie-a7a kernel: endpoint num 3
+[    9.416220] radxa-cubie-a7a kernel: endpoint num 4
+[    9.416222] radxa-cubie-a7a kernel: endpoint num 4
+[    9.416224] radxa-cubie-a7a kernel: aic_btusb: firmware_info_init: Auto suspend is disabled
+[    9.416227] radxa-cubie-a7a kernel: aic_btusb: btusb_probe: download begining...
+[    9.416228] radxa-cubie-a7a kernel: aic_btusb: btusb_probe: download ending...
+[    9.416583] radxa-cubie-a7a kernel: usbcore: registered new interface driver aic_btusb
+[    9.416950] radxa-cubie-a7a kernel: aic_btusb: btusb_open: Start
+[    9.416957] radxa-cubie-a7a kernel:  download_patch 0
+[    9.416980] radxa-cubie-a7a kernel: aic_btusb: btusb_open: End
+[    9.439130] radxa-cubie-a7a kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    9.439387] radxa-cubie-a7a kernel: cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    9.507316] radxa-cubie-a7a kernel: 
+[    9.507323] radxa-cubie-a7a kernel: **********************************************************
+[    9.507324] radxa-cubie-a7a kernel: **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    9.507325] radxa-cubie-a7a kernel: **                                                      **
+[    9.507326] radxa-cubie-a7a kernel: ** trace_printk() being used. Allocating extra memory.  **
+[    9.507328] radxa-cubie-a7a kernel: **                                                      **
+[    9.507329] radxa-cubie-a7a kernel: ** This means that this is a DEBUG kernel and it is     **
+[    9.507330] radxa-cubie-a7a kernel: ** unsafe for production use.                           **
+[    9.507331] radxa-cubie-a7a kernel: **                                                      **
+[    9.507332] radxa-cubie-a7a kernel: ** If you see this message and you are not debugging    **
+[    9.507333] radxa-cubie-a7a kernel: ** the kernel, report this immediately to your vendor!  **
+[    9.507334] radxa-cubie-a7a kernel: **                                                      **
+[    9.507334] radxa-cubie-a7a kernel: **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    9.507336] radxa-cubie-a7a kernel: **********************************************************
+[    9.621368] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[    9.627029] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[    9.639904] radxa-cubie-a7a kernel: ========== tcp ack debug tcp_ack_init 
+[    9.645156] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[    9.645179] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[   10.596422] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[   10.635453] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[   10.649082] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[   10.665055] radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[   11.072857] radxa-cubie-a7a kernel: ieee80211 phy0: 
+                                       *******************************************************
+                                       ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+                                       *******************************************************
+[   11.102510] radxa-cubie-a7a kernel: usbcore: registered new interface driver aic8800_fdrv
+[   11.331176] radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        p2p dev addr=f2 ab 5c e1 db 2f
+[   11.354844] radxa-cubie-a7a kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   11.354872] radxa-cubie-a7a kernel: Bluetooth: BNEP socket layer initialized
+[   11.370061] radxa-cubie-a7a kernel: NET: Registered PF_ALG protocol family
+[   11.619729] radxa-cubie-a7a kernel: EXT4-fs (mmcblk0p3): resizing filesystem from 1569515 to 7706747 blocks
+[   12.378377] radxa-cubie-a7a kernel: dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+[   12.451627] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+[   12.451656] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+[   12.456711] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   12.457591] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   12.470810] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+[   12.470838] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+[   12.475894] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   12.566949] radxa-cubie-a7a kernel: Bluetooth: RFCOMM TTY layer initialized
+[   12.566988] radxa-cubie-a7a kernel: Bluetooth: RFCOMM socket layer initialized
+[   12.567009] radxa-cubie-a7a kernel: Bluetooth: RFCOMM ver 1.11
+[   13.414192] radxa-cubie-a7a kernel: EXT4-fs (mmcblk0p3): resized filesystem to 7706747
+[   17.534627] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   23.103212] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vi_test@0:[WARN]: runtime_suspend disable clock
+[   23.103237] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_ve_dec_test@0:[WARN]: runtime_suspend disable clock
+[   23.103253] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_ve_enc_test@0:[WARN]: runtime_suspend disable clock
+[   23.103267] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_npu_test@0:[WARN]: runtime_suspend disable clock
+[   23.103277] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_pcie_test@0:[WARN]: runtime_suspend disable clock
+[   23.103285] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_usb2_test@0:[WARN]: runtime_suspend disable clock
+[   23.103293] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_de_sys_test@0:[WARN]: runtime_suspend disable clock
+[   23.103306] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vo_test@0:[WARN]: runtime_suspend disable clock
+[   23.103318] radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vo1_test@0:[WARN]: runtime_suspend disable clock
+[   33.760365] radxa-cubie-a7a kernel: axp8191-bldo2: disabling
+[   33.761028] radxa-cubie-a7a kernel: axp8191-bldo5: disabling
+[   35.906400] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+[   35.906429] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+[   35.911484] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   35.911679] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   35.924748] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+[   35.924772] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+[   35.929825] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   41.018649] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+[  538.293706] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+[  540.306888] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  540.311135] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  540.563848] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+[  568.948738] radxa-cubie-a7a kernel: rx eapol
+[  568.953167] radxa-cubie-a7a kernel: rx eapol
+[  568.956681] radxa-cubie-a7a kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+
+=== STDERR ===
+
+RC=0

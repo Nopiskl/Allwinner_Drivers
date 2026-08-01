@@ -1,0 +1,1470 @@
+
+
+===== capture started 2026-07-31T17:28:31.044235+00:00 COM4@115200 =====
+[?2004l[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Reboot Screen[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mboot-efi.automount[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mconfig.automount[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+[ 2044.301948][    T1] reboot: Restarting system
+......
+
+
+[264]HELLO! BOOT0 is starting!
+[267]BOOT0 commit : {4721ad08}
+[281]dram_para_total:0xf
+[283]vaild para:6  select dram para0
+[287]rtc[3] value = 0xa301
+[mmc]: mmc driver ver 2025-10-16 17:10
+[mmc]: Wrong media type 0x0
+[mmc]: ***Try SD card 0***
+[mmc]: HSSDR52/SDR25 4 bit
+[mmc]: 50000000 Hz
+[mmc]: 30436 MB
+[mmc]: ***SD/MMC 0 init OK!!!***
+[334]DRAM BOOT DRIVE INFO: V0.601
+[339]DRAM_VCC set to 560 mv
+[341]DRAM CLK =2400 MHZ
+[344]DRAM Type =9 (8:LPDDR4,9:LPDDR5)
+[491]Training result is = 7
+[494]DRAM Pstate 1 training, frequency is 1200 Mhz
+[673]Training result is = 7
+[676]DRAM Pstate 2 training, frequency is 800 Mhz
+[1020]Training result is = 7
+[1023]DRAM Pstate 3 training, frequency is 400 Mhz
+[1105]Training result is = 7
+[1108]DRAM Pstate 0 training, frequency is 2400 Mhz
+[1117]Actual DRAM SIZE =4096 M
+[1120]DRAM SIZE =4096 MBytes, para1 = a0fa, para2 = 10001001, dram_tpr13 = 65
+[1134]DRAM simple test OK.
+[1140]error:bad magic.
+[1204]error: dtb not found for scp
+[1207]mmc not para
+[1209]Jump to ATF: monitor_base = 0x48000000, uboot_base = 0x4a000000, optee_base = 0x0
+NOTICE:  BL31: OP-TEE 32bit detected
+NOTICE:  BL31: U-BOOT 32bit detected
+NOTICE:  BL31: dram size is 4294967296 bytes
+NOTICE:  BL31: v2.5(debug):48e54578a
+NOTICE:  BL31: Built : 14:13:06, Jul  2 2025
+NOTICE:  BL31: No DTB found.
+ERROR:   Error initializing runtime service opteed_fast
+
+
+U-Boot 2018.07-17-boot-aw2501-g4c7078cfdf7-dirty (Apr 29 2026 - 10:03:59 +0000) Allwinner Technology
+
+[01.264]CPU:   Allwinner Family
+[01.267]Model: Radxa Cubie A7A
+I2C:   ready
+[01.329]DRAM:  4 GiB
+[01.338]Relocation Offset is: 75d89000
+[01.389]secure enable bit: 0
+[01.392]PMU: AXP8191
+[01.394]PMU: AXP8191 VER_A
+FDT ERROR:fdt_get_regulator_name:get property handle twi-supply error:FDT_ERR_INTERNAL
+[01.406]bmu_axp515_probe pmic_bus_read fail
+[01.410][AXP8191] onoff status: 0x50 = 0x0, 0x51 = 0x0
+[01.415][AXP8191] charge status: 0x4 = 0x1
+[01.419]CPU=1014 MHz,PLL6=1200 Mhz,AHB=200 Mhz, APB1=24Mhz  MBus=600Mhz
+[01.425]gic: sec monitor mode
+SPI ALL:   ready
+[01.469]flash init start
+[01.471]workmode = 0,storage type = 1
+[01.475][mmc]: mmc driver ver uboot2018:2024-10-18 9:01:00 -- uboot2018:2025-03-28 10:03:00
+[01.483][mmc]: get sdc_type fail and use default host:tm1.
+[01.491][mmc]: can't find node "mmc0",will add new node
+[01.496][mmc]: fdt err returned <no error>
+[01.499][mmc]: Using default timing para
+[01.503][mmc]: SUNXI SDMMC Controller Version:0x50530
+[01.531][mmc]: card_caps:0x3000000a
+[01.534][mmc]: host_caps:0x3000003f
+[01.540]sunxi flash init ok
+get value error
+[01.550]Loading Environment from SUNXI_FLASH... OK
+No ethernet found.
+[01.587]NOT support bridge yet
+[01.590]Warn: no find panel or bridge
+[01.594]hdmi0@5520000 disconnected
+[01.597]drm hdmi get mode: 1920x1080@60Hz
+hdmi0@5520000: use force output detailed mode clock 148500 kHz, flags[5]
+    H: 1920 2008 2052 2200
+    V: 1080 1084 1089 1125
+bus_format: 0
+partno erro : can't find partition bootloader
+[01.626]bootloader is not found!
+partno erro : can't find partition boot-resource
+[01.635]boot-resource is not found!
+[01.638]Can not load logo.bmp file!
+[01.642]load logo fail
+[01.651]the secure storage item0 copy0 magic is bad
+[01.663]the secure storage item0 copy1 magic is bad
+[01.667]usb burn from boot
+delay time 0
+[01.674]usb prepare ok
+[01.977]overtime
+[01.981]do_burn_from_boot usb : no usb exist
+skip update boot_param
+cann't get the boot_base from the env
+[01.992]update part info
+[01.997]battery temp is -1
+[02.002]update bootcmd
+[02.010](not enough data: expected >= 8 cells, got 4 cells)
+Link up timeout
+Speed change timeout
+PCIe speed of Gen1
+Override default fdtfile to allwinner/sun60i-a733-cubie-a7a.dtb
+[04.452]libfdt fdt_check_header(): FDT_ERR_BADMAGIC
+[04.458]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[04.463][mmc]: get sunxi-mmc0 string failed
+[04.468]The storage not support sample function
+[04.474]## error: update_fdt_dram_para_from_bootpara : FDT_ERR_NOTFOUND
+[04.481]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.486]mac addr => 08:51:49:58:40:32
+[04.489]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.495]mac addr => 08:51:49:58:40:33
+[04.499]/chosen/rng-seed node not exit
+[04.502]no battery, disabled battery functons
+[04.507]Could not find nodeoffset for bat_supply
+[04.511]update dts
+curr_device:0
+Device: SUNXI SD/MMC
+Manufacturer ID: 3
+OEM: 5344
+Name: SD32G 
+Bus Speed: 50000000
+Mode : SD High Speed (50MHz)
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 29.7 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+[ufs]info:Driver version 0.0.24 2024.12.30 16:00
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]err:link startup failed -6
+[ufs]err:ufshcd_probe() failed -6
+fail to init ufs
+sunxi_flash - sunxi_flash sub-system
+
+Usage:
+sunxi_flash sunxi_flash init storage_type
+sunxi_flash read mem_addr part_name [size]
+sunxi_flash read_mtd mem_addr part_name [size]
+sunxi_flash write <mem_addr> <part_name> [size]
+sunxi_flash write <mem_addr> <part_name> [offset] [size]
+sunxi_flash write_mtd <mem_addr> <part_name>
+sunxi_flash boot0 force_dram_update_size <new_val> 
+sunxi_flash boot0 force_dram_update_flag <new_val> 
+
+Hit any key to stop autoboot:  0 
+starting USB...
+USB0:   start sunxi  USB-DRD...
+config usb clk ok
+sunxi USB-DRD init ok...
+USB EHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+USB1:   start sunxi  USB1-Host...
+config usb clk ok
+sunxi USB1-Host init ok...
+USB EHCI 1.00
+scanning bus 1 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+
+Device 0: device type unknown
+... is now current device
+** Bad device usb 0 **
+** Bad device usb 0 **
+mmc0 is current device
+Scanning mmc 0:2...
+Scanning mmc 0:3...
+Found /boot/extlinux/extlinux.conf
+Retrieving file: /boot/extlinux/extlinux.conf
+1443 bytes read in 20 ms (70.3 KiB/s)
+U-Boot menu
+1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+2:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733 (rescue target)
+Enter choice: 1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+Retrieving file: /boot/initrd.img-5.15.147-21-a733
+32594122 bytes read in 1369 ms (22.7 MiB/s)
+Retrieving file: /boot/vmlinuz-5.15.147-21-a733
+23296512 bytes read in 986 ms (22.5 MiB/s)
+append: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+Retrieving file: /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+196460 bytes read in 163 ms (1.1 MiB/s)
+Retrieving file: /boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+6464 bytes read in 40 ms (157.2 KiB/s)
+[13.671]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[13.680]The storage not support sample function
+[13.770]mac addr => 08:51:49:58:40:32
+[13.773]mac addr => 08:51:49:58:40:33
+[13.778]no battery, disabled battery functons
+[13.785]update dts
+stop sunxi USB-DRD ok...
+stop sunxi USB1-Host ok...
+[13.814]Starting kernel ...
+
+[13.816]total: 13816 ms
+
+[13.818][mmc]: MMC Device 2 not found
+[13.822][mmc]: mmc 2 not find, so not exit
+NOTICE:  [SCP] :wait arisc ready....
+NOTICE:  [SCP] :arisc version: [d463b9da43dc50320f21ba51c6c51afe2db20d83]
+NOTICE:  [SCP] :arisc startup ready
+NOTICE:  [SCP] :arisc startup notify message feedback
+NOTICE:  [SCP] :sunxi-arisc driver is starting
+NOTICE:  BL3-1: Next image address = 0x40200000
+NOTICE:  BL3-1: Next image spsr = 0x3c5
+[    0.000000][    T0] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000][    T0] Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000][    T0] random: crng init done
+[    0.000000][    T0] Machine model: sun60iw2
+[    0.000000][    T0] printk: bootconsole [earlycon0] enabled
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.082118][    T1] iommu_master csi_iommu: attach fail:-517
+[    0.082179][    T1] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.229113][    T1] sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.229127][    T1] sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.229396][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229400][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229425][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229428][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.294984][    T1] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.332919][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.343016][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.353106][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.363180][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.373247][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.383328][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.393426][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.403515][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.413612][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.421578][    T1] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.424039][    T1] sunxi:sunxi_sidefuse init success!
+[    0.424044][    T1] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.445628][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.455774][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.465883][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.475968][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.486061][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.496151][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.506245][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.516369][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.526507][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.536642][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.546756][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.556862][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.566989][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.577169][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.587403][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.597488][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.607572][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.617698][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.619826][    T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.637095][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.647162][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.657270][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.667364][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.677426][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.687548][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.696806][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.707508][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.741721][    C0] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.768177][  T106] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.928770][    T9] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.936219][    T9] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.943134][    T9] sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.951574][    T9] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.960114][    T9] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.969147][    T9] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.977882][    T9] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.986316][    T9] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.994428][    T9] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    1.004796][    T9] sunxi-ufs-pltfm 4520000.ufs: last intr at 924528 us, last intr status=0x404
+[    1.014564][    T9] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.024152][    T9] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.035487][    T9] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.043417][    T9] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.051346][    T9] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.059380][    T9] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.067349][    T9] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.075364][    T9] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.083342][    T9] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.091319][    T9] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.099288][    T9] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.107258][    T9] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.117162][    T9] host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.125076][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.132205][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.139329][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.146456][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.153582][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.160795][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.168891][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.176305][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 925817 us
+[    1.185375][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.193568][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.201174][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.208880][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 415308 us
+[    1.217169][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.224582][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.232091][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    2.919962][  T106] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    3.315653][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[    3.325910][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[    3.335923][  T180] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x51)
+[    3.345770][  T180] rtc-hym8563 14-0051: could not init device, -22
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mEntropy Daemon based on the HAVEGE algorithm[0m.
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+         Starting [0;1;39mShow Plymouth Boot Screen[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Online Metadata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Listening on [    7.087258][  T316] sunxipart: failed to parse sunxi_gpt!
+[0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mAccounts Service[0m...
+         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+         Starting [0;1;39mNetwork Manager[0m...
+         Starting [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+         Starting [0;1;39mInitialize hardware monitoring sensors[0m...
+[[0;32m  OK  [0m] Started [0;1;39mrsetup configuration service[0m.
+         Starting [0;1;39mRealtimeKit Scheduling Policy Service[0m...
+         Starting [0;1;39mUser Login Management[0m...
+         Starting [0;1;39mDisk Manager[0m...
+         Starting [0;1;39mDaemon for power management[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+         Starting [0;1;39mLinux zramswap setup[0m...
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyAS0[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dbacklight.slice[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHardware activated USB gadget[0m.
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m...
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mInitialize hardware monitoring sensors[0m.
+[    7.532370][  T315] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.547281][  T315] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.562903][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.576214][  T327] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    7.590330][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.603260][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.619632][    T9] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.684239][    T9] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+[    7.693354][    T9] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m.
+[    7.741265][    T9] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/disk/by-uuid/A7A8-C9FB[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[    7.876661][    T9] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A8-C9FB[0m...
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRealtimeKit Scheduling Policy Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRadxa USB OTG services[0m.
+         Starting [0;1;39mCUPS Scheduler[0m...
+         Starting [0;1;39mAuthorization Manager[0m...
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A9-19D5[0m...
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+         Starting [0;1;39mHostname Service[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mLinux zramswap setup[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mTerminate Plymouth Boot Screen[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSimple Desktop Display Manager[0m.
+         Starting [0;1;39mHDMI toggle (1280x1024 -> 1920x1080) once after boot[0m...
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+[   10.582696][  T324] ieee80211 phy0: 
+[   10.582696][  T324] *******************************************************
+[   10.582696][  T324] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+[   10.582696][  T324] *******************************************************
+[   10.893958][  T601] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+
+Debian GNU/Linux 11 radxa-cubie-a7a ttyAS0
+
+radxa-cubie-a7a login: [[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Reboot Screen[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Stopping [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m...
+         Stopping [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dbacklight.slice[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mboot-efi.automount[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mconfig.automount[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+[  270.151728][    T1] reboot: Restarting system
+......
+
+
+[252]HELLO! BOOT0 is starting!
+[255]BOOT0 commit : {4721ad08}
+[268]dram_para_total:0xf
+[271]vaild para:6  select dram para0
+[274]rtc[3] value = 0xa301
+[mmc]: mmc driver ver 2025-10-16 17:10
+[mmc]: Wrong media type 0x0
+[mmc]: ***Try SD card 0***
+[mmc]: HSSDR52/SDR25 4 bit
+[mmc]: 50000000 Hz
+[mmc]: 30436 MB
+[mmc]: ***SD/MMC 0 init OK!!!***
+[321]DRAM BOOT DRIVE INFO: V0.601
+[326]DRAM_VCC set to 560 mv
+[329]DRAM CLK =2400 MHZ
+[331]DRAM Type =9 (8:LPDDR4,9:LPDDR5)
+[479]Training result is = 7
+[481]DRAM Pstate 1 training, frequency is 1200 Mhz
+[660]Training result is = 7
+[663]DRAM Pstate 2 training, frequency is 800 Mhz
+[1007]Training result is = 7
+[1010]DRAM Pstate 3 training, frequency is 400 Mhz
+[1092]Training result is = 7
+[1095]DRAM Pstate 0 training, frequency is 2400 Mhz
+[1104]Actual DRAM SIZE =4096 M
+[1107]DRAM SIZE =4096 MBytes, para1 = a0fa, para2 = 10001001, dram_tpr13 = 65
+[1121]DRAM simple test OK.
+[1127]error:bad magic.
+[1191]error: dtb not found for scp
+[1194]mmc not para
+[1196]Jump to ATF: monitor_base = 0x48000000, uboot_base = 0x4a000000, optee_base = 0x0
+NOTICE:  BL31: OP-TEE 32bit detected
+NOTICE:  BL31: U-BOOT 32bit detected
+NOTICE:  BL31: dram size is 4294967296 bytes
+NOTICE:  BL31: v2.5(debug):48e54578a
+NOTICE:  BL31: Built : 14:13:06, Jul  2 2025
+NOTICE:  BL31: No DTB found.
+ERROR:   Error initializing runtime service opteed_fast
+
+
+U-Boot 2018.07-17-boot-aw2501-g4c7078cfdf7-dirty (Apr 29 2026 - 10:03:59 +0000) Allwinner Technology
+
+[01.251]CPU:   Allwinner Family
+[01.254]Model: Radxa Cubie A7A
+I2C:   ready
+[01.316]DRAM:  4 GiB
+[01.325]Relocation Offset is: 75d89000
+[01.376]secure enable bit: 0
+[01.379]PMU: AXP8191
+[01.381]PMU: AXP8191 VER_A
+FDT ERROR:fdt_get_regulator_name:get property handle twi-supply error:FDT_ERR_INTERNAL
+[01.393]bmu_axp515_probe pmic_bus_read fail
+[01.397][AXP8191] onoff status: 0x50 = 0x0, 0x51 = 0x0
+[01.402][AXP8191] charge status: 0x4 = 0x1
+[01.406]CPU=1014 MHz,PLL6=1200 Mhz,AHB=200 Mhz, APB1=24Mhz  MBus=600Mhz
+[01.412]gic: sec monitor mode
+SPI ALL:   ready
+[01.456]flash init start
+[01.458]workmode = 0,storage type = 1
+[01.461][mmc]: mmc driver ver uboot2018:2024-10-18 9:01:00 -- uboot2018:2025-03-28 10:03:00
+[01.470][mmc]: get sdc_type fail and use default host:tm1.
+[01.478][mmc]: can't find node "mmc0",will add new node
+[01.482][mmc]: fdt err returned <no error>
+[01.486][mmc]: Using default timing para
+[01.490][mmc]: SUNXI SDMMC Controller Version:0x50530
+[01.518][mmc]: card_caps:0x3000000a
+[01.521][mmc]: host_caps:0x3000003f
+[01.527]sunxi flash init ok
+get value error
+[01.537]Loading Environment from SUNXI_FLASH... OK
+No ethernet found.
+[01.574]NOT support bridge yet
+[01.577]Warn: no find panel or bridge
+[01.581]hdmi0@5520000 disconnected
+[01.584]drm hdmi get mode: 1920x1080@60Hz
+hdmi0@5520000: use force output detailed mode clock 148500 kHz, flags[5]
+    H: 1920 2008 2052 2200
+    V: 1080 1084 1089 1125
+bus_format: 0
+partno erro : can't find partition bootloader
+[01.613]bootloader is not found!
+partno erro : can't find partition boot-resource
+[01.622]boot-resource is not found!
+[01.625]Can not load logo.bmp file!
+[01.628]load logo fail
+[01.638]the secure storage item0 copy0 magic is bad
+[01.650]the secure storage item0 copy1 magic is bad
+[01.654]usb burn from boot
+delay time 0
+[01.661]usb prepare ok
+[01.964]overtime
+[01.968]do_burn_from_boot usb : no usb exist
+skip update boot_param
+cann't get the boot_base from the env
+[01.979]update part info
+[01.984]battery temp is -1
+[01.989]update bootcmd
+[01.997](not enough data: expected >= 8 cells, got 4 cells)
+Link up timeout
+Speed change timeout
+PCIe speed of Gen1
+Override default fdtfile to allwinner/sun60i-a733-cubie-a7a.dtb
+[04.439]libfdt fdt_check_header(): FDT_ERR_BADMAGIC
+[04.445]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[04.450][mmc]: get sunxi-mmc0 string failed
+[04.455]The storage not support sample function
+[04.461]## error: update_fdt_dram_para_from_bootpara : FDT_ERR_NOTFOUND
+[04.468]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.473]mac addr => 08:51:49:58:40:32
+[04.477]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.482]mac addr => 08:51:49:58:40:33
+[04.486]/chosen/rng-seed node not exit
+[04.489]no battery, disabled battery functons
+[04.494]Could not find nodeoffset for bat_supply
+[04.498]update dts
+curr_device:0
+Device: SUNXI SD/MMC
+Manufacturer ID: 3
+OEM: 5344
+Name: SD32G 
+Bus Speed: 50000000
+Mode : SD High Speed (50MHz)
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 29.7 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+[ufs]info:Driver version 0.0.24 2024.12.30 16:00
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]err:link startup failed -6
+[ufs]err:ufshcd_probe() failed -6
+fail to init ufs
+sunxi_flash - sunxi_flash sub-system
+
+Usage:
+sunxi_flash sunxi_flash init storage_type
+sunxi_flash read mem_addr part_name [size]
+sunxi_flash read_mtd mem_addr part_name [size]
+sunxi_flash write <mem_addr> <part_name> [size]
+sunxi_flash write <mem_addr> <part_name> [offset] [size]
+sunxi_flash write_mtd <mem_addr> <part_name>
+sunxi_flash boot0 force_dram_update_size <new_val> 
+sunxi_flash boot0 force_dram_update_flag <new_val> 
+
+Hit any key to stop autoboot:  0 
+starting USB...
+USB0:   start sunxi  USB-DRD...
+config usb clk ok
+sunxi USB-DRD init ok...
+USB EHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+USB1:   start sunxi  USB1-Host...
+config usb clk ok
+sunxi USB1-Host init ok...
+USB EHCI 1.00
+scanning bus 1 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+
+Device 0: device type unknown
+... is now current device
+** Bad device usb 0 **
+** Bad device usb 0 **
+mmc0 is current device
+Scanning mmc 0:2...
+Scanning mmc 0:3...
+Found /boot/extlinux/extlinux.conf
+Retrieving file: /boot/extlinux/extlinux.conf
+1443 bytes read in 20 ms (70.3 KiB/s)
+U-Boot menu
+1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+2:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733 (rescue target)
+Enter choice: 1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+Retrieving file: /boot/initrd.img-5.15.147-21-a733
+32594122 bytes read in 1369 ms (22.7 MiB/s)
+Retrieving file: /boot/vmlinuz-5.15.147-21-a733
+23296512 bytes read in 986 ms (22.5 MiB/s)
+append: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+Retrieving file: /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+196460 bytes read in 163 ms (1.1 MiB/s)
+Retrieving file: /boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+6464 bytes read in 40 ms (157.2 KiB/s)
+[13.657]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[13.666]The storage not support sample function
+[13.755]mac addr => 08:51:49:58:40:32
+[13.759]mac addr => 08:51:49:58:40:33
+[13.764]no battery, disabled battery functons
+[13.771]update dts
+stop sunxi USB-DRD ok...
+stop sunxi USB1-Host ok...
+[13.800]Starting kernel ...
+
+[13.802]total: 13802 ms
+
+[13.804][mmc]: MMC Device 2 not found
+[13.808][mmc]: mmc 2 not find, so not exit
+NOTICE:  [SCP] :wait arisc ready....
+NOTICE:  [SCP] :arisc version: [d463b9da43dc50320f21ba51c6c51afe2db20d83]
+NOTICE:  [SCP] :arisc startup ready
+NOTICE:  [SCP] :arisc startup notify message feedback
+NOTICE:  [SCP] :sunxi-arisc driver is starting
+NOTICE:  BL3-1: Next image address = 0x40200000
+NOTICE:  BL3-1: Next image spsr = 0x3c5
+[    0.000000][    T0] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000][    T0] Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000][    T0] random: crng init done
+[    0.000000][    T0] Machine model: sun60iw2
+[    0.000000][    T0] printk: bootconsole [earlycon0] enabled
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.082333][    T1] iommu_master csi_iommu: attach fail:-517
+[    0.082396][    T1] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.229198][    T1] sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.229213][    T1] sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.229491][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229495][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229517][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.229520][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.294875][    T1] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.334448][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.344526][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.354591][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.364665][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.374734][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.384771][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.394846][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.404898][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.414997][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.422724][    T1] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.425218][    T1] sunxi:sunxi_sidefuse init success!
+[    0.425223][    T1] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.447074][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.457192][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.467264][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.477312][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.487393][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.497472][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.507558][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.517652][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.527744][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.537862][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.547980][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.558072][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.568165][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.578415][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.579966][    T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.597870][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.607944][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.618029][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.628102][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.638172][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.648216][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.658315][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.668351][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.678448][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.688518][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.697777][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.708446][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.743959][    C0] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.757722][  T106] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.930295][    T9] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.937763][    T9] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.944672][    T9] sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.952918][    T9] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.961333][    T9] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.970229][    T9] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.978840][    T9] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.987144][    T9] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.993399][    T9] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    1.003871][    T9] sunxi-ufs-pltfm 4520000.ufs: last intr at 925777 us, last intr status=0x404
+[    1.013697][    T9] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.023362][    T9] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.034741][    T9] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.042709][    T9] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.050665][    T9] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.059386][    T9] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.067309][    T9] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.075216][    T9] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.083115][    T9] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.091011][    T9] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.098911][    T9] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.106813][    T9] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.114710][    T9] host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.122612][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.129731][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.136849][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.143968][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.151087][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.158307][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.166400][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.173814][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 927120 us
+[    1.182883][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.191071][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.198680][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.206383][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 416216 us
+[    1.214673][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.222085][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.229595][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    2.900213][  T106] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    3.286015][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[    3.296242][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[    3.306413][  T176] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x51)
+[    3.316824][  T176] rtc-hym8563 14-0051: could not init device, -22
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+         Starting [0;1;39mShow Plymouth Boot Screen[0m...
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mEntropy Daemon based on the HAVEGE algorithm[0m.
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyAS0[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dbacklight.slice[0m.
+[    6.306948][  T321] sunxipart: failed to parse sunxi_gpt!
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m...
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHardware activated USB gadget[0m.
+[    6.663337][  T312] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m.
+[    6.687972][  T293] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.712724][  T293] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Online Metadata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscar[    6.784116][    T9] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+d unused blocks once a week[0m.[    6.793340][    T9] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39[    6.843595][    T9] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mAccounts Service[0m...
+         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+         Starting [0;1;39mNetwork Manager[0m...
+         Starting [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+         Starting [0;1;39mInitialize hardware monitoring sensors[0m...
+[[0;32m  OK  [0m] Started [0;1;39mrsetup configuration service[0m.
+         Starting [0;1;39mRealtimeKit Scheduling Policy Service[0m...
+         Starting [0;1;39mUser Login Management[0m...
+         Starting [0;1;39mDisk Manager[0m...
+         Starting [0;1;39mDaemon for power management[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+         Starting [0;1;39mLinux zramswap setup[0m...
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mInitialize hardware monitoring sensors[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRealtimeKit Scheduling Policy Service[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A9-19D5[0m...
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLinux zramswap setup[0m.
+         Starting [0;1;39mAuthorization Manager[0m...
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A8-C9FB[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRadxa USB OTG services[0m.
+         Starting [0;1;39mCUPS Scheduler[0m...
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mTerminate Plymouth Boot Screen[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSimple Desktop Display Manager[0m.
+
+Debian GNU/Linux 11 radxa-cubie-a7a ttyAS0
+
+radxa-cubie-a7a login: [    9.952000][  T304] ieee80211 phy0: 
+[    9.952000][  T304] *******************************************************
+[    9.952000][  T304] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+[    9.952000][  T304] *******************************************************
+[   10.316705][  T619] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+
+
+===== capture started 2026-07-31T17:46:35.212748+00:00 COM4@115200 =====
+[?200[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Reboot Screen[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mUser and Group Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password Requests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Stopping [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m...
+         Stopping [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dbacklight.slice[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mboot-efi.automount[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mconfig.automount[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+[  596.979254][    T1] reboot: Restarting system
+......
+
+
+[250]HELLO! BOOT0 is starting!
+[253]BOOT0 commit : {4721ad08}
+[267]dram_para_total:0xf
+[269]vaild para:6  select dram para0
+[273]rtc[3] value = 0xa301
+[mmc]: mmc driver ver 2025-10-16 17:10
+[mmc]: Wrong media type 0x0
+[mmc]: ***Try SD card 0***
+[mmc]: HSSDR52/SDR25 4 bit
+[mmc]: 50000000 Hz
+[mmc]: 30436 MB
+[mmc]: ***SD/MMC 0 init OK!!!***
+[320]DRAM BOOT DRIVE INFO: V0.601
+[325]DRAM_VCC set to 560 mv
+[327]DRAM CLK =2400 MHZ
+[330]DRAM Type =9 (8:LPDDR4,9:LPDDR5)
+[477]Training result is = 7
+[480]DRAM Pstate 1 training, frequency is 1200 Mhz
+[659]Training result is = 7
+[661]DRAM Pstate 2 training, frequency is 800 Mhz
+[1006]Training result is = 7
+[1009]DRAM Pstate 3 training, frequency is 400 Mhz
+[1091]Training result is = 7
+[1094]DRAM Pstate 0 training, frequency is 2400 Mhz
+[1103]Actual DRAM SIZE =4096 M
+[1106]DRAM SIZE =4096 MBytes, para1 = a0fa, para2 = 10001001, dram_tpr13 = 65
+[1120]DRAM simple test OK.
+[1125]error:bad magic.
+[1190]error: dtb not found for scp
+[1193]mmc not para
+[1195]Jump to ATF: monitor_base = 0x48000000, uboot_base = 0x4a000000, optee_base = 0x0
+NOTICE:  BL31: OP-TEE 32bit detected
+NOTICE:  BL31: U-BOOT 32bit detected
+NOTICE:  BL31: dram size is 4294967296 bytes
+NOTICE:  BL31: v2.5(debug):48e54578a
+NOTICE:  BL31: Built : 14:13:06, Jul  2 2025
+NOTICE:  BL31: No DTB found.
+ERROR:   Error initializing runtime service opteed_fast
+
+
+U-Boot 2018.07-17-boot-aw2501-g4c7078cfdf7-dirty (Apr 29 2026 - 10:03:59 +0000) Allwinner Technology
+
+[01.250]CPU:   Allwinner Family
+[01.253]Model: Radxa Cubie A7A
+I2C:   ready
+[01.315]DRAM:  4 GiB
+[01.323]Relocation Offset is: 75d89000
+[01.375]secure enable bit: 0
+[01.378]PMU: AXP8191
+[01.380]PMU: AXP8191 VER_A
+FDT ERROR:fdt_get_regulator_name:get property handle twi-supply error:FDT_ERR_INTERNAL
+[01.392]bmu_axp515_probe pmic_bus_read fail
+[01.396][AXP8191] onoff status: 0x50 = 0x0, 0x51 = 0x0
+[01.401][AXP8191] charge status: 0x4 = 0x1
+[01.404]CPU=1014 MHz,PLL6=1200 Mhz,AHB=200 Mhz, APB1=24Mhz  MBus=600Mhz
+[01.411]gic: sec monitor mode
+SPI ALL:   ready
+[01.455]flash init start
+[01.457]workmode = 0,storage type = 1
+[01.460][mmc]: mmc driver ver uboot2018:2024-10-18 9:01:00 -- uboot2018:2025-03-28 10:03:00
+[01.469][mmc]: get sdc_type fail and use default host:tm1.
+[01.477][mmc]: can't find node "mmc0",will add new node
+[01.481][mmc]: fdt err returned <no error>
+[01.485][mmc]: Using default timing para
+[01.489][mmc]: SUNXI SDMMC Controller Version:0x50530
+[01.517][mmc]: card_caps:0x3000000a
+[01.520][mmc]: host_caps:0x3000003f
+[01.525]sunxi flash init ok
+get value error
+[01.536]Loading Environment from SUNXI_FLASH... OK
+No ethernet found.
+[01.573]NOT support bridge yet
+[01.576]Warn: no find panel or bridge
+[01.580]hdmi0@5520000 disconnected
+[01.583]drm hdmi get mode: 1920x1080@60Hz
+hdmi0@5520000: use force output detailed mode clock 148500 kHz, flags[5]
+    H: 1920 2008 2052 2200
+    V: 1080 1084 1089 1125
+bus_format: 0
+partno erro : can't find partition bootloader
+[01.612]bootloader is not found!
+partno erro : can't find partition boot-resource
+[01.621]boot-resource is not found!
+[01.624]Can not load logo.bmp file!
+[01.627]load logo fail
+[01.637]the secure storage item0 copy0 magic is bad
+[01.649]the secure storage item0 copy1 magic is bad
+[01.653]usb burn from boot
+delay time 0
+[01.659]usb prepare ok
+[01.963]overtime
+[01.967]do_burn_from_boot usb : no usb exist
+skip update boot_param
+cann't get the boot_base from the env
+[01.978]update part info
+[01.983]battery temp is -1
+[01.988]update bootcmd
+[01.996](not enough data: expected >= 8 cells, got 4 cells)
+Link up timeout
+Speed change timeout
+PCIe speed of Gen1
+Override default fdtfile to allwinner/sun60i-a733-cubie-a7a.dtb
+[04.438]libfdt fdt_check_header(): FDT_ERR_BADMAGIC
+[04.444]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[04.449][mmc]: get sunxi-mmc0 string failed
+[04.454]The storage not support sample function
+[04.460]## error: update_fdt_dram_para_from_bootpara : FDT_ERR_NOTFOUND
+[04.467]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.472]mac addr => 08:51:49:58:40:32
+[04.475]chip id : 0x00005100 0x00004900 0x00004810 0x00002262
+[04.481]mac addr => 08:51:49:58:40:33
+[04.485]/chosen/rng-seed node not exit
+[04.488]no battery, disabled battery functons
+[04.493]Could not find nodeoffset for bat_supply
+[04.497]update dts
+curr_device:0
+Device: SUNXI SD/MMC
+Manufacturer ID: 3
+OEM: 5344
+Name: SD32G 
+Bus Speed: 50000000
+Mode : SD High Speed (50MHz)
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 29.7 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+[ufs]info:Driver version 0.0.24 2024.12.30 16:00
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]info:Cal words 0x60:val 0x92510000, 0x64:val 0x53279661
+[ufs]err:uic c 16,uic a 0,1,0
+[ufs]err:e 80000010,0,0,0,0
+[ufs]err:int s 0,400
+[ufs]err:Device not present
+[ufs]err:wait device link startup failed
+[ufs]info:peer link startup timeout
+[ufs]err:link startup failed -6
+[ufs]err:ufshcd_probe() failed -6
+fail to init ufs
+sunxi_flash - sunxi_flash sub-system
+
+Usage:
+sunxi_flash sunxi_flash init storage_type
+sunxi_flash read mem_addr part_name [size]
+sunxi_flash read_mtd mem_addr part_name [size]
+sunxi_flash write <mem_addr> <part_name> [size]
+sunxi_flash write <mem_addr> <part_name> [offset] [size]
+sunxi_flash write_mtd <mem_addr> <part_name>
+sunxi_flash boot0 force_dram_update_size <new_val> 
+sunxi_flash boot0 force_dram_update_flag <new_val> 
+
+Hit any key to stop autoboot:  0 
+starting USB...
+USB0:   start sunxi  USB-DRD...
+config usb clk ok
+sunxi USB-DRD init ok...
+USB EHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+USB1:   start sunxi  USB1-Host...
+config usb clk ok
+sunxi USB1-Host init ok...
+USB EHCI 1.00
+scanning bus 1 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+
+Device 0: device type unknown
+... is now current device
+** Bad device usb 0 **
+** Bad device usb 0 **
+mmc0 is current device
+Scanning mmc 0:2...
+Scanning mmc 0:3...
+Found /boot/extlinux/extlinux.conf
+Retrieving file: /boot/extlinux/extlinux.conf
+1443 bytes read in 20 ms (70.3 KiB/s)
+U-Boot menu
+1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+2:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733 (rescue target)
+Enter choice: 1:	Debian GNU/Linux 11 (bullseye) 5.15.147-21-a733
+Retrieving file: /boot/initrd.img-5.15.147-21-a733
+32594122 bytes read in 1369 ms (22.7 MiB/s)
+Retrieving file: /boot/vmlinuz-5.15.147-21-a733
+23296512 bytes read in 985 ms (22.6 MiB/s)
+append: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+Retrieving file: /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+196460 bytes read in 162 ms (1.2 MiB/s)
+Retrieving file: /boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+6464 bytes read in 40 ms (157.2 KiB/s)
+[13.656]libfdt fdt_path_offset() returned FDT_ERR_BADMAGIC
+[13.665]The storage not support sample function
+[13.754]mac addr => 08:51:49:58:40:32
+[13.758]mac addr => 08:51:49:58:40:33
+[13.763]no battery, disabled battery functons
+[13.770]update dts
+stop sunxi USB-DRD ok...
+stop sunxi USB1-Host ok...
+[13.799]Starting kernel ...
+
+[13.801]total: 13801 ms
+
+[13.803][mmc]: MMC Device 2 not found
+[13.807][mmc]: mmc 2 not find, so not exit
+NOTICE:  [SCP] :wait arisc ready....
+NOTICE:  [SCP] :arisc version: [d463b9da43dc50320f21ba51c6c51afe2db20d83]
+NOTICE:  [SCP] :arisc startup ready
+NOTICE:  [SCP] :arisc startup notify message feedback
+NOTICE:  [SCP] :sunxi-arisc driver is starting
+NOTICE:  BL3-1: Next image address = 0x40200000
+NOTICE:  BL3-1: Next image spsr = 0x3c5
+[    0.000000][    T0] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000][    T0] Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000][    T0] random: crng init done
+[    0.000000][    T0] Machine model: sun60iw2
+[    0.000000][    T0] printk: bootconsole [earlycon0] enabled
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000][    T0] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.082154][    T1] iommu_master csi_iommu: attach fail:-517
+[    0.082214][    T1] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.228388][    T1] sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.228402][    T1] sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.228670][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228674][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228698][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228701][    T1] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.293991][    T1] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.333582][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.343735][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.353853][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.363954][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.374028][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.384151][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.394249][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.404355][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.412085][    T1] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.414539][    T1] sunxi:sunxi_sidefuse init success!
+[    0.414544][    T1] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.436445][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.446575][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.456695][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.466759][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.476827][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.486927][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.497022][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.507122][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.517226][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.527328][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.537456][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.547575][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.557710][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.567885][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.569627][    T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.587417][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.597577][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.607678][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.617779][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.627876][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.637966][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.648037][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.658130][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.668215][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.678324][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.688417][    C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.697748][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.708501][  T110] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.742902][    C0] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.757155][  T106] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.929153][    T9] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.936613][    T9] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.943501][    T9] sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.951763][    T9] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.960202][    T9] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.960207][    T9] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.977708][    T9] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.986068][    T9] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.992384][    T9] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    1.002752][    T9] sunxi-ufs-pltfm 4520000.ufs: last intr at 924821 us, last intr status=0x404
+[    1.012614][    T9] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.022265][    T9] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.033610][    T9] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.041555][    T9] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.049471][    T9] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.057386][    T9] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.065302][    T9] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.075162][    T9] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.083061][    T9] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.090970][    T9] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.098874][    T9] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.106780][    T9] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.114685][    T9] host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.122589][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.129716][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.136838][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.143956][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.151079][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.158295][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.166392][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.173802][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 926165 us
+[    1.182873][    T9] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.191064][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.198673][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.206377][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 405726 us
+[    1.214667][    T9] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.222079][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.229590][    T9] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    2.900411][  T106] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    3.272136][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[    3.282386][    C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[    3.292273][  T191] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x51)
+[    3.302142][  T191] rtc-hym8563 14-0051: could not init device, -22
+[[0;32m  OK  [0m] Finished [0;1;39mTell Plymouth To Write Out Runtime Data[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mColdplug All udev Devices[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mFlush Journal to Persistent Storage[0m.
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mEntropy Daemon based on the HAVEGE algorithm[0m.
+         Starting [0;1;39mNetwork Name Resolution[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRule-based Manager for Device Events and Files[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dbacklight.slice[0m.
+         Starting [0;1;39mShow Plymouth Boot Screen[0m...
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m...
+         Starting [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m...
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyAS0[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:backlight0[0m.
+[    6.180653][  T299] sunxipart: failed to parse sunxi_gpt!
+[[0;32m  OK  [0m] Finished [0;1;39mLoad/Save Screen Backlight Brightness of backlight:sgm37604a[0m.
+[[0;32m  OK  [0m] Started [0;1;39mShow Plymouth Boot Screen[0m.
+[[0;32m  OK  [0m] Started [0;1;39mForward Password Requests to Plymouth Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHardware activated USB gadget[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Started [0;1;39mlocal-apt-repository.path[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mPeriodic ext4 Online Metadata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRefresh fwupd metadata regularly[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [[    6.420527][  T329] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+0m] Reached target [0;1;39mTime[    6.432815][  T329] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+rs[0m.
+[[0;32m  OK  [0m] Li[    6.438874][  T305] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+stening on [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0[    6.460925][  T106] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+m.
+[[0;32m  OK  [0m] Listening on [0;1;39mCUPS Scheduler[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;3[    6.486378][  T106] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+9mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+         Starting [0;1;39mAccounts Service[0m...
+         Starting [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+[    6.557580][  T106] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+[    6.566752][  T106] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+         Starting [0;1;39mNetwork Manager[0m...
+[    6.609069][  T106] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+         Starting [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m...
+[[0;32m  OK  [0m] Started [0;1;39mirqbalance daemon[0m.
+         Starting [0;1;39mInitialize hardware monitoring sensors[0m...
+[[0;32m  OK  [0m] Started [0;1;39mrsetup configuration service[0m.
+         Starting [0;1;39mRealtimeKit Scheduling Policy Service[0m...
+         Starting [0;1;39mUser Login Management[0m...
+         Starting [0;1;39mDisk Manager[0m...
+         Starting [0;1;39mDaemon for power management[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+         Starting [0;1;39mLinux zramswap setup[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mRemove Stale Online ext4 Metadata Check Snapshots[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mInitialize hardware monitoring sensors[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRealtimeKit Scheduling Policy Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mRadxa USB OTG services[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+         Starting [0;1;39mCUPS Scheduler[0m...
+         Starting [0;1;39mLoad Kernel Module drm[0m...
+         Starting [0;1;39mAuthorization Manager[0m...
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A8-C9FB[0m...
+         Starting [0;1;39mFile System Check on /dev/disk/by-uuid/A7A9-19D5[0m...
+         Starting [0;1;39mHostname Service[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Finished [0;1;39mLinux zramswap setup[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mLoad Kernel Module drm[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPermit User Sessions[0m.
+         Starting [0;1;39mHold until boot process finishes up[0m...
+         Starting [0;1;39mTerminate Plymouth Boot Screen[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSimple Desktop Display Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+
+Debian GNU/Linux 11 radxa-cubie-a7a ttyAS0
+
+radxa-cubie-a7a login: [    9.985916][  T325] ieee80211 phy0: 
+[    9.985916][  T325] *******************************************************
+[    9.985916][  T325] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+[    9.985916][  T325] *******************************************************
+[   10.055915][  T580] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+[  150.363612][  T521] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  152.575737][  T521] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  154.676705][  T521] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  156.776948][  T521] [drm:displl_clk_enable] *ERROR* displl clk unable to lock

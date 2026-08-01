@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+mask=/etc/udev/rules.d/60-hdmi-hotplug.rules
+
+if [ -L "$mask" ] && [ "$(readlink "$mask")" = /dev/null ]; then
+	rm -- "$mask"
+elif [ -e "$mask" ] || [ -L "$mask" ]; then
+	echo "ERROR: refusing to remove unexpected $mask" >&2
+	exit 1
+fi
+
+udevadm control --reload-rules
+systemctl enable hdmi-toggle-once.service
+echo "Vendor HDMI hotplug rule and hdmi-toggle-once service are restored for the next boot."

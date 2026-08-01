@@ -1,0 +1,9 @@
+--- opened 2026-07-31T14:57:45.6837476+08:00 ---
+
+--- host sent Enter to continue stock l0r boot ---
+
+[  145.118492][  T621] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+
+Debian GNU/Linux 11 radxa-cubie-a7a ttyAS0
+
+radxa-cubie-a7a login: 

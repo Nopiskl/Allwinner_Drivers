@@ -1,0 +1,239 @@
+input  = /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+output = /tmp/sun60i-a733-cubie-a7a-v002-merged.dtb
+overlay[0] = /tmp/cubie-a7a-meizu-e3-display-v002.dtbo
+=== hashes ===
+8459223cec0ca1fbe7036aa33fedf69529e20292941d4d26c67caa6a4f6c2b13  /tmp/cubie-a7a-meizu-e3-display-v002.dtso
+125a7d072bdab2c959a7335c3e8b7a1b0b3d5fc258da3aef81e603f6cbe6356f  /tmp/cubie-a7a-meizu-e3-display-v002.pp.dts
+b05d2220b31452a46ffb83940f349d1827be0d4c8e352f36b9e04fb9b0db3be2  /tmp/cubie-a7a-meizu-e3-display-v002.dtbo
+2c8028a5498abece4f97ff9b8cdab60e9717141a505304b2879273ecef511dcd  /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+3e96594476a26e9f217f7ef38c41164e5059b48a19576717d70c2ab0e3717cbc  /tmp/sun60i-a733-cubie-a7a-v002-merged.dtb
+1b6a34a1288992b5be142dc1f9dd184027a9d6ece0d04a8c7bb08de464a0ed32  /tmp/sun60i-a733-cubie-a7a-v002-merged.dts
+=== sizes ===
+4372 /tmp/cubie-a7a-meizu-e3-display-v002.dtso
+4695 /tmp/cubie-a7a-meizu-e3-display-v002.pp.dts
+6440 /tmp/cubie-a7a-meizu-e3-display-v002.dtbo
+196460 /usr/lib/linux-image-5.15.147-21-a733/allwinner/sun60i-a733-cubie-a7a.dtb
+199866 /tmp/sun60i-a733-cubie-a7a-v002-merged.dtb
+267102 /tmp/sun60i-a733-cubie-a7a-v002-merged.dts
+=== overlay readback targeted values ===
+3-/ {
+4-
+5-	metadata {
+6:		title = "Enable Meizu E3 Panel for Radxa A7A (v002)";
+7-		compatible = "radxa,cubie-a7a";
+8-		category = "display";
+9-		exclusive = "dlcd0\0dsi0\0dsi0combophy\0PD18\0PD19\0PD16\0PD17\0PD21\0PD23";
+10:		description = "Meizu E3 panel using the official Radxa Cubie A7A non-burst DSI path and dsi0 port@1 graph fix";
+11-	};
+12-
+13-	fragment@0 {
+14-		target-path = [2f 00];
+15-
+16-		__overlay__ {
+17-
+18-			backlight0 {
+19-				compatible = "pwm-backlight";
+20:				status = "okay";
+21-				enable-gpio = <0xffffffff 0x03 0x17 0x00>;
+22-				brightness-levels = <0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f 0x10 0x11 0x12 0x13 0x14 0x15 0x16 0x17 0x18 0x19 0x1a 0x1b 0x1c 0x1d 0x1e 0x1f 0x20 0x21 0x22 0x23 0x24 0x25 0x26 0x27 0x28 0x29 0x2a 0x2b 0x2c 0x2d 0x2e 0x2f 0x30 0x31 0x32 0x33 0x34 0x35 0x36 0x37 0x38 0x39 0x3a 0x3b 0x3c 0x3d 0x3e 0x3f 0x40 0x41 0x42 0x43 0x44 0x45 0x46 0x47 0x48 0x49 0x4a 0x4b 0x4c 0x4d 0x4e 0x4f 0x50 0x51 0x52 0x53 0x54 0x55 0x56 0x57 0x58 0x59 0x5a 0x5b 0x5c 0x5d 0x5e 0x5f 0x60 0x61 0x62 0x63 0x64 0x65 0x66 0x67 0x68 0x69 0x6a 0x6b 0x6c 0x6d 0x6e 0x6f 0x70 0x71 0x72 0x73 0x74 0x75 0x76 0x77 0x78 0x79 0x7a 0x7b 0x7c 0x7d 0x7e 0x7f 0x80 0x81 0x82 0x83 0x84 0x85 0x86 0x87 0x88 0x89 0x8a 0x8b 0x8c 0x8d 0x8e 0x8f 0x90 0x91 0x92 0x93 0x94 0x95 0x96 0x97 0x98 0x99 0x9a 0x9b 0x9c 0x9d 0x9e 0x9f 0xa0 0xa1 0xa2 0xa3 0xa4 0xa5 0xa6 0xa7 0xa8 0xa9 0xaa 0xab 0xac 0xad 0xae 0xaf 0xb0 0xb1 0xb2 0xb3 0xb4 0xb5 0xb6 0xb7 0xb8 0xb9 0xba 0xbb 0xbc 0xbd 0xbe 0xbf 0xc0 0xc1 0xc2 0xc3 0xc4 0xc5 0xc6 0xc7 0xc8 0xc9 0xca 0xcb 0xcc 0xcd 0xce 0xcf 0xd0 0xd1 0xd2 0xd3 0xd4 0xd5 0xd6 0xd7 0xd8 0xd9 0xda 0xdb 0xdc 0xdd 0xde 0xdf 0xe0 0xe1 0xe2 0xe3 0xe4 0xe5 0xe6 0xe7 0xe8 0xe9 0xea 0xeb 0xec 0xed 0xee 0xef 0xf0 0xf1 0xf2 0xf3 0xf4 0xf5 0xf6 0xf7 0xf8 0xf9 0xfa 0xfb 0xfc 0xfd 0xfe 0xff>;
+23-				default-brightness-level = <0x49>;
+24-				pwms = <0xffffffff 0x04 0x61a8 0x01>;
+25-				phandle = <0x01>;
+26-			};
+27-
+28-			dsi_panel@1 {
+29-				compatible = "allwinner,panel-dsi";
+30:				status = "okay";
+31-				power-delay-ms = <0x78>;
+32-				power0-supply = <0xffffffff>;
+33-				power1-supply = <0xffffffff>;
+34-				reset-num = <0x01>;
+35-				reset-delay-ms = <0x78>;
+36-				reset-gpios = <0xffffffff 0x03 0x13 0x06>;
+37-				backlight = <0x01>;
+38:				dsi,flags = <0xa01>;
+39-				dsi,lanes = <0x04>;
+40-				enable-delay-ms = <0x78>;
+41-				dsi,format = <0x00>;
+42-				panel-init-sequence = <0x5780111 0x50a0129>;
+43-				panel-exit-sequence = <0x5000128 0x5000110>;
+44-				phandle = <0x07>;
+45-
+46-				display-timings {
+--
+72-			};
+73-
+74-			gpio-i2c0 {
+75:				status = "okay";
+76-				compatible = "i2c-gpio";
+77-				scl-gpios = <0xffffffff 0x03 0x10 0x06>;
+78-				sda-gpios = <0xffffffff 0x03 0x11 0x06>;
+79-				i2c-gpio,delay-us = <0x02>;
+80-				#address-cells = <0x01>;
+81-				#size-cells = <0x00>;
+82-				phandle = <0x09>;
+83-
+--
+94-				sec_ts@48 {
+95-					compatible = "sec,sec_ts";
+96-					reg = <0x48>;
+97:					status = "okay";
+98-					sec,irq_gpio = <0xffffffff 0x03 0x12 0x01>;
+99-					sec,max_coords = <0x438 0x870>;
+100-					phandle = <0x0b>;
+101-				};
+102-			};
+103-		};
+104-	};
+105-
+--
+107-		target = <0xffffffff>;
+108-
+109-		__overlay__ {
+110:			status = "okay";
+111-		};
+112-	};
+113-
+114-	fragment@2 {
+115-		target = <0xffffffff>;
+116-
+117-		__overlay__ {
+118:			status = "okay";
+119-		};
+120-	};
+121-
+122-	fragment@3 {
+123-		target = <0xffffffff>;
+124-
+125-		__overlay__ {
+126:			status = "okay";
+127-			pinctrl-0 = <0xffffffff>;
+128-			pinctrl-1 = <0xffffffff>;
+129-			pinctrl-names = "active\0sleep";
+130-
+131-			ports {
+132-
+133:				port@1 {
+134-					reg = <0x01>;
+135-					phandle = <0x0c>;
+136-
+137-					endpoint {
+138-						remote-endpoint = <0x04>;
+139-						phandle = <0x05>;
+140-					};
+141-				};
+--
+143-
+144-			panel@0 {
+145-				compatible = "allwinner,virtual-panel";
+146:				status = "okay";
+147-				reg = <0x00>;
+148-				phandle = <0x0d>;
+149-
+150-				ports {
+151-
+152-					port@0 {
+153-						reg = <0x00>;
+154-						phandle = <0x0e>;
+--
+160-						};
+161-					};
+162-
+163:					port@1 {
+164-						reg = <0x01>;
+165-						phandle = <0x0f>;
+166-
+167-						endpoint@0 {
+168-							reg = <0x00>;
+169-							remote-endpoint = <0x06>;
+170-							phandle = <0x03>;
+171-						};
+--
+184-		gpio_i2c0 = "/fragment@0/__overlay__/gpio-i2c0";
+185-		sgm37604_bl = "/fragment@0/__overlay__/gpio-i2c0/backlight@36";
+186-		sec_ts = "/fragment@0/__overlay__/gpio-i2c0/sec_ts@48";
+187:		dsi0_out = "/fragment@3/__overlay__/ports/port@1";
+188:		dsi_out_panel = "/fragment@3/__overlay__/ports/port@1/endpoint";
+189-		panel = "/fragment@3/__overlay__/panel@0";
+190-		panel_in = "/fragment@3/__overlay__/panel@0/ports/port@0";
+191-		panel_input = "/fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0";
+192:		panel_out = "/fragment@3/__overlay__/panel@0/ports/port@1";
+193:		panel_output_0 = "/fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0";
+194-	};
+195-
+196-	__fixups__ {
+197-		pio = "/fragment@0/__overlay__/backlight0:enable-gpio:0\0/fragment@0/__overlay__/dsi_panel@1:reset-gpios:0\0/fragment@0/__overlay__/gpio-i2c0:scl-gpios:0\0/fragment@0/__overlay__/gpio-i2c0:sda-gpios:0\0/fragment@0/__overlay__/gpio-i2c0/backlight@36:enable-gpios:0\0/fragment@0/__overlay__/gpio-i2c0/sec_ts@48:sec,irq_gpio:0";
+198-		pwm0 = "/fragment@0/__overlay__/backlight0:pwms:0";
+199-		reg_dc1sw1 = "/fragment@0/__overlay__/dsi_panel@1:power0-supply:0";
+200-		reg_bldo2 = "/fragment@0/__overlay__/dsi_panel@1:power1-supply:0";
+201-		dsi0combophy = "/fragment@1:target:0";
+--
+234-
+235-				ports {
+236-
+237:					port@1 {
+238-
+239-						endpoint {
+240-							remote-endpoint = <0x00>;
+241-						};
+242-					};
+243-				};
+244-
+245-				panel@0 {
+--
+253-							};
+254-						};
+255-
+256:						port@1 {
+257-
+258-							endpoint@0 {
+259-								remote-endpoint = <0x00>;
+260-							};
+261-						};
+262-					};
+263-				};
+264-			};
+=== required tools ===
+/usr/bin/fdtget
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:105.5-15: Warning (reg_format): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:155.4-14: Warning (reg_format): /fragment@3/__overlay__/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:165.3-13: Warning (reg_format): /fragment@3/__overlay__/panel@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:168.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:170.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:175.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:177.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:62.25-109.4: Warning (unit_address_vs_reg): /fragment@0/__overlay__/dsi_panel@1: node has a unit name, but no reg property
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (pci_device_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (simple_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:104.26-107.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:104.26-107.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:154.20-159.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:154.20-159.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:162.17-182.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:162.17-182.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:167.21-173.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:167.21-173.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:169.29-172.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:169.29-172.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:174.22-180.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:174.22-180.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:176.32-179.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:176.32-179.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (avoid_unnecessary_addr_size): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtbo: Warning (unique_unit_address): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:154.20-159.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:154.20-159.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:167.21-173.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:167.21-173.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:174.22-180.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:174.22-180.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:104.26-107.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:104.26-107.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:169.29-172.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:169.29-172.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:176.32-179.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-meizu-e3-display-v002.dtso:176.32-179.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#size-cells' is -1, must be 0
+RC 0

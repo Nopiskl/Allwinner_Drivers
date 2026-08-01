@@ -1,0 +1,419 @@
+=== Fri 31 Jul 2026 05:36:18 PM UTC === start
++ PATH=/usr/sbin:/usr/bin:/sbin:/bin
++ FORCE_ARG=force
++ ATTR_NODE=/sys/class/hdmi/hdmi/attr/hdmi_source
++ TRIGGER_MIN_WIDTH=0
++ LOCK=/run/hdmi-toggle-once.lock
++ [ force != force ]
++ MODESET=
++ [ -r /sys/class/hdmi/hdmi/attr/hdmi_source ]
++ awk -F| /\| *state *\|/ {gsub(/^ +| +$/,"",$8); print $8; exit} /sys/class/hdmi/hdmi/attr/hdmi_source
++ MODESET=no
++ echo mode_set_from_attr=no
+mode_set_from_attr=no
++ [ force != force ]
++ XAUTH=
++ i=0
++ [ 0 -lt 40 ]
++ + ls -1thead /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} -n1
+
++ XAUTH=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1}
++ [ -n /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ break
++ [ -n /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} ]
++ XR=env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr
++ i=0
++ [ 0 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=1
++ sleep 0.5
++ [ 1 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=2
++ sleep 0.5
++ [ 2 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=3
++ sleep 0.5
++ [ 3 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=4
++ sleep 0.5
++ [ 4 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=5
++ sleep 0.5
++ [ 5 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=6
++ sleep 0.5
++ [ 6 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=7
++ sleep 0.5
++ [ 7 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=8
++ sleep 0.5
++ [ 8 -lt 20 ]
++ + head -n1cat
+ /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=9
++ sleep 0.5
++ [ 9 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/statushead
+ -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=10
++ sleep 0.5
++ [ 10 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=11
++ sleep 0.5
++ [ 11 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=12
++ sleep 0.5
++ [ 12 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=13
++ sleep 0.5
++ [ 13 -lt 20 ]
++ head -n1+ 
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=14
++ sleep 0.5
++ [ 14 -lt 20 ]
++ head+  -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=15
++ sleep 0.5
++ [ 15 -lt 20 ]
++ + head -n1cat
+ /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=16
++ sleep 0.5
++ [ 16 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=17
++ sleep 0.5
++ [ 17 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=18
++ sleep 0.5
++ [ 18 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=19
++ sleep 0.5
++ [ 19 -lt 20 ]
++ + head -n1cat
+ /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=20
++ sleep 0.5
++ [ 20 -lt 20 ]
++ OUT=HDMI-1
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ grep -q ^HDMI-1 connected
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ awk $2=="connected"{print $1; exit}
++ OUT=DSI-1
++ [ -n DSI-1 ]
++ [ 0 -gt 0 ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ awk -v o=DSI-1 
+  $1==o && $2=="connected"{in=1; next}
+  in && NF==0 {exit}
+  in && $1 ~ /^[0-9]+x[0-9]+$/ {print $0}
+
+awk: line 2: syntax error at or near in
+awk: line 3: syntax error at or near in
+awk: line 4: syntax error at or near in
++ MODES=
++ printf %s\n 
++ awk  !seen[$1]++ { n++; if (n==2){print $1; exit} }
++ SECOND=
++ [ -n  ]
++ SECOND=1280x720
++ printf %s\n 
++ awk -v r=1280x720 $1==r{print; exit}
++ LINE2=
++ echo SECOND_LINE=
+SECOND_LINE=
++ echo 
++ grep -Eq (^|[[:space:]])60(\.[0-9]+)?
++ RATE2=
++ [ -n  ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --output DSI-1 --mode 1280x720
+xrandr: cannot find mode 1280x720
++ true
++ sleep 0.3
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --output DSI-1 --auto
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xset -dpms s off s noblank
++ date
++ echo === Fri 31 Jul 2026 05:36:29 PM UTC === end
+=== Fri 31 Jul 2026 05:36:29 PM UTC === end
+=== Fri 31 Jul 2026 05:36:32 PM UTC === start
++ PATH=/usr/sbin:/usr/bin:/sbin:/bin
++ FORCE_ARG=
++ ATTR_NODE=/sys/class/hdmi/hdmi/attr/hdmi_source
++ TRIGGER_MIN_WIDTH=0
++ LOCK=/run/hdmi-toggle-once.lock
++ [  != force ]
++ [ -e /run/hdmi-toggle-once.lock ]
++ :
++ MODESET=
++ [ -r /sys/class/hdmi/hdmi/attr/hdmi_source ]
++ awk -F| /\| *state *\|/ {gsub(/^ +| +$/,"",$8); print $8; exit} /sys/class/hdmi/hdmi/attr/hdmi_source
++ MODESET=no
++ echo mode_set_from_attr=no
+mode_set_from_attr=no
++ [  != force ]
++ [ no = no ]
++ XAUTH=
++ i=0
++ [ 0 -lt 40 ]
++ + ls -1t /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1}head
+ -n1
++ XAUTH=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1}
++ [ -n /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ break
++ [ -n /var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} ]
++ XR=env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr
++ i=0
++ [ 0 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=1
++ sleep 0.5
++ [ 1 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=2
++ sleep 0.5
++ [ 2 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=3
++ sleep 0.5
++ [ 3 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=4
++ sleep 0.5
++ [ 4 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=5
++ sleep 0.5
++ [ 5 -lt 20 ]
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=6
++ sleep 0.5
++ [ 6 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=7
++ sleep 0.5
++ [ 7 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=8
++ sleep 0.5
++ [ 8 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=9
++ sleep 0.5
++ [ 9 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=10
++ sleep 0.5
++ [ 10 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=11
++ sleep 0.5
++ [ 11 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=12
++ sleep 0.5
++ [ 12 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=13
++ sleep 0.5
++ [ 13 -lt 20 ]
++ head -n1+ 
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=14
++ sleep 0.5
++ [ 14 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=15
++ sleep 0.5
++ [ 15 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=16
++ sleep 0.5
++ [ 16 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=17
++ sleep 0.5
++ [ 17 -lt 20 ]
++ head -n1
++ cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=18
++ sleep 0.5
++ [ 18 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=19
++ sleep 0.5
++ [ 19 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=20
++ sleep 0.5
++ [ 20 -lt 20 ]
++ OUT=HDMI-1
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ grep -q ^HDMI-1 connected
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ awk $2=="connected"{print $1; exit}
++ OUT=DSI-1
++ [ -n DSI-1 ]
++ [ 0 -gt 0 ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --query
++ awk -v o=DSI-1 
+  $1==o && $2=="connected"{in=1; next}
+  in && NF==0 {exit}
+  in && $1 ~ /^[0-9]+x[0-9]+$/ {print $0}
+
+awk: line 2: syntax error at or near in
+awk: line 3: syntax error at or near in
+awk: line 4: syntax error at or near in
++ MODES=
++ printf %s\n 
++ awk  !seen[$1]++ { n++; if (n==2){print $1; exit} }
++ SECOND=
++ [ -n  ]
++ SECOND=1280x720
++ printf %s\n 
++ awk -v r=1280x720 $1==r{print; exit}
++ LINE2=
++ echo SECOND_LINE=
+SECOND_LINE=
++ echo 
++ grep -Eq (^|[[:space:]])60(\.[0-9]+)?
++ RATE2=
++ [ -n  ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --output DSI-1 --mode 1280x720
+xrandr: cannot find mode 1280x720
++ true
++ sleep 0.3
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xrandr --output DSI-1 --auto
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{3455c7d0-5532-482d-86de-9286a5f805f1} xset -dpms s off s noblank
++ date
++ echo === Fri 31 Jul 2026 05:36:42 PM UTC === end
+=== Fri 31 Jul 2026 05:36:42 PM UTC === end

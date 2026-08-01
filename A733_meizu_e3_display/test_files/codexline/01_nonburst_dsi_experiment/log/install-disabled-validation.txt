@@ -1,0 +1,78 @@
+=== before install ===
+meizu-e3-dkms 0.1.9 install ok installed
+cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /boot/dtbo/cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+=== install ===
+(Reading database ... 131335 files and directories currently installed.)
+Preparing to unpack .../meizu-e3-dkms_0.1.10_all.deb ...
+
+-------- Uninstall Beginning --------
+Module:  meizu-e3-dkms
+Version: 0.1.9
+Kernel:  5.15.147-21-a733 (aarch64)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+sec_ts.ko.xz:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.147-21-a733/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+sgm37604a.ko.xz:
+ - Uninstallation
+   - Deleting from: /lib/modules/5.15.147-21-a733/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod...
+
+DKMS: uninstall completed.
+
+------------------------------
+Deleting module version: 0.1.9
+completely from the DKMS tree.
+------------------------------
+Done.
+Unpacking meizu-e3-dkms (0.1.10) over (0.1.9) ...
+Setting up meizu-e3-dkms (0.1.10) ...
+**************************************************
+****You may enable overlay by running rsetup****
+**************************************************
+=== after install ===
+meizu-e3-dkms 0.1.10 install ok installed
+bash: line 4: dkms: command not found
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Loading new meizu-e3-dkms-0.1.10 DKMS files...
+Building for 5.15.147-21-a733
+Building initial module for 5.15.147-21-a733
+Done.
+
+sec_ts.ko.xz:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.147-21-a733/updates/dkms/
+
+sgm37604a.ko.xz:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.15.147-21-a733/updates/dkms/
+
+depmod...
+
+DKMS: install completed.
+bash: line 11: dkms: command not found
+RC 127

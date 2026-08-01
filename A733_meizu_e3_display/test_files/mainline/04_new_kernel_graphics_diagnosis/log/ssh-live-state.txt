@@ -1,0 +1,2305 @@
+=== identity ===
+2026-07-31T13:26:22+00:00
+Linux radxa-cubie-a7a 6.6.98-3-aw2511 #3 SMP Thu Jun 11 12:38:49 UTC 2026 aarch64 GNU/Linux
+ 13:26:22 up 8 min,  6 users,  load average: 0.08, 0.31, 0.23
+BOOT_ID=b117f8c6-71c8-4416-8bfa-770f126123af
+CMDLINE=root=UUID=653db195-501c-4b19-a720-2fc8f1382665 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr= mac1_addr= quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+=== boot overlay hashes ===
+8:default l0
+14:label l0
+19:	fdtoverlays  /boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-t4.dtbo
+22:label l0r
+bd7d0f58990715413761f6f17a4be9d29ce416576e1c14eae94b9c254d3b2292  /boot/extlinux/extlinux.conf
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-t4.dtbo
+=== modules and I2C binding ===
+aic8800-usb/5.0+git20260123.5f7be68d-5, 6.6.98-3-aw2511, aarch64: installed
+img-bxm-dkms/0.1.0-3, 6.6.98-3-aw2511, aarch64: installed
+meizu-e3-drivers-t4/0.1.10, 6.6.98-3-aw2511, aarch64: installed
+radxa-overlays/0.2.25, 6.6.98-3-aw2511, aarch64: installed
+sunxi_ve               49152  0
+sunxi_usbc             36864  0
+sgm37604a              12288  0
+0-0036 compatible=sgmicro,sgm37604a  driver=../../../../../bus/i2c/drivers/sgm37604a
+0-0048 compatible=sec,sec_ts  driver=unbound
+# SEC touch remains installed through DKMS but is quarantined after the t4
+# test measured a persistent ~945 IRQ/s storm.  Load only the safe backlight.
+sgm37604a
+# The 0.1.10 SEC driver probes and maps correctly on t4, but PD18 remains low
+# and produces about 945 level-triggered IRQs/s at idle.  Prevent automatic
+# modalias loading until that initialization/IRQ behavior is corrected.
+blacklist sec_ts
+=== DRM sysfs connectors ===
+--- /sys/class/drm/card0-DSI-1
+status=connected
+enabled=enabled
+dpms=On
+modes=1080x2160
+--- /sys/class/drm/card0-HDMI-A-1
+status=connected
+enabled=enabled
+dpms=On
+modes=1920x1080
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+2560x1440
+2560x1440
+1920x1080
+1920x1080
+1920x1080i
+1920x1080i
+1920x1080
+1920x1080i
+1920x1080
+1920x1080
+1920x1080
+1920x1080
+1920x1080
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1024x768
+800x600
+640x480
+640x480
+256x160
+--- /sys/class/drm/card0-Writeback-1
+status=unknown
+enabled=disabled
+dpms=On
+modes==== DRM debug state ===
+--- /sys/kernel/debug/dri/0/name
+sunxi-drm dev=soc@3000000:sunxi-drm unique=soc@3000000:sunxi-drm
+--- /sys/kernel/debug/dri/0/state
+plane[92]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=166
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001011cd
+				size=25923584
+				imported=no
+				dma_addr=0x00000000fc000000
+				vaddr=00000000b755d03f
+	crtc-pos=1080x2160+0+0
+	src-pos=1080.000000x2160.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  166  | 1080x2160+   0+   0 | 1080x2160+   0+   0 |      none  |   255  | 0x00000000
+
+	ovl@  101000: enable
+		(1080x2160+   0+   0) = (1080x2160) ==> (1080x2160) 
+	afbd@  105000: disable
+
+	tfbd@  105400: disable
+
+	scaler@  104000: disable
+
+	snr@  106400: disable
+
+	sharp@  106000: disable
+
+	cdc@  108000: disable
+
+	gtm disable
+	vch0_cdc_icsc@       0: disable
+	vch0_cdc_icsc@       0: disable
+
+	dlc@  115000: disable
+	gamma0@  116000:
+		gamma_tbl off
+
+	fcm@  111000: disable csc: disable
+	vch0_fcm_icsc@       0: disable
+	vch0_fcm_ocsc@       0: disable
+
+	vch0_csc@  100800: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+plane[100]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=1
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  121000: disable
+		
+	tfbd@  125400: disable
+
+	scaler@  124000: disable
+
+	vch1_csc@  120800: disable
+plane[106]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=2
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  1c1000: disable
+		
+	tfbd@  1c5400: disable
+
+	scaler@  1c4000: disable
+
+	cdc@  1c8000: disable
+
+	uch0_csc@  1c0800: disable
+plane[112]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=3
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  201000: disable
+		
+	scaler@  204000: disable
+
+	uch2_csc@  200800: disable
+blender@  281000: enable
+	 pipe_id | enable | channel | premult |       crtc-pos      
+	---------+--------+---------+---------+---------------------
+	     0   |   true |    0    |  false  | 1080x2160+   0+   0 
+
+
+
+	deband@  287000: disable
+	smbl0@  28b000:
+		smbl_tbl off
+	gamma0@  289000:
+		gamma_tbl on
+	disp0_gamma_csc@       0: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		bcsh: 50 50 50 50
+	dither@  288000: disable
+	fmt@  285000: disable
+
+plane[119]: plane-0-vch2(1)
+	crtc=DE-1
+	fb=166
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001011cd
+				size=25923584
+				imported=no
+				dma_addr=0x00000000fc000000
+				vaddr=00000000b755d03f
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+1080.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  166  | 1920x1080+1080+   0 | 1920x1080+   0+   0 |   premult  |   255  | 0x00000000
+
+	ovl@  141000: enable
+		(1920x1080+   0+   0) = (1920x1080) ==> (1920x1080) 
+	scaler@  144000: disable
+
+	snr@  146400: disable
+
+	fcm@  151000: disable csc: disable
+	vch2_fcm_icsc@       0: disable
+	vch2_fcm_ocsc@       0: disable
+
+	vch2_csc@  140800: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+plane[126]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=1
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  1e1000: disable
+		
+	tfbd@  1e5400: disable
+
+	scaler@  1e4000: disable
+
+	uch1_csc@  1e0800: disable
+plane[132]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=2
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  221000: disable
+		
+	scaler@  224000: disable
+
+	uch3_csc@  220800: disable
+blender@  2a1000: enable
+	 pipe_id | enable | channel | premult |       crtc-pos      
+	---------+--------+---------+---------+---------------------
+	     0   |   true |    0    |  false  | 1920x1080+   0+   0 
+
+
+	smbl1@  2ab000:
+		smbl_tbl off
+	gamma1@  2a9000:
+		gamma_tbl on
+	disp1_gamma_csc@       0: enable
+		in:  colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+		bcsh: 50 50 50 50
+	dither@  2a8000: disable
+	fmt@  2a5000: disable
+
+crtc[99]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=1
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0	irqcnt:29545	err:0	fps:59.799
+		format_space:0	yuv_sampling:0	eotf:1	cs:1	color_range:1	data_bits:0
+	offline composite fps:98.17	timeout:29545
+	    vsync: 29545 last rcq at vsync: 2064 offline: disable
+	wb off
+crtc[125]: DE-1
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=1
+	plane_mask=10
+	connector_mask=4
+	encoder_mask=4
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+	on: 1920x1080@60&600Mhz->tcon4	irqcnt:28864	err:0	fps:59.756
+		format_space:0	yuv_sampling:0	eotf:4	cs:1	color_range:1	data_bits:0
+	offline composite fps:99.84	timeout:28864
+	    vsync: 28864 last rcq at vsync: 1393 offline: disable
+	wb off
+connector[144]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+connector[146]: DSI-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+	on:
+	interface type: Single DSI
+	dsi_mode: master-dsi, 	 3dfifo: disabled
+	irqcnt:29558	vblank_cnt:29558	Refresh Rate:59.796
+	clk and data lane work mode:
+		 data0 | data1 | data2 | data3 | clk 
+		-------+-------+-------+-------+------
+		  HS   |  HS   |  HS   |  HS   |  HS   
+	clk source: displl
+		 pixel_clk rate to be set:174444KHz, real pixel_clk rate:175500KHz
+	 hsync-len | hback-porch |  hactive  | hfront-porch | vsync-len | vback-porch | vactive | vfront-porch 
+	-----------+-------------+-----------+--------------+-----------+-------------+---------+--------------
+	      3    |      12     |   1078    |        4     |      4    |      10     |   2160  |       10
+******* tcon reg dump ********
+0x05501000: 80000000 00008a02 00000000 00000000 
+0x05501010: 00000000 00000000 00000000 00000000 
+0x05501020: 00000000 00000000 00000000 00000000 
+0x05501030: 00000000 00000000 00000000 00000000 
+0x05501040: 81000020 f0000001 0437086f 04ba000f 
+0x05501050: 1110000d 00020003 00000000 00000000 
+0x05501060: 10410005 00000000 00000000 00000000 
+0x05501070: 00000000 00000000 00000000 00000000 
+0x05501080: 00000000 00000000 00000000 00000000 
+0x05501090: 00000000 00000000 00000000 00000000 
+0x055010a0: 00000000 00000000 00000000 00000000 
+0x055010b0: 00000000 00000000 00000000 00000000 
+0x055010c0: 00000000 00000000 00000000 00000000 
+0x055010d0: 00000000 00000000 00000000 00000000 
+0x055010e0: 00000000 00000000 00000000 00000000 
+0x055010f0: 00000000 00000000 00000000 018e4000 
+0x05501100: 00000000 00000000 00000000 00000000 
+0x05501110: 00000000 00000000 00000000 00000000 
+0x05501120: 00000000 00000000 00000000 00000000 
+0x05501130: 00000000 00000000 00000000 00000000 
+0x05501140: 00000000 00000000 00000000 00000000 
+0x05501150: 00000000 00000000 00000000 00000000 
+0x05501160: 005b0437 030c086f 01c5000a 00000000 
+0x05501170: 00000000 00000000 00000000 
+0x05501220: 00000000 00000000 00000000 00000000 
+0x05501230: 00000000 00000000 00000000 00000000 
+0x05501240: 00000000 00000000 00000000 00000000 
+******* dsi reg dump ********
+0x05506000: 01010001 000a0004 00000000 00000003 
+0x05506010: 00070001 00f20017 000a0004 08880870 
+0x05506020: 0000001f 10000001 20000010 2000000f 
+0x05506030: 30100001 40000010 0000000f 5000001f 
+0x05506040: 30000002 00000031 63f07602 00560001 
+0x05506050: 00000000 00000031 00000000 00000000 
+0x05506060: 0000000a 00000000 00000000 00000000 
+0x05506070: 00000000 00000000 00000000 10000000 
+0x05506080: 00010008 00000000 00000000 00000000 
+0x05506090: 220ca83e 00000000 0000ffff ffffffff 
+0x055060a0: 00000000 00000000 00000000 00000000 
+0x055060b0: 12000021 01000031 07000001 12000021 
+0x055060c0: 1a000019 ffff0000 3a001c19 f9350000 
+0x055060d0: 1a000019 ffff0000 00000000 00000000 
+0x055060e0: 290cca19 3f630000 1a000019 ffff0000 
+0x055060f0: 002803f0 036d02c5 00000000 00000000 
+0x05506100: 00000000 00000000 00000000 00000000 
+0x05506110: 00000000 00000000 00000000 00000000 
+0x05506120: 0000001f 20000010 6000000f 30100001 
+0x05506130: 40000010 0000000f 5000001f 00000000 
+0x05506140: 03000002 00000000 00000000 
+0x055061f0: 00000000 00000000 00000000 00000000 
+0x05506200: 00000203 00000000 00000000 00000000 
+0x05506210: 00000000 00000000 00000000 00000000 
+0x05506220: 00000000 00000000 00000000 00000000 
+0x05506230: 00000000 00000000 00000000 00000000 
+0x05506240: 00000000 00000000 00000000 00000000 
+0x05506250: 00000000 00000000 00000000 00000000 
+0x05506260: 00000000 00000000 00000000 00000000 
+0x05506270: 00000000 00000000 00000000 00000000 
+0x05506280: 00000000 00000000 00000000 00000000 
+0x05506290: 00000000 00000000 00000000 00000000 
+0x055062a0: 00000000 00000000 00000000 00000000 
+0x055062b0: 00000000 00000000 00000000 00000000 
+0x055062c0: 00000000 00000000 00000000 00000000 
+0x055062d0: 00000000 00000000 00000000 00000000 
+0x055062e0: 0000035c 00184ef6 00000000 00000000 
+0x055062f0: 00300000 f04f0000 000000ff 
+0x05507000: 00000031 10000000 00000000 00000000 
+0x05507010: 0906000e 0a033207 0000001e 00000000 
+0x05507020: 00000303 00000000 00000000 00000000 
+0x05507030: 00000000 00000000 00000001 00000000 
+0x05507040: 00000000 00000000 00000000 00777777 
+0x05507050: 80000000 0f000012 ff040000 e4b4327f 
+0x05507060: 00000000 00000000 00000000 00000000 
+0x05507070: ffc00000 000002f0 00000000 00000000 
+0x05507080: 00000000 00000000 00000000 00000000 
+0x05507090: 00000000 00000000 00000000 00000000 
+0x055070a0: 00000000 00000000 00000000 00000000 
+0x055070b0: 00000000 00000000 00000000 00000000 
+0x055070c0: 00000000 00000000 00000000 00000000 
+0x055070d0: 00000000 00000000 00000000 00000000 
+0x055070e0: 15fd5555 00000000 00000000 00000000 
+0x055070f0: 00000000 00000000 00000000 00000000 
+0x05507100: 00000000 23f05181 006f1480 00032800 
+0x05507110: 00001f0b 00000053 00000014 00000000 
+0x05507120: 00000000 00f05181 00000000 00000000 
+0x05507130: 00000000 30200000 40000001 
+connector[148]: HDMI-A-1
+	crtc=DE-1
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+--- /sys/kernel/debug/dri/0/clients
+             command  tgid dev master a   uid      magic
+                   X   839   0   y    y     0          0
+              kmscon   832   0   n    y     0          0
+               kded6  1117   0   n    y  1000          2
+           ksmserver  1118   0   n    y  1000          3
+            kwin_x11  1119   0   n    y  1000          4
+         plasmashell  1135   0   n    y  1000          5
+     polkit-kde-auth  1162   0   n    y  1000          6
+             kaccess  1161   0   n    y  1000          7
+         plasmashell  1135   0   n    n  1000          0
+         kdeconnectd  1268   0   n    y  1000          8
+     DiscoverNotifie  1298   0   n    y  1000          9
+     xdg-desktop-por  1383   0   n    y  1000         10
+      systemsettings  1754   0   n    y  1000          1
+      systemsettings  1754   0   n    n  1000          0
+--- /sys/kernel/debug/dri/0/framebuffer
+framebuffer[166]:
+	allocated by = X
+	refcount=3
+	format=XR24 little-endian (0x34325258)
+	modifier=0x0
+	size=3000x2160
+	layers:
+		size[0]=3000x2160
+		pitch[0]=12000
+		offset[0]=0
+		obj[0]:
+			name=0
+			refcount=3
+			start=001011cd
+			size=25923584
+			imported=no
+			dma_addr=0x00000000fc000000
+			vaddr=00000000b755d03f
+framebuffer[162]:
+	allocated by = sunxi_fbdev
+	refcount=1
+	format=AR24 little-endian (0x34325241)
+	modifier=0x0
+	size=1080x4320
+	layers:
+		size[0]=1080x4320
+		pitch[0]=4320
+		offset[0]=0
+		obj[0]:
+			name=0
+			refcount=3
+			start=00100000
+			size=18665472
+			imported=no
+			dma_addr=0x00000000fe000000
+			vaddr=000000009ef7c5a7
+--- /sys/kernel/debug/dri/0/gem_names
+  name     size handles refcount
+--- /sys/kernel/debug/dri/1/name
+pvr dev=1800000.gpu unique=1800000.gpu
+--- /sys/kernel/debug/dri/1/clients
+             command  tgid dev master a   uid      magic
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+               kded6  1117 128   n    n  1000          0
+               kded6  1117 128   n    n  1000          0
+           ksmserver  1118 128   n    n  1000          0
+           ksmserver  1118 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+             kaccess  1161 128   n    n  1000          0
+             kaccess  1161 128   n    n  1000          0
+     polkit-kde-auth  1162 128   n    n  1000          0
+     polkit-kde-auth  1162 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         kdeconnectd  1268 128   n    n  1000          0
+         kdeconnectd  1268 128   n    n  1000          0
+     DiscoverNotifie  1298 128   n    n  1000          0
+     DiscoverNotifie  1298 128   n    n  1000          0
+     xdg-desktop-por  1383 128   n    n  1000          0
+     xdg-desktop-por  1383 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+--- /sys/kernel/debug/dri/1/framebuffer
+--- /sys/kernel/debug/dri/1/gem_names
+  name     size handles refcount
+--- /sys/kernel/debug/dri/128/name
+pvr dev=1800000.gpu unique=1800000.gpu
+--- /sys/kernel/debug/dri/128/clients
+             command  tgid dev master a   uid      magic
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+                   X   839 128   n    y     0          0
+               kded6  1117 128   n    n  1000          0
+               kded6  1117 128   n    n  1000          0
+           ksmserver  1118 128   n    n  1000          0
+           ksmserver  1118 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+            kwin_x11  1119 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+             kaccess  1161 128   n    n  1000          0
+             kaccess  1161 128   n    n  1000          0
+     polkit-kde-auth  1162 128   n    n  1000          0
+     polkit-kde-auth  1162 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         kdeconnectd  1268 128   n    n  1000          0
+         kdeconnectd  1268 128   n    n  1000          0
+     DiscoverNotifie  1298 128   n    n  1000          0
+     DiscoverNotifie  1298 128   n    n  1000          0
+     xdg-desktop-por  1383 128   n    n  1000          0
+     xdg-desktop-por  1383 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+         plasmashell  1135 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+      systemsettings  1754 128   n    n  1000          0
+--- /sys/kernel/debug/dri/128/framebuffer
+--- /sys/kernel/debug/dri/128/gem_names
+  name     size handles refcount
+=== display interrupts ===
+ 27:          0          0          0          0          0          0          0          0  sunxi_pio_edge   2 Edge      Headphone detection
+449:      29561          0          0          0          0          0          0          0  wakeupgen  59 Level     5506000.dsi0
+451:      28874          0          0          0          0          0          0          0  wakeupgen  57 Level     5730000.tcon3
+460:          0          0          0          0          0          0          0          0  wakeupgen 170 Level     3900000.iommu
+461:          0          0          0          0          0          0          0          0  wakeupgen 171 Level     3900000.iommu
+464:          0          0          0          0          0          0          0          0  wakeupgen  34 Level     5000000.de
+480:          0          0          0          0          0          0          0          0  wakeupgen  49 Level     cedar_dev
+481:          0          0          0          0          0          0          0          0  wakeupgen  52 Level     5400000.deinterlace
+482:          0          0          0          0          0          0          0          0  wakeupgen  48 Level     cedar_dev_ve2
+=== backlight ===
+--- /sys/class/backlight/backlight0 -> /sys/devices/platform/backlight0
+type=raw
+brightness=73
+actual_brightness=73
+max_brightness=255
+bl_power=0
+--- /sys/class/backlight/sgm37604a -> /sys/devices/platform/gpio-i2c0/i2c-0/0-0036
+type=raw
+brightness=2000
+actual_brightness=2000
+max_brightness=4095
+bl_power=0
+=== desktop process/session ===
+10 1000 radxa -     19538 user    -    no -
+ 3 1000 radxa seat0 966   user    tty2 no -
+ 4 1000 radxa -     972   manager -    no -
+ 5 1000 radxa -     18843 user    -    no -
+ 6 1000 radxa -     18847 user    -    no -
+ 7 1000 radxa -     18964 user    -    no -
+ 8 1000 radxa -     18982 user    -    no -
+UID=1000
+GID=1000
+Name=radxa
+Timestamp=Fri 2026-07-31 13:17:10 UTC
+TimestampMonotonic=31919195
+RuntimePath=/run/user/1000
+Service=user@1000.service
+Slice=user-1000.slice
+Display=3
+State=active
+Sessions=10 8 7 6 5 4 3
+IdleHint=no
+IdleSinceHint=0
+IdleSinceHintMonotonic=0
+Linger=no
+USER         PID     TID PSR %CPU STAT ELAPSED COMMAND
+root       20000   20000   7  300 R          0 ps -eo user,pid,tid,psr,pcpu,stat,etimes,args --sort=-pcpu
+root         839     839   2  3.8 Ssl+     484 /usr/bin/X -nolisten tcp -background none -seat seat0 vt2 -auth /run/sddm/xauth_pAvRwj -noreset -displayfd 16
+radxa       1135    1135   5  3.4 Ssl      460 /usr/bin/plasmashell --no-respawn
+radxa       1301    1301   4  2.9 Ss       455 /bin/bash /usr/bin/radxa-tp-mon
+root        1464    1464   4  2.0 Ssl      454 /usr/libexec/packagekitd
+root       19538   19538   0  1.9 Ss         3 sshd-session: radxa [priv]
+root       19552   19552   2  1.6 S          2 /bin/bash -se
+radxa       1754    1754   6  1.5 Ssl      439 /usr/bin/systemsettings
+radxa       1119    1119   0  1.4 Ssl      462 /usr/bin/kwin_x11 --replace
+radxa       1298    1298   0  1.3 Ssl      455 /usr/lib/aarch64-linux-gnu/libexec/DiscoverNotifier --check-delay 20
+root       18938   18938   1  1.2 S+       174 apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base-apps
+root         408     408   7  0.8 SN       487 [pvr_defer_free]
+root          95      95   0  0.6 S        496 [irq/447-mmc0]
+root       19548   19548   7  0.6 Ss         3 sudo -S -p  /bin/bash -se
+radxa      19547   19547   0  0.6 S          3 sshd-session: radxa@notty
+root           1       1   3  0.5 Ss       496 /sbin/init splash earlycon
+message+     617     617   3  0.4 Ss       486 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+radxa       1117    1117   1  0.3 Ssl      462 /usr/bin/kded6
+root          70      70   4  0.3 I        496 [kworker/u16:6-flush-179:0]
+root          11      11   0  0.3 I        496 [kworker/u16:0-pvr_misr]
+radxa       1163    1163   3  0.3 Ssl      459 /usr/lib/aarch64-linux-gnu/libexec/org_kde_powerdevil
+radxa       1268    1268   0  0.3 Ssl      455 /usr/bin/kdeconnectd
+radxa       1118    1118   2  0.2 Ssl      462 /usr/bin/ksmserver
+root         571     571   0  0.2 I        486 [kworker/0:3-events_freezable_power_]
+root          83      83   1  0.2 I        496 [kworker/u16:9-events_unbound]
+radxa       1161    1161   3  0.2 Ssl      459 /usr/bin/kaccess
+radxa       1162    1162   6  0.2 Ssl      459 /usr/lib/aarch64-linux-gnu/libexec/polkit-kde-authentication-agent-1
+radxa       1383    1383   5  0.1 Ssl      455 /usr/lib/aarch64-linux-gnu/libexec/xdg-desktop-portal-kde
+root         270     270   5  0.1 Ss       488 /usr/lib/systemd/systemd-journald
+root          67      67   5  0.1 I        496 [kworker/u16:3-pvr_misr]
+radxa       1307    1307   5  0.1 S        455 xev -root
+root          10      10   0  0.1 I        496 [kworker/0:1-events]
+radxa        972     972   6  0.1 Ss       464 /usr/lib/systemd/systemd --user
+radxa        984     984   1  0.1 Ss       464 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+polkitd      723     723   1  0.1 Ssl      486 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root         714     714   6  0.1 Ssl      486 /usr/sbin/NetworkManager --no-daemon
+radxa       1056    1056   6  0.1 Ssl      462 /usr/lib/aarch64-linux-gnu/libexec/kglobalacceld
+root          93      93   3  0.1 I        496 [kworker/3:1-events]
+root          76      76   6  0.1 I        496 [kworker/6:4-events]
+root         119     119   1  0.1 I        495 [kworker/1:2-events]
+root          52      52   7  0.1 I        496 [kworker/7:0-events]
+root         100     100   6  0.1 I        496 [kworker/6:5-events]
+radxa       1157    1157   0  0.1 Ssl      459 /usr/lib/aarch64-linux-gnu/libexec/kactivitymanagerd
+root         115     115   2  0.1 I        495 [kworker/2:1-events]
+root         116     116   4  0.1 I        495 [kworker/4:1-events]
+radxa        987     987   7  0.0 S<sl     464 /usr/bin/wireplumber
+root          16      16   4  0.0 I        496 [rcu_sched]
+root         122     122   7  0.0 S        495 [hdmi hpd]
+radxa        990     990   5  0.0 Sl       463 /usr/bin/startplasma-x11
+radxa      18990   18990   6  0.0 Ss+      134 -bash
+root         427     427   3  0.0 Ss       487 /usr/sbin/haveged --Foreground --verbose=1
+radxa       1070    1070   0  0.0 Ssl      462 /usr/libexec/xdg-desktop-portal
+root          42      42   5  0.0 D        496 [kworker/5:0+events]
+root         255     255   0  0.0 I<       489 [kworker/0:2H-mmc_complete]
+root          57      57   7  0.0 I        496 [kworker/7:1-events]
+radxa      18854   18854   3  0.0 S        331 sshd-session: radxa@pts/0
+root         317     317   2  0.0 Ss       488 /usr/lib/systemd/systemd-udevd
+root       18999   18999   7  0.0 I        134 [kworker/7:2-events]
+root         639     639   4  0.0 Ss       486 /usr/lib/systemd/systemd-logind
+root          22      22   1  0.0 I        496 [kworker/1:0-events]
+root          27      27   2  0.0 I        496 [kworker/2:0-events]
+root          60      60   3  0.0 I        496 [kworker/u16:1-pvr_misr]
+root          15      15   0  0.0 S        496 [ksoftirqd/0]
+root         621     621   6  0.0 Ssl      486 /usr/sbin/irqbalance
+root         641     641   5  0.0 Ssl      486 /usr/libexec/udisks2/udisksd
+_apt       18944   18944   6  0.0 S+       171 /usr/lib/apt/methods/https
+_apt       18943   18943   0  0.0 S+       171 /usr/lib/apt/methods/https
+root         117     117   5  0.0 I        495 [kworker/5:1-events]
+root       18935   18935   5  0.0 S+       174 sudo apt-get install -y gstreamer1.0-tools gstreamer1.0-plugins-base-apps
+root         643     643   4  0.0 Ssl      486 /usr/libexec/upowerd
+radxa       1149    1149   3  0.0 Ssl      459 /usr/lib/aarch64-linux-gnu/libexec/kf6/kscreen_backend_launcher
+root         832     832   2  0.0 Ssl      485 /usr/libexec/kmscon/kmscon --vt=tty1 --seats=seat0 --no-switchvt --login -- /sbin/agetty -8 -o -p -- \u --noclear -- - $TERM
+root         716     716   7  0.0 Ss       486 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+root       18982   18982   2  0.0 Ss       134 sshd-session: radxa [priv]
+root       18964   18964   7  0.0 Ss       135 sshd-session: radxa [priv]
+radxa       1164    1164   2  0.0 Ssl      459 /usr/bin/xembedsniproxy
+root          37      37   4  0.0 I        496 [kworker/4:0-events]
+root         612     612   3  0.0 Ssl      486 /usr/libexec/accounts-daemon
+radxa       1160    1160   1  0.0 Ssl      459 /usr/bin/gmenudbusmenuproxy
+--- radxa environment subset
+QT_ACCESSIBILITY=1
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DISPLAY=:0
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+QT_SCREEN_SCALE_FACTORS=DSI-1=1;HDMI-1=1;
+XAUTHORITY=/tmp/xauth_kEfYpP
+XDG_SESSION_TYPE=x11
+XAUTHORITY_DISCOVERED=/run/sddm/xauth_pAvRwj
+=== X11 xrandr ===
+Screen 0: minimum 320 x 200, current 3000 x 2160, maximum 8192 x 8192
+DSI-1 connected primary 1080x2160+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1080x2160     59.36*+
+HDMI-1 connected 1920x1080+1080+0 (normal left inverted right x axis y axis) 708mm x 398mm
+   1920x1080     60.00*+  50.00    59.94    30.00    25.00    24.00    29.97    23.98  
+   4096x2160     30.00    24.00    29.97    23.98  
+   3840x2160     30.00    25.00    24.00    29.97    23.98  
+   2560x1440     49.96    60.00  
+   1920x1080i    60.00    50.00    59.94  
+   1280x720      60.00    50.00    30.00    25.00    59.94    29.97    24.00    23.98  
+   1024x768      60.00  
+   800x600       60.32  
+   640x480       60.00    59.94  
+=== X11 xrandr verbose ===
+Screen 0: minimum 320 x 200, current 3000 x 2160, maximum 8192 x 8192
+DSI-1 connected primary 1080x2160+0+0 (0x43) normal (normal left inverted right x axis y axis) 0mm x 0mm
+	Identifier: 0x40
+	Timestamp:  12310
+	Subpixel:   unknown
+	Gamma:      1.0:1.0:1.0
+	Brightness: 1.0
+	Clones:    
+	CRTC:       0
+	CRTCs:      0 1
+	Transform:  1.000000 0.000000 0.000000
+	            0.000000 1.000000 0.000000
+	            0.000000 0.000000 1.000000
+	           filter: 
+	_KDE_SCREEN_INDEX: 1 
+	link-status: Good 
+		supported: Good, Bad
+	CONNECTOR_ID: 146 
+		supported: 146
+	non-desktop: 0 
+		range: (0, 1)
+  1080x2160 (0x43) 157.000MHz *current +preferred
+        h: width  1080 start 1195 end 1198 total 1211 skew    0 clock 129.64KHz
+        v: height 2160 start 2170 end 2174 total 2184           clock  59.36Hz
+HDMI-1 connected 1920x1080+1080+0 (0x44) normal (normal left inverted right x axis y axis) 708mm x 398mm
+	Identifier: 0x41
+	Timestamp:  12310
+	Subpixel:   unknown
+	Gamma:      1.0:1.0:1.0
+	Brightness: 1.0
+	Clones:    
+	CRTC:       1
+	CRTCs:      0 1
+	Transform:  1.000000 0.000000 0.000000
+	            0.000000 1.000000 0.000000
+	            0.000000 0.000000 1.000000
+	           filter: 
+	_KDE_SCREEN_INDEX: 2 
+	EDID: 
+		00ffffffffffff0021570921bad73401
+		0f22010380462778022895a7554ea326
+		0f5054210800d1c081c0010001000100
+		010001000100023a801871382d40582c
+		4500c48e2100001e000000fd0018551e
+		641e000a202020202020000000fc0055
+		475245454e2d5548440a202000000010
+		0000000000000000000000000000013b
+		020331714f101f22212004133e3d3c5f
+		6405143f23090707830100006e030c00
+		1000003c20008001020304e50e616066
+		656a5e00a0a0a0295030202500b01332
+		00001819640080a3a02c50b0103510b0
+		13320000180000000000000000000000
+		00000000000000000000000000000000
+		0000000000000000000000000000006e
+	dynamicrange: 1 
+		range: (0, 31)
+	dynamicrange_support: SDR 
+		supported: SDR, HDR10, HDR10P, HLG
+	pixelformat: 1 
+		range: (0, 255)
+	pixelformat_support: YUV420_10BITS 
+		supported: RGB888_8BITS, YUV444_8BITS, YUV422_8BITS, YUV420_8BITS, RGB888_10BITS, YUV444_10BITS, YUV422_10BITS, YUV420_10BITS, RGB888_12BITS, YUV444_12BITS, YUV422_12BITS, YUV420_12BITS, RGB888_16BITS, YUV444_16BITS, YUV422_16BITS, YUV420_16BITS
+	link-status: Good 
+		supported: Good, Bad
+	CONNECTOR_ID: 148 
+		supported: 148
+	non-desktop: 0 
+		range: (0, 1)
+  1920x1080 (0x44) 148.500MHz +HSync +VSync *current +preferred
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  67.50KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  60.00Hz
+  4096x2160 (0x45) 297.000MHz +HSync +VSync
+        h: width  4096 start 4184 end 4272 total 4400 skew    0 clock  67.50KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  30.00Hz
+  4096x2160 (0x46) 297.000MHz +HSync +VSync
+        h: width  4096 start 5116 end 5204 total 5500 skew    0 clock  54.00KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  24.00Hz
+  4096x2160 (0x47) 296.703MHz +HSync +VSync
+        h: width  4096 start 4184 end 4272 total 4400 skew    0 clock  67.43KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  29.97Hz
+  4096x2160 (0x48) 296.703MHz +HSync +VSync
+        h: width  4096 start 5116 end 5204 total 5500 skew    0 clock  53.95KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  23.98Hz
+  3840x2160 (0x49) 297.000MHz +HSync +VSync
+        h: width  3840 start 4016 end 4104 total 4400 skew    0 clock  67.50KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  30.00Hz
+  3840x2160 (0x4a) 297.000MHz +HSync +VSync
+        h: width  3840 start 4896 end 4984 total 5280 skew    0 clock  56.25KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  25.00Hz
+  3840x2160 (0x4b) 297.000MHz +HSync +VSync
+        h: width  3840 start 5116 end 5204 total 5500 skew    0 clock  54.00KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  24.00Hz
+  3840x2160 (0x4c) 296.703MHz +HSync +VSync
+        h: width  3840 start 4016 end 4104 total 4400 skew    0 clock  67.43KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  29.97Hz
+  3840x2160 (0x4d) 296.703MHz +HSync +VSync
+        h: width  3840 start 5116 end 5204 total 5500 skew    0 clock  53.95KHz
+        v: height 2160 start 2168 end 2178 total 2250           clock  23.98Hz
+  2560x1440 (0x4e) 256.250MHz -HSync -VSync
+        h: width  2560 start 2736 end 3008 total 3456 skew    0 clock  74.15KHz
+        v: height 1440 start 1443 end 1448 total 1484           clock  49.96Hz
+  2560x1440 (0x4f) 241.700MHz -HSync -VSync
+        h: width  2560 start 2608 end 2640 total 2720 skew    0 clock  88.86KHz
+        v: height 1440 start 1442 end 1447 total 1481           clock  60.00Hz
+  1920x1080 (0x50) 148.500MHz +HSync +VSync
+        h: width  1920 start 2448 end 2492 total 2640 skew    0 clock  56.25KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  50.00Hz
+  1920x1080 (0x51) 148.352MHz +HSync +VSync
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  67.43KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  59.94Hz
+  1920x1080i (0x52) 74.250MHz +HSync +VSync Interlace
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  33.75KHz
+        v: height 1080 start 1084 end 1094 total 1125           clock  60.00Hz
+  1920x1080i (0x53) 74.250MHz +HSync +VSync Interlace
+        h: width  1920 start 2448 end 2492 total 2640 skew    0 clock  28.12KHz
+        v: height 1080 start 1084 end 1094 total 1125           clock  50.00Hz
+  1920x1080 (0x54) 74.250MHz +HSync +VSync
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  33.75KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  30.00Hz
+  1920x1080 (0x55) 74.250MHz +HSync +VSync
+        h: width  1920 start 2448 end 2492 total 2640 skew    0 clock  28.12KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  25.00Hz
+  1920x1080 (0x56) 74.250MHz +HSync +VSync
+        h: width  1920 start 2558 end 2602 total 2750 skew    0 clock  27.00KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  24.00Hz
+  1920x1080i (0x57) 74.176MHz +HSync +VSync Interlace
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  33.72KHz
+        v: height 1080 start 1084 end 1094 total 1125           clock  59.94Hz
+  1920x1080 (0x58) 74.176MHz +HSync +VSync
+        h: width  1920 start 2008 end 2052 total 2200 skew    0 clock  33.72KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  29.97Hz
+  1920x1080 (0x59) 74.176MHz +HSync +VSync
+        h: width  1920 start 2558 end 2602 total 2750 skew    0 clock  26.97KHz
+        v: height 1080 start 1084 end 1089 total 1125           clock  23.98Hz
+  1280x720 (0x5a) 74.250MHz +HSync +VSync
+        h: width  1280 start 1390 end 1430 total 1650 skew    0 clock  45.00KHz
+        v: height  720 start  725 end  730 total  750           clock  60.00Hz
+  1280x720 (0x5b) 74.250MHz +HSync +VSync
+        h: width  1280 start 1720 end 1760 total 1980 skew    0 clock  37.50KHz
+        v: height  720 start  725 end  730 total  750           clock  50.00Hz
+  1280x720 (0x5c) 74.250MHz +HSync +VSync
+        h: width  1280 start 3040 end 3080 total 3300 skew    0 clock  22.50KHz
+        v: height  720 start  725 end  730 total  750           clock  30.00Hz
+  1280x720 (0x5d) 74.250MHz +HSync +VSync
+        h: width  1280 start 3700 end 3740 total 3960 skew    0 clock  18.75KHz
+        v: height  720 start  725 end  730 total  750           clock  25.00Hz
+  1280x720 (0x5e) 74.176MHz +HSync +VSync
+        h: width  1280 start 1390 end 1430 total 1650 skew    0 clock  44.96KHz
+        v: height  720 start  725 end  730 total  750           clock  59.94Hz
+  1280x720 (0x5f) 74.176MHz +HSync +VSync
+        h: width  1280 start 3040 end 3080 total 3300 skew    0 clock  22.48KHz
+        v: height  720 start  725 end  730 total  750           clock  29.97Hz
+  1280x720 (0x60) 59.400MHz +HSync +VSync
+        h: width  1280 start 3040 end 3080 total 3300 skew    0 clock  18.00KHz
+        v: height  720 start  725 end  730 total  750           clock  24.00Hz
+  1280x720 (0x61) 59.341MHz +HSync +VSync
+        h: width  1280 start 3040 end 3080 total 3300 skew    0 clock  17.98KHz
+        v: height  720 start  725 end  730 total  750           clock  23.98Hz
+  1024x768 (0x62) 65.000MHz -HSync -VSync
+        h: width  1024 start 1048 end 1184 total 1344 skew    0 clock  48.36KHz
+        v: height  768 start  771 end  777 total  806           clock  60.00Hz
+  800x600 (0x63) 40.000MHz +HSync +VSync
+        h: width   800 start  840 end  968 total 1056 skew    0 clock  37.88KHz
+        v: height  600 start  601 end  605 total  628           clock  60.32Hz
+  640x480 (0x64) 25.200MHz -HSync -VSync
+        h: width   640 start  656 end  752 total  800 skew    0 clock  31.50KHz
+        v: height  480 start  490 end  492 total  525           clock  60.00Hz
+  640x480 (0x65) 25.175MHz -HSync -VSync
+        h: width   640 start  656 end  752 total  800 skew    0 clock  31.47KHz
+        v: height  480 start  490 end  492 total  525           clock  59.94Hz
+=== X11 providers ===
+Providers: number : 1
+Provider 0: id: 0x42 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 2 outputs: 2 associated providers: 0 name:modesetting
+=== X11 DPMS ===
+Keyboard Control:
+  auto repeat:  on    key click percent:  0    LED mask:  00000000
+  XKB indicators:
+    00: Caps Lock:   off    01: Num Lock:    off    02: Scroll Lock: off
+    03: Compose:     off    04: Kana:        off    05: Sleep:       off
+    06: Suspend:     off    07: Mute:        off    08: Misc:        off
+    09: Mail:        off    10: Charging:    off    11: Shift Lock:  off
+    12: Group 2:     off    13: Mouse Keys:  off
+  auto repeat delay:  600    repeat rate:  25
+  auto repeating keys:  00ffffffdffffbbf
+                        fadfffefffedffff
+                        9fffffffffffffff
+                        fff7ffffffffffff
+  bell percent:  50    bell pitch:  400    bell duration:  100
+Pointer Control:
+  acceleration:  2/1    threshold:  4
+Screen Saver:
+  prefer blanking:  yes    allow exposures:  yes
+  timeout:  0    cycle:  600
+Colors:
+  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff
+Font Path:
+  /usr/share/fonts/X11//misc/,/usr/share/fonts/X11//Type1/,/usr/share/fonts/X11//100dpi/,/usr/share/fonts/X11//75dpi/,built-ins
+DPMS (Display Power Management Signaling):
+  Standby: 0    Suspend: 0    Off: 0
+  DPMS is Enabled
+  Monitor is On
+=== X11 display details ===
+name of display:    :0
+version number:    11.0
+number of extensions:    25
+  dimensions:    3000x2160 pixels (793x571 millimeters)
+  resolution:    96x96 dots per inch
+  depths (7):    24, 1, 4, 8, 15, 16, 32
+=== OpenGL renderer ===
+Error: couldn't find RGB GLX visual or fbconfig
+name of display: :0
+
+=== screenshot tools ===
+/usr/bin/xwd
+=== KWin support information ===
+KWin Support Information:
+The following information should be used when requesting support on e.g. https://discuss.kde.org.
+It provides information about the currently running instance, which options are used,
+what OpenGL driver and which effects are running.
+Please post the information provided underneath this introductory text to a paste bin service
+like https://paste.kde.org instead of pasting into support threads.
+
+==========================
+
+Version
+=======
+KWin version: 6.3.6
+Qt Version: 6.8.2
+Qt compile version: 6.8.2
+XCB compile version: 1.17.0
+
+Operation Mode: X11
+
+Build Options
+=============
+KWIN_BUILD_DECORATIONS: yes
+KWIN_BUILD_TABBOX: yes
+KWIN_BUILD_ACTIVITIES: yes
+HAVE_X11_XCB: yes
+HAVE_GLX: yes
+
+X11
+===
+Vendor: The X.Org Foundation
+Vendor Release: 12101002
+Protocol Version/Revision: 11/0
+SHAPE: yes; Version: 0x11
+RANDR: yes; Version: 0x14
+DAMAGE: yes; Version: 0x11
+Composite: yes; Version: 0x4
+RENDER: yes; Version: 0xb
+XFIXES: yes; Version: 0x50
+SYNC: yes; Version: 0x31
+GLX: no; Version: 0x0
+
+Decoration
+==========
+Plugin: org.kde.breeze
+Theme: 
+Plugin recommends border size: None
+onAllDesktopsAvailable: false
+alphaChannelSupported: false
+closeOnDoubleClickOnMenu: false
+decorationButtonsLeft: 0, 2
+decorationButtonsRight: 6, 3, 4, 5
+borderSize: 0
+gridUnit: 10
+font: Noto Sans,10,-1,0,400,0,0,0,0,0,0,0,0,0,0,1
+smallSpacing: 2
+largeSpacing: 10
+
+Output backend
+==============
+Name: KWin::X11StandaloneBackend
+
+Cursor
+======
+themeName: breeze_cursors
+themeSize: 24
+
+Options
+=======
+focusPolicy: ClickToFocus
+xwaylandCrashPolicy: 1
+xwaylandMaxCrashCount: 3
+nextFocusPrefersMouse: false
+clickRaise: true
+autoRaise: false
+autoRaiseInterval: 0
+delayFocusInterval: 0
+shadeHover: false
+shadeHoverInterval: 250
+separateScreenFocus: true
+placement: 5
+activationDesktopPolicy: SwitchToOtherDesktop
+focusPolicyIsReasonable: true
+borderSnapZone: 10
+windowSnapZone: 10
+centerSnapZone: 0
+snapOnlyWhenOverlapping: false
+edgeBarrier: 100
+cornerBarrier: 1
+rollOverDesktops: false
+focusStealingPreventionLevel: 1
+operationTitlebarDblClick: 5000
+operationMaxButtonLeftClick: 5000
+operationMaxButtonMiddleClick: 5015
+operationMaxButtonRightClick: 5014
+commandActiveTitlebar1: MouseRaise
+commandActiveTitlebar2: MouseNothing
+commandActiveTitlebar3: MouseOperationsMenu
+commandInactiveTitlebar1: MouseActivateAndRaise
+commandInactiveTitlebar2: MouseNothing
+commandInactiveTitlebar3: MouseOperationsMenu
+commandWindow1: MouseActivateRaiseOnReleaseAndPassClick
+commandWindow2: MouseActivateAndPassClick
+commandWindow3: MouseActivateAndPassClick
+commandWindowWheel: MouseNothing
+commandAll1: MouseUnrestrictedMove
+commandAll2: MouseToggleRaiseAndLower
+commandAll3: MouseUnrestrictedResize
+keyCmdAllModKey: 16777250
+doubleClickBorderToMaximize: true
+condensedTitle: false
+electricBorderMaximize: true
+electricBorderTiling: true
+electricBorderCornerRatio: 0.25
+borderlessMaximizedWindows: false
+killPingTimeout: 5000
+compositingMode: 1
+useCompositing: true
+hiddenPreviews: 1
+glSmoothScale: 2
+glStrictBinding: true
+glStrictBindingFollowsDriver: true
+glPreferBufferSwap: AutoSwapStrategy
+glPlatformInterface: 1
+windowsBlockCompositing: true
+allowTearing: true
+interactiveWindowMoveEnabled: true
+
+Screen Edges
+============
+desktopSwitching: false
+desktopSwitchingMovingClients: false
+cursorPushBackDistance: 1x1
+actionTopLeft: 0
+actionTop: 0
+actionTopRight: 0
+actionRight: 0
+actionBottomRight: 0
+actionBottom: 0
+actionBottomLeft: 0
+actionLeft: 0
+
+Screens
+=======
+Number of Screens: 2
+
+Screen 0:
+---------
+Name: DSI-1
+Enabled: 1
+Geometry: 0,0,1080x2160
+Physical size: 0x0mm
+Scale: 1
+Refresh Rate: 59361
+Adaptive Sync: incapable
+Screen 1:
+---------
+Name: HDMI-1
+Enabled: 1
+Geometry: 1080,0,1920x1080
+Physical size: 708x398mm
+Scale: 1
+Refresh Rate: 60000
+Adaptive Sync: incapable
+
+Compositing
+===========
+Compositing is not active
+
+=== KWin/Xorg configuration ===
+--- /home/radxa/.config/kwinrc
+[Desktops]
+Id_1=64267607-6cea-49ec-8322-e8243e730f09
+Number=1
+Rows=1
+
+[Tiling]
+padding=4
+
+[Tiling][4226d50a-7536-534b-8065-33493ae98411]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][c9832b80-5ce5-5d6e-8f5c-66063dc46fd8]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+--- /var/log/Xorg.0.log
+[    12.309] (--) Log file renamed from "/var/log/Xorg.pid-839.log" to "/var/log/Xorg.0.log"
+[    12.323] 
+X.Org X Server 1.21.1.2
+X Protocol Version 11, Revision 0
+[    12.323] Current Operating System: Linux radxa-cubie-a7a 6.6.98-3-aw2511 #3 SMP Thu Jun 11 12:38:49 UTC 2026 aarch64
+[    12.323] Kernel command line: root=UUID=653db195-501c-4b19-a720-2fc8f1382665 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr= mac1_addr= quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+[    12.323]  
+[    12.323] Current version of pixman: 0.44.0
+[    12.323] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    12.323] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    12.324] (==) Log file: "/var/log/Xorg.0.log", Time: Fri Jul 31 13:16:50 2026
+[    12.327] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[    12.327] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    12.331] (==) No Layout section.  Using the first Screen section.
+[    12.331] (**) |-->Screen "Default Screen" (0)
+[    12.331] (**) |   |-->Monitor "Default Monitor"
+[    12.331] (**) |   |-->Device "Allwinner Graphics"
+[    12.331] (==) Automatically adding devices
+[    12.331] (==) Automatically enabling devices
+[    12.331] (==) Automatically adding GPU devices
+[    12.331] (==) Automatically binding GPU devices
+[    12.331] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    12.347] (WW) The directory "/usr/share/fonts/X11//TTF/" does not exist.
+[    12.347] 	Entry deleted from font path.
+[    12.347] (WW) The directory "/usr/share/fonts/X11//OTF/" does not exist.
+[    12.347] 	Entry deleted from font path.
+[    12.351] (==) FontPath set to:
+	/usr/share/fonts/X11//misc/,
+	/usr/share/fonts/X11//Type1/,
+	/usr/share/fonts/X11//100dpi/,
+	/usr/share/fonts/X11//75dpi/
+[    12.351] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    12.351] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    12.351] (II) Loader magic: 0xaaaadbb8c010
+[    12.351] (II) Module ABI versions:
+[    12.351] 	X.Org ANSI C Emulation: 0.4
+[    12.351] 	X.Org Video Driver: 25.2
+[    12.351] 	X.Org XInput driver : 24.4
+[    12.351] 	X.Org Server Extension : 10.0
+[    12.353] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    12.353] (II) Platform probe for /sys/devices/platform/soc@3000000/1800000.gpu/drm/card1
+[    12.353] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    12.353] (II) Platform probe for /sys/devices/platform/soc@3000000/soc@3000000:sunxi-drm/drm/card0
+[    12.353] (II) no primary bus or device found
+[    12.353] 	falling back to /sys/devices/platform/soc@3000000/1800000.gpu/drm/card1
+[    12.353] (II) LoadModule: "modesetting"
+[    12.357] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    12.374] (II) Module modesetting: vendor="X.Org Foundation"
+[    12.374] 	compiled for 1.21.1.2, module version = 1.21.1
+[    12.374] 	Module class: X.Org Video Driver
+[    12.374] 	ABI class: X.Org Video Driver, version 25.2
+[    12.374] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    12.374] (++) using VT number 2
+
+[    12.400] (II) modeset(0): using drv /dev/dri/card0
+[    12.400] (II) modeset(G0): using drv /dev/dri/card1
+[    12.400] (II) modeset(0): Creating default Display subsection in Screen section
+	"Default Screen" for depth/fbbpp 24/32
+[    12.400] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    12.400] (**) modeset(0): Option "kmsdev" "/dev/dri/card0"
+[    12.400] (**) modeset(0): Option "AccelMethod" "glamor"
+[    12.400] (==) modeset(0): RGB weight 888
+[    12.400] (==) modeset(0): Default visual is TrueColor
+[    12.400] (II) Loading sub module "glamoregl"
+[    12.400] (II) LoadModule: "glamoregl"
+[    12.401] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    12.446] (II) Module glamoregl: vendor="X.Org Foundation"
+[    12.446] 	compiled for 1.21.1.2, module version = 1.0.1
+[    12.446] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    12.666] (II) modeset(0): glamor X acceleration enabled on PowerVR B-Series BXM-4-64
+[    12.667] (II) modeset(0): glamor initialized
+[    12.667] (==) modeset(0): VariableRefresh: disabled
+[    12.667] (==) modeset(0): AsyncFlipSecondaries: disabled
+[    12.667] (II) modeset(0): Output DSI-1 using monitor section Default Monitor
+[    12.667] (**) modeset(0): Option "Rotate" "normal"
+[    12.668] (II) modeset(0): Output HDMI-1 has no monitor section
+[    12.669] (II) modeset(0): EDID for output DSI-1
+[    12.669] (II) modeset(0): Printing probed modes for output DSI-1
+[    12.669] (II) modeset(0): Modeline "1080x2160"x59.4  157.00  1080 1195 1198 1211  2160 2170 2174 2184 (129.6 kHz eP)
+[    12.669] (II) modeset(0): EDID for output HDMI-1
+[    12.670] (II) modeset(0): Manufacturer: HJW  Model: 2109  Serial#: 20240314
+[    12.670] (II) modeset(0): Year: 2024  Week: 15
+[    12.670] (II) modeset(0): EDID Version: 1.3
+[    12.670] (II) modeset(0): Digital Display Input
+[    12.670] (II) modeset(0): Max Image Size [cm]: horiz.: 70  vert.: 39
+[    12.670] (II) modeset(0): Gamma: 2.20
+[    12.670] (II) modeset(0): No DPMS capabilities specified
+[    12.670] (II) modeset(0): Supported color encodings: RGB 4:4:4 
+[    12.670] (II) modeset(0): First detailed timing is preferred mode
+[    12.670] (II) modeset(0): redX: 0.652 redY: 0.334   greenX: 0.307 greenY: 0.637
+[    12.670] (II) modeset(0): blueX: 0.150 blueY: 0.060   whiteX: 0.313 whiteY: 0.329
+[    12.670] (II) modeset(0): Supported established timings:
+[    12.670] (II) modeset(0): 640x480@60Hz
+[    12.670] (II) modeset(0): 800x600@60Hz
+[    12.670] (II) modeset(0): 1024x768@60Hz
+[    12.670] (II) modeset(0): Manufacturer's mask: 0
+[    12.670] (II) modeset(0): Supported standard timings:
+[    12.670] (II) modeset(0): #0: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    12.670] (II) modeset(0): #1: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    12.670] (II) modeset(0): Supported detailed timing:
+[    12.670] (II) modeset(0): clock: 148.5 MHz   Image Size:  708 x 398 mm
+[    12.670] (II) modeset(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[    12.670] (II) modeset(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    12.670] (II) modeset(0): Ranges: V min: 24 V max: 85 Hz, H min: 30 H max: 100 kHz, PixClock max 305 MHz
+[    12.670] (II) modeset(0): Monitor name: UGREEN-UHD
+[    12.670] (II) modeset(0): Supported detailed timing:
+[    12.670] (II) modeset(0): clock: 241.7 MHz   Image Size:  944 x 531 mm
+[    12.670] (II) modeset(0): h_active: 2560  h_sync: 2608  h_sync_end 2640 h_blank_end 2720 h_border: 0
+[    12.670] (II) modeset(0): v_active: 1440  v_sync: 1442  v_sync_end 1447 v_blanking: 1481 v_border: 0
+[    12.670] (II) modeset(0): Supported detailed timing:
+[    12.670] (II) modeset(0): clock: 256.2 MHz   Image Size:  944 x 531 mm
+[    12.670] (II) modeset(0): h_active: 2560  h_sync: 2736  h_sync_end 3008 h_blank_end 3456 h_border: 0
+[    12.670] (II) modeset(0): v_active: 1440  v_sync: 1443  v_sync_end 1448 v_blanking: 1484 v_border: 0
+[    12.670] (II) modeset(0): Number of EDID sections to follow: 1
+[    12.670] (II) modeset(0): EDID (in hex):
+[    12.670] (II) modeset(0): 	00ffffffffffff0021570921bad73401
+[    12.670] (II) modeset(0): 	0f22010380462778022895a7554ea326
+[    12.670] (II) modeset(0): 	0f5054210800d1c081c0010001000100
+[    12.670] (II) modeset(0): 	010001000100023a801871382d40582c
+[    12.670] (II) modeset(0): 	4500c48e2100001e000000fd0018551e
+[    12.670] (II) modeset(0): 	641e000a202020202020000000fc0055
+[    12.670] (II) modeset(0): 	475245454e2d5548440a202000000010
+[    12.670] (II) modeset(0): 	0000000000000000000000000000013b
+[    12.670] (II) modeset(0): 	020331714f101f22212004133e3d3c5f
+[    12.671] (II) modeset(0): 	6405143f23090707830100006e030c00
+[    12.671] (II) modeset(0): 	1000003c20008001020304e50e616066
+[    12.671] (II) modeset(0): 	656a5e00a0a0a0295030202500b01332
+[    12.671] (II) modeset(0): 	00001819640080a3a02c50b0103510b0
+[    12.671] (II) modeset(0): 	13320000180000000000000000000000
+[    12.671] (II) modeset(0): 	00000000000000000000000000000000
+[    12.671] (II) modeset(0): 	0000000000000000000000000000006e
+[    12.671] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[    12.671] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Not using mode "256x160" (bad mode clock/interlace/doublescan)
+[    12.671] (II) modeset(0): Printing probed modes for output HDMI-1
+[    12.671] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    12.671] (II) modeset(0): Modeline "4096x2160"x30.0  297.00  4096 4184 4272 4400  2160 2168 2178 2250 +hsync +vsync (67.5 kHz e)
+[    12.671] (II) modeset(0): Modeline "4096x2160"x24.0  297.00  4096 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (54.0 kHz e)
+[    12.671] (II) modeset(0): Modeline "4096x2160"x30.0  296.70  4096 4184 4272 4400  2160 2168 2178 2250 +hsync +vsync (67.4 kHz e)
+[    12.671] (II) modeset(0): Modeline "4096x2160"x24.0  296.70  4096 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (53.9 kHz e)
+[    12.671] (II) modeset(0): Modeline "3840x2160"x30.0  297.00  3840 4016 4104 4400  2160 2168 2178 2250 +hsync +vsync (67.5 kHz e)
+[    12.671] (II) modeset(0): Modeline "3840x2160"x25.0  297.00  3840 4896 4984 5280  2160 2168 2178 2250 +hsync +vsync (56.2 kHz e)
+[    12.671] (II) modeset(0): Modeline "3840x2160"x24.0  297.00  3840 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (54.0 kHz e)
+[    12.671] (II) modeset(0): Modeline "3840x2160"x30.0  296.70  3840 4016 4104 4400  2160 2168 2178 2250 +hsync +vsync (67.4 kHz e)
+[    12.671] (II) modeset(0): Modeline "3840x2160"x24.0  296.70  3840 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (53.9 kHz e)
+[    12.671] (II) modeset(0): Modeline "2560x1440"x50.0  256.25  2560 2736 3008 3456  1440 1443 1448 1484 -hsync -vsync (74.1 kHz e)
+[    12.671] (II) modeset(0): Modeline "2560x1440"x60.0  241.70  2560 2608 2640 2720  1440 1442 1447 1481 -hsync -vsync (88.9 kHz e)
+[    12.671] (II) modeset(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    12.671] (II) modeset(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    12.671] (II) modeset(0): Modeline "1920x1080i"x60.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    12.671] (II) modeset(0): Modeline "1920x1080i"x50.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    12.671] (II) modeset(0): Modeline "1920x1080"x30.0   74.25  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (33.8 kHz e)
+[    12.672] (II) modeset(0): Modeline "1920x1080"x25.0   74.25  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (28.1 kHz e)
+[    12.672] (II) modeset(0): Modeline "1920x1080"x24.0   74.25  1920 2558 2602 2750  1080 1084 1089 1125 +hsync +vsync (27.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1920x1080i"x59.9   74.18  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.7 kHz e)
+[    12.672] (II) modeset(0): Modeline "1920x1080"x30.0   74.18  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (33.7 kHz e)
+[    12.672] (II) modeset(0): Modeline "1920x1080"x24.0   74.18  1920 2558 2602 2750  1080 1084 1089 1125 +hsync +vsync (27.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x30.0   74.25  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (22.5 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x25.0   74.25  1280 3700 3740 3960  720 725 730 750 +hsync +vsync (18.8 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x30.0   74.18  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (22.5 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x24.0   59.40  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (18.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1280x720"x24.0   59.34  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (18.0 kHz e)
+[    12.672] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    12.672] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    12.672] (II) modeset(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    12.672] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    12.672] (II) modeset(0): Output DSI-1 connected
+[    12.672] (II) modeset(0): Output HDMI-1 connected
+[    12.672] (II) modeset(0): Using spanning desktop for initial modes
+[    12.672] (II) modeset(0): Output DSI-1 using initial mode 1080x2160 +0+0
+[    12.672] (II) modeset(0): Output HDMI-1 using initial mode 1920x1080 +1080+0
+[    12.672] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    12.672] (==) modeset(0): DPI set to (96, 96)
+[    12.672] (II) Loading sub module "fb"
+[    12.672] (II) LoadModule: "fb"
+[    12.672] (II) Module "fb" already built-in
+[    12.672] (II) modeset(G0): Using 24bpp hw front buffer with 32bpp shadow
+[    12.672] (==) modeset(G0): Depth 24, (==) framebuffer bpp 32
+[    12.673] (==) modeset(G0): RGB weight 888
+[    12.673] (==) modeset(G0): Default visual is TrueColor
+[    12.673] (**) modeset(G0): Cannot use glamor with 24bpp packed fb
+[    12.673] (II) modeset(G0): ShadowFB: preferred YES, enabled FORCE
+[    12.673] (II) modeset(G0): Double-buffered shadow updates: off
+[    12.673] (EE) modeset(G0): KMS doesn't support dumb interface
+[    12.673] (EE) modeset(G0): KMS setup failed
+[    12.673] (II) UnloadModule: "modesetting"
+[    12.737] glamor: Implementation returned 0x1908/0x1401 read format/type for depth 30, expected 0x1908/0x8368.  Falling back to software.
+[    12.812] (==) modeset(0): Backing store enabled
+[    12.812] (==) modeset(0): Silken mouse enabled
+[    12.824] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+[    12.824] (==) modeset(0): DPMS enabled
+[    12.824] (WW) modeset(0): Option "DRI" is not used
+[    12.824] (WW) modeset(0): Option "Rotate" is not used
+[    12.824] (II) modeset(0): [DRI2] Setup complete
+[    12.824] (II) modeset(0): [DRI2]   DRI driver: sunxi-drm
+[    12.824] (II) modeset(0): [DRI2]   VDPAU driver: sunxi-drm
+[    12.824] (II) Initializing extension Generic Event Extension
+[    12.824] (II) Initializing extension SHAPE
+[    12.824] (II) Initializing extension MIT-SHM
+[    12.824] (II) Initializing extension XInputExtension
+[    12.826] (II) Initializing extension XTEST
+[    12.826] (II) Initializing extension BIG-REQUESTS
+[    12.826] (II) Initializing extension SYNC
+[    12.826] (II) Initializing extension XKEYBOARD
+[    12.826] (II) Initializing extension XC-MISC
+[    12.826] (II) Initializing extension XFIXES
+[    12.826] (II) Initializing extension RENDER
+[    12.826] (II) Initializing extension RANDR
+[    12.826] (II) Initializing extension COMPOSITE
+[    12.826] (II) Initializing extension DAMAGE
+[    12.826] (II) Initializing extension DOUBLE-BUFFER
+[    12.826] (II) Initializing extension RECORD
+[    12.826] (II) Initializing extension DPMS
+[    12.826] (II) Initializing extension Present
+[    12.826] (II) Initializing extension DRI3
+[    12.826] (II) Initializing extension X-Resource
+[    12.826] (II) Initializing extension XVideo
+[    12.826] (II) Initializing extension XVideo-MotionCompensation
+[    12.826] (II) Initializing extension XFree86-VidModeExtension
+[    12.826] (II) Initializing extension XFree86-DGA
+[    12.826] (II) Initializing extension DRI2
+[    12.827] (II) modeset(0): Damage tracking initialized
+[    12.827] (II) modeset(0): Setting screen physical size to 793 x 571
+[    13.006] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event10)
+[    13.006] (**) 2.4G Mouse: Applying InputClass "libinput keyboard catchall"
+[    13.006] (II) LoadModule: "libinput"
+[    13.007] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    13.019] (II) Module libinput: vendor="X.Org Foundation"
+[    13.019] 	compiled for 1.21.1.15, module version = 1.5.0
+[    13.019] 	Module class: X.Org XInput Driver
+[    13.019] 	ABI class: X.Org XInput driver, version 24.4
+[    13.019] (II) Using input driver 'libinput' for '2.4G Mouse'
+[    13.019] (**) 2.4G Mouse: always reports core events
+[    13.019] (**) Option "Device" "/dev/input/event10"
+[    13.060] (II) event10 - 2.4G Mouse: is tagged by udev as: Keyboard
+[    13.060] (II) event10 - 2.4G Mouse: device is a keyboard
+[    13.060] (II) event10 - 2.4G Mouse: device removed
+[    13.093] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10/event10"
+[    13.093] (II) XINPUT: Adding extended input device "2.4G Mouse" (type: KEYBOARD, id 6)
+[    13.093] (**) Option "xkb_model" "pc105"
+[    13.093] (**) Option "xkb_layout" "us"
+[    13.101] (II) event10 - 2.4G Mouse: is tagged by udev as: Keyboard
+[    13.101] (II) event10 - 2.4G Mouse: device is a keyboard
+[    13.103] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+[    13.103] (II) No input driver specified, ignoring this device.
+[    13.103] (II) This device may have been added with another device file.
+[    13.104] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
+[    13.104] (**) 2.4G Mouse: Applying InputClass "libinput pointer catchall"
+[    13.104] (II) Using input driver 'libinput' for '2.4G Mouse'
+[    13.104] (**) 2.4G Mouse: always reports core events
+[    13.104] (**) Option "Device" "/dev/input/event12"
+[    13.107] (II) event12 - 2.4G Mouse: is tagged by udev as: Mouse
+[    13.107] (II) event12 - 2.4G Mouse: device is a pointer
+[    13.107] (II) event12 - 2.4G Mouse: device removed
+[    13.164] (II) libinput: 2.4G Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.164] (II) libinput: 2.4G Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.164] (II) libinput: 2.4G Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.164] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12/event12"
+[    13.164] (II) XINPUT: Adding extended input device "2.4G Mouse" (type: MOUSE, id 7)
+[    13.165] (**) Option "AccelerationScheme" "none"
+[    13.165] (**) 2.4G Mouse: (accel) selected scheme none/0
+[    13.165] (**) 2.4G Mouse: (accel) acceleration factor: 2.000
+[    13.165] (**) 2.4G Mouse: (accel) acceleration threshold: 4
+[    13.172] (II) event12 - 2.4G Mouse: is tagged by udev as: Mouse
+[    13.173] (II) event12 - 2.4G Mouse: device is a pointer
+[    13.178] (II) config/udev: Adding input device 2.4G Mouse Consumer Control (/dev/input/event13)
+[    13.178] (**) 2.4G Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    13.178] (II) Using input driver 'libinput' for '2.4G Mouse Consumer Control'
+[    13.178] (**) 2.4G Mouse Consumer Control: always reports core events
+[    13.178] (**) Option "Device" "/dev/input/event13"
+[    13.181] (II) event13 - 2.4G Mouse Consumer Control: is tagged by udev as: Keyboard
+[    13.181] (II) event13 - 2.4G Mouse Consumer Control: device is a keyboard
+[    13.181] (II) event13 - 2.4G Mouse Consumer Control: device removed
+[    13.212] (II) libinput: 2.4G Mouse Consumer Control: needs a virtual subdevice
+[    13.212] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13/event13"
+[    13.212] (II) XINPUT: Adding extended input device "2.4G Mouse Consumer Control" (type: MOUSE, id 8)
+[    13.213] (**) Option "AccelerationScheme" "none"
+[    13.213] (**) 2.4G Mouse Consumer Control: (accel) selected scheme none/0
+[    13.213] (**) 2.4G Mouse Consumer Control: (accel) acceleration factor: 2.000
+[    13.213] (**) 2.4G Mouse Consumer Control: (accel) acceleration threshold: 4
+[    13.218] (II) event13 - 2.4G Mouse Consumer Control: is tagged by udev as: Keyboard
+[    13.218] (II) event13 - 2.4G Mouse Consumer Control: device is a keyboard
+[    13.220] (II) config/udev: Adding input device 2.4G Mouse System Control (/dev/input/event14)
+[    13.220] (**) 2.4G Mouse System Control: Applying InputClass "libinput keyboard catchall"
+[    13.220] (II) Using input driver 'libinput' for '2.4G Mouse System Control'
+[    13.220] (**) 2.4G Mouse System Control: always reports core events
+[    13.220] (**) Option "Device" "/dev/input/event14"
+[    13.223] (II) event14 - 2.4G Mouse System Control: is tagged by udev as: Keyboard
+[    13.223] (II) event14 - 2.4G Mouse System Control: device is a keyboard
+[    13.224] (II) event14 - 2.4G Mouse System Control: device removed
+[    13.260] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14/event14"
+[    13.260] (II) XINPUT: Adding extended input device "2.4G Mouse System Control" (type: KEYBOARD, id 9)
+[    13.260] (**) Option "xkb_model" "pc105"
+[    13.260] (**) Option "xkb_layout" "us"
+[    13.268] (II) event14 - 2.4G Mouse System Control: is tagged by udev as: Keyboard
+[    13.268] (II) event14 - 2.4G Mouse System Control: device is a keyboard
+[    13.273] (II) config/udev: Adding input device YICHIP 2.4G Receiver (/dev/input/event15)
+[    13.273] (**) YICHIP 2.4G Receiver: Applying InputClass "libinput keyboard catchall"
+[    13.273] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver'
+[    13.273] (**) YICHIP 2.4G Receiver: always reports core events
+[    13.273] (**) Option "Device" "/dev/input/event15"
+[    13.279] (II) event15 - YICHIP 2.4G Receiver: is tagged by udev as: Keyboard
+[    13.279] (II) event15 - YICHIP 2.4G Receiver: device is a keyboard
+[    13.279] (II) event15 - YICHIP 2.4G Receiver: device removed
+[    13.308] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16/event15"
+[    13.308] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver" (type: KEYBOARD, id 10)
+[    13.308] (**) Option "xkb_model" "pc105"
+[    13.308] (**) Option "xkb_layout" "us"
+[    13.316] (II) event15 - YICHIP 2.4G Receiver: is tagged by udev as: Keyboard
+[    13.316] (II) event15 - YICHIP 2.4G Receiver: device is a keyboard
+[    13.318] (II) config/udev: Adding input device YICHIP 2.4G Receiver Mouse (/dev/input/event16)
+[    13.318] (**) YICHIP 2.4G Receiver Mouse: Applying InputClass "libinput pointer catchall"
+[    13.318] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Mouse'
+[    13.318] (**) YICHIP 2.4G Receiver Mouse: always reports core events
+[    13.318] (**) Option "Device" "/dev/input/event16"
+[    13.321] (II) event16 - YICHIP 2.4G Receiver Mouse: is tagged by udev as: Mouse
+[    13.321] (II) event16 - YICHIP 2.4G Receiver Mouse: device is a pointer
+[    13.321] (II) event16 - YICHIP 2.4G Receiver Mouse: device removed
+[    13.356] (II) libinput: YICHIP 2.4G Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.356] (II) libinput: YICHIP 2.4G Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.356] (II) libinput: YICHIP 2.4G Receiver Mouse: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.356] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17/event16"
+[    13.356] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Mouse" (type: MOUSE, id 11)
+[    13.356] (**) Option "AccelerationScheme" "none"
+[    13.356] (**) YICHIP 2.4G Receiver Mouse: (accel) selected scheme none/0
+[    13.357] (**) YICHIP 2.4G Receiver Mouse: (accel) acceleration factor: 2.000
+[    13.357] (**) YICHIP 2.4G Receiver Mouse: (accel) acceleration threshold: 4
+[    13.364] (II) event16 - YICHIP 2.4G Receiver Mouse: is tagged by udev as: Mouse
+[    13.364] (II) event16 - YICHIP 2.4G Receiver Mouse: device is a pointer
+[    13.369] (II) config/udev: Adding input device YICHIP 2.4G Receiver System Control (/dev/input/event17)
+[    13.369] (**) YICHIP 2.4G Receiver System Control: Applying InputClass "libinput keyboard catchall"
+[    13.369] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver System Control'
+[    13.370] (**) YICHIP 2.4G Receiver System Control: always reports core events
+[    13.370] (**) Option "Device" "/dev/input/event17"
+[    13.372] (II) event17 - YICHIP 2.4G Receiver System Control: is tagged by udev as: Keyboard
+[    13.372] (II) event17 - YICHIP 2.4G Receiver System Control: device is a keyboard
+[    13.372] (II) event17 - YICHIP 2.4G Receiver System Control: device removed
+[    13.404] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18/event17"
+[    13.404] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver System Control" (type: KEYBOARD, id 12)
+[    13.404] (**) Option "xkb_model" "pc105"
+[    13.404] (**) Option "xkb_layout" "us"
+[    13.412] (II) event17 - YICHIP 2.4G Receiver System Control: is tagged by udev as: Keyboard
+[    13.412] (II) event17 - YICHIP 2.4G Receiver System Control: device is a keyboard
+[    13.418] (II) config/udev: Adding input device YICHIP 2.4G Receiver Consumer Control (/dev/input/event18)
+[    13.418] (**) YICHIP 2.4G Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    13.418] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Consumer Control'
+[    13.418] (**) YICHIP 2.4G Receiver Consumer Control: always reports core events
+[    13.418] (**) Option "Device" "/dev/input/event18"
+[    13.420] (II) event18 - YICHIP 2.4G Receiver Consumer Control: is tagged by udev as: Keyboard
+[    13.420] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device is a keyboard
+[    13.421] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device removed
+[    13.452] (II) libinput: YICHIP 2.4G Receiver Consumer Control: needs a virtual subdevice
+[    13.452] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19/event18"
+[    13.452] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Consumer Control" (type: MOUSE, id 13)
+[    13.452] (**) Option "AccelerationScheme" "none"
+[    13.452] (**) YICHIP 2.4G Receiver Consumer Control: (accel) selected scheme none/0
+[    13.452] (**) YICHIP 2.4G Receiver Consumer Control: (accel) acceleration factor: 2.000
+[    13.453] (**) YICHIP 2.4G Receiver Consumer Control: (accel) acceleration threshold: 4
+[    13.460] (II) event18 - YICHIP 2.4G Receiver Consumer Control: is tagged by udev as: Keyboard
+[    13.460] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device is a keyboard
+[    13.464] (II) config/udev: Adding input device sunxi-gpadc0/channel0/input0 (/dev/input/event0)
+[    13.464] (II) No input driver specified, ignoring this device.
+[    13.464] (II) This device may have been added with another device file.
+[    13.466] (II) config/udev: Adding input device sunxi-gpadc0/channel1/input0 (/dev/input/event1)
+[    13.466] (II) No input driver specified, ignoring this device.
+[    13.466] (II) This device may have been added with another device file.
+[    13.467] (II) config/udev: Adding input device sunxi-gpadc0/channel2/input0 (/dev/input/event2)
+[    13.467] (II) No input driver specified, ignoring this device.
+[    13.467] (II) This device may have been added with another device file.
+[    13.467] (II) config/udev: Adding input device sunxi-gpadc0/channel3/input0 (/dev/input/event3)
+[    13.467] (II) No input driver specified, ignoring this device.
+[    13.467] (II) This device may have been added with another device file.
+[    13.468] (II) config/udev: Adding input device sunxi-gpadc0/channel4/input0 (/dev/input/event4)
+[    13.468] (II) No input driver specified, ignoring this device.
+[    13.468] (II) This device may have been added with another device file.
+[    13.468] (II) config/udev: Adding input device sunxi-gpadc0/channel5/input0 (/dev/input/event5)
+[    13.468] (II) No input driver specified, ignoring this device.
+[    13.468] (II) This device may have been added with another device file.
+[    13.468] (II) config/udev: Adding input device sunxi-gpadc0/channel6/input0 (/dev/input/event6)
+[    13.468] (II) No input driver specified, ignoring this device.
+[    13.468] (II) This device may have been added with another device file.
+[    13.469] (II) config/udev: Adding input device sunxi-gpadc0/channel7/input0 (/dev/input/event7)
+[    13.469] (II) No input driver specified, ignoring this device.
+[    13.469] (II) This device may have been added with another device file.
+[    13.469] (II) config/udev: Adding input device sunxi_cec (/dev/input/event9)
+[    13.469] (**) sunxi_cec: Applying InputClass "libinput keyboard catchall"
+[    13.469] (II) Using input driver 'libinput' for 'sunxi_cec'
+[    13.469] (**) sunxi_cec: always reports core events
+[    13.469] (**) Option "Device" "/dev/input/event9"
+[    13.470] (II) event9  - sunxi_cec: is tagged by udev as: Keyboard Pointingstick
+[    13.470] (II) event9  - sunxi_cec: device is a pointer
+[    13.470] (II) event9  - sunxi_cec: device is a keyboard
+[    13.471] (II) event9  - sunxi_cec: device removed
+[    13.500] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.500] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.500] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.500] (II) libinput: sunxi_cec: needs a virtual subdevice
+[    13.500] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9/event9"
+[    13.500] (II) XINPUT: Adding extended input device "sunxi_cec" (type: MOUSE, id 14)
+[    13.500] (**) Option "AccelerationScheme" "none"
+[    13.500] (**) sunxi_cec: (accel) selected scheme none/0
+[    13.500] (**) sunxi_cec: (accel) acceleration factor: 2.000
+[    13.500] (**) sunxi_cec: (accel) acceleration threshold: 4
+[    13.502] (II) event9  - sunxi_cec: is tagged by udev as: Keyboard Pointingstick
+[    13.502] (II) event9  - sunxi_cec: device is a pointer
+[    13.502] (II) event9  - sunxi_cec: device is a keyboard
+[    13.504] (II) config/udev: Adding input device axp8191-pek (/dev/input/event8)
+[    13.504] (**) axp8191-pek: Applying InputClass "libinput keyboard catchall"
+[    13.504] (II) Using input driver 'libinput' for 'axp8191-pek'
+[    13.504] (**) axp8191-pek: always reports core events
+[    13.504] (**) Option "Device" "/dev/input/event8"
+[    13.506] (II) event8  - axp8191-pek: is tagged by udev as: Keyboard
+[    13.506] (II) event8  - axp8191-pek: device is a keyboard
+[    13.507] (II) event8  - axp8191-pek: device removed
+[    13.532] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8/event8"
+[    13.532] (II) XINPUT: Adding extended input device "axp8191-pek" (type: KEYBOARD, id 15)
+[    13.532] (**) Option "xkb_model" "pc105"
+[    13.532] (**) Option "xkb_layout" "us"
+[    13.535] (II) event8  - axp8191-pek: is tagged by udev as: Keyboard
+[    13.535] (II) event8  - axp8191-pek: device is a keyboard
+[    13.536] (II) config/udev: Adding input device sunxi-ac101b Headphones (/dev/input/event19)
+[    13.536] (**) sunxi-ac101b Headphones: Applying InputClass "libinput keyboard catchall"
+[    13.536] (II) Using input driver 'libinput' for 'sunxi-ac101b Headphones'
+[    13.536] (**) sunxi-ac101b Headphones: always reports core events
+[    13.536] (**) Option "Device" "/dev/input/event19"
+[    13.538] (II) event19 - sunxi-ac101b Headphones: is tagged by udev as: Keyboard Switch
+[    13.538] (II) event19 - sunxi-ac101b Headphones: device is a keyboard
+[    13.538] (II) event19 - sunxi-ac101b Headphones: device removed
+[    13.572] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card1/input21/event19"
+[    13.572] (II) XINPUT: Adding extended input device "sunxi-ac101b Headphones" (type: KEYBOARD, id 16)
+[    13.572] (**) Option "xkb_model" "pc105"
+[    13.572] (**) Option "xkb_layout" "us"
+[    13.576] (II) event19 - sunxi-ac101b Headphones: is tagged by udev as: Keyboard Switch
+[    13.576] (II) event19 - sunxi-ac101b Headphones: device is a keyboard
+[    13.591] (**) 2.4G Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    13.591] (II) Using input driver 'libinput' for '2.4G Mouse Consumer Control'
+[    13.591] (**) 2.4G Mouse Consumer Control: always reports core events
+[    13.591] (**) Option "Device" "/dev/input/event13"
+[    13.591] (II) libinput: 2.4G Mouse Consumer Control: is a virtual subdevice
+[    13.591] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13/event13"
+[    13.591] (II) XINPUT: Adding extended input device "2.4G Mouse Consumer Control" (type: KEYBOARD, id 17)
+[    13.591] (**) Option "xkb_model" "pc105"
+[    13.591] (**) Option "xkb_layout" "us"
+[    13.592] (**) YICHIP 2.4G Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    13.592] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Consumer Control'
+[    13.592] (**) YICHIP 2.4G Receiver Consumer Control: always reports core events
+[    13.592] (**) Option "Device" "/dev/input/event18"
+[    13.592] (II) libinput: YICHIP 2.4G Receiver Consumer Control: is a virtual subdevice
+[    13.592] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19/event18"
+[    13.592] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Consumer Control" (type: KEYBOARD, id 18)
+[    13.592] (**) Option "xkb_model" "pc105"
+[    13.592] (**) Option "xkb_layout" "us"
+[    13.592] (**) sunxi_cec: Applying InputClass "libinput keyboard catchall"
+[    13.592] (II) Using input driver 'libinput' for 'sunxi_cec'
+[    13.592] (**) sunxi_cec: always reports core events
+[    13.592] (**) Option "Device" "/dev/input/event9"
+[    13.592] (II) libinput: sunxi_cec: is a virtual subdevice
+[    13.592] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.592] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.592] (II) libinput: sunxi_cec: Step value 0 was provided, libinput Fallback acceleration function is used.
+[    13.592] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9/event9"
+[    13.592] (II) XINPUT: Adding extended input device "sunxi_cec" (type: KEYBOARD, id 19)
+[    13.592] (**) Option "xkb_model" "pc105"
+[    13.592] (**) Option "xkb_layout" "us"
+[    13.773] (II) modeset(0): Disabling kernel dirty updates, not required.
+[    13.793] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[    36.331] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[    37.179] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[    41.519] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   475.649] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   475.658] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   475.674] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   475.675] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   497.151] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   497.160] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   497.174] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[   497.175] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+--- kscreen files
+/home/radxa/.local/share/kscreen/2246337e8c2a9b36189a068fcdae231f
+[
+    {
+        "enabled": true,
+        "id": "DSI-1",
+        "metadata": {
+            "name": "DSI-1"
+        },
+        "mode": {
+            "refresh": 59.361228942871094,
+            "size": {
+                "height": 2160,
+                "width": 1080
+            }
+        },
+        "overscan": 0,
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "priority": 1,
+        "rgbrange": 0,
+        "rotation": 1,
+        "scale": 1,
+        "vrrpolicy": 2
+    },
+    {
+        "enabled": true,
+        "id": "3237f6c5b1af29212d6042742a6581e1",
+        "metadata": {
+            "fullname": "xrandr-UGREEN-UHD-20240314",
+            "name": "HDMI-1"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "overscan": 0,
+        "pos": {
+            "x": 1080,
+            "y": 0
+        },
+        "priority": 2,
+        "rgbrange": 0,
+        "rotation": 1,
+        "scale": 1,
+        "vrrpolicy": 2
+    }
+]
+/home/radxa/.local/share/kscreen/2fbadc0619c73e25f783ced00624a1b6
+[
+    {
+        "enabled": true,
+        "id": "3237f6c5b1af29212d6042742a6581e1",
+        "metadata": {
+            "fullname": "xrandr-UGREEN-UHD-20240314",
+            "name": "HDMI-1"
+        },
+        "mode": {
+            "refresh": 60,
+            "size": {
+                "height": 1080,
+                "width": 1920
+            }
+        },
+        "overscan": 0,
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "priority": 1,
+        "rgbrange": 0,
+        "rotation": 1,
+        "scale": 1,
+        "vrrpolicy": 2
+    }
+]
+/home/radxa/.local/share/kscreen/outputs/3237f6c5b1af29212d6042742a6581e1
+{
+    "id": "3237f6c5b1af29212d6042742a6581e1",
+    "metadata": {
+        "fullname": "xrandr-UGREEN-UHD-20240314",
+        "name": "HDMI-1"
+    },
+    "mode": {
+        "refresh": 60,
+        "size": {
+            "height": 1080,
+            "width": 1920
+        }
+    },
+    "overscan": 0,
+    "rgbrange": 0,
+    "rotation": 1,
+    "scale": 1,
+    "vrrpolicy": 2
+}
+/home/radxa/.local/share/kscreen/outputs/b5350822fc24a835e633b5bf90f2b56d
+{
+    "id": "DSI-1",
+    "metadata": {
+        "name": "DSI-1"
+    },
+    "mode": {
+        "refresh": 59.361228942871094,
+        "size": {
+            "height": 2160,
+            "width": 1080
+        }
+    },
+    "overscan": 0,
+    "rgbrange": 0,
+    "rotation": 1,
+    "scale": 1,
+    "vrrpolicy": 2
+}
+=== KWin/Xorg current journal ===
+Jul 31 13:16:46 radxa-cubie-a7a kernel: DMI not present or invalid.
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /dsi_panel@1
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/hdmi0@5520000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /dsi_panel@1
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/hdmi0@5520000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: iommu: Default domain type: Translated
+Jul 31 13:16:46 radxa-cubie-a7a kernel: iommu: DMA domain TLB invalidation policy: strict mode
+Jul 31 13:16:46 radxa-cubie-a7a kernel: iommu_master csi_iommu: attach fail:-517
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_init start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] dsi driver regsiter finsh
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [PHY] sunxi_dsi_combophy_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [PHY]sunxi_dsi_combophy_probe finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] reset-on-sequence property not found
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_host_attach start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_host_attach finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_probe finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_probe ok
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_drm_platform_probe start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+Jul 31 13:16:46 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi iommu: irq = 460
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi iommu: irq = 461
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: Adding to iommu group 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-DE] chn_cfg_mode not found, used def val
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] de use no display sys
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_drm_bind start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-DE] sunxi_de_bind start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 0 ok
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 1 ok
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_bind start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] Loading esd watchdog module...
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] TE GPIO not configured
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm:sunxi_drm_dsi_bind] *ERROR* Failed to request TE IRQ
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm:sunxi_drm_dsi_bind] *ERROR* esd watchdog init failed!
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init dts done
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable resource done
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init resource done
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi connector create finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_tcon_dsi_mode_init start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_lcd_pin_set_state start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [PHY] sunxi_dsi_combophy_configure start
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv detect hpd connect
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+Jul 31 13:16:46 radxa-cubie-a7a kernel: [drm] sunxi_drm_bind ok
+Jul 31 13:16:46 radxa-cubie-a7a kernel: sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+Jul 31 13:16:46 radxa-cubie-a7a systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Jul 31 13:16:46 radxa-cubie-a7a systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Jul 31 13:16:46 radxa-cubie-a7a systemd[1]: modprobe@drm.service: Deactivated successfully.
+Jul 31 13:16:46 radxa-cubie-a7a systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Jul 31 13:16:47 radxa-cubie-a7a kernel: sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+Jul 31 13:16:47 radxa-cubie-a7a kernel: sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+Jul 31 13:16:47 radxa-cubie-a7a kernel: sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+Jul 31 13:16:47 radxa-cubie-a7a kernel: deinterlace 5400000.deinterlace: Adding to iommu group 0
+Jul 31 13:16:47 radxa-cubie-a7a kernel: [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+Jul 31 13:16:47 radxa-cubie-a7a kernel: sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+Jul 31 13:16:47 radxa-cubie-a7a kernel: debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+Jul 31 13:16:47 radxa-cubie-a7a kernel: debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+Jul 31 13:16:47 radxa-cubie-a7a systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Jul 31 13:16:47 radxa-cubie-a7a systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Jul 31 13:16:48 radxa-cubie-a7a systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Jul 31 13:16:48 radxa-cubie-a7a alsactl[614]: Found hardware: "allwinner-hdmi" "" "" "" ""
+Jul 31 13:16:48 radxa-cubie-a7a irqbalance[621]: IRQ 5506000.dsi0(449) guessed as class 0
+Jul 31 13:16:48 radxa-cubie-a7a irqbalance[621]: IRQ 3900000.iommu(460) guessed as class 0
+Jul 31 13:16:48 radxa-cubie-a7a irqbalance[621]: IRQ 3900000.iommu(461) guessed as class 0
+Jul 31 13:16:48 radxa-cubie-a7a rtkit-daemon[636]: Watchdog thread running.
+Jul 31 13:16:49 radxa-cubie-a7a systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Jul 31 13:16:49 radxa-cubie-a7a systemd[1]: Starting hdmi-toggle-once.service - HDMI toggle (1280x1024 -> 1920x1080) once after boot...
+Jul 31 13:16:50 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:16:50 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:16:50 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:16:50 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:16:50 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 1 not enable, skip
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 1
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [top phy]
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - pixel clock 148500KHz
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: top phy config done
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [snps phy]
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: snps phy state: lock
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio check: triger cts re-calculate
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable output done
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:16:51 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:16:52 radxa-cubie-a7a NetworkManager[714]: <info>  [1785503812.5849] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:16:54 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:16:55 radxa-cubie-a7a kmscon[832]: [0000.567974] WARNING: drm_shared: Device /dev/dri/card1 doesn't support atomic modesetting, using legacy (uterm_drm_video_init() in ../src/uterm_drm_shared.c:1020)
+Jul 31 13:16:55 radxa-cubie-a7a kmscon[832]: [0000.568070] ERROR: video_drm2d: driver does not support dumb buffers (video_init() in ../src/uterm_drm2d_video.c:287)
+Jul 31 13:16:56 radxa-cubie-a7a sddm-greeter-qt6.bak[900]: Adding view for "DSI-1" QRect(0,0 1080x2160)
+Jul 31 13:16:57 radxa-cubie-a7a sddm-greeter-qt6.bak[900]: Adding view for "HDMI-1" QRect(1080,0 1920x1080)
+Jul 31 13:17:00 radxa-cubie-a7a kernel: pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+Jul 31 13:17:00 radxa-cubie-a7a kernel: pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+Jul 31 13:17:05 radxa-cubie-a7a systemd[1]: Finished hdmi-toggle-once.service - HDMI toggle (1280x1024 -> 1920x1080) once after boot.
+Jul 31 13:17:05 radxa-cubie-a7a audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=hdmi-toggle-once comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Jul 31 13:17:05 radxa-cubie-a7a kernel: audit: type=1130 audit(1785503825.056:91): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=hdmi-toggle-once comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:17:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 13:17:12 radxa-cubie-a7a systemd[972]: Starting plasma-kwin_x11.service - KDE Window Manager...
+Jul 31 13:17:13 radxa-cubie-a7a kded6[1117]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:14 radxa-cubie-a7a ksmserver[1118]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:14 radxa-cubie-a7a systemd[972]: Starting plasma-plasmashell.service - KDE Plasma Workspace...
+Jul 31 13:17:14 radxa-cubie-a7a kwin_x11[1119]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:14 radxa-cubie-a7a kwin_x11[1119]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:14 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:17:14 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:17:14 radxa-cubie-a7a systemd[972]: Started plasma-kwin_x11.service - KDE Window Manager.
+Jul 31 13:17:15 radxa-cubie-a7a kwin_x11[1119]: kwin_core: Compositing disabled: no OpenGL support
+Jul 31 13:17:15 radxa-cubie-a7a kwin_x11[1119]: kwin_core: Compositing is not possible
+Jul 31 13:17:15 radxa-cubie-a7a kded6[1117]: org.kde.pulseaudio: No object for name "alsa_output.platform-soc_3000000_i2s3_mach.HDMI__HDMI0__sink.monitor"
+Jul 31 13:17:15 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:17:15 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:17:15 radxa-cubie-a7a plasmashell[1135]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:15 radxa-cubie-a7a plasmashell[1135]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:15 radxa-cubie-a7a dbus-daemon[984]: [session uid=1000 pid=984 pidfd=5] Activating via systemd: service name='org.kde.ActivityManager' unit='plasma-kactivitymanagerd.service' requested by ':1.28' (uid=1000 pid=1135 comm="/usr/bin/plasmashell --no-respawn")
+Jul 31 13:17:15 radxa-cubie-a7a systemd[972]: Started plasma-plasmashell.service - KDE Plasma Workspace.
+Jul 31 13:17:16 radxa-cubie-a7a kaccess[1161]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:16 radxa-cubie-a7a polkit-kde-authentication-agent-1[1162]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:16 radxa-cubie-a7a plasmashell[1135]: kf.plasma.quick: Applet preload policy set to 1
+Jul 31 13:17:16 radxa-cubie-a7a plasmashell[1135]: file:///usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:178:25: QML FolderViewDropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth":
+Jul 31 13:17:16 radxa-cubie-a7a plasmashell[1135]: file:///usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:201:9
+Jul 31 13:17:17 radxa-cubie-a7a plasmashell[1135]: Toolbox not loading, toolbox package is either invalid or disabled.
+Jul 31 13:17:17 radxa-cubie-a7a plasmashell[1135]: file:///usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:178:25: QML FolderViewDropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth":
+Jul 31 13:17:17 radxa-cubie-a7a plasmashell[1135]: file:///usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:201:9
+Jul 31 13:17:17 radxa-cubie-a7a plasmashell[1135]: Toolbox not loading, toolbox package is either invalid or disabled.
+Jul 31 13:17:18 radxa-cubie-a7a plasmashell[1135]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:19 radxa-cubie-a7a systemd[972]: Starting app-meizu\x2de3\x2dmap\x2dtouch@autostart.service - Map Meizu E3 touch panel to DSI...
+Jul 31 13:17:19 radxa-cubie-a7a systemd[972]: Started app-meizu\x2de3\x2dmap\x2dtouch@autostart.service - Map Meizu E3 touch panel to DSI.
+Jul 31 13:17:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:17:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:17:20 radxa-cubie-a7a plasmashell[1135]: org.kde.plasma.kicker: Entry is not valid "org.kde.kontact.desktop" 0xaaaaf2cb1790
+Jul 31 13:17:20 radxa-cubie-a7a plasmashell[1135]: org.kde.plasma.kicker: Entry is not valid "org.kde.kontact.desktop" 0xaaaaf2cb1790
+Jul 31 13:17:20 radxa-cubie-a7a kdeconnectd[1268]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:20 radxa-cubie-a7a DiscoverNotifier[1298]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:20 radxa-cubie-a7a kup-daemon[1321]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:20 radxa-cubie-a7a plasma-fallback-session-restore[1299]: Cannot find EGLConfig, returning null config
+Jul 31 13:17:20 radxa-cubie-a7a xdg-desktop-portal-kde[1383]: Cannot find EGLConfig, returning null config
+Jul 31 13:18:55 radxa-cubie-a7a plasmashell[1135]: org.kde.pulseaudio: No object for name "alsa_output.platform-soc_3000000_i2s3_mach.HDMI__HDMI0__sink.monitor"
+Jul 31 13:19:06 radxa-cubie-a7a systemsettings[1754]: Cannot find EGLConfig, returning null config
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:04 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi detect: connect
+Jul 31 13:26:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 49
+=== kernel display fault counts ===
+sunxi_de_atomic_flush.*timeout         0
+PageTable Invalid                      0
+Bug is in DE                           0
+is not mapped                          0
+rcu.*stall                             0
+soft lockup                            0
+NULL pointer                           0
+kernel panic                           0
+underflow                              0
+fifo.*(error|empty|full)               0
+vblank.*(timeout|failed)               0
+page.?flip.*(timeout|failed)           0
+dsi.*(error|failed|timeout)            2
+=== kernel display timeline ===
+[    0.010086] [      T0] printk: bootconsole [earlycon0] disabled
+[    0.048994] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon4@5731000
+[    0.049008] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+[    0.049027] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+[    0.049054] [      T1] /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.049067] [      T1] /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.049086] [      T1] /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+[    0.049101] [      T1] /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+[    0.049123] [      T1] /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.049136] [      T1] /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /dsi_panel@1
+[    0.049168] [      T1] /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+[    0.049187] [      T1] /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.049213] [      T1] /soc@3000000/tcon4@5731000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.049237] [      T1] /soc@3000000/hdmi0@5520000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+[    0.068407] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon4@5731000
+[    0.068420] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+[    0.068435] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+[    0.068669] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+[    0.068696] [      T1] /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.068707] [      T1] /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.068850] [      T1] /soc@3000000/tcon0@5501000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.068891] [      T1] /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+[    0.068904] [      T1] /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/tcon0@5501000
+[    0.068969] [      T1] /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.068982] [      T1] /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /dsi_panel@1
+[    0.069056] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+[    0.069081] [      T1] /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+[    0.069093] [      T1] /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.069170] [      T1] /soc@3000000/de@5000000: Fixed dependency cycle(s) with /soc@3000000/tcon4@5731000
+[    0.069200] [      T1] /soc@3000000/tcon4@5731000: Fixed dependency cycle(s) with /soc@3000000/de@5000000
+[    0.069284] [      T1] /soc@3000000/tcon3@5730000: Fixed dependency cycle(s) with /soc@3000000/hdmi0@5520000
+[    0.069311] [      T1] /soc@3000000/hdmi0@5520000: Fixed dependency cycle(s) with /soc@3000000/tcon3@5730000
+[    0.072028] [      T1] iommu: Default domain type: Translated
+[    0.072031] [      T1] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.076224] [      T1] iommu_master csi_iommu: attach fail:-517
+[    0.076265] [      T1] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.334902] [      T1] sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.444276] [      T1] [drm] [DSI-PANEL] panel_dsi_init start
+[    0.444409] [      T1] [drm] [DSI-PANEL] dsi driver regsiter finsh
+[    0.444557] [      T1] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.444602] [      T1] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.444925] [      T1] [drm] [PHY] sunxi_dsi_combophy_probe start
+[    0.445099] [      T1] [drm] [PHY]sunxi_dsi_combophy_probe finish
+[    0.445360] [      T1] [drm] [DSI] sunxi_drm_dsi_probe start
+[    0.445532] [      T1] /soc@3000000/dsi0@5506000: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000/panel@0
+[    0.445566] [      T1] /soc@3000000/dsi0@5506000/panel@0: Fixed dependency cycle(s) with /soc@3000000/dsi0@5506000
+[    0.445620] [      T1] [drm] [DSI-PANEL] panel_dsi_probe start
+[    0.445641] [      T1] [drm] reset-on-sequence property not found
+[    0.445861] [      T1] [drm] [DSI]sunxi_drm_dsi_host_attach start
+[    0.445864] [      T1] [drm] [DSI]sunxi_drm_dsi_host_attach finish
+[    0.445866] [      T1] [drm] [DSI-PANEL] panel_dsi_probe finish
+[    0.445929] [      T1] [drm] [DSI]sunxi_drm_dsi_probe ok
+[    0.446373] [      T1] [drm] [TCON] sunxi_tcon_probe start
+[    0.446432] [      T1] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.446591] [      T1] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.446671] [      T1] [drm] [TCON] sunxi_tcon_probe start
+[    0.446704] [      T1] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.446818] [      T1] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.446888] [      T1] [drm] [TCON] sunxi_tcon_probe start
+[    0.446916] [      T1] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[    0.446995] [      T1] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.447119] [      T1] [drm] sunxi_drm_platform_probe start
+[    0.447120] [      T1] [drm] sunxi_drm_match_add start
+[    0.447881] [      T1] [drm] sunxi_drm_match_add finish
+[    0.498056] [      T1] dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    1.642740] [     T70] sunxi iommu: irq = 460
+[    1.642946] [     T70] sunxi iommu: irq = 461
+[    1.658581] [     T70] sunxi-display-engine 5000000.de: Adding to iommu group 0
+[    1.659492] [     T70] [drm] [SUNXI-DE] chn_cfg_mode not found, used def val
+[    1.659528] [     T70] [drm] de use no display sys
+[    1.660026] [     T70] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[    1.660040] [     T70] [drm] sunxi_drm_bind start
+[    1.660218] [     T70] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    1.660289] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[    1.660306] [     T70] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    1.660343] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[    1.660353] [     T70] [drm] [SUNXI-DE] sunxi_de_bind start
+[    1.660393] [     T70] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[    1.660719] [     T70] [drm] sunxi_de_bind crtc init for de 0 ok
+[    1.660769] [     T70] [drm] sunxi_de_bind crtc init for de 1 ok
+[    1.660967] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[    1.660983] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+[    1.660994] [     T70] [drm] [DSI]sunxi_drm_dsi_bind start
+[    1.661155] [     T70] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    1.661301] [     T70] [drm] Loading esd watchdog module...
+[    1.661321] [     T70] [drm] TE GPIO not configured
+[    1.661324] [     T70] [drm:sunxi_drm_dsi_bind] *ERROR* Failed to request TE IRQ
+[    1.669359] [     T70] [drm:sunxi_drm_dsi_bind] *ERROR* esd watchdog init failed!
+[    1.677437] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+[    1.677532] [     T70] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    1.677937] [     T70] [drm] sunxi-hdmi: hdmi drv init dts done
+[    1.678611] [     T70] [drm] sunxi-hdmi: hdmi drv enable resource done
+[    1.678619] [     T70] [drm] sunxi-hdmi: hdmi drv init resource done
+[    1.678815] [     T70] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[    1.679144] [     T70] rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[    1.679293] [     T70] input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[    1.679514] [     T70] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[    1.680273] [     T70] [drm] sunxi-hdmi: drm hdmi connector create finish
+[    1.680304] [     T70] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+[    1.680312] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[    1.680331] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+[    1.680343] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[    1.680355] [     T70] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[    1.690233] [     T70] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    1.690325] [     T70] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[    1.690331] [     T70] [drm] sunxi_de_enable index 0
+[    1.690406] [     T70] [drm] sunxi_de_enable finish sw en=0
+[    1.690431] [     T70] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[    1.690435] [     T70] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[    1.690590] [     T70] [drm] [DSI] sunxi_lcd_pin_set_state start
+[    1.690808] [     T70] [drm] [PHY] sunxi_dsi_combophy_configure start
+[    1.690813] [     T70] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[    1.730317] [    T122] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[    2.260666] [    T122] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[    2.260674] [    T122] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[    2.260680] [    T122] [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[    2.260690] [    T122] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.260696] [    T122] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.260701] [    T122] [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[    2.276656] [    T122] [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[    2.292654] [    T122] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[    2.445490] [     T70] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[    2.461879] [    T122] [drm] sunxi-hdmi: drm hdmi detect: connect
+[    2.463020] [     T70] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[    2.463062] [     T70] [drm] sunxi_drm_bind ok
+[    8.258289] [      T1] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[    8.293069] [      T1] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    8.293399] [      T1] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[    8.340982] [    T271] sgm37604a: loading out-of-tree module taints kernel.
+[    9.073856] [    T343] sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[    9.077549] [    T343] sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[    9.078075] [    T343] sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[    9.080683] [    T327] deinterlace 5400000.deinterlace: Adding to iommu group 0
+[    9.142592] [    T330] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    9.243140] [    T327] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    9.348122] [     T70] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[   12.676096] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   12.676592] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[   12.677944] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   12.678428] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[   12.832795] [    T839] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[   13.634756] [    T839] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[   13.634812] [    T839] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[   13.634816] [    T839] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[   13.634840] [    T839] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[   13.634850] [    T839] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[   13.634855] [    T839] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[   13.634859] [    T839] [drm] sunxi_de_enable index 1
+[   13.634875] [    T839] [drm] sunxi_de_enable finish sw en=0
+[   13.634888] [    T839] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[   13.635015] [    T839] [drm] sunxi-hdmi: dw audio get n = 6144
+[   13.661110] [    T839] [drm] sunxi-hdmi: [top phy]
+[   13.661113] [    T839] [drm] sunxi-hdmi:  - pixel clock 148500KHz
+[   13.661116] [    T839] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[   13.661228] [    T839] [drm] sunxi-hdmi: top phy config done
+[   13.661562] [    T839] [drm] sunxi-hdmi: [snps phy]
+[   13.661565] [    T839] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[   13.661569] [    T839] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[   13.661574] [    T839] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[   13.661578] [    T839] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[   13.662087] [    T839] [drm] sunxi-hdmi: snps phy state: lock
+[   13.712104] [    T839] [drm] sunxi-hdmi: dw audio check: triger cts re-calculate
+[   13.712107] [    T839] [drm] sunxi-hdmi: hdmi drv enable output done
+[   13.712110] [    T839] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[   13.801529] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   13.802113] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[   16.565533] [    T898] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   16.565565] [    T898] [drm] sunxi-hdmi: dw audio get n = 6144
+[   16.570621] [    T898] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   16.571503] [    T898] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   16.583004] [    T898] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   16.583031] [    T898] [drm] sunxi-hdmi: dw audio get n = 6144
+[   16.588086] [    T898] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   16.589015] [    T898] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   16.773160] [    T896] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   16.798417] [    T896] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   16.799341] [    T896] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   26.959970] [     T58] audit: type=1130 audit(1785503825.056:91): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=hdmi-toggle-once comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   33.678260] [    T987] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   33.678306] [    T987] [drm] sunxi-hdmi: dw audio get n = 6144
+[   33.683378] [    T987] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   33.684776] [    T987] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   33.698261] [    T987] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   33.698308] [    T987] [drm] sunxi-hdmi: dw audio get n = 6144
+[   33.703382] [    T987] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   33.704876] [    T987] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   33.804469] [    T985] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   33.827143] [    T985] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   33.828854] [    T985] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   36.339704] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   36.340065] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[   37.187267] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   37.187767] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[   41.527045] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[   41.527424] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  475.690685] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  475.691403] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  475.700318] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  475.700737] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  475.715927] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  475.716485] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  475.717622] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  475.718152] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  497.195919] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  497.196346] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  497.205116] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  497.205556] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  497.218771] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  497.219335] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49
+[  497.220484] [    T839] [drm] sunxi-hdmi: drm hdmi detect: connect
+[  497.221016] [    T839] [drm] sunxi-hdmi: drm get edid support modes: 49

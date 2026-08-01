@@ -1,0 +1,87 @@
+
+xwininfo: Window id: 0x400009 "Quick Settings  — System Settings"
+
+  Root window id: 0x7b (the root window) (has no name)
+  Parent window id: 0x120001a (has no name)
+     0 children.
+
+
+xwininfo: Window id: 0x120001a (has no name)
+
+  Root window id: 0x7b (the root window) (has no name)
+  Parent window id: 0x1200019 (has no name)
+     1 child:
+     0x400009 "Quick Settings  — System Settings": ("systemsettings" "systemsettings")  930x819+0+0  +1761+209
+
+
+xwininfo: Window id: 0x1200019 (has no name)
+
+  Root window id: 0x7b (the root window) (has no name)
+  Parent window id: 0x7b (the root window) (has no name)
+     1 child:
+     0x120001a (has no name): ()  930x819+1+28  +1761+209
+        1 child:
+        0x400009 "Quick Settings  — System Settings": ("systemsettings" "systemsettings")  930x819+0+0  +1761+209
+
+  Absolute upper-left X:  1760
+  Absolute upper-left Y:  181
+  Relative upper-left X:  1760
+  Relative upper-left Y:  181
+  Width: 932
+  Height: 848
+  Depth: 24
+  Visual: 0x21
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0x400008 (not installed)
+  Bit Gravity State: ForgetGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +1760+181  -308+181  -308-1131  +1760-1131
+  -geometry 932x848+1760+181
+
+  Bit gravity: ForgetGravity
+  Window gravity: NorthWestGravity
+  Backing-store hint: NotUseful
+  Backing-planes to be preserved: 0xffffffff
+  Backing pixel: 0
+  Save-unders: No
+
+  Someone wants these events:
+      KeyPress
+      KeyRelease
+      ButtonPress
+      ButtonRelease
+      EnterWindow
+      LeaveWindow
+      PointerMotion
+      ButtonMotion
+      KeymapState
+      Exposure
+      VisibilityChange
+      StructureNotify
+      SubstructureRedirect
+      FocusChange
+      PropertyChange
+  Do not propagate these events:
+  Override redirection?: No
+
+  No window manager hints defined
+  Window manager hints:
+      Process id: (unknown)
+
+  No normal window size hints defined
+  No zoom window size hints defined
+
+  No window shape defined
+  No border shape defined
+
+_NET_WM_STATE(ATOM) = 
+_NET_WM_DESKTOP(CARDINAL) = 0
+WM_STATE(WM_STATE):
+		window state: Normal
+		icon window: 0x0

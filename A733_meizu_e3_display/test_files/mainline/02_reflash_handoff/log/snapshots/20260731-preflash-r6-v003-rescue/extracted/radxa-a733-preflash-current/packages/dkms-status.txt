@@ -1,0 +1,110 @@
+COMMAND: sh -c 
+    dkms status 2>&1 || true
+    printf "\nLoaded modules:\n"
+    lsmod
+    printf "\nModule metadata:\n"
+    for m in sec_ts sgm37604a; do
+        modinfo "$m" 2>&1 || true
+    done
+
+
+aic8800-usb, 5.0+git20260123.5f7be68d-5, 5.15.147-21-a733, aarch64: installed
+img-bxm-dkms, 0.1.0-3, 5.15.147-21-a733, aarch64: installed
+meizu-e3-dkms, 0.1.10, 5.15.147-21-a733, aarch64: installed
+radxa-overlays, 0.2.18, 5.15.147-21-a733, aarch64: installed
+
+Loaded modules:
+Module                  Size  Used by
+rfcomm                 49152  4
+vfat                   20480  2
+fat                    81920  1 vfat
+zstd                   16384  8
+zram                   24576  2
+zsmalloc               32768  1 zram
+cmac                   16384  3
+algif_hash             16384  1
+aes_generic            36864  3
+ecb                    16384  1
+algif_skcipher         16384  1
+af_alg                 28672  6 algif_hash,algif_skcipher
+bnep                   20480  2
+aic8800_fdrv          602112  0
+sha256_generic         16384  0
+cfg80211              872448  1 aic8800_fdrv
+aic_btusb              40960  0
+bluetooth             442368  30 aic_btusb,bnep,rfcomm
+libaes                 16384  2 bluetooth,aes_generic
+aic_load_fw            77824  1 aic8800_fdrv
+maxio                  16384  1
+snd_soc_sunxi_i2s      61440  4
+snd_soc_sunxi_machine    49152  6
+snd_soc_ac101b         69632  1
+snd_soc_sunxi_pcm      24576  1 snd_soc_sunxi_i2s
+snd_soc_sunxi_codec_hdmi    16384  1
+snd_soc_sunxi_common   102400  5 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_i2s,snd_soc_sunxi_machine
+sunxi_stmmac           36864  0
+snd_soc_aw87x_pa       94208  1 snd_soc_sunxi_common
+stmmac_platform        20480  1 sunxi_stmmac
+stmmac                221184  3 stmmac_platform,sunxi_stmmac
+snd_soc_core          245760  7 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_common,snd_soc_sunxi_i2s,snd_soc_sunxi_machine,snd_soc_aw87x_pa
+snd_pcm_dmaengine      16384  2 snd_soc_sunxi_pcm,snd_soc_core
+pcs_xpcs               20480  1 stmmac
+snd_pcm               126976  4 snd_soc_sunxi_pcm,snd_soc_core,snd_soc_sunxi_machine,snd_pcm_dmaengine
+phylink                36864  1 stmmac
+of_mdio                16384  2 stmmac_platform,stmmac
+fixed_phy              16384  1 of_mdio
+pvrsrvkm             1413120  17
+snd_timer              36864  1 snd_pcm
+fwnode_mdio            16384  1 of_mdio
+libphy                151552  8 maxio,fwnode_mdio,of_mdio,stmmac,fixed_phy,sunxi_stmmac,phylink,pcs_xpcs
+vipcore               253952  0
+snd                    94208  17 snd_timer,snd_soc_core,snd_soc_sunxi_common,snd_pcm,snd_soc_sunxi_i2s
+soundcore              16384  1 snd
+sunxi_ve               49152  0
+sunxi_usbc             36864  0
+deinterlace            90112  0
+spi_sunxi_ng           73728  0
+at24                   20480  0
+pwm_fan                16384  0
+ledtrig_netdev         16384  0
+ledtrig_pattern        16384  0
+ledtrig_heartbeat      16384  0
+ledtrig_default_on     16384  0
+fuse                  126976  1
+ip_tables              28672  0
+x_tables               45056  1 ip_tables
+autofs4                36864  4
+btrfs                1392640  0
+blake2b_generic        20480  0
+xor                    16384  1 btrfs
+xor_neon               16384  1 xor
+zstd_compress         176128  2 btrfs,zstd
+lzo_compress           16384  1 btrfs
+lzo_decompress         16384  1 btrfs
+raid6_pq              106496  1 btrfs
+libcrc32c              16384  1 btrfs
+rtc_hym8563            16384  1
+
+Module metadata:
+filename:       /lib/modules/5.15.147-21-a733/updates/dkms/sec_ts.ko.xz
+license:        GPL
+description:    Samsung Electronics TouchScreen driver
+author:         Younghee, Won<younghee46.won@samsung.com>
+alias:          of:N*T*Csec,sec_tsC*
+alias:          of:N*T*Csec,sec_ts
+alias:          i2c:sec_ts
+depends:        
+name:           sec_ts
+vermagic:       5.15.147-21-a733 SMP preempt mod_unload aarch64
+filename:       /lib/modules/5.15.147-21-a733/updates/dkms/sgm37604a.ko.xz
+license:        GPL
+description:    SGM37604A Driver
+author:         YeQiang Li <liyeqiang.com>
+alias:          of:N*T*Csgmicro,sgm37604aC*
+alias:          of:N*T*Csgmicro,sgm37604a
+alias:          i2c:sgm37604a
+depends:        
+name:           sgm37604a
+vermagic:       5.15.147-21-a733 SMP preempt mod_unload aarch64
+
+EXIT_CODE=0

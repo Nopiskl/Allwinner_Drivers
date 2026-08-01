@@ -1,0 +1,207 @@
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=163
+		allocated by = X
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=1920x1080
+		layers:
+			size[0]=1920x1080
+			pitch[0]=7680
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00100fd2
+				size=8294400
+				imported=no
+				paddr=0x00000000fd800000
+				vaddr=00000000e45a16d2
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  163  | 1920x1080+   0+   0 | 1920x1080+   0+   0 |      none  |   255  | 0x00000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[120]: plane-0-vch2(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[100]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+	on: 1920x1080@60&600Mhz->tcon4 irqcnt=65619 err=0
+	    format_space: 0 yuv_sampling: 0 eotf:4 cs: 1 color_range: 1 data_bits: 0
+	    vsync: 65619 last rcq at vsync: 32370
+	wb off
+crtc[126]: DE-1
+	enable=0
+	active=0
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=0
+	connector_mask=0
+	encoder_mask=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[147]: HDMI-A-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+
+CONNECTORS
+/sys/class/drm/card0-HDMI-A-1/status=connected
+/sys/class/drm/card0-Writeback-1/status=unknown
+
+BACKLIGHT
+total 0
+drwxr-xr-x  2 root root 0 Jan  1  1970 .
+drwxr-xr-x 79 root root 0 Jan  1  1970 ..
+
+MODULES
+Module                  Size  Used by
+rfcomm                 49152  12
+cmac                   16384  3
+algif_hash             16384  1
+aes_generic            36864  3
+ecb                    16384  1
+algif_skcipher         16384  1
+af_alg                 28672  6 algif_hash,algif_skcipher
+bnep                   20480  2
+aic8800_fdrv          602112  0
+sha256_generic         16384  0
+aic_btusb              40960  0
+cfg80211              872448  1 aic8800_fdrv
+bluetooth             442368  40 aic_btusb,bnep,rfcomm
+libaes                 16384  2 bluetooth,aes_generic
+vfat                   20480  2
+fat                    81920  1 vfat
+maxio                  16384  1
+sunxi_stmmac           36864  0
+stmmac_platform        20480  1 sunxi_stmmac
+stmmac                221184  3 stmmac_platform,sunxi_stmmac
+snd_soc_sunxi_codec_hdmi    16384  1
+snd_soc_sunxi_machine    49152  3
+snd_soc_ac101b         69632  1
+pcs_xpcs               20480  1 stmmac
+aic_load_fw            77824  1 aic8800_fdrv
+phylink                36864  1 stmmac
+of_mdio                16384  2 stmmac_platform,stmmac
+snd_soc_sunxi_i2s      61440  4
+snd_soc_sunxi_pcm      24576  1 snd_soc_sunxi_i2s
+zstd                   16384  8
+snd_soc_sunxi_common   102400  5 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_i2s,snd_soc_sunxi_machine
+at24                   20480  0
+fixed_phy              16384  1 of_mdio
+snd_soc_aw87x_pa       94208  1 snd_soc_sunxi_common
+fwnode_mdio            16384  1 of_mdio
+libphy                151552  8 maxio,fwnode_mdio,of_mdio,stmmac,fixed_phy,sunxi_stmmac,phylink,pcs_xpcs
+snd_soc_core          245760  7 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_common,snd_soc_sunxi_i2s,snd_soc_sunxi_machine,snd_soc_aw87x_pa
+deinterlace            90112  0
+snd_pcm_dmaengine      16384  2 snd_soc_sunxi_pcm,snd_soc_core
+zram                   24576  2
+zsmalloc               32768  1 zram
+snd_pcm               126976  4 snd_soc_sunxi_pcm,snd_soc_core,snd_soc_sunxi_machine,snd_pcm_dmaengine
+snd_timer              36864  1 snd_pcm
+vipcore               253952  0
+snd                    94208  11 snd_timer,snd_soc_core,snd_soc_sunxi_common,snd_pcm,snd_soc_sunxi_i2s
+pvrsrvkm             1413120  70
+soundcore              16384  1 snd
+sunxi_usbc             36864  0
+spi_sunxi_ng           73728  0
+sunxi_ve               49152  0
+pwm_fan                16384  0
+ledtrig_netdev         16384  0
+ledtrig_pattern        16384  0
+ledtrig_heartbeat      16384  0
+ledtrig_default_on     16384  0
+fuse                  126976  1
+ip_tables              28672  0
+x_tables               45056  1 ip_tables
+autofs4                36864  4
+btrfs                1392640  0
+blake2b_generic        20480  0
+xor                    16384  1 btrfs
+xor_neon               16384  1 xor
+zstd_compress         176128  2 btrfs,zstd
+lzo_compress           16384  1 btrfs
+lzo_decompress         16384  1 btrfs
+raid6_pq              106496  1 btrfs
+libcrc32c              16384  1 btrfs
+rtc_hym8563            16384  1
+
+=== STDERR ===
+
+RC=0

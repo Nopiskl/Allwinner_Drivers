@@ -1,0 +1,1603 @@
+COMMAND: dmesg -T
+
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[Fri Jul 31 09:01:36 2026] [     T74] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T74] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm OD pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000080
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000282
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000484
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: detmode:gpio irq
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: Sunxi ufs driver version 0.0.18 2025.5.16 15:16
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: freq-table-hz property not specified
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq-max-microamp
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq2-max-microamp
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000686
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: fore use int ref 26m
+[Fri Jul 31 09:01:36 2026] [      T1] scsi host0: ufshcd
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000888
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-ufs-pltfm 4520000.ufs: [ufs]err:evt num 12,UFS_EVT_DEV_RESET
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000a8a
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [DSI-PANEL] panel_dsi_init start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [DSI-PANEL] dsi driver regsiter finsh
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON] sunxi_tcon_probe start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON] sunxi_tcon_probe ret = 0
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON] sunxi_tcon_probe start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] [TCON] sunxi_tcon_probe ret = 0
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] sunxi_drm_platform_probe start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] sunxi_drm_match_add start
+[Fri Jul 31 09:01:36 2026] [      T1] [drm] sunxi_drm_match_add finish
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000c8c
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi-cadence-combophy 6c00000.serdes: Sub System Version v2.0.0
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: IRQ eth_wake_irq not found
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000e8e
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:stmmac-4500000.ethernet:[INFO]: Phy use soc fanout
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:stmmac-4500000.ethernet:[INFO]: Not found delay-maps in dts
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Failed to config rmmi
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Phy setup failed (-110)
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [      T1] sunxi:stmmac-4500000.ethernet:[INFO]: RGMII use internal transmit clock
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: User ID: 0x20, Synopsys ID: 0x53
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: 	DWMAC4/5
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: DMA HW capability register supported
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: RX Checksum Offload Engine supported
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: TX Checksum insertion supported
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: Wake-Up On Lan supported
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: Enabled RFS Flow TC (entries=10)
+[Fri Jul 31 09:01:36 2026] [      T1] dwmac-sunxi 4500000.ethernet: Using 32/40 bits DMA host/device width
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001090
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001292
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001494
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001696
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001898
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:pin-2000000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001a9a
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001c9c
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001e9e
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000020a0
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000022a2
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000024a4
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Failed to config rmmi
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Phy setup failed (-110)
+[Fri Jul 31 09:01:36 2026] [     T52] mmc1: host does not support reading read-only switch, assuming write-enable
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000026a6
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[Fri Jul 31 09:01:36 2026] [     T52] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: sdc0 :the host don't support tuning in kernel
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T52] mmc1: new ultra high speed SDR104 SDHC card at address aaaa
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000028a8
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [     T52] mmcblk1: mmc1:aaaa SD32G 29.7 GiB
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002aaa
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002cac
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002eae
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000030b0
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [     T52]  mmcblk1: p1 p2 p3
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000032b2
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000034b4
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000036b6
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000038b8
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003aba
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Failed to config rmmi
+[Fri Jul 31 09:01:36 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Phy setup failed (-110)
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003cbc
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003ebe
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[Fri Jul 31 09:01:36 2026] [      C0] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 0 p2 err, cmd 1, RTO !!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sunxi v4p5x/v4p6x retry give up!
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[Fri Jul 31 09:01:36 2026] [     T95] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[Fri Jul 31 09:01:36 2026] [     T74] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm OFF vdd 0 width 1 timing LEGACY(SDR12) dt B
+[Fri Jul 31 09:01:36 2026] [     T74] mmc0: Failed to initialize a non-removable card
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: sunxi_ufs_rmmi_config: wait sram init done timeout
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Failed to config rmmi
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Phy setup failed (-110)
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: [ufs]err:evt num 7,UFS_EVT_LINK_STARTUP_FAIL
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: 0 outstanding reqs, tasks=0x0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: last intr at 1021407 us, last intr status=0x404
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x80
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] host_regs: 00000090: 00000016 00000000 00000001 00000000
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 1021425 us
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of wlun resume_fail
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of wlun suspend_fail
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 449804 us
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[Fri Jul 31 09:01:37 2026] [     T67] sunxi-ufs-pltfm 4520000.ufs: ufshcd_async_scan failed: 1
+[Fri Jul 31 09:01:37 2026] [     T11] Freeing initrd memory: 45928K
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:stmmac-4500000.ethernet:[INFO]: probe success (Version 0.3.2)
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: resistance calibration supported - enabled, mode - V2
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: phy provider register success
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi-cadence-combophy 6c00000.serdes: combophy0 set power ON
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 1
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: hcc params 0x0118ffc5 hci version 0x120 quirks 0x0000008000000010
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: irq 455, io mem 0x06a00000
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 2
+[Fri Jul 31 09:01:37 2026] [      T1] xhci-hcd xhci-hcd.40.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.06
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb1: Product: xHCI Host Controller
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb1: Manufacturer: Linux 6.6.98-3-aw2511 xhci-hcd
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb1: SerialNumber: xhci-hcd.40.auto
+[Fri Jul 31 09:01:37 2026] [      T1] hub 1-0:1.0: USB hub found
+[Fri Jul 31 09:01:37 2026] [      T1] hub 1-0:1.0: 1 port detected
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.06
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: Product: xHCI Host Controller
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: Manufacturer: Linux 6.6.98-3-aw2511 xhci-hcd
+[Fri Jul 31 09:01:37 2026] [      T1] usb usb2: SerialNumber: xhci-hcd.40.auto
+[Fri Jul 31 09:01:37 2026] [      T1] hub 2-0:1.0: USB hub found
+[Fri Jul 31 09:01:37 2026] [      T1] hub 2-0:1.0: 1 port detected
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:dwc3_sunxi_plat-12.usbc2:[INFO]: DesignWare USB3 Allwinner Glue Layer Driver(v1.0.23 2024-11-25 14:00)
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:gpadc:[INFO]: sunxi_gpadc_init(): 2294: gpadc class register success
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:gpadc-2521000.gpadc:[WARN]: warn: sample rate not set
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel0/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input0
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel1/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input1
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel2/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input2
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel3/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input3
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel4/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input4
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel5/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input5
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel6/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input6
+[Fri Jul 31 09:01:37 2026] [      T1] input: sunxi-gpadc0/channel7/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input7
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:gpadc-2521000.gpadc:[INFO]: sunxi_gpadc probe success
+[Fri Jul 31 09:01:37 2026] [      T1] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 09:01:37 2026] [      T1] thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 09:01:37 2026] [      T1] thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 09:01:37 2026] [      T1] thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 09:01:37 2026] [      T1] thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[Fri Jul 31 09:01:37 2026] [      T1] axp2101-pek axp2101-pek.0: DMA mask not set
+[Fri Jul 31 09:01:37 2026] [      T1] input: axp8191-pek as /devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+[Fri Jul 31 09:01:37 2026] [      T1] sunxi:sunxi_sid:[ERR]: Fail to read 'dvfs2_ori' in dts
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (408000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (720000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (792000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1008000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1104000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1200000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1296000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1392000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1416000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1512000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1608000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1704000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1800000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (728000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1092000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1300000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1586000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (408000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (720000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (792000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1008000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1200000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1296000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1392000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1512000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1608000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1704000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1800000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1896000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1920000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1944000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1992000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (728000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1300000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1586000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1690000000)
+[Fri Jul 31 09:01:37 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1976000000)
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu0: EM: created perf domain
+[Fri Jul 31 09:01:37 2026] [      T1] cpu cpu6: EM: created perf domain
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, platform driver init
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, platform device compatible=allwinner,npu
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, platform driver device=0xffff0000c0d8dc10
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] clock_rate: 26000000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore irq number is 457.
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] npu power domains status: 1
+[Fri Jul 31 09:01:37 2026] [      T1] NPU AXI CLK NULL
+[Fri Jul 31 09:01:37 2026] [      T1] NPU AHB CLK NULL
+[Fri Jul 31 09:01:37 2026] [      T1] NPU TZMA CLK NULL
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] EXTRA: 0x, SID: 0x0, max_freq: 1200000000, default_freq: 1200000000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] current dvfs: 0, vf index: 0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] successed to set opp regulator
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] Supported vf list: 
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1]     freq: 492000000, vol: 800000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1]     freq: 852000000, vol: 800000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1]     freq: 1008000000, vol: 960000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] get freq list and add opp successfully
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] target rate: 1008000000, vol: 960000, target_fscale: 100
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] npu devfreq added
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] successed to register cooling device
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] enable aw vip devfreq
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] NPU Use VF0000, use freq 1008 MHz
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] Get NPU Regulator Control FAIL!
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] Want set npu vol(960000) now vol(800000)
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, device_cnt=1, core_cnt=1
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] core_0, request irqline=457, name=vipcore_0
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, allocate page for video memory, size: 0x400000 bytes
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] vipcore, heap_cnt=0, reserved video memory cpu_phy=0xfa400000, vip_phy=0xfa400000, size=0x400000
+[Fri Jul 31 09:01:37 2026] [      T1] npu[1][1] VIPLite driver version 2.0.3.4-AW-2025-10-27
+[Fri Jul 31 09:01:37 2026] [      T1] [ADDR_MGT] addr_mgt_probe: module version: v1.0.13
+[Fri Jul 31 09:01:37 2026] [      T1] [ADDR_MGT] addr_mgt_probe: success.
+[Fri Jul 31 09:01:37 2026] [      T1] registered taskstats version 1
+[Fri Jul 31 09:01:37 2026] [      T1] Loading compiled-in X.509 certificates
+[Fri Jul 31 09:01:37 2026] [      T1] Key type .fscrypt registered
+[Fri Jul 31 09:01:37 2026] [      T1] Key type fscrypt-provisioning registered
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi iommu: irq = 458
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi iommu: irq = 459
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi:twi_sunxi-2510000.twi:[INFO]: v2.6.9 probe success
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-display-engine 5000000.de: Adding to iommu group 0
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] [SUNXI-DE] chn_cfg_mode not found, used def val
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] de use no display sys
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi_drm_bind start
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] [SUNXI-DE] sunxi_de_bind start
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi_de_bind crtc init for de 0 ok
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi_de_bind crtc init for de 1 ok
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi drv init dts done
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi drv enable resource done
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi drv init resource done
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[Fri Jul 31 09:01:37 2026] [     T84] Registered IR keymap rc-cec
+[Fri Jul 31 09:01:37 2026] [     T84] rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[Fri Jul 31 09:01:37 2026] [     T84] input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: drm hdmi connector create finish
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] HDMI-A-1 Not connected, start hot-plug monitoring
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] start HDMI-A-1 monitor monitoring, interval: 100ms
+[Fri Jul 31 09:01:37 2026] [     T84] [drm:commit_init_connecting.isra.0] *ERROR* offline mode: init connecting not found sunxi_drm_offline_mode_pre_init
+[Fri Jul 31 09:01:37 2026] [     T84] [drm:sunxi_drm_get_logo_info] *ERROR* init connecting not found sunxi_drm_get_logo_info
+[Fri Jul 31 09:01:37 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[Fri Jul 31 09:01:37 2026] [     T84] [drm] sunxi_drm_bind ok
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-pcie 6000000.pcie: host bridge /soc@3000000/pcie@6000000 ranges:
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-pcie 6000000.pcie:      err 0x0020000000..0x0020ffffff -> 0x0020000000
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-pcie 6000000.pcie:       IO 0x0021000000..0x0021ffffff -> 0x0021000000
+[Fri Jul 31 09:01:37 2026] [     T84] sunxi-pcie 6000000.pcie:      MEM 0x0022000000..0x0027ffffff -> 0x0022000000
+[Fri Jul 31 09:01:37 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [     T91] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [     T91] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[Fri Jul 31 09:01:38 2026] [     T91] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[Fri Jul 31 09:01:38 2026] [     T91] usb 1-1: Product: USB 2.0 Hub
+[Fri Jul 31 09:01:38 2026] [     T91] hub 1-1:1.0: USB hub found
+[Fri Jul 31 09:01:38 2026] [     T91] hub 1-1:1.0: 4 ports detected
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.2: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.2: Product: USB2.1 Hub
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.2: Manufacturer: GenesysLogic
+[Fri Jul 31 09:01:38 2026] [     T56] hub 1-1.2:1.0: USB hub found
+[Fri Jul 31 09:01:38 2026] [     T56] hub 1-1.2:1.0: 4 ports detected
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:38 2026] [     T56] usb 1-1.4: new high-speed USB device number 4 using xhci-hcd
+[Fri Jul 31 09:01:38 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T56] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[Fri Jul 31 09:01:39 2026] [     T56] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Fri Jul 31 09:01:39 2026] [     T56] usb 1-1.4: Product: AIC Wlan
+[Fri Jul 31 09:01:39 2026] [     T56] usb 1-1.4: Manufacturer: aicsemi
+[Fri Jul 31 09:01:39 2026] [     T56] usb 1-1.4: SerialNumber: 20220103
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.3: new full-speed USB device number 5 using xhci-hcd
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.3: New USB device found, idVendor=1ea7, idProduct=0066, bcdDevice= 2.00
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.3: Product: 2.4G Mouse
+[Fri Jul 31 09:01:39 2026] [     T91] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] hid-generic 0003:1EA7:0066.0001: input: USB HID v1.10 Keyboard [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input0
+[Fri Jul 31 09:01:39 2026] [     T91] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+[Fri Jul 31 09:01:39 2026] [     T91] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+[Fri Jul 31 09:01:39 2026] [     T91] input: 2.4G Mouse Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] input: 2.4G Mouse System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+[Fri Jul 31 09:01:39 2026] [     T91] hid-generic 0003:1EA7:0066.0002: input: USB HID v1.10 Mouse [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input1
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.4: new full-speed USB device number 6 using xhci-hcd
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.4: New USB device found, idVendor=3151, idProduct=3020, bcdDevice= 0.02
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.4: Product: 2.4G Receiver
+[Fri Jul 31 09:01:39 2026] [     T91] usb 1-1.2.4: Manufacturer: YICHIP
+[Fri Jul 31 09:01:39 2026] [     T91] input: YICHIP 2.4G Receiver as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T91] hid-generic 0003:3151:3020.0003: input: USB HID v2.00 Keyboard [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input0
+[Fri Jul 31 09:01:39 2026] [     T91] input: YICHIP 2.4G Receiver Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+[Fri Jul 31 09:01:39 2026] [     T91] input: YICHIP 2.4G Receiver System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+[Fri Jul 31 09:01:39 2026] [     T91] input: YICHIP 2.4G Receiver Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+[Fri Jul 31 09:01:39 2026] [     T91] hid-generic 0003:3151:3020.0004: input: USB HID v2.00 Mouse [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input1
+[Fri Jul 31 09:01:39 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:39 2026] [     T84] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[Fri Jul 31 09:01:39 2026] [     T84] sunxi:pcie-rc-6000000.pcie:[INFO]: PCIe speed of Gen1
+[Fri Jul 31 09:01:39 2026] [     T84] sunxi-pcie 6000000.pcie: PCI host bridge to bus 0000:00
+[Fri Jul 31 09:01:39 2026] [     T84] pci_bus 0000:00: root bus resource [bus 00-ff]
+[Fri Jul 31 09:01:39 2026] [     T84] pci_bus 0000:00: root bus resource [??? 0x20000000-0x20ffffff flags 0x0]
+[Fri Jul 31 09:01:39 2026] [     T84] pci_bus 0000:00: root bus resource [io  0x0000-0xffffff] (bus address [0x21000000-0x21ffffff])
+[Fri Jul 31 09:01:39 2026] [     T84] pci_bus 0000:00: root bus resource [mem 0x22000000-0x27ffffff]
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: [1f6d:abcd] type 01 class 0x060400
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: supports D1
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: BAR 0: assigned [mem 0x22000000-0x220fffff]
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: BAR 6: assigned [mem 0x22100000-0x2210ffff pref]
+[Fri Jul 31 09:01:39 2026] [     T84] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Jul 31 09:01:39 2026] [     T84] sunxi:pcie-6000000.pcie:[INFO]: driver version: 1.2.5
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ehci_sunxi:[INFO]: sunxi-ehci: EHCI SUNXI driver
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:sunxi_hci:[INFO]: sunxi ehci0-controller don't init wakeup source
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: probe, pdev->name: 4101000.ehci0-controller, sunxi_ehci: 0xffff8000817a4490, 0x:ffff800082215000, irq_no:1da
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: Not init ehci0
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci1]: probe, pdev->name: 4200000.ehci1-controller, sunxi_ehci: 0xffff8000817a48c0, 0x:ffff800082225000, irq_no:1db
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: supply hci not found, using dummy regulator
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: EHCI Host Controller
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: new USB bus registered, assigned bus number 3
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: irq 475, io mem 0x04200000
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: USB 2.0 started, EHCI 1.00
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.06
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb3: Product: EHCI Host Controller
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb3: Manufacturer: Linux 6.6.98-3-aw2511 ehci_hcd
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb3: SerialNumber: sunxi-ehci
+[Fri Jul 31 09:01:40 2026] [      T1] hub 3-0:1.0: USB hub found
+[Fri Jul 31 09:01:40 2026] [      T1] hub 3-0:1.0: 1 port detected
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ohci_sunxi:[INFO]: sunxi-ohci: OHCI SUNXI driver
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:sunxi_hci:[INFO]: sunxi ohci0-controller don't init wakeup source
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: probe, pdev->name: 4101400.ohci0-controller, sunxi_ohci: 0xffff8000817a5120
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: Not init ohci0
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci1]: probe, pdev->name: 4200400.ohci1-controller, sunxi_ohci: 0xffff8000817a5550
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: supply hci not found, using dummy regulator
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: OHCI Host Controller
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: new USB bus registered, assigned bus number 4
+[Fri Jul 31 09:01:40 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: irq 477, io mem 0x04200400
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.06
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb4: Product: OHCI Host Controller
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb4: Manufacturer: Linux 6.6.98-3-aw2511 ohci_hcd
+[Fri Jul 31 09:01:40 2026] [      T1] usb usb4: SerialNumber: sunxi-ohci
+[Fri Jul 31 09:01:40 2026] [      T1] hub 4-0:1.0: USB hub found
+[Fri Jul 31 09:01:40 2026] [      T1] hub 4-0:1.0: 1 port detected
+[Fri Jul 31 09:01:40 2026] [      T1] clk: Not disabling unused clocks
+[Fri Jul 31 09:01:40 2026] [      T1] Freeing unused kernel memory: 1920K
+[Fri Jul 31 09:01:40 2026] [      T1] Run /init as init process
+[Fri Jul 31 09:01:40 2026] [      T1]   with arguments:
+[Fri Jul 31 09:01:40 2026] [      T1]     /init
+[Fri Jul 31 09:01:40 2026] [      T1]     splash
+[Fri Jul 31 09:01:40 2026] [      T1]     earlycon
+[Fri Jul 31 09:01:40 2026] [      T1]   with environment:
+[Fri Jul 31 09:01:40 2026] [      T1]     HOME=/
+[Fri Jul 31 09:01:40 2026] [      T1]     TERM=linux
+[Fri Jul 31 09:01:40 2026] [      T1]     mac_addr=
+[Fri Jul 31 09:01:40 2026] [      T1]     mac1_addr=
+[Fri Jul 31 09:01:40 2026] [      T1]     cgroup_enable=memory
+[Fri Jul 31 09:01:40 2026] [      T1]     cgroup_memory=1
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T184] dwmac-sunxi 4500000.ethernet end0: renamed from eth0
+[Fri Jul 31 09:01:40 2026] [    T181] rtc-hym8563 14-0051: no valid clock/calendar values available
+[Fri Jul 31 09:01:40 2026] [    T181] rtc-hym8563 14-0051: registered as rtc0
+[Fri Jul 31 09:01:40 2026] [    T181] rtc-hym8563 14-0051: no valid clock/calendar values available
+[Fri Jul 31 09:01:40 2026] [    T181] rtc-hym8563 14-0051: hctosys: unable to read the hardware clock
+[Fri Jul 31 09:01:40 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: neonx8   gen()  3395 MB/s
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: neonx4   gen()  3322 MB/s
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: neonx2   gen()  3257 MB/s
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: neonx1   gen()  2838 MB/s
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: int64x8  gen()  2106 MB/s
+[Fri Jul 31 09:01:40 2026] [    T200] raid6: int64x4  gen()  2344 MB/s
+[Fri Jul 31 09:01:40 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T200] raid6: int64x2  gen()  2229 MB/s
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T200] raid6: int64x1  gen()  1701 MB/s
+[Fri Jul 31 09:01:41 2026] [    T200] raid6: using algorithm neonx8 gen() 3395 MB/s
+[Fri Jul 31 09:01:41 2026] [    T200] raid6: .... xor() 2521 MB/s, rmw enabled
+[Fri Jul 31 09:01:41 2026] [    T200] raid6: using neon recovery algorithm
+[Fri Jul 31 09:01:41 2026] [    T200] xor: measuring software checksum speed
+[Fri Jul 31 09:01:41 2026] [    T200]    8regs           :  3595 MB/sec
+[Fri Jul 31 09:01:41 2026] [    T200]    32regs          :  3608 MB/sec
+[Fri Jul 31 09:01:41 2026] [    T200]    arm64_neon      :  3694 MB/sec
+[Fri Jul 31 09:01:41 2026] [    T200] xor: using function: arm64_neon (3694 MB/sec)
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T200] Btrfs loaded, zoned=no, fsverity=no
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T214] EXT4-fs (mmcblk1p3): mounted filesystem 653db195-501c-4b19-a720-2fc8f1382665 r/w with ordered data mode. Quota mode: disabled.
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T239] EXT4-fs (mmcblk1p3): unmounting filesystem 653db195-501c-4b19-a720-2fc8f1382665.
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:41 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T259]  mmcblk1: p1 p2 p3
+[Fri Jul 31 09:01:42 2026] [    T149]  mmcblk1: p1 p2 p3
+[Fri Jul 31 09:01:42 2026] [    T149]  mmcblk1: p1 p2 p3
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T269] EXT4-fs (mmcblk1p3): mounted filesystem 653db195-501c-4b19-a720-2fc8f1382665 r/w with ordered data mode. Quota mode: disabled.
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:42 2026] [      T1] systemd[1]: System time advanced to built-in epoch: Mon 2026-04-13 19:38:05 UTC
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Inserted module 'autofs4'
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Detected architecture arm64.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Detected first boot.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Hostname set to <radxa-a733>.
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Initializing machine ID from random generator.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Populated /etc with preset unit settings.
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Queued start job for default target graphical.target.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Created slice system-kmsconvt.slice - Slice /system/kmsconvt.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Created slice user.slice - User and Session Slice.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Expecting device dev-ttyAS0.device - /dev/ttyAS0...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Reached target slices.target - Slice Units.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Reached target swap.target - Swaps.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-networkd.socket - Network Service Netlink Socket.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting tmp.mount - Temporary Directory /tmp...
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-fsck-root.service - File System Check on Root Device skipped, unmet condition check ConditionPathIsReadWrite=!/
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-journald.service - Journal Service...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-network-generator.service - Generate Network Units from Kernel Command Line...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[Fri Jul 31 09:01:43 2026] [    T314] fuse: init (API version 7.39)
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted tmp.mount - Temporary Directory /tmp.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished systemd-network-generator.service - Generate Network Units from Kernel Command Line.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Reached target network-pre.target - Preparation for Network.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[Fri Jul 31 09:01:43 2026] [    T315] systemd-journald[315]: Collecting audit messages is enabled.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[Fri Jul 31 09:01:43 2026] [     T58] audit: type=1130 audit(1776109085.920:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-load-credentials comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:43 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:43 2026] [    T325] EXT4-fs (mmcblk1p3): re-mounted 653db195-501c-4b19-a720-2fc8f1382665.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[Fri Jul 31 09:01:43 2026] [     T58] audit: type=1130 audit(1776109085.940:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, no trigger condition checks were met.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-file-system.service - Lock File Systems to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-machine-id.service - Lock Machine ID to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-firmware-code.service - Lock Firmware Code to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-firmware-config.service - Lock Firmware Configuration to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-secureboot-authority.service - Lock UEFI SecureBoot Authority to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-secureboot-policy.service - Lock UEFI SecureBoot Policy to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: systemd-pcrlock-make-policy.service - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[Fri Jul 31 09:01:43 2026] [     T58] audit: type=1130 audit(1776109085.972:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[Fri Jul 31 09:01:43 2026] [      T1] systemd[1]: Started systemd-journald.service - Journal Service.
+[Fri Jul 31 09:01:43 2026] [     T58] audit: type=1130 audit(1776109085.992:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:43 2026] [     T58] audit: type=1130 audit(1776109086.000:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev-early comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:44 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [     T58] audit: type=1130 audit(1776109086.036:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:44 2026] [     T58] audit: type=1130 audit(1776109086.084:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:44 2026] [    T315] systemd-journald[315]: Received client request to flush runtime journal.
+[Fri Jul 31 09:01:44 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [     T58] audit: type=1130 audit(1776109086.152:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysusers comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:44 2026] [     T58] audit: type=1334 audit(1776109086.156:10): prog-id=19 op=LOAD
+[Fri Jul 31 09:01:44 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [     T58] audit: type=1130 audit(1776109086.244:11): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:44 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [      C4] random: crng init done
+[Fri Jul 31 09:01:44 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T399] platform 7023017.s_pwm0: supply pwm not found, using dummy regulator
+[Fri Jul 31 09:01:44 2026] [    T395] at24 0-0050: supply vcc not found, using dummy regulator
+[Fri Jul 31 09:01:44 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T395] at24 0-0050: 2048 byte 24c16 EEPROM, writable, 1 bytes/write
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_fw: loading out-of-tree module taints kernel.
+[Fri Jul 31 09:01:44 2026] [    T385] aic_bluetooth_mod_init 
+[Fri Jul 31 09:01:44 2026] [    T385] RELEASE DATE:2026_0123_5f7be68d 
+[Fri Jul 31 09:01:44 2026] [    T385] Aic high speed USB device detected
+[Fri Jul 31 09:01:44 2026] [    T385] chip_id=7, chip_mcu_id = 0
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+[Fri Jul 31 09:01:44 2026] [    T409] sunxi:sunxi_usbc:[INFO]: OTG can't find bcten-gpio, use default mode.
+[Fri Jul 31 09:01:44 2026] [    T409] sunxi:sunxi_usbc:[INFO]: get id is fail, -61
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[INFO]: 2215 sunxi_cedar_init(): sunxi cedar version 1.1
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[INFO]: 2137 sunxi_cedar_probe(): probe ve
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi-cedar 1c0e000.ve: supply ve not found, using dummy regulator
+[Fri Jul 31 09:01:44 2026] [    T399] deinterlace 5400000.deinterlace: Adding to iommu group 0
+[Fri Jul 31 09:01:44 2026] [    T399] sunxi:deinterlace:[INFO]: DI probe
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[WARN]: 392 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[INFO]: 2140 sunxi_cedar_probe(): probe ve1
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[INFO]: 2143 sunxi_cedar_probe(): probe ve2
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi-cedar 1c10000.ve2: supply ve not found, using dummy regulator
+[Fri Jul 31 09:01:44 2026] [    T384] sunxi:VE:[WARN]: 392 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[Fri Jul 31 09:01:44 2026] [    T418] [sunxi bxm]SysDevInit start!
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[Fri Jul 31 09:01:44 2026] [    T418] pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[Fri Jul 31 09:01:44 2026] [    T418] [sunxi bxm]SysDevInit end!
+[Fri Jul 31 09:01:44 2026] [    T418] PVR_K:  418: Read BVNC 36.56.104.183 from HW device registers
+[Fri Jul 31 09:01:44 2026] [    T418] PVR_K:  418: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[Fri Jul 31 09:01:44 2026] [    T418] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[Fri Jul 31 09:01:44 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T385] file md5:54b15ce88b3b9ba14bf961e6f90839fc
+[Fri Jul 31 09:01:44 2026] [    T385] ### Upload fw_patch_table_8800d80_u02.bin fw_patch_table, size=1384
+[Fri Jul 31 09:01:44 2026] [    T385] addr_adid 0x201940, addr_patch 0x1e0000
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+[Fri Jul 31 09:01:44 2026] [    T385] file md5:f546881a81b960d89a672578eb45a809
+[Fri Jul 31 09:01:44 2026] [    T385] ### Upload fw_adid_8800d80_u02.bin firmware, @ = 201940  size=1708
+[Fri Jul 31 09:01:44 2026] [    T385] fw download complete
+
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+[Fri Jul 31 09:01:44 2026] [    T385] file md5:f5400db1d64e0150c3232eb53e7f78b6
+[Fri Jul 31 09:01:44 2026] [    T385] ### Upload fw_patch_8800d80_u02.bin firmware, @ = 1e0000  size=32700
+[Fri Jul 31 09:01:44 2026] [    T385] fw download complete
+
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+[Fri Jul 31 09:01:44 2026] [    T385] file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+[Fri Jul 31 09:01:44 2026] [    T385] ### Upload fw_patch_8800d80_u02_ext0.bin firmware, @ = 20b43c  size=16136
+[Fri Jul 31 09:01:44 2026] [    T385] fw download complete
+
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt btmode[4]:5
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt btport[4]:1
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt uart_baud[4]:1500000
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt uart_flowctrl[4]:1
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt lpm_enable[4]:0
+[Fri Jul 31 09:01:44 2026] [    T385] aicbt_patch_table_load bt tx_pwr[4]:6F2F
+[Fri Jul 31 09:01:44 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T385] patch version - Aug 01 2025 11:05:26 - git a26f071
+[Fri Jul 31 09:01:44 2026] [    T385] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+[Fri Jul 31 09:01:44 2026] [    T385] file md5:280bb388f3b44bf1cbe5ec072ba274da
+[Fri Jul 31 09:01:44 2026] [    T385] ### Upload fmacfw_8800d80_u02.bin firmware, @ = 120000  size=358072
+[Fri Jul 31 09:01:44 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:44 2026] [    T385] fw download complete
+
+[Fri Jul 31 09:01:44 2026] [    T385] AICWFDBG(LOGERROR)	Read FW mem: 00120198
+[Fri Jul 31 09:01:44 2026] [    T385] AICWFDBG(LOGERROR)	120198=177158
+[Fri Jul 31 09:01:44 2026] [    T385] AICWFDBG(LOGERROR)	1201a0=177c00
+[Fri Jul 31 09:01:44 2026] [    T385] usbcore: registered new interface driver aic_load_fw
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:44 2026] [    T125] app_cmp
+[Fri Jul 31 09:01:45 2026] [    T417] [Awinic] aw87xxx_pa_init:driver version: v2.14.0
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T125] usb 1-1.4: USB disconnect, device number 4
+[Fri Jul 31 09:01:45 2026] [    T125] aicwf_usb_disconnect enter 
+[Fri Jul 31 09:01:45 2026] [    T125] aicwf_bus_deinit
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T447] sunxi:sunxi_usbc:[INFO]: insmod_device_driver
+
+[Fri Jul 31 09:01:45 2026] [    T447] sunxi_usb_udc 4100000.udc-controller: supply udc not found, using dummy regulator
+[Fri Jul 31 09:01:45 2026] [    T447] sunxi:sunxi_usbc:[INFO]: device_chose finished 340!
+[Fri Jul 31 09:01:45 2026] [    T125] q_sz/max:  0 /  8 - next tkn: 559
+[Fri Jul 31 09:01:45 2026] [    T125] q_sz/max:  0 /  8 - next tkn: 559
+[Fri Jul 31 09:01:45 2026] [    T443] usb bustx thread will to stop
+[Fri Jul 31 09:01:45 2026] [    T443] usb bustx thread stop
+[Fri Jul 31 09:01:45 2026] [    T125] exit aicwf_bus_deinit
+[Fri Jul 31 09:01:45 2026] [    T444] usb busrx thread will to stop
+[Fri Jul 31 09:01:45 2026] [    T444] usb busrx thread stop
+[Fri Jul 31 09:01:45 2026] [    T399] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [    T399] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [    T399] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [    T399] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T396] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 09:01:45 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:45 2026] [    T381] sunxi:sound-i2s:[WARN]: 2237 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[Fri Jul 31 09:01:45 2026] [    T381] sunxi:sound-i2s:[WARN]: 2245 snd_sunxi_dts_params_init(): clk-keep missing
+[Fri Jul 31 09:01:45 2026] [    T381] sunxi:sound-i2s:[WARN]: 2237 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[Fri Jul 31 09:01:45 2026] [    T381] sunxi:sound-i2s:[WARN]: 2245 snd_sunxi_dts_params_init(): clk-keep missing
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC Jack
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP Jack
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-ac101b:[INFO]: 269 ac101b_bg_hdata_cal(): BG voltage set to 1.48V
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-ac101b:[INFO]: 281 ac101b_bg_hdata_cal(): codec adc offset: -2\x1b[0m
+[Fri Jul 31 09:01:45 2026] [     T11] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[Fri Jul 31 09:01:45 2026] [    T114] sunxi:sound-jack:[ERR]: 241 sunxi_jack_det_scan_work(): jack_adv or extdev is null
+[Fri Jul 31 09:01:45 2026] [     T11] input: sunxi-ac101b Headphones as /devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+[Fri Jul 31 09:01:45 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 09:01:45 2026] [     T11] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[Fri Jul 31 09:01:45 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: new high-speed USB device number 7 using xhci-hcd
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d81, bcdDevice= 1.00
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: Product: AIC 8800D80
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: Manufacturer: AICSemi
+[Fri Jul 31 09:01:46 2026] [    T125] usb 1-1.4: SerialNumber: 20220103
+[Fri Jul 31 09:01:46 2026] [    T125] aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[Fri Jul 31 09:01:46 2026] [    T125] aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[Fri Jul 31 09:01:46 2026] [    T125] aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[Fri Jul 31 09:01:46 2026] [    T489] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[Fri Jul 31 09:01:46 2026] [    T489] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[Fri Jul 31 09:01:46 2026] [    T489] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+
+[Fri Jul 31 09:01:46 2026] [    T410] **********************************************************
+[Fri Jul 31 09:01:46 2026] [    T410] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Fri Jul 31 09:01:46 2026] [    T410] **                                                      **
+[Fri Jul 31 09:01:46 2026] [    T410] ** trace_printk() being used. Allocating extra memory.  **
+[Fri Jul 31 09:01:46 2026] [    T410] **                                                      **
+[Fri Jul 31 09:01:46 2026] [    T410] ** This means that this is a DEBUG kernel and it is     **
+[Fri Jul 31 09:01:46 2026] [    T410] ** unsafe for production use.                           **
+[Fri Jul 31 09:01:46 2026] [    T410] **                                                      **
+[Fri Jul 31 09:01:46 2026] [    T410] ** If you see this message and you are not debugging    **
+[Fri Jul 31 09:01:46 2026] [    T410] ** the kernel, report this immediately to your vendor!  **
+[Fri Jul 31 09:01:46 2026] [    T410] **                                                      **
+[Fri Jul 31 09:01:46 2026] [    T410] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Fri Jul 31 09:01:46 2026] [    T410] **********************************************************
+[Fri Jul 31 09:01:46 2026] [    T415] Bluetooth: Core ver 2.22
+[Fri Jul 31 09:01:46 2026] [    T415] NET: Registered PF_BLUETOOTH protocol family
+[Fri Jul 31 09:01:46 2026] [    T415] Bluetooth: HCI device and connection manager initialized
+[Fri Jul 31 09:01:46 2026] [    T415] Bluetooth: HCI socket layer initialized
+[Fri Jul 31 09:01:46 2026] [    T415] Bluetooth: L2CAP socket layer initialized
+[Fri Jul 31 09:01:46 2026] [    T415] Bluetooth: SCO socket layer initialized
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T415] aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+[Fri Jul 31 09:01:46 2026] [    T415] aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+[Fri Jul 31 09:01:46 2026] [    T415] aic_btusb: RELEASE DATE: 2023_1211_1958 
+
+[Fri Jul 31 09:01:46 2026] [    T410] ========== tcp ack debug tcp_ack_init 
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:46 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:47 2026] [    T410] ieee80211 phy0: 
+                                      *******************************************************
+                                      ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+                                      *******************************************************
+[Fri Jul 31 09:01:47 2026] [    T410] usbcore: registered new interface driver aic8800_fdrv
+[Fri Jul 31 09:01:47 2026] [    T415] aic_btusb: btusb_probe: usb_interface 0000000004b6115e, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+[Fri Jul 31 09:01:47 2026] [    T415] aicwf_usb_chipmatch USE AIC8800D80
+[Fri Jul 31 09:01:47 2026] [    T415] endpoint num 3
+[Fri Jul 31 09:01:47 2026] [    T415] endpoint num 4
+[Fri Jul 31 09:01:47 2026] [    T415] endpoint num 4
+[Fri Jul 31 09:01:47 2026] [    T415] aic_btusb: firmware_info_init: Auto suspend is disabled
+[Fri Jul 31 09:01:47 2026] [    T415] aic_btusb: btusb_probe: download begining...
+[Fri Jul 31 09:01:47 2026] [    T415] aic_btusb: btusb_probe: download ending...
+[Fri Jul 31 09:01:47 2026] [    T415] usbcore: registered new interface driver aic_btusb
+[Fri Jul 31 09:01:47 2026] [    T113] aic_btusb: btusb_open: Start
+[Fri Jul 31 09:01:47 2026] [    T113]  download_patch 0
+[Fri Jul 31 09:01:47 2026] [    T113] aic_btusb: btusb_open: End
+[Fri Jul 31 09:01:47 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:48 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:49 2026] [     T58] kauditd_printk_skb: 37 callbacks suppressed
+[Fri Jul 31 09:01:49 2026] [     T58] audit: type=1130 audit(1776109091.960:41): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=ldconfig comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:49 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1130 audit(1776109092.040:42): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-update-done comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.100:43): prog-id=26 op=LOAD
+[Fri Jul 31 09:01:50 2026] [    T113] aic btusb_shutdown
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T113] aic_btusb: btusb_close: hci running 0
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.152:44): prog-id=27 op=LOAD
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.152:45): prog-id=28 op=LOAD
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1130 audit(1776109092.156:46): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=irqbalance comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.156:47): prog-id=29 op=LOAD
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1130 audit(1776109092.168:48): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=rsetup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.188:49): prog-id=30 op=LOAD
+[Fri Jul 31 09:01:50 2026] [     T58] audit: type=1334 audit(1776109092.188:50): prog-id=31 op=LOAD
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T824] zram: Added device: zram0
+[Fri Jul 31 09:01:50 2026] [    T808] zram0: detected capacity change from 0 to 4005096
+[Fri Jul 31 09:01:50 2026] [    T843] Adding 2002544k swap on /dev/zram0.  Priority:100 extents:1 across:2002544k SS
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T850] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[Fri Jul 31 09:01:50 2026] [    T850] Bluetooth: BNEP socket layer initialized
+[Fri Jul 31 09:01:50 2026] [    T793] Bluetooth: MGMT ver 1.22
+[Fri Jul 31 09:01:50 2026] [    T855] NET: Registered PF_ALG protocol family
+[Fri Jul 31 09:01:50 2026] [    T110] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T877] Bluetooth: RFCOMM TTY layer initialized
+[Fri Jul 31 09:01:50 2026] [    T877] Bluetooth: RFCOMM socket layer initialized
+[Fri Jul 31 09:01:50 2026] [    T877] Bluetooth: RFCOMM ver 1.11
+[Fri Jul 31 09:01:50 2026] [    T113] aic_btusb: btusb_open: Start
+[Fri Jul 31 09:01:50 2026] [    T113]  download_patch 0
+[Fri Jul 31 09:01:50 2026] [    T113] aic_btusb: btusb_open: End
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:50 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: PHY [stmmac-0:01] driver [Generic PHY] (irq=POLL)
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac4: Master AXI performs fixed burst length
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: No Safety Features support found
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: registered PTP clock
+[Fri Jul 31 09:01:51 2026] [    T849] dwmac-sunxi 4500000.ethernet end0: configuring for phy/rgmii link mode
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T851] AICWFDBG(LOGERROR)	p2p dev addr=f2 ab 5c e1 db 2f
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:51 2026] [    T991] PVR_K:  991: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[Fri Jul 31 09:01:52 2026] [    T991] PVR_K:  991: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T991] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:52 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T991] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 09:01:53 2026] [    T991] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:53 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [   T1164] EXT4-fs (mmcblk1p3): resizing filesystem from 1677356 to 7706747 blocks
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:54 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [     T58] kauditd_printk_skb: 98 callbacks suppressed
+[Fri Jul 31 09:01:55 2026] [     T58] audit: type=1105 audit(1776109097.048:145): pid=1116 uid=0 auid=103 ses=1 msg='op=PAM:session_open grantors=pam_selinux,pam_keyinit,pam_limits,pam_loginuid,pam_permit,pam_umask,pam_unix,pam_systemd,pam_selinux,pam_env,pam_env acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [   T1164] EXT4-fs (mmcblk1p3): resized filesystem to 7706747
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:55 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.812:146): prog-id=39 op=LOAD
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.812:147): prog-id=35 op=UNLOAD
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:01:56 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 09:01:56 2026] [   T1181] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.880:148): prog-id=40 op=LOAD
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.880:149): prog-id=19 op=UNLOAD
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.920:150): prog-id=41 op=LOAD
+[Fri Jul 31 09:01:56 2026] [     T58] audit: type=1334 audit(1776109098.920:151): prog-id=22 op=UNLOAD
+[Fri Jul 31 09:01:56 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [   T1179] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:01:57 2026] [   T1179] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:01:57 2026] [   T1179] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [     T58] audit: type=1334 audit(1776109099.208:152): prog-id=42 op=LOAD
+[Fri Jul 31 09:01:57 2026] [     T58] audit: type=1334 audit(1776109099.208:153): prog-id=30 op=UNLOAD
+[Fri Jul 31 09:01:57 2026] [     T58] audit: type=1334 audit(1776109099.208:154): prog-id=43 op=LOAD
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:57 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [     T66] pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 09:01:58 2026] [     T66] pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+[Fri Jul 31 09:01:58 2026] [     T66] pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 09:01:58 2026] [     T66] pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+[Fri Jul 31 09:01:58 2026] [     T56] platform a020000.dmcfreq: deferred probe pending
+[Fri Jul 31 09:01:58 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:58 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:01:59 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [     T58] kauditd_printk_skb: 43 callbacks suppressed
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.192:198): prog-id=66 op=LOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.192:199): prog-id=41 op=UNLOAD
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:200): prog-id=67 op=LOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:201): prog-id=47 op=UNLOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:202): prog-id=68 op=LOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:203): prog-id=69 op=LOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:204): prog-id=48 op=UNLOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.260:205): prog-id=49 op=UNLOAD
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.360:206): prog-id=70 op=LOAD
+[Fri Jul 31 09:02:00 2026] [     T58] audit: type=1334 audit(1776109102.360:207): prog-id=39 op=UNLOAD
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:00 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_vi_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_ve_dec_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_ve_enc_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_npu_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_pcie_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_usb2_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_de_sys_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_vo_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [     T91] sunxi:sunxi_pd_test-soc@3000000:pd_vo1_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:01 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:02 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:03 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:04 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:05 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T416] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [   T1576] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[Fri Jul 31 09:02:06 2026] [     T58] kauditd_printk_skb: 71 callbacks suppressed
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:279): prog-id=105 op=LOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:280): prog-id=87 op=UNLOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:281): prog-id=106 op=LOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:282): prog-id=107 op=LOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:283): prog-id=88 op=UNLOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.612:284): prog-id=89 op=UNLOAD
+[Fri Jul 31 09:02:06 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.664:285): prog-id=108 op=LOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.664:286): prog-id=101 op=UNLOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.664:287): prog-id=109 op=LOAD
+[Fri Jul 31 09:02:06 2026] [     T58] audit: type=1334 audit(1776109108.664:288): prog-id=110 op=LOAD
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:06 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:07 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:08 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:09 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:10 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:11 2026] [     T56] axp8191-bldo2: disabling
+[Fri Jul 31 09:02:11 2026] [     T56] axp8191-bldo5: disabling
+[Fri Jul 31 09:02:11 2026] [     T56] axp8191-dldo2: disabling
+[Fri Jul 31 09:02:11 2026] [     T56] axp8191-dldo3: disabling
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:12 2026] [     T58] kauditd_printk_skb: 82 callbacks suppressed
+[Fri Jul 31 09:02:12 2026] [     T58] audit: type=1334 audit(1776109114.984:371): prog-id=151 op=LOAD
+[Fri Jul 31 09:02:12 2026] [     T58] audit: type=1334 audit(1776109114.984:372): prog-id=147 op=UNLOAD
+[Fri Jul 31 09:02:12 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.052:373): prog-id=152 op=LOAD
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.052:374): prog-id=144 op=UNLOAD
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.212:375): prog-id=153 op=LOAD
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.212:376): prog-id=140 op=UNLOAD
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.244:377): prog-id=154 op=LOAD
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.244:378): prog-id=155 op=LOAD
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.244:379): prog-id=128 op=UNLOAD
+[Fri Jul 31 09:02:13 2026] [     T58] audit: type=1334 audit(1776109115.244:380): prog-id=129 op=UNLOAD
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: disconnect
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 09:02:13 2026] [    T117] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] HDMI-A-1 connection detected
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] HDMI-A-1: Configuration mode 1920x1080@60Hz
+[Fri Jul 31 09:02:13 2026] [    T114] Console: switching to colour frame buffer device 240x67
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi_de_enable index 0
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:  - pixel clock 148500KHz
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 09:02:13 2026] [    T114] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 09:02:14 2026] [    T114] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 09:02:14 2026] [    T114] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T114] [drm] HDMI-A-1: Configuration complete
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_disable de 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: sunxi hdmi select vic 4 use hdmi14 vsif
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi mode set: 1280*720 >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_enable index 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] suxni tcon hdmi set rate: 74250000Hz and get diff: 74250000Hz
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - pixel clock 74250KHz
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:    - pll: 0xE81F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - refer clock: 74250KHz, color bits: 8, repeat: 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:     - mpll: 0x0002, 0x1142, 0x0214
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - refer clock: 74250KHz. [25000KHz~185625KHz]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_disable de 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_enable index 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - pixel clock 148500KHz
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 09:02:14 2026] [    T991] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 09:02:15 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:15 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:15 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:15 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 09:02:17 2026] [   T1976] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:02:17 2026] [   T1971] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:02:17 2026] [   T1971] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:02:17 2026] [   T1971] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 09:02:18 2026] [     T58] kauditd_printk_skb: 61 callbacks suppressed
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.784:438): prog-id=174 op=LOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.844:439): prog-id=175 op=LOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.844:440): prog-id=176 op=LOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.844:441): prog-id=163 op=UNLOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.844:442): prog-id=164 op=UNLOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.864:443): prog-id=177 op=LOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1300 audit(1776109120.864:443): arch=c00000b7 syscall=280 success=yes exit=22 a0=5 a1=ffffce712660 a2=94 a3=95 items=0 ppid=1 pid=2090 auid=4294967295 uid=998 gid=998 euid=998 suid=998 fsuid=998 egid=998 sgid=998 fsgid=998 tty=(none) ses=4294967295 comm="systemd-network" exe="/usr/lib/systemd/systemd-networkd" key=(null)
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1327 audit(1776109120.864:443): proctitle="/usr/lib/systemd/systemd-networkd"
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1334 audit(1776109120.864:444): prog-id=177 op=UNLOAD
+[Fri Jul 31 09:02:18 2026] [     T58] audit: type=1300 audit(1776109120.864:444): arch=c00000b7 syscall=57 success=yes exit=0 a0=16 a1=0 a2=0 a3=0 items=0 ppid=1 pid=2090 auid=4294967295 uid=998 gid=998 euid=998 suid=998 fsuid=998 egid=998 sgid=998 fsgid=998 tty=(none) ses=4294967295 comm="systemd-network" exe="/usr/lib/systemd/systemd-networkd" key=(null)
+[Fri Jul 31 09:02:25 2026] [     T58] kauditd_printk_skb: 91 callbacks suppressed
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1131 audit(1776109127.152:531): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=sshd-keygen comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.308:532): prog-id=219 op=LOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.308:533): prog-id=210 op=UNLOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.436:534): prog-id=220 op=LOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.436:535): prog-id=215 op=UNLOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.564:536): prog-id=221 op=LOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.564:537): prog-id=218 op=UNLOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.676:538): prog-id=222 op=LOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.676:539): prog-id=211 op=UNLOAD
+[Fri Jul 31 09:02:25 2026] [     T58] audit: type=1334 audit(1776109127.760:540): prog-id=223 op=LOAD
+[Fri Jul 31 09:02:32 2026] [     T58] kauditd_printk_skb: 35 callbacks suppressed
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1100 audit(1776109134.032:576): pid=2840 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_succeed_if,pam_permit,pam_cap acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1101 audit(1776109134.044:577): pid=2840 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1103 audit(1776109134.048:578): pid=2840 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1006 audit(1776109134.048:579): pid=2840 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=5 res=1
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1300 audit(1776109134.048:579): arch=c00000b7 syscall=64 success=yes exit=4 a0=c a1=ffffc9b90000 a2=4 a3=0 items=0 ppid=955 pid=2840 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=5 comm="sddm-helper" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" key=(null)
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1327 audit(1776109134.048:579): proctitle=2F7573722F6C69622F616172636836342D6C696E75782D676E752F7364646D2F7364646D2D68656C706572002D2D736F636B6574002F746D702F7364646D2D617574682D65623061653333332D656235342D343765362D393535342D346630636365386339383839002D2D69640031002D2D7374617274002F7573722F62696E
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1105 audit(1776109134.188:580): pid=2840 uid=0 auid=1000 ses=5 msg='op=PAM:session_open grantors=pam_selinux,pam_keyinit,pam_limits,pam_loginuid,pam_permit,pam_umask,pam_unix,pam_systemd,pam_selinux,pam_env,pam_env acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1106 audit(1776109134.596:581): pid=1116 uid=0 auid=103 ses=1 msg='op=PAM:session_close grantors=pam_selinux,pam_keyinit,pam_limits,pam_loginuid,pam_permit,pam_umask,pam_unix,pam_systemd,pam_selinux,pam_env,pam_env acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 09:02:32 2026] [     T58] audit: type=1104 audit(1776109134.596:582): pid=1116 uid=0 auid=103 ses=1 msg='op=PAM:setcred grantors=pam_permit acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 09:02:36 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:36 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 09:02:38 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 09:02:38 2026] [   T2997] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 09:02:40 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:40 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:41 2026] [     T58] audit: type=1130 audit(1776109143.920:583): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=packagekit comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:42 2026] [     T58] audit: type=1131 audit(1776109144.172:584): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=rsetup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:42 2026] [    T991] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 09:02:42 2026] [    T991] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 09:02:43 2026] [     T58] audit: type=1131 audit(1776109145.212:585): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user@103 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:43 2026] [     T58] audit: type=1131 audit(1776109145.844:586): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@103 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:02:44 2026] [   T3125] warning: `kdeconnectd' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+[Fri Jul 31 09:03:41 2026] [     T58] audit: type=1100 audit(1776109203.832:587): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:41 2026] [     T58] audit: type=1101 audit(1776109203.836:588): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:41 2026] [     T58] audit: type=1123 audit(1776109203.836:589): pid=4017 uid=1000 auid=1000 ses=3 msg='cwd="/home/radxa" cmd=73797374656D63746C20737461727420737368 exe="/usr/bin/sudo" terminal=ttyAS0 res=success'
+[Fri Jul 31 09:03:41 2026] [     T58] audit: type=1110 audit(1776109203.836:590): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:41 2026] [     T58] audit: type=1105 audit(1776109203.836:591): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:session_open grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:42 2026] [     T58] audit: type=1130 audit(1776109204.096:592): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=ssh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:03:42 2026] [     T58] audit: type=1106 audit(1776109204.104:593): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:42 2026] [     T58] audit: type=1104 audit(1776109204.104:594): pid=4017 uid=1000 auid=1000 ses=3 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:46 2026] [     T58] audit: type=1101 audit(1776109208.636:595): pid=4029 uid=1000 auid=1000 ses=3 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:46 2026] [     T58] audit: type=1123 audit(1776109208.636:596): pid=4029 uid=1000 auid=1000 ses=3 msg='cwd="/home/radxa" cmd=73797374656D63746C20656E61626C6520737368 exe="/usr/bin/sudo" terminal=ttyAS0 res=success'
+[Fri Jul 31 09:03:47 2026] [     T58] kauditd_printk_skb: 2 callbacks suppressed
+[Fri Jul 31 09:03:47 2026] [     T58] audit: type=1106 audit(1776109210.024:599): pid=4029 uid=1000 auid=1000 ses=3 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:03:47 2026] [     T58] audit: type=1104 audit(1776109210.024:600): pid=4029 uid=1000 auid=1000 ses=3 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.300:601): prog-id=239 op=LOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.300:602): prog-id=227 op=UNLOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.304:603): prog-id=240 op=LOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.304:604): prog-id=241 op=LOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.304:605): prog-id=228 op=UNLOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.304:606): prog-id=229 op=UNLOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.372:607): prog-id=242 op=LOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.372:608): prog-id=219 op=UNLOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.432:609): prog-id=243 op=LOAD
+[Fri Jul 31 09:08:11 2026] [     T58] audit: type=1334 audit(1776109473.432:610): prog-id=244 op=LOAD
+[Fri Jul 31 09:08:39 2026] [     T58] kauditd_printk_skb: 24 callbacks suppressed
+[Fri Jul 31 09:08:39 2026] [     T58] audit: type=1111 audit(1776109501.760:635): pid=849 uid=0 auid=4294967295 ses=4294967295 msg='op=connection-add-activate uuid=8e1dfcb9-a5dd-4508-afc7-89068040d0f3 name="WMY-777" pid=2978 uid=1000 result=success exe="/usr/sbin/NetworkManager" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:41 2026] [    T498] rx eapol
+[Fri Jul 31 09:08:41 2026] [    T498] rx eapol
+[Fri Jul 31 09:08:42 2026] [     T58] audit: type=1111 audit(1776109504.120:636): pid=849 uid=0 auid=4294967295 ses=4294967295 msg='op=statistics interface="wlan0" ifindex=4 args=2000 pid=2978 uid=1000 result=success exe="/usr/sbin/NetworkManager" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:42 2026] [     T58] audit: type=1130 audit(1776109504.124:637): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:52 2026] [     T58] audit: type=1131 audit(1776109514.088:638): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:57 2026] [     T58] audit: type=1130 audit(1785488937.789:639): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=e2scrub_all comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:57 2026] [     T58] audit: type=1131 audit(1785488937.789:640): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=e2scrub_all comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:57 2026] [     T58] audit: type=1130 audit(1785488937.813:641): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dpkg-db-backup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:57 2026] [     T58] audit: type=1131 audit(1785488937.813:642): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dpkg-db-backup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:58 2026] [     T58] audit: type=1130 audit(1785488938.053:643): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@sd_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:58 2026] [     T58] audit: type=1131 audit(1785488938.053:644): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@sd_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:08:58 2026] [     T58] audit: type=1334 audit(1785488938.101:645): prog-id=256 op=LOAD
+[Fri Jul 31 09:09:00 2026] [     T58] audit: type=1130 audit(1785488940.537:646): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1100 audit(1785488982.549:647): pid=5866 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1101 audit(1785488982.573:648): pid=5866 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1103 audit(1785488982.577:649): pid=5866 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1006 audit(1785488982.577:650): pid=5866 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=6 res=1
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1300 audit(1785488982.577:650): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffc65d7630 a2=4 a3=0 items=0 ppid=4026 pid=5866 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=6 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1327 audit(1785488982.577:650): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1105 audit(1785488982.705:651): pid=5866 uid=0 auid=1000 ses=6 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1103 audit(1785488982.709:652): pid=5882 uid=0 auid=1000 ses=6 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1106 audit(1785488982.977:653): pid=5866 uid=0 auid=1000 ses=6 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:42 2026] [     T58] audit: type=1104 audit(1785488982.977:654): pid=5866 uid=0 auid=1000 ses=6 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:09:54 2026] [     T58] audit: type=1130 audit(1785488994.401:655): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:09:54 2026] [     T58] audit: type=1131 audit(1785488994.401:656): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1100 audit(1785489012.516:657): pid=6308 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1101 audit(1785489012.532:658): pid=6308 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1103 audit(1785489012.536:659): pid=6308 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1006 audit(1785489012.536:660): pid=6308 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=7 res=1
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1300 audit(1785489012.536:660): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=fffff9eac550 a2=4 a3=0 items=0 ppid=4026 pid=6308 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=7 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1327 audit(1785489012.536:660): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1105 audit(1785489012.668:661): pid=6308 uid=0 auid=1000 ses=7 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1103 audit(1785489012.672:662): pid=6325 uid=0 auid=1000 ses=7 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1100 audit(1785489013.008:663): pid=6329 uid=1000 auid=1000 ses=7 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 09:10:12 2026] [     T58] audit: type=1101 audit(1785489013.012:664): pid=6329 uid=1000 auid=1000 ses=7 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+
+EXIT_CODE=0

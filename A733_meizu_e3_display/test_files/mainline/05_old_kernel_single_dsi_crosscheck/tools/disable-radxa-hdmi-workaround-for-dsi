@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eu
+
+mask=/etc/udev/rules.d/60-hdmi-hotplug.rules
+
+systemctl disable hdmi-toggle-once.service
+
+if [ -e "$mask" ] || [ -L "$mask" ]; then
+	if [ ! -L "$mask" ] || [ "$(readlink "$mask")" != /dev/null ]; then
+		echo "ERROR: refusing to replace unexpected $mask" >&2
+		exit 1
+	fi
+else
+	ln -s /dev/null "$mask"
+fi
+
+udevadm control --reload-rules
+echo "Radxa HDMI toggle service and broad DRM hotplug rule are disabled."

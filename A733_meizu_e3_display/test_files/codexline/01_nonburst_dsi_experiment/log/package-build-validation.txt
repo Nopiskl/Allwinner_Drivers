@@ -1,0 +1,74 @@
+dpkg-deb: building package 'meizu-e3-dkms' in '/tmp/meizu-e3-dkms_0.1.10_all.deb'.
+=== package info ===
+ new Debian package, version 2.0.
+ size 115492 bytes: control archive=1412 bytes.
+     979 bytes,    23 lines      control              
+    1070 bytes,    43 lines   *  postinst             #!/bin/sh
+     332 bytes,    14 lines   *  prerm                #!/bin/sh
+ Package: meizu-e3-dkms
+ Version: 0.1.10
+ Architecture: all
+ Maintainer: Meizu E3 Port <maintainer@localhost>
+ Installed-Size: 799
+ Depends: dkms (>= 2.1.0.0)
+ Recommends: device-tree-compiler
+ Section: kernel
+ Priority: optional
+ Homepage: https://github.com/
+ Description: Meizu E3 display and touch integration (DKMS)
+  Driver and device-tree overlay sources live under /usr/src/meizu-e3-dkms-<ver>/
+  (Makefile, drivers/, overlay/). DKMS builds kernel modules on the target at
+  configure time; postinst compiles the versioned overlay to
+  /boot/dtbo/*.dtbo.disabled
+  when dtc is available.
+  Touch mapping is deliberately not performed from an X11 autostart helper:
+  display probing and layout changes are kept out of the kernel bring-up path.
+  .
+  This package does not depend on Debian/Ubuntu archive kernel headers: install
+  linux-headers matching your running kernel (uname -r) from your vendor or
+  board image repository (e.g. Radxa) before expecting DKMS or overlay build to
+  succeed.
+=== package contents ===
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./etc/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./etc/xdg/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./etc/xdg/autostart/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/lib/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/lib/meizu-e3-dkms/
+-rwxr-xr-x root/root      1845 2026-07-31 06:35 ./usr/lib/meizu-e3-dkms/compile-overlay.sh
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/share/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/share/doc/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/share/doc/meizu-e3-dkms/
+-rw-r--r-- root/root       589 2026-07-31 06:35 ./usr/share/doc/meizu-e3-dkms/changelog.gz
+-rw-r--r-- root/root       982 2026-07-31 06:35 ./usr/share/doc/meizu-e3-dkms/changes-v001.txt
+-rw-r--r-- root/root      1422 2026-07-31 06:35 ./usr/share/doc/meizu-e3-dkms/changes-v002.txt
+-rw-r--r-- root/root       624 2026-07-31 06:35 ./usr/share/doc/meizu-e3-dkms/copyright
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/
+-rw-r--r-- root/root       764 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/Makefile
+-rw-r--r-- root/root       413 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/dkms.conf
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/backlight/
+-rw-r--r-- root/root       202 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/backlight/Makefile
+-rw-r--r-- root/root     11701 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/backlight/sgm37604a.c
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/
+-rw-r--r-- root/root       265 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/Makefile
+-rw-r--r-- root/root    606012 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/s6d6ft0_v1.10_20170918.c
+-rw-r--r-- root/root     14158 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts.h
+-rw-r--r-- root/root     43459 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts_fn.c
+-rw-r--r-- root/root     20663 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts_fw.c
+-rw-r--r-- root/root     63442 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts_main.c
+-rw-r--r-- root/root     21129 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts_selftest.c
+-rw-r--r-- root/root      4709 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/drivers/sec_ts/sec_ts_selftest.h
+drwxr-xr-x root/root         0 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/overlay/
+-rw-r--r-- root/root      4372 2026-07-31 06:35 ./usr/src/meizu-e3-dkms-0.1.10/overlay/cubie-a7a-meizu-e3-display.dtso
+=== package hash ===
+998700ce97de18ae5fc07a754151c7d9893ef885b5abe83342af83e2191476d9  /tmp/meizu-e3-dkms_0.1.10_all.deb
+=== control scripts modes ===
+644 radxa:radxa 979 /tmp/meizu-e3-dkms-build-0110-1785479755/DEBIAN/control
+755 radxa:radxa 1070 /tmp/meizu-e3-dkms-build-0110-1785479755/DEBIAN/postinst
+755 radxa:radxa 332 /tmp/meizu-e3-dkms-build-0110-1785479755/DEBIAN/prerm
+755 radxa:radxa 1845 /tmp/meizu-e3-dkms-build-0110-1785479755/usr/lib/meizu-e3-dkms/compile-overlay.sh
+=== stale live identifiers ===
+RC 0

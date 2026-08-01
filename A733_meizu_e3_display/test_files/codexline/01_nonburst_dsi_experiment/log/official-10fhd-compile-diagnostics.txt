@@ -1,0 +1,52 @@
+=== official dtc diagnostics ===
+=== official result ===
+af039b699f4487e41240d9437b65b771ece84ade0691bf58b77c501df934e5f1  /tmp/cubie-a7a-radxa-display-10fhd-official.dtso
+419c203454dfcb8726a7fc0381b3f87ee921f672d19cc716a807ddd7a16de2b1  /tmp/cubie-a7a-radxa-display-10fhd-official.dtbo
+official flags=1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:104.5-15: Warning (reg_format): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:127.4-14: Warning (reg_format): /fragment@3/__overlay__/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:137.3-13: Warning (reg_format): /fragment@3/__overlay__/panel@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:140.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:142.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:147.5-15: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:149.6-16: Warning (reg_format): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:170.3-16: Warning (reg_format): /fragment@4/__overlay__/gt9271@5d:reg: property has invalid length (4 bytes) (#address-cells == 2, #size-cells == 1)
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:62.25-108.4: Warning (unit_address_vs_reg): /fragment@0/__overlay__/dsi_panel@1: node has a unit name, but no reg property
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:181.28-186.4: Warning (unit_address_vs_reg): /fragment@5/__overlay__/twi2@0: node has a unit name, but no reg property
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:188.26-191.4: Warning (unit_address_vs_reg): /fragment@5/__overlay__/twi2@1: node has a unit name, but no reg property
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (pci_device_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (pci_device_bus_num): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (simple_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (i2c_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (spi_bus_reg): Failed prerequisite 'reg_format'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:103.26-106.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:103.26-106.6: Warning (avoid_default_addr_size): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:126.20-131.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:126.20-131.5: Warning (avoid_default_addr_size): /fragment@3/__overlay__/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:134.17-154.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:134.17-154.4: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:139.21-145.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:139.21-145.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:141.29-144.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:141.29-144.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:146.22-152.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:146.22-152.6: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:148.32-151.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:148.32-151.7: Warning (avoid_default_addr_size): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:168.12-177.7: Warning (avoid_default_addr_size): /fragment@4/__overlay__/gt9271@5d: Relying on default #address-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:168.12-177.7: Warning (avoid_default_addr_size): /fragment@4/__overlay__/gt9271@5d: Relying on default #size-cells value
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (avoid_unnecessary_addr_size): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtbo: Warning (unique_unit_address): Failed prerequisite 'avoid_default_addr_size'
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:126.20-131.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:126.20-131.5: Warning (graph_port): /fragment@3/__overlay__/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:139.21-145.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:139.21-145.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:146.22-152.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:146.22-152.6: Warning (graph_port): /fragment@3/__overlay__/panel@0/ports/port@1: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:103.26-106.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:103.26-106.6: Warning (graph_endpoint): /fragment@0/__overlay__/dsi_panel@1/port/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:141.29-144.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:141.29-144.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0: graph node '#size-cells' is -1, must be 0
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:148.32-151.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#address-cells' is -1, must be 1
+/tmp/cubie-a7a-radxa-display-10fhd-official.dtso:148.32-151.7: Warning (graph_endpoint): /fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0: graph node '#size-cells' is -1, must be 0
+RC 0

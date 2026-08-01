@@ -1,0 +1,81 @@
+2026-07-31T13:42:31+00:00
+b117f8c6-71c8-4416-8bfa-770f126123af
+=== processes ===
+radxa           1119    1428 S /usr/bin/kwin_x11 --replace
+radxa           1135    1427 S /usr/bin/plasmashell --no-respawn
+=== connector enabled/dpms/status ===
+card0-DSI-1 status=connected
+  enabled=enabled
+  dpms=On
+card0-HDMI-A-1 status=connected
+  enabled=enabled
+  dpms=On
+card0-Writeback-1 status=unknown
+  enabled=disabled
+  dpms=On
+=== CRTC activity ===
+crtc[99]: DE-0
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+crtc[125]: DE-1
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+=== X11 current/DPMS ===
+Screen 0: minimum 320 x 200, current 3000 x 2160, maximum 8192 x 8192
+DSI-1 connected primary 1080x2160+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1080x2160     59.36*+
+HDMI-1 connected 1920x1080+1080+0 (normal left inverted right x axis y axis) 708mm x 398mm
+   1920x1080     60.00*+  50.00    59.94    30.00    25.00    24.00    29.97    23.98  
+   4096x2160     30.00    24.00    29.97    23.98  
+   3840x2160     30.00    25.00    24.00    29.97    23.98  
+   2560x1440     49.96    60.00  
+   1920x1080i    60.00    50.00    59.94  
+   1280x720      60.00    50.00    30.00    25.00    59.94    29.97    24.00    23.98  
+   1024x768      60.00  
+   800x600       60.32  
+   640x480       60.00    59.94  
+DPMS (Display Power Management Signaling):
+  Standby: 0    Suspend: 0    Off: 0
+  DPMS is Enabled
+  Monitor is On
+=== kernel since redraw test ===
+Jul 31 13:33:12 radxa-cubie-a7a kernel: [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_lcd_pin_set_state start
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi_de_disable de 0
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi_de_disable de 1
+Jul 31 13:33:14 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 1 not enable, skip
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 0
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_tcon_dsi_mode_init start
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_lcd_pin_set_state start
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [PHY] sunxi_dsi_combophy_configure start
+Jul 31 13:42:18 radxa-cubie-a7a kernel: [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 1
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [top phy]
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - pixel clock 148500KHz
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: top phy config done
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [snps phy]
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: snps phy state: lock
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio check: triger cts re-calculate
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable output done
+Jul 31 13:42:19 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>

@@ -1,0 +1,9 @@
+xdotool    wmctrl     xwininfo   /usr/bin/xwininfo
+xprop      /usr/bin/xprop
+xwd        /usr/bin/xwd
+xset       /usr/bin/xset
+qdbus6     /usr/bin/qdbus6
+     0x400049 "Qt Clipboard Requestor Window — System Settings": ()  3x3+0+0  +0+0
+     0x40000b "System Settings": ()  1x1+0+0  +0+0
+     0x400006 "Qt Selection Owner for systemsettings": ()  3x3+0+0  +0+0
+           0x400009 "Quick Settings  — System Settings": ("systemsettings" "systemsettings")  930x819+0+0  +1761+209

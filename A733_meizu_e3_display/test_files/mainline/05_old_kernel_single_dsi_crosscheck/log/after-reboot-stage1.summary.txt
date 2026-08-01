@@ -1,0 +1,305 @@
+=== identity ===
+Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64 GNU/Linux
+77788ee9-677b-4b93-8009-3f3ca551a0f0
+up 1 minute
+root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+=== live DT ===
+/proc/device-tree/soc@3000000/dsi0@5506000/status=okay
+/proc/device-tree/soc@3000000/dsi0@5506000/ports/port@1/reg=   16777216
+/proc/device-tree/gpio-i2c0/backlight@36/compatible=sgmicro,sgm37604a
+/proc/device-tree/gpio-i2c0/sec_ts@48/status=okay
+=== modules ===
+sgm37604a              16384  0
+=== I2C clients ===
+=== backlights ===
+[/sys/class/backlight/backlight0]
+brightness=73
+actual_brightness=73
+max_brightness=255
+bl_power=0
+type=raw
+[/sys/class/backlight/sgm37604a]
+brightness=2000
+actual_brightness=2000
+max_brightness=4095
+bl_power=0
+type=raw
+=== DRM connectors ===
+[/sys/class/drm/card0-DSI-1]
+status=connected
+enabled=enabled
+modes=1080x2160
+[/sys/class/drm/card0-HDMI-A-1]
+status=disconnected
+enabled=disabled
+modes=[/sys/class/drm/card0-Writeback-1]
+status=unknown
+enabled=disabled
+modes==== DRM state ===
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=166
+		allocated by = X
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=1080x2160
+		layers:
+			size[0]=1080x2160
+			pitch[0]=4320
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001011cd
+				size=9334784
+				imported=no
+				paddr=0x00000000fd000000
+				vaddr=000000007c3c23df
+	crtc-pos=1080x2160+0+0
+	src-pos=1080.000000x2160.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  166  | 1080x2160+   0+   0 | 1080x2160+   0+   0 |      none  |   255  | 0x00000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[120]: plane-0-vch2(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[100]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0 irqcnt=3468 err=0
+	    format_space: 0 yuv_sampling: 0 eotf:1 cs: 1 color_range: 1 data_bits: 0
+	    vsync: 3468 last rcq at vsync: 1855
+	wb off
+crtc[126]: DE-1
+	enable=0
+	active=0
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=0
+	connector_mask=0
+	encoder_mask=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[147]: DSI-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[149]: HDMI-A-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+=== sessions ===
+3 1000 radxa seat0 
+5 1000 radxa       
+active
+=== fatal signatures ===
+=== relevant display/backlight tail ===
+[    0.000000] printk: bootconsole [earlycon0] enabled
+[    0.001601] printk: bootconsole [earlycon0] disabled
+[    0.059642] platform 5501000.tcon0: Fixing up cyclic dependency with 5000000.de
+[    0.059778] platform 5506000.dsi0: Fixing up cyclic dependency with 5501000.tcon0
+[    0.059961] platform 5730000.tcon3: Fixing up cyclic dependency with 5000000.de
+[    0.060046] platform 5731000.tcon4: Fixing up cyclic dependency with 5000000.de
+[    0.060136] platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+[    0.077436] iommu: Default domain type: Translated 
+[    0.077439] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.082118] iommu_master csi_iommu: attach fail:-517
+[    0.082179] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.220592] pwm-backlight backlight0: supply power not found, using dummy regulator
+[    0.420361] [drm] [DSI-PANEL] panel_dsi_init start
+[    0.420436] [drm] [DSI-PANEL] dsi driver regsiter finsh
+[    0.420582] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.420644] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.420959] [drm] [PHY] sunxi_dsi_combophy_probe start
+[    0.421127] [drm] [PHY]sunxi_dsi_combophy_probe finish
+[    0.421400] [drm] [DSI] sunxi_drm_dsi_probe start
+[    0.421565] [drm] Loading esd watchdog module...
+[    0.421577] [drm] TE GPIO not configured
+[    0.421578] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.421666] mipi-dsi 5506000.dsi0.0: Fixing up cyclic dependency with dsi_panel@1
+[    0.421696] [drm] [DSI]sunxi_drm_dsi_probe ok
+[    0.422184] [drm] [TCON] sunxi_tcon_probe start
+[    0.422229] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.422330] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422400] [drm] [TCON] sunxi_tcon_probe start
+[    0.422430] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.422509] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422571] [drm] [TCON] sunxi_tcon_probe start
+[    0.422596] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[    0.422646] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422770] [drm] sunxi_drm_platform_probe start
+[    0.422772] [drm] sunxi_drm_match_add start
+[    0.423639] [drm] sunxi_drm_match_add finish
+[    0.424044] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.764773] sunxi iommu: irq = 16
+[    0.764884] sunxi iommu: irq = 17
+[    0.779564] g2d 5440000.g2d: Adding to iommu group 0
+[    0.780831] sunxi-display-engine 5000000.de: Adding to iommu group 0
+[    0.781176] [drm] de use no display sys
+[    0.781674] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[    0.781937] [drm] [DSI-PANEL] panel_dsi_probe start
+[    0.781969] [drm] reset-on-sequence property not found
+[    0.782359] [drm] [DSI]sunxi_drm_dsi_host_attach start
+[    0.782369] [drm] sunxi_drm_bind start
+[    0.782565] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.782643] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[    0.782658] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.782691] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[    0.782698] [drm] [SUNXI-DE] sunxi_de_bind start
+[    0.782726] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[    0.783149] [drm] sunxi_de_bind crtc init for de 0 ok
+[    0.783200] [drm] sunxi_de_bind crtc init for de 1 ok
+[    0.783675] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[    0.783694] sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+[    0.783701] [drm] [DSI]sunxi_drm_dsi_bind start
+[    0.783767] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.783968] sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+[    0.784033] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.784399] [drm] sunxi-hdmi: hdmi drv init dts done
+[    0.785260] [drm] sunxi-hdmi: hdmi drv enable resource done
+[    0.785265] [drm] sunxi-hdmi: hdmi drv init resource done
+[    0.785501] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[    0.786255] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[    0.787821] [drm] sunxi-hdmi: drm hdmi connector create finish
+[    0.787828] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+[    0.787841] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[    0.787852] sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+[    0.787857] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[    0.787860] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[    0.788011] [drm] start DSI-1 monitor monitoring, interval: 100ms
+[    0.788292] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[    0.788299] [drm] sunxi_drm_bind ok
+[    0.788302] [drm] [DSI]sunxi_drm_dsi_host_attach finish
+[    0.788304] [drm] [DSI-PANEL] panel_dsi_probe finish
+[    1.791219] [drm] DSI-1 connection detected
+[    1.791281] [drm] DSI-1: Configuration mode 1080x2160@59Hz
+[    1.807049] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    1.807083] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[    1.807087] [drm] sunxi_de_enable index 0
+[    1.807149] [drm] sunxi_de_enable finish sw en=0
+[    1.807166] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[    1.807169] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[    1.807255] [drm] [DSI] sunxi_lcd_pin_set_state start
+[    1.807445] [drm] [PHY] sunxi_dsi_combophy_configure start
+[    1.807447] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[    2.571418] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[    2.580300] [drm] DSI-1: Configuration complete
+[    5.484539] systemd[1]: Starting Load Kernel Module drm...
+[    5.521904] systemd[1]: modprobe@drm.service: Succeeded.
+[    5.522212] systemd[1]: Finished Load Kernel Module drm.
+[    5.539987] sgm37604a: loading out-of-tree module taints kernel.
+[    7.066157] sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[    7.067650] sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[    7.068591] sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[    7.134523] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    7.203580] deinterlace 5400000.deinterlace: Adding to iommu group 0
+[    9.018304] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.018349] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.018385] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.018420] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.018455] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.018490] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.154029] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[    9.857119] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[    9.875865] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.875911] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.875946] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.875981] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.876017] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[    9.876052] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   10.970126] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   10.970142] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   10.970147] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   10.970469] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   10.983763] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   10.983780] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   10.983786] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   16.048073] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   22.295465] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   22.295481] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   22.295486] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   22.295719] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   22.309481] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   22.309494] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   22.309499] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   23.054370] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.054416] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.054450] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.054483] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.054517] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.054551] [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   27.345352] [drm] sunxi-hdmi: hdmi drv audio set disable done

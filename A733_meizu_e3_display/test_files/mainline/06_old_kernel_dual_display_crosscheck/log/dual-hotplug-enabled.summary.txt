@@ -1,0 +1,239 @@
+=== identity ===
+2a2e4660-b03a-4fa7-9673-0296ed6deaf5
+up 12 minutes
+=== xrandr ===
+Screen 0: minimum 320 x 200, current 3000 x 2160, maximum 8192 x 8192
+DSI-1 connected 1080x2160+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1080x2160     59.36*+
+HDMI-1 connected primary 1920x1080+1080+0 (normal left inverted right x axis y axis) 708mm x 398mm
+   1920x1080     60.00*+  50.00    59.94    30.00    25.00    24.00    29.97    23.98  
+   4096x2160     30.00    24.00    29.97    23.98  
+   3840x2160     30.00    25.00    24.00    29.97    23.98  
+   2560x1440     49.96    60.00  
+   1920x1080i    60.00    50.00    59.94  
+   1280x720      60.00    50.00    30.00    25.00    59.94    29.97    24.00    23.98  
+   1024x768      60.00  
+   800x600       60.32  
+   640x480       60.00    59.94  
+=== workaround ===
+disabled
+lrwxrwxrwx 1 root root 9 Jul 31 17:50 /etc/udev/rules.d/60-hdmi-hotplug.rules -> /dev/null
+NO_HOTPLUG_LOG
+NO_TOGGLE_LOG
+=== counts ===
+PLL=8
+FATAL=0
+=== relevant ===
+[    1.828444] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  150.363612] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  152.575737] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  154.676705] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  156.776948] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  156.825521] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  157.877841] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  247.773801] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  248.813778] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  642.823824] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[  643.304030] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  643.304043] [drm] sunxi-hdmi: [error] hdmi drv plugin read edid failed
+[  643.991888] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  643.991900] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  643.991904] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  644.471857] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  644.471871] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  644.471875] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  644.951837] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  644.951850] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  644.951853] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  645.781328] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  645.803066] [drm] sunxi-hdmi: snps phy state: lock
+[  646.379495] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  646.379508] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  646.379513] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  646.875606] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  646.875619] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  646.875623] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  663.809590] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  666.033825] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  668.257677] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  670.481633] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  670.530421] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  671.145319] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  671.145332] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  671.145336] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  671.633204] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  671.633217] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  671.633221] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  672.117233] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  672.117245] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  672.117249] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  672.601190] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  672.601202] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  672.601206] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  673.081151] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  673.081164] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  673.081168] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  673.573192] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  673.573215] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  673.573223] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  686.808066] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  686.823978] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  695.574866] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[  696.970309] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  696.993736] [drm] sunxi-hdmi: snps phy state: lock
+[  707.082415] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  707.082496] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  707.104498] [drm] sunxi-hdmi: snps phy state: lock
+[  707.208911] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  707.330257] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  707.353455] [drm] sunxi-hdmi: snps phy state: lock
+=== DRM state ===
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=169
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00104f80
+				size=25923584
+				imported=no
+				paddr=0x00000000f0000000
+				vaddr=0000000006b2613f
+	crtc-pos=1080x2160+0+0
+	src-pos=1080.000000x2160.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  169  | 1080x2160+   0+   0 | 1080x2160+   0+   0 |      none  |   255  | 0x00000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[120]: plane-0-vch2(1)
+	crtc=DE-1
+	fb=169
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00104f80
+				size=25923584
+				imported=no
+				paddr=0x00000000f0000000
+				vaddr=0000000006b2613f
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+1080.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  169  | 1920x1080+1080+   0 | 1920x1080+   0+   0 |   premult  |   255  | 0x00000000
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[100]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0 irqcnt=41842 err=0
+	    format_space: 0 yuv_sampling: 0 eotf:1 cs: 1 color_range: 1 data_bits: 0
+	    vsync: 41842 last rcq at vsync: 39738
+	wb off
+crtc[126]: DE-1
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=10
+	connector_mask=4
+	encoder_mask=4
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+	on: 1920x1080@60&600Mhz->tcon4 irqcnt=5158 err=0
+	    format_space: 0 yuv_sampling: 0 eotf:4 cs: 1 color_range: 1 data_bits: 0
+	    vsync: 5158 last rcq at vsync: 3062
+	wb off
+connector[145]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[147]: DSI-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[149]: HDMI-A-1
+	crtc=DE-1
+	self_refresh_aware=0
+	max_requested_bpc=0

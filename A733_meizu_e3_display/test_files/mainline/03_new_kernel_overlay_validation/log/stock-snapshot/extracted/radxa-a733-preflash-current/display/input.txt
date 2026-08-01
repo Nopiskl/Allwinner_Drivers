@@ -1,0 +1,269 @@
+COMMAND: sh -c 
+    cat /proc/bus/input/devices
+    printf "\n/sys/class/input:\n"
+    find /sys/class/input -maxdepth 2 -type l -printf "%p -> %l\n" 2>/dev/null | sort
+
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel0/input0"
+P: Phys=sunxi-gpadc0/channel0/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input0
+U: Uniq=
+H: Handlers=event0 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel1/input0"
+P: Phys=sunxi-gpadc0/channel1/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input1
+U: Uniq=
+H: Handlers=event1 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel2/input0"
+P: Phys=sunxi-gpadc0/channel2/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input2
+U: Uniq=
+H: Handlers=event2 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel3/input0"
+P: Phys=sunxi-gpadc0/channel3/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input3
+U: Uniq=
+H: Handlers=event3 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel4/input0"
+P: Phys=sunxi-gpadc0/channel4/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input4
+U: Uniq=
+H: Handlers=event4 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel5/input0"
+P: Phys=sunxi-gpadc0/channel5/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input5
+U: Uniq=
+H: Handlers=event5 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel6/input0"
+P: Phys=sunxi-gpadc0/channel6/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input6
+U: Uniq=
+H: Handlers=event6 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="sunxi-gpadc0/channel7/input0"
+P: Phys=sunxi-gpadc0/channel7/input0
+S: Sysfs=/devices/platform/soc@3000000/2521000.gpadc/input/input7
+U: Uniq=
+H: Handlers=event7 
+B: PROP=0
+B: EV=11
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="axp8191-pek"
+P: Phys=m1kbd/input2
+S: Sysfs=/devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+U: Uniq=
+H: Handlers=kbd event8 
+B: PROP=0
+B: EV=100003
+B: KEY=10000000000000 0
+
+I: Bus=001e Vendor=0000 Product=0000 Version=0001
+N: Name="sunxi_cec"
+P: Phys=sunxi_cec/input0
+S: Sysfs=/devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+U: Uniq=
+H: Handlers=kbd event9 
+B: PROP=20
+B: EV=100017
+B: KEY=ffffc000000000 3ff 0 400000320fc200 40830c900000000 0 210300 49d2c040ec00 1e378000000000 8010000010000000
+B: REL=3
+B: MSC=10
+
+I: Bus=0003 Vendor=1ea7 Product=0066 Version=0110
+N: Name="2.4G Mouse"
+P: Phys=usb-xhci-hcd.40.auto-1.2.3/input0
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+U: Uniq=
+H: Handlers=sysrq kbd leds event10 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=1ea7 Product=0066 Version=0110
+N: Name="2.4G Mouse"
+P: Phys=usb-xhci-hcd.40.auto-1.2.3/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+U: Uniq=
+H: Handlers=event11 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0003 Vendor=1ea7 Product=0066 Version=0110
+N: Name="2.4G Mouse"
+P: Phys=usb-xhci-hcd.40.auto-1.2.3/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+U: Uniq=
+H: Handlers=event12 
+B: PROP=0
+B: EV=17
+B: KEY=ff0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=1ea7 Product=0066 Version=0110
+N: Name="2.4G Mouse Consumer Control"
+P: Phys=usb-xhci-hcd.40.auto-1.2.3/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+U: Uniq=
+H: Handlers=kbd event13 
+B: PROP=0
+B: EV=1f
+B: KEY=3f00033fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17d000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=1ea7 Product=0066 Version=0110
+N: Name="2.4G Mouse System Control"
+P: Phys=usb-xhci-hcd.40.auto-1.2.3/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+U: Uniq=
+H: Handlers=kbd event14 
+B: PROP=0
+B: EV=13
+B: KEY=c000 10000000000000 0
+B: MSC=10
+
+I: Bus=0003 Vendor=3151 Product=3020 Version=0200
+N: Name="YICHIP 2.4G Receiver"
+P: Phys=usb-xhci-hcd.40.auto-1.2.4/input0
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+U: Uniq=
+H: Handlers=sysrq kbd leds event15 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=3151 Product=3020 Version=0200
+N: Name="YICHIP 2.4G Receiver Mouse"
+P: Phys=usb-xhci-hcd.40.auto-1.2.4/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+U: Uniq=
+H: Handlers=event16 
+B: PROP=0
+B: EV=17
+B: KEY=1f0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=3151 Product=3020 Version=0200
+N: Name="YICHIP 2.4G Receiver System Control"
+P: Phys=usb-xhci-hcd.40.auto-1.2.4/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+U: Uniq=
+H: Handlers=kbd event17 
+B: PROP=0
+B: EV=13
+B: KEY=40000000000000 0 0 0 40000010cc00 10000000000000 0
+B: MSC=10
+
+I: Bus=0003 Vendor=3151 Product=3020 Version=0200
+N: Name="YICHIP 2.4G Receiver Consumer Control"
+P: Phys=usb-xhci-hcd.40.auto-1.2.4/input1
+S: Sysfs=/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+U: Uniq=
+H: Handlers=kbd event18 
+B: PROP=0
+B: EV=1f
+B: KEY=3f00033fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17d000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="sunxi-ac101b Headphones"
+P: Phys=ALSA
+S: Sysfs=/devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+U: Uniq=
+H: Handlers=kbd event19 
+B: PROP=0
+B: EV=23
+B: KEY=40 0 0 0 0 0 400000000 0 c000000000000 0
+B: SW=14
+
+
+/sys/class/input:
+/sys/class/input/event0 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input0/event0
+/sys/class/input/event10 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10/event10
+/sys/class/input/event11 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11/event11
+/sys/class/input/event12 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12/event12
+/sys/class/input/event13 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13/event13
+/sys/class/input/event14 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14/event14
+/sys/class/input/event15 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16/event15
+/sys/class/input/event16 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17/event16
+/sys/class/input/event17 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18/event17
+/sys/class/input/event18 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19/event18
+/sys/class/input/event19 -> ../../devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21/event19
+/sys/class/input/event1 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input1/event1
+/sys/class/input/event2 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input2/event2
+/sys/class/input/event3 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input3/event3
+/sys/class/input/event4 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input4/event4
+/sys/class/input/event5 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input5/event5
+/sys/class/input/event6 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input6/event6
+/sys/class/input/event7 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input7/event7
+/sys/class/input/event8 -> ../../devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8/event8
+/sys/class/input/event9 -> ../../devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9/event9
+/sys/class/input/input0 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input0
+/sys/class/input/input10 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+/sys/class/input/input11 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+/sys/class/input/input12 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+/sys/class/input/input13 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+/sys/class/input/input14 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+/sys/class/input/input16 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+/sys/class/input/input17 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+/sys/class/input/input18 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+/sys/class/input/input19 -> ../../devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+/sys/class/input/input1 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input1
+/sys/class/input/input21 -> ../../devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+/sys/class/input/input2 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input2
+/sys/class/input/input3 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input3
+/sys/class/input/input4 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input4
+/sys/class/input/input5 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input5
+/sys/class/input/input6 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input6
+/sys/class/input/input7 -> ../../devices/platform/soc@3000000/2521000.gpadc/input/input7
+/sys/class/input/input8 -> ../../devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+/sys/class/input/input9 -> ../../devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+
+EXIT_CODE=0

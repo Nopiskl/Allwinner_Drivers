@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Map only once per X11 session.  HDMI hotplug/layout changes are handled by
+# the next normal session start; there is deliberately no polling loop.
+TOUCH_NAME="Samsung Electronics Touchscreen 1223"
+OUTPUT_NAME="DSI-1"
+
+if command -v xinput >/dev/null 2>&1 &&
+   command -v xrandr >/dev/null 2>&1 &&
+   xrandr --query 2>/dev/null | grep -q "^${OUTPUT_NAME}[[:space:]]connected"; then
+	device_id=$(xinput list --id-only "$TOUCH_NAME" 2>/dev/null | head -n 1)
+	if [ -n "$device_id" ]; then
+		xinput map-to-output "$device_id" "$OUTPUT_NAME"
+	fi
+fi
+
+# Preserve Radxa's mappings for its officially supported Goodix/FTS panels
+# and, for SDDM, preserve execution of the original Xsetup argument.
+exec /usr/bin/radxa-map-tp "$@"

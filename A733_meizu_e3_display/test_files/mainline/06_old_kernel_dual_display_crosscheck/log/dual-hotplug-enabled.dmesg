@@ -1,0 +1,1731 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+[    0.000000] random: crng init done
+[    0.000000] Machine model: sun60iw2
+[    0.000000] printk: bootconsole [earlycon0] enabled
+[    0.000000] efi: UEFI not found.
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x000000013fffffff]
+[    0.000000] cma: Reserved 16 MiB at 0x00000000ff000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] percpu: Embedded 29 pages/cpu s78360 r8192 d32232 u118784
+[    0.000000] pcpu-alloc: s78360 r8192 d32232 u118784 alloc=29*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] Kernel command line: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+[    0.000000] Unknown kernel command line parameters "splash earlycon mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 cgroup_enable=memory cgroup_memory=1", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] software IO TLB: mapped [mem 0x00000000fb000000-0x00000000ff000000] (64MB)
+[    0.000000] Memory: 3949548K/4194304K available (11776K kernel code, 2910K rwdata, 4180K rodata, 3776K init, 481K bss, 228372K reserved, 16384K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 38759 entries in 152 pages
+[    0.000000] ftrace: allocated 152 pages with 3 groups
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 256 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: 16 PPIs implemented
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000003460000
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+[    0.000000] sunxi:ccu-ng:[INFO]: ccu will stop clk in init process
+[    0.000000] sunxi:ccu-ng:[INFO]: ccu: sunxi ccu init OK
+[    0.000000] sunxi:ccu-ng:[INFO]: sunxi ccu common driver version: 1.2.4
+[    0.000000] sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 1.0.15
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000001] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000249] sunxi:timer_sun50i:[INFO]: sun50i timer init:0xffffff00000002, driver version: 1.1.3
+[    0.000259] clocksource: timer: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+[    0.001575] Console: colour dummy device 80x25
+[    0.001588] printk: console [tty1] enabled
+[    0.001592] printk: bootconsole [earlycon0] disabled
+[    0.001622] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.001634] pid_max: default: 32768 minimum: 301
+[    0.001688] LSM: Security Framework initializing
+[    0.001772] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.001792] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.003837] rcu: Hierarchical SRCU implementation.
+[    0.005049] EFI services will not be available.
+[    0.005468] smp: Bringing up secondary CPUs ...
+[    0.006006] Detected VIPT I-cache on CPU1
+[    0.006045] GICv3: CPU1: found redistributor 100 region 0:0x0000000003480000
+[    0.006087] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    0.006683] Detected VIPT I-cache on CPU2
+[    0.006714] GICv3: CPU2: found redistributor 200 region 0:0x00000000034a0000
+[    0.006745] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    0.007306] Detected VIPT I-cache on CPU3
+[    0.007332] GICv3: CPU3: found redistributor 300 region 0:0x00000000034c0000
+[    0.007360] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    0.007954] Detected VIPT I-cache on CPU4
+[    0.007979] GICv3: CPU4: found redistributor 400 region 0:0x00000000034e0000
+[    0.008005] CPU4: Booted secondary processor 0x0000000400 [0x412fd050]
+[    0.008551] Detected VIPT I-cache on CPU5
+[    0.008576] GICv3: CPU5: found redistributor 500 region 0:0x0000000003500000
+[    0.008601] CPU5: Booted secondary processor 0x0000000500 [0x412fd050]
+[    0.009145] CPU features: detected: Spectre-v4
+[    0.009149] CPU features: detected: Spectre-BHB
+[    0.009154] Detected PIPT I-cache on CPU6
+[    0.009170] GICv3: CPU6: found redistributor 600 region 0:0x0000000003520000
+[    0.009186] CPU6: Booted secondary processor 0x0000000600 [0x414fd0b1]
+[    0.009718] Detected PIPT I-cache on CPU7
+[    0.009736] GICv3: CPU7: found redistributor 700 region 0:0x0000000003540000
+[    0.009753] CPU7: Booted secondary processor 0x0000000700 [0x414fd0b1]
+[    0.009812] smp: Brought up 1 node, 8 CPUs
+[    0.009829] SMP: Total of 8 processors activated.
+[    0.009835] CPU features: detected: 32-bit EL0 Support
+[    0.009839] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.009844] CPU features: detected: Common not Private translations
+[    0.009848] CPU features: detected: CRC32 instructions
+[    0.009853] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.009857] CPU features: detected: Privileged Access Never
+[    0.009861] CPU features: detected: RAS Extension Support
+[    0.009867] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.009940] CPU: All CPU(s) started at EL1
+[    0.009976] alternatives: patching kernel code
+[    0.011755] devtmpfs: initialized
+[    0.021935] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.021946] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.022199] pinctrl core: initialized pinctrl subsystem
+[    0.022390] DMI not present or invalid.
+[    0.022544] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.023301] DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[    0.023453] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.023693] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.023718] audit: initializing netlink subsys (disabled)
+[    0.023821] audit: type=2000 audit(0.024:1): state=initialized audit_enabled=0 res=1
+[    0.023976] thermal_sys: Registered thermal governor 'fair_share'
+[    0.023980] thermal_sys: Registered thermal governor 'step_wise'
+[    0.023982] thermal_sys: Registered thermal governor 'user_space'
+[    0.023984] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.024314] thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+[    0.024358] thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+[    0.024477] thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+[    0.024508] thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+[    0.024538] thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+[    0.024556] cpuidle: using governor menu
+[    0.024658] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.024779] ASID allocator initialised with 65536 entries
+[    0.033698] sunxi:ccu-ng:[INFO]: sunxi rtc-ccu version: 0.5.5
+[    0.044985] sunxi:ccu-ng:[INFO]: rtc_ccu: sunxi ccu init OK
+[    0.049617] sunxi:ccu-ng:[INFO]: cpupll_ccu: sunxi ccu init OK
+[    0.049620] sunxi:ccu-ng:[INFO]: sunxi pll_cpu driver version: 0.0.5
+[    0.050073] sunxi:ccu-ng:[INFO]: r_ccu: sunxi ccu init OK
+[    0.050077] sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 0.5.6
+[    0.050831] sunxi:pin:[INFO]: sunxi pinctrl version: 0.6.8
+[    0.054897] sunxi:pin-2000000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+[    0.054901] sunxi:pin:[INFO]: sunxi pinctrl core driver version: 1.4.9
+[    0.055131] sunxi:pin:[INFO]: sunxi r-pinctrl version: 0.0.2
+[    0.055832] sunxi:pin-7025000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+[    0.059677] platform 5501000.tcon0: Fixing up cyclic dependency with 5000000.de
+[    0.059814] platform 5506000.dsi0: Fixing up cyclic dependency with 5501000.tcon0
+[    0.059998] platform 5730000.tcon3: Fixing up cyclic dependency with 5000000.de
+[    0.060085] platform 5731000.tcon4: Fixing up cyclic dependency with 5000000.de
+[    0.060177] platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+[    0.064139] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.064145] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.064148] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.064150] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.066091] sunxi:pin-7025000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+[    0.077491] iommu: Default domain type: Translated 
+[    0.077494] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.077575] vgaarb: loaded
+[    0.077709] SCSI subsystem initialized
+[    0.077745] usbcore: registered new interface driver usbfs
+[    0.077757] usbcore: registered new interface driver hub
+[    0.077771] usbcore: registered new device driver usb
+[    0.078032] i2c-gpio gpio-i2c0: using lines 113 (SDA) and 112 (SCL)
+[    0.078168] mc: Linux media interface: v0.10
+[    0.078178] videodev: Linux video capture interface: v2.00
+[    0.081948] sun6i-dma 4601000.dma-controller: sunxi dma probed, driver version: 1.2.6
+[    0.082154] iommu_master csi_iommu: attach fail:-517
+[    0.082164] fbcon: Taking over console
+[    0.082214] sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.083299] sunxi-twi 7083000.twi: supply twi not found, using dummy regulator
+[    0.083843] sunxi:axp2101-13-0036:[INFO]: AXP20x variant AXP8191 found
+[    0.086306] axp8191-dcdc1: supplied by regulator-dummy
+[    0.089771] axp8191-dcdc2: supplied by regulator-dummy
+[    0.093763] axp8191-dcdc3: supplied by regulator-dummy
+[    0.097765] axp8191-dcdc4: supplied by regulator-dummy
+[    0.101766] axp8191-dcdc5: supplied by regulator-dummy
+[    0.105775] axp8191-dcdc6: supplied by regulator-dummy
+[    0.109772] axp8191-dcdc7: supplied by regulator-dummy
+[    0.113777] axp8191-dcdc8: supplied by regulator-dummy
+[    0.117785] axp8191-dcdc9: supplied by regulator-dummy
+[    0.121688] axp8191-dc1sw1: supplied by axp8191-dcdc1
+[    0.121868] axp8191-dc1sw2: supplied by axp8191-dcdc1
+[    0.122345] axp8191-aldo1: supplied by regulator-dummy
+[    0.125946] axp8191-aldo2: supplied by regulator-dummy
+[    0.126294] axp8191-aldo3: supplied by regulator-dummy
+[    0.126639] axp8191-aldo4: supplied by regulator-dummy
+[    0.126986] axp8191-aldo5: supplied by regulator-dummy
+[    0.127340] axp8191-aldo6: supplied by regulator-dummy
+[    0.127684] axp8191-bldo1: supplied by regulator-dummy
+[    0.128031] axp8191-bldo2: supplied by regulator-dummy
+[    0.128384] axp8191-bldo3: supplied by regulator-dummy
+[    0.128731] axp8191-bldo4: supplied by regulator-dummy
+[    0.129078] axp8191-bldo5: supplied by regulator-dummy
+[    0.129275] axp8191-cldo1: supplied by regulator-dummy
+[    0.133958] axp8191-cldo2: supplied by regulator-dummy
+[    0.134146] axp8191-cldo3: supplied by regulator-dummy
+[    0.137964] axp8191-cldo4: supplied by regulator-dummy
+[    0.138152] axp8191-cldo5: supplied by regulator-dummy
+[    0.141806] axp8191-dldo1: supplied by regulator-dummy
+[    0.145974] axp8191-dldo2: supplied by regulator-dummy
+[    0.146324] axp8191-dldo3: supplied by regulator-dummy
+[    0.146684] axp8191-dldo4: supplied by regulator-dummy
+[    0.147040] axp8191-dldo5: supplied by regulator-dummy
+[    0.147232] axp8191-dldo6: supplied by regulator-dummy
+[    0.149823] axp8191-eldo1: supplied by regulator-dummy
+[    0.153819] axp8191-eldo2: supplied by regulator-dummy
+[    0.157989] axp8191-eldo3: supplied by regulator-dummy
+[    0.158347] axp8191-eldo4: supplied by regulator-dummy
+[    0.158705] axp8191-eldo5: supplied by regulator-dummy
+[    0.158899] axp8191-eldo6: supplied by regulator-dummy
+[    0.161691] axp8191-rtcldo: supplied by regulator-dummy
+[    0.161813] axp8191-temp-ctrl: Failed to locate of_node [id: 0]
+[    0.162964] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.162996] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163025] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163056] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163085] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163115] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163143] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163173] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163204] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163235] reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.164434] sunxi:axp2101-13-0036:[INFO]: AXP20X driver loaded
+[    0.164484] sunxi:twi_sunxi-7083000.twi:[INFO]: v2.6.9 probe success
+[    0.164757] sunxi-twi 7084000.twi: supply twi not found, using dummy regulator
+[    0.164981] sunxi:twi_sunxi-7084000.twi:[INFO]: v2.6.9 probe success
+[    0.165056] sunxi-twi 7085000.twi: supply twi not found, using dummy regulator
+[    0.165338] sunxi:twi_sunxi-7085000.twi:[INFO]: v2.6.9 probe success
+[    0.166040] sunxi:pwm-2527000.pwm:[INFO]: pwmchip probe success
+[    0.166357] sunxi:pwm-2528000.pwm:[INFO]: pwmchip probe success
+[    0.166697] sunxi:pwm-7023000.pwm:[INFO]: pwmchip probe success
+[    0.167000] clocksource: Switched to clocksource arch_sys_counter
+[    0.179912] sunxi_usb_udc 4100000.udc-controller: sunxi:sunxi_usb_udc UDC Inner DMA Feature - wordaddr: 1, extend: enabled
+[    0.180190] NET: Registered PF_INET protocol family
+[    0.180320] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.181524] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.181571] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.181579] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.181780] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    0.182171] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.182291] MPTCP token hash table entries: 4096 (order: 4, 98304 bytes, linear)
+[    0.182327] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.182402] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    0.182520] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.182536] PCI: CLS 0 bytes, default 64
+[    0.182799] Trying to unpack rootfs image as initramfs...
+[    0.191553] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.191929] kvm [1]: HYP mode not available
+[    0.192356] Initialise system trusted keyrings
+[    0.192436] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+[    0.218696] Key type asymmetric registered
+[    0.218702] Asymmetric key parser 'x509' registered
+[    0.218760] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    0.218857] io scheduler mq-deadline registered
+[    0.218859] io scheduler kyber registered
+[    0.219883] pwm-backlight backlight0: supply power not found, using dummy regulator
+[    0.220900] reg-virt-consumer reg-virt-consumer.0.auto: DMA mask not set
+[    0.221122] reg-virt-consumer reg-virt-consumer.1.auto: DMA mask not set
+[    0.221318] reg-virt-consumer reg-virt-consumer.2.auto: DMA mask not set
+[    0.221541] reg-virt-consumer reg-virt-consumer.3.auto: DMA mask not set
+[    0.221735] reg-virt-consumer reg-virt-consumer.4.auto: DMA mask not set
+[    0.221919] reg-virt-consumer reg-virt-consumer.5.auto: DMA mask not set
+[    0.222108] reg-virt-consumer reg-virt-consumer.6.auto: DMA mask not set
+[    0.222295] reg-virt-consumer reg-virt-consumer.7.auto: DMA mask not set
+[    0.222478] reg-virt-consumer reg-virt-consumer.8.auto: DMA mask not set
+[    0.222692] reg-virt-consumer reg-virt-consumer.9.auto: DMA mask not set
+[    0.222879] reg-virt-consumer reg-virt-consumer.10.auto: DMA mask not set
+[    0.222959] reg-virt-consumer reg-virt-consumer.11.auto: DMA mask not set
+[    0.223051] reg-virt-consumer reg-virt-consumer.12.auto: DMA mask not set
+[    0.223126] reg-virt-consumer reg-virt-consumer.13.auto: DMA mask not set
+[    0.223202] reg-virt-consumer reg-virt-consumer.14.auto: DMA mask not set
+[    0.223284] reg-virt-consumer reg-virt-consumer.15.auto: supply bldo1 not found, using dummy regulator
+[    0.223337] reg-virt-consumer reg-virt-consumer.16.auto: supply bldo2 not found, using dummy regulator
+[    0.223383] reg-virt-consumer reg-virt-consumer.17.auto: supply bldo3 not found, using dummy regulator
+[    0.223429] reg-virt-consumer reg-virt-consumer.18.auto: supply bldo4 not found, using dummy regulator
+[    0.223482] reg-virt-consumer reg-virt-consumer.19.auto: supply bldo5 not found, using dummy regulator
+[    0.223526] reg-virt-consumer reg-virt-consumer.20.auto: supply cldo1 not found, using dummy regulator
+[    0.223569] reg-virt-consumer reg-virt-consumer.21.auto: supply cldo2 not found, using dummy regulator
+[    0.223614] reg-virt-consumer reg-virt-consumer.22.auto: supply cldo3 not found, using dummy regulator
+[    0.223659] reg-virt-consumer reg-virt-consumer.23.auto: supply cldo4 not found, using dummy regulator
+[    0.223714] reg-virt-consumer reg-virt-consumer.24.auto: supply cldo5 not found, using dummy regulator
+[    0.223753] reg-virt-consumer reg-virt-consumer.25.auto: DMA mask not set
+[    0.223965] reg-virt-consumer reg-virt-consumer.26.auto: DMA mask not set
+[    0.224042] reg-virt-consumer reg-virt-consumer.27.auto: DMA mask not set
+[    0.224114] reg-virt-consumer reg-virt-consumer.28.auto: DMA mask not set
+[    0.224181] reg-virt-consumer reg-virt-consumer.29.auto: DMA mask not set
+[    0.224240] reg-virt-consumer reg-virt-consumer.30.auto: DMA mask not set
+[    0.224430] reg-virt-consumer reg-virt-consumer.31.auto: DMA mask not set
+[    0.224619] reg-virt-consumer reg-virt-consumer.32.auto: DMA mask not set
+[    0.224826] reg-virt-consumer reg-virt-consumer.33.auto: DMA mask not set
+[    0.224912] reg-virt-consumer reg-virt-consumer.34.auto: DMA mask not set
+[    0.224989] reg-virt-consumer reg-virt-consumer.35.auto: DMA mask not set
+[    0.225063] reg-virt-consumer reg-virt-consumer.36.auto: DMA mask not set
+[    0.225252] reg-virt-consumer reg-virt-consumer.37.auto: DMA mask not set
+[    0.225314] reg-virt-consumer reg-virt-consumer.38.auto: DMA mask not set
+[    0.225330] reg-virt-consumer reg-virt-consumer.38.auto: supply dc1sw1 not found, using dummy regulator
+[    0.225388] reg-virt-consumer reg-virt-consumer.39.auto: DMA mask not set
+[    0.225402] reg-virt-consumer reg-virt-consumer.39.auto: supply dc1sw2 not found, using dummy regulator
+[    0.225950] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.226603] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.226607] ehci-pci: EHCI PCI platform driver
+[    0.226619] ehci-platform: EHCI generic platform driver
+[    0.226714] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.226720] ohci-pci: OHCI PCI platform driver
+[    0.226731] ohci-platform: OHCI generic platform driver
+[    0.227101] i2c_dev: i2c /dev entries driver
+[    0.228236] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.228284] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    0.228331] usbcore: registered new interface driver usbhid
+[    0.228333] usbhid: USB HID core driver
+[    0.228388] sunxi:ccu_ddr:[ERR]: dram_clk:2400
+[    0.228402] sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+[    0.228670] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228674] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228682] uart-ng 2500000.uart: there is not valid maps for state default
+[    0.228698] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228701] sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+[    0.228706] uart-ng 2500000.uart: there is not valid maps for state sleep
+[    0.228927] uart-ng uart-ng0: supply uart not found, using dummy regulator
+[    0.228993] sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the TX DMA channel!
+[    0.228996] sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the RX DMA channel!
+[    0.229037] uart-ng0: ttyAS0 at MMIO 0x2500000 (irq = 420, base_baud = 1500000) is a SUNXI
+[    0.229047] sunxi:sunxi_uart_ng-uart-ng0:[INFO]: console setup baud 115200 parity n bits 8, flow n
+[    0.291263] printk: console [ttyAS0] enabled
+[    0.292419] NSI_PMU 2020000.nsi-controller: Get support-ecc failed
+[    0.293074] sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.293724] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+[    0.293921] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: ctl-spec-caps 328
+[    0.293978] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vmmc regulator found
+[    0.293980] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vqmmc regulator found
+[    0.293982] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vdmmc regulator found
+[    0.293984] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd33sw regulator found
+[    0.293986] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd18sw regulator found
+[    0.293987] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq33sw regulator found
+[    0.293989] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq18sw regulator found
+[    0.293991] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+[    0.301912] sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get uart0 pinstate,check if needed
+[    0.301915] sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get pin bias hs pinstate,check if needed
+[    0.302549] sunxi-mmc 4022000.sdmmc: sunxi:sunxi_mmc_host***ctl-cmdq-md*** 20
+[    0.302854] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: cq_host:ffff0000c1219e80, mmc:ffff0000c0d77000, host:ffff0000c0d77580
+[    0.302868] mmc1: CQHCI version 0.00
+[    0.302954] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.315610] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.328359] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.328460] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: detmode:alway in(non removable)
+[    0.328879] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+[    0.329094] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ctl-spec-caps 428
+[    0.330268] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vqmmc regulator found
+[    0.330274] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vdmmc regulator found
+[    0.330677] sunxi-mmc 4020000.sdmmc: Got CD GPIO
+[    0.330708] sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostcd-set-debounce is 0x1
+[    0.330717] sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostexecute tuning in kernel, retune_period=3600
+[    0.330931] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.330949] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[    0.331368] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.332687] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm OD pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.333582] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.342827] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.342861] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000080
+[    0.342887] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.343565] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.343735] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.352966] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.353002] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000282
+[    0.353031] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.353853] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.363070] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.363106] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000484
+[    0.363134] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.363651] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.363741] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: detmode:gpio irq
+[    0.363954] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.364087] sunxi-ufs-pltfm 4520000.ufs: Sunxi ufs driver version 0.0.16 2025.1.20 10:40
+[    0.373165] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.373199] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000686
+[    0.373225] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.373732] sunxi-ufs-pltfm 4520000.ufs: freq-table-hz property not specified
+[    0.373740] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    0.373748] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+[    0.373753] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq-max-microamp
+[    0.373758] sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq2-max-microamp
+[    0.374028] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.374862] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.383246] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.383280] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000888
+[    0.383303] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.383644] sunxi-ufs-pltfm 4520000.ufs: fore use int ref 26m
+[    0.384151] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.384356] scsi host0: ufshcd
+[    0.393370] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.393403] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000a8a
+[    0.393430] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.394249] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.403445] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.403457] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.403511] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000c8c
+[    0.403535] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.404355] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.410273] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.410763] sunxi:g2d_sunxi:[INFO]: [G2D]: rcq version initialized.major:241
+[    0.410766] sunxi:g2d_sunxi:[INFO]: [G2D]: g2d_module_init
+[    0.410835] [drm] [DSI-PANEL] panel_dsi_init start
+[    0.410914] [drm] [DSI-PANEL] dsi driver regsiter finsh
+[    0.411077] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.411136] [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.411451] [drm] [PHY] sunxi_dsi_combophy_probe start
+[    0.411625] [drm] [PHY]sunxi_dsi_combophy_probe finish
+[    0.411901] [drm] [DSI] sunxi_drm_dsi_probe start
+[    0.412072] [drm] Loading esd watchdog module...
+[    0.412084] [drm] TE GPIO not configured
+[    0.412085] [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.412177] mipi-dsi 5506000.dsi0.0: Fixing up cyclic dependency with dsi_panel@1
+[    0.412203] [drm] [DSI]sunxi_drm_dsi_probe ok
+[    0.412730] [drm] [TCON] sunxi_tcon_probe start
+[    0.412783] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.412885] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.412955] [drm] [TCON] sunxi_tcon_probe start
+[    0.412982] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.413062] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.413126] [drm] [TCON] sunxi_tcon_probe start
+[    0.413151] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[    0.413208] [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.413337] [drm] sunxi_drm_platform_probe start
+[    0.413339] [drm] sunxi_drm_match_add start
+[    0.413592] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.414203] [drm] sunxi_drm_match_add finish
+[    0.414539] sunxi:sunxi_sidefuse init success!
+[    0.414544] sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.414830] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.435593] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000e8e
+[    0.435628] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.435877] sunxi-cadence-combophy 6c00000.serdes: Sub System Version v2.0.0
+[    0.436219] sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: resistance calibration supported - enabled, mode - V2
+[    0.436289] sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: phy provider register success
+[    0.436445] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.437038] sunxi-cadence-combophy 6c00000.serdes: combophy0 set power ON
+[    0.445681] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.445739] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001090
+[    0.445764] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.446575] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.455810] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.455857] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001292
+[    0.455888] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.456695] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.465906] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.465930] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001494
+[    0.465956] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.466759] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.475968] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.475992] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001696
+[    0.476015] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.476827] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.478115] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.486036] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+[    0.486043] sunxi:pin-2000000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+[    0.486044] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.486077] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001898
+[    0.486104] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.486927] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.496143] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.496174] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001a9a
+[    0.496200] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.497022] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.506240] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.506273] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001c9c
+[    0.506299] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.506296] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+[    0.507122] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.516349] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.516380] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001e9e
+[    0.516406] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.517226] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.519316] xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[    0.526437] xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 1
+[    0.526452] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.526484] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000020a0
+[    0.526507] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.526623] xhci-hcd xhci-hcd.40.auto: hcc params 0x0118ffc5 hci version 0x120 quirks 0x0000000000010010
+[    0.526655] xhci-hcd xhci-hcd.40.auto: irq 493, io mem 0x06a00000
+[    0.526725] xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+[    0.526731] xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 2
+[    0.526736] xhci-hcd xhci-hcd.40.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    0.526799] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+[    0.526804] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.526808] usb usb1: Product: xHCI Host Controller
+[    0.526811] usb usb1: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+[    0.526814] usb usb1: SerialNumber: xhci-hcd.40.auto
+[    0.527275] hub 1-0:1.0: USB hub found
+[    0.527289] hub 1-0:1.0: 1 port detected
+[    0.527328] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.527426] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    0.536565] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+[    0.536570] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.536571] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.536575] usb usb2: Product: xHCI Host Controller
+[    0.536579] usb usb2: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+[    0.536582] usb usb2: SerialNumber: xhci-hcd.40.auto
+[    0.536610] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000022a2
+[    0.536636] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.536929] hub 2-0:1.0: USB hub found
+[    0.536945] hub 2-0:1.0: 1 port detected
+[    0.537456] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.538251] sunxi:dwc3_sunxi_plat-12.usbc2:[INFO]: DesignWare USB3 Allwinner Glue Layer Driver(v1.0.23 2024-11-25 14:00)
+[    0.546689] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.546728] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000024a4
+[    0.546754] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.547332] sunxi_gpadc_init(): 1806: gpadc class register success
+[    0.547418] sunxi-gpadc 2521000.gpadc: warn: sample rate not set
+[    0.547424] sunxi-gpadc 2521000.gpadc: sunxi_gpadc_dts_parse: warn: keyadc not select
+[    0.547553] input: sunxi-gpadc0/channel0/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input0
+[    0.547575] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.547681] input: sunxi-gpadc0/channel1/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input1
+[    0.556797] mmc0: host does not support reading read-only switch, assuming write-enable
+[    0.556818] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.556858] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000026a6
+[    0.556888] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.557036] input: sunxi-gpadc0/channel2/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input2
+[    0.557272] input: sunxi-gpadc0/channel3/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input3
+[    0.557497] input: sunxi-gpadc0/channel4/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input4
+[    0.557540] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing LEGACY(SDR12) dt B
+[    0.557710] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.557773] input: sunxi-gpadc0/channel5/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input5
+[    0.566971] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.567002] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.567036] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000028a8
+[    0.567063] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.567089] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.567196] input: sunxi-gpadc0/channel6/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input6
+[    0.567306] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+[    0.567416] input: sunxi-gpadc0/channel7/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input7
+[    0.567419] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: used kernel tuning, delay = 0
+[    0.567466] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: change sample method
+[    0.567468] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: start tuning, tuning clk = 200000000  opcode=19
+[    0.567471] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ----speed mode = 6
+[    0.567748] sunxi-gpadc 2521000.gpadc: sunxi_gpadc probe success
+[    0.567885] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.568500] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.569627] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[    0.569781] axp2101-pek axp2101-pek.0: DMA mask not set
+[    0.577151] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.586569] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002aaa
+[    0.586605] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.587417] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.596667] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.596732] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002cac
+[    0.596772] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.597577] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.606811] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.606836] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002eae
+[    0.606860] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.607678] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.616913] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.616948] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000030b0
+[    0.616975] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.617779] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.627023] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.627050] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000032b2
+[    0.627073] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.627862] input: axp8191-pek as /devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+[    0.627876] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.637107] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.637139] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000034b4
+[    0.637162] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.637479] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.637493] cpu cpu0: _opp_add: OPP not supported by regulators (408000000)
+[    0.637610] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.637617] cpu cpu0: _opp_add: OPP not supported by regulators (720000000)
+[    0.637720] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.637727] cpu cpu0: _opp_add: OPP not supported by regulators (792000000)
+[    0.637835] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.637843] cpu cpu0: _opp_add: OPP not supported by regulators (1008000000)
+[    0.637944] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.637951] cpu cpu0: _opp_add: OPP not supported by regulators (1104000000)
+[    0.637966] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.638060] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647176] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.647198] cpu cpu0: _opp_add: OPP not supported by regulators (1200000000)
+[    0.647202] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000036b6
+[    0.647226] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.647279] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647283] cpu cpu0: _opp_add: OPP not supported by regulators (1296000000)
+[    0.647332] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647345] cpu cpu0: _opp_add: OPP not supported by regulators (1392000000)
+[    0.647399] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647402] cpu cpu0: _opp_add: OPP not supported by regulators (1416000000)
+[    0.647458] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647461] cpu cpu0: _opp_add: OPP not supported by regulators (1512000000)
+[    0.647518] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647521] cpu cpu0: _opp_add: OPP not supported by regulators (1608000000)
+[    0.647580] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647582] cpu cpu0: _opp_add: OPP not supported by regulators (1704000000)
+[    0.647637] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647639] cpu cpu0: _opp_add: OPP not supported by regulators (1800000000)
+[    0.647736] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647739] cpu cpu0: _opp_add: OPP not supported by regulators (728000000)
+[    0.647879] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647882] cpu cpu0: _opp_add: OPP not supported by regulators (1092000000)
+[    0.647984] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.647987] cpu cpu0: _opp_add: OPP not supported by regulators (1300000000)
+[    0.648037] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.648111] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.657228] cpu cpu0: _opp_add: OPP not supported by regulators (1586000000)
+[    0.657265] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.657301] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000038b8
+[    0.657327] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.657877] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.657889] cpu cpu6: _opp_add: OPP not supported by regulators (408000000)
+[    0.657993] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.658000] cpu cpu6: _opp_add: OPP not supported by regulators (720000000)
+[    0.658112] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.658119] cpu cpu6: _opp_add: OPP not supported by regulators (792000000)
+[    0.658130] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.658218] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667362] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.667388] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003aba
+[    0.667412] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.667439] cpu cpu6: _opp_add: OPP not supported by regulators (1008000000)
+[    0.667494] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667497] cpu cpu6: _opp_add: OPP not supported by regulators (1200000000)
+[    0.667565] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667568] cpu cpu6: _opp_add: OPP not supported by regulators (1296000000)
+[    0.667724] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667734] cpu cpu6: _opp_add: OPP not supported by regulators (1392000000)
+[    0.667801] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667804] cpu cpu6: _opp_add: OPP not supported by regulators (1512000000)
+[    0.667870] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667873] cpu cpu6: _opp_add: OPP not supported by regulators (1608000000)
+[    0.667933] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.667936] cpu cpu6: _opp_add: OPP not supported by regulators (1704000000)
+[    0.668004] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.668014] cpu cpu6: _opp_add: OPP not supported by regulators (1800000000)
+[    0.668065] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.668075] cpu cpu6: _opp_add: OPP not supported by regulators (1896000000)
+[    0.668140] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.668142] cpu cpu6: _opp_add: OPP not supported by regulators (1920000000)
+[    0.668208] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.668211] cpu cpu6: _opp_add: OPP not supported by regulators (1944000000)
+[    0.668215] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.668265] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.677396] cpu cpu6: _opp_add: OPP not supported by regulators (1992000000)
+[    0.677426] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.677450] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003cbc
+[    0.677473] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.677498] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.677501] cpu cpu6: _opp_add: OPP not supported by regulators (728000000)
+[    0.677787] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.677790] cpu cpu6: _opp_add: OPP not supported by regulators (1300000000)
+[    0.677927] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.677930] cpu cpu6: _opp_add: OPP not supported by regulators (1586000000)
+[    0.678024] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678027] cpu cpu6: _opp_add: OPP not supported by regulators (1690000000)
+[    0.678262] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    0.678265] cpu cpu6: _opp_add: OPP not supported by regulators (1976000000)
+[    0.678324] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.678394] cpu cpu0: EM: OPP:416000 is inefficient
+[    0.687557] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.687589] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003ebe
+[    0.687610] cpu cpu0: EM: created perf domain
+[    0.687615] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+[    0.687892] cpu cpu6: EM: OPP:1014000 is inefficient
+[    0.687906] cpu cpu6: EM: OPP:416000 is inefficient
+[    0.688027] cpu cpu6: EM: created perf domain
+[    0.688417] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+[    0.697706] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+[    0.697743] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sunxi v4p5x/v4p6x retry give up!
+[    0.697748] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.699323] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.708501] sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+[    0.716406] sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm OFF vdd 0 width 1 timing LEGACY(SDR12) dt B
+[    0.718793] sunxi:sun55iw3_devfreq:[INFO]: F0:400000000, F1:800000000, F2:1200000000, F3:2400000000, up:50, down:30
+[    0.719452] [ADDR_MGT] addr_mgt_probe: module version: v1.0.11
+[    0.719833] [ADDR_MGT] addr_mgt_probe: success.
+[    0.720093] NET: Registered PF_INET6 protocol family
+[    0.720839] Segment Routing with IPv6
+[    0.720851] In-situ OAM (IOAM) with IPv6
+[    0.721497] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.721683] NET: Registered PF_PACKET protocol family
+[    0.722083] Key type dns_resolver registered
+[    0.722860] registered taskstats version 1
+[    0.722873] Loading compiled-in X.509 certificates
+[    0.723585] Key type .fscrypt registered
+[    0.723589] Key type fscrypt-provisioning registered
+[    0.742902] sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+[    0.753499] sunxi iommu: irq = 16
+[    0.753568] sunxi iommu: irq = 17
+[    0.756882] ------------[ cut here ]------------
+[    0.756892] couldn't get idr
+[    0.756919] WARNING: CPU: 5 PID: 106 at drivers/i2c/i2c-core-base.c:1542 __i2c_add_numbered_adapter+0x8c/0xb4
+[    0.756936] Modules linked in:
+[    0.756943] CPU: 5 PID: 106 Comm: kworker/u16:2 Not tainted 5.15.147-21-a733 #21
+[    0.756950] Hardware name: sun60iw2 (DT)
+[    0.756954] Workqueue: events_unbound deferred_probe_work_func
+[    0.756963] pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[    0.756968] pc : __i2c_add_numbered_adapter+0x8c/0xb4
+[    0.756973] lr : __i2c_add_numbered_adapter+0x8c/0xb4
+[    0.756977] sp : ffff80000a1b3b00
+[    0.756980] x29: ffff80000a1b3b00 x28: 0000000000000000 x27: ffff8000096a4150
+[    0.756989] x26: ffff8000096a4000 x25: ffff8000095da888 x24: ffff0000c0f9b000
+[    0.756997] x23: ffff8000095da928 x22: ffff8000095da928 x21: ffff800009470018
+[    0.757005] x20: ffff0000c6140080 x19: 00000000ffffffe4 x18: 0000000000000009
+[    0.757013] x17: 000000040044ffff x16: 041000f2b5503510 x15: 0000000000000030
+[    0.757021] x14: 0000000000000000 x13: 7264692074656720 x12: 74276e646c756f63
+[    0.757028] x11: 656820747563205b x10: ffff8000093e0268 x9 : ffff8000080fa2f0
+[    0.757036] x8 : ffff800009384248 x7 : ffff8000093dc248 x6 : 0000000000004020
+[    0.757044] x5 : 000000000000bff4 x4 : 40000000fffff2ac x3 : 0000000000000000
+[    0.757052] x2 : 0000000000000000 x1 : 0000000000000000 x0 : ffff0000c109ee00
+[    0.757060] Call trace:
+[    0.757063]  __i2c_add_numbered_adapter+0x8c/0xb4
+[    0.757068]  i2c_add_numbered_adapter+0x24/0x40
+[    0.757073]  sunxi_twi_probe+0x370/0x8f0
+[    0.757081]  platform_probe+0x70/0xe0
+[    0.757086]  really_probe.part.0+0xa4/0x320
+[    0.757091]  __driver_probe_device+0xa0/0x174
+[    0.757096]  driver_probe_device+0x4c/0x12c
+[    0.757101]  __device_attach_driver+0xc0/0x13c
+[    0.757105]  bus_for_each_drv+0x80/0xe0
+[    0.757109]  __device_attach+0xb0/0x1cc
+[    0.757114]  device_initial_probe+0x1c/0x30
+[    0.757119]  bus_probe_device+0xa0/0xac
+[    0.757123]  deferred_probe_work_func+0x90/0xd0
+[    0.757128]  process_one_work+0x1f8/0x480
+[    0.757135]  worker_thread+0x2e4/0x460
+[    0.757139]  kthread+0x15c/0x170
+[    0.757144]  ret_from_fork+0x10/0x20
+[    0.757151] ---[ end trace e06997bfe28419a4 ]---
+[    0.757155] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.765218] sunxi-twi: probe of 2510000.twi failed with error -16
+[    0.765599] g2d 5440000.g2d: Adding to iommu group 0
+[    0.766837] sunxi-display-engine 5000000.de: Adding to iommu group 0
+[    0.767223] [drm] de use no display sys
+[    0.767734] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[    0.767982] [drm] [DSI-PANEL] panel_dsi_probe start
+[    0.768015] [drm] reset-on-sequence property not found
+[    0.768417] [drm] [DSI]sunxi_drm_dsi_host_attach start
+[    0.768426] [drm] sunxi_drm_bind start
+[    0.768625] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.768708] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[    0.768723] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.768758] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[    0.768765] [drm] [SUNXI-DE] sunxi_de_bind start
+[    0.768800] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[    0.769206] [drm] sunxi_de_bind crtc init for de 0 ok
+[    0.769256] [drm] sunxi_de_bind crtc init for de 1 ok
+[    0.769704] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[    0.769719] sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+[    0.769727] [drm] [DSI]sunxi_drm_dsi_bind start
+[    0.769789] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.769984] sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+[    0.770049] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.770401] [drm] sunxi-hdmi: hdmi drv init dts done
+[    0.771123] [drm] sunxi-hdmi: hdmi drv enable resource done
+[    0.771129] [drm] sunxi-hdmi: hdmi drv init resource done
+[    0.771337] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[    0.771705] Registered IR keymap rc-cec
+[    0.771764] rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[    0.771861] input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[    0.772120] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[    0.772912] [drm] sunxi-hdmi: drm hdmi connector create finish
+[    0.772922] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+
+[    0.772931] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[    0.772948] sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+[    0.772956] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[    0.772962] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[    0.773017] [drm] start DSI-1 monitor monitoring, interval: 100ms
+[    0.773406] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[    0.773421] [drm] sunxi_drm_bind ok
+[    0.773428] [drm] [DSI]sunxi_drm_dsi_host_attach finish
+[    0.773431] [drm] [DSI-PANEL] panel_dsi_probe finish
+[    0.776215] sunxi-pcie 6000000.pcie: host bridge /soc@3000000/pcie@6000000 ranges:
+[    0.776253] sunxi-pcie 6000000.pcie:      err 0x0020000000..0x0020ffffff -> 0x0020000000
+[    0.776267] sunxi-pcie 6000000.pcie:       IO 0x0021000000..0x0021ffffff -> 0x0021000000
+[    0.776278] sunxi-pcie 6000000.pcie:      MEM 0x0022000000..0x0027ffffff -> 0x0022000000
+[    0.780601] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning section: 
+[    0.780605] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [0-19|20] 
+[    0.780608] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [25-63|39] 
+[    0.780609] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: 
+[    0.780611] sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning result: 25 - 63,  best: 44
+[    0.780796] mmc0: new ultra high speed SDR104 SDHC card at address aaaa
+[    0.781409] mmcblk0: mmc0:aaaa SD32G 29.7 GiB 
+[    0.786271]  mmcblk0: p1 p2 p3
+[    0.802993] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[    0.820987] sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+[    0.855575] Freeing initrd memory: 31828K
+[    0.929153] sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    0.936613] sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+[    0.943501] sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+[    0.951763] sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+[    0.955957] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[    0.960190] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    0.960200] usb 1-1: Product: USB 2.0 Hub
+[    0.960202] sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+[    0.960207] sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+[    0.974907] hub 1-1:1.0: USB hub found
+[    0.977708] sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+[    0.977782] hub 1-1:1.0: 4 ports detected
+[    0.986068] sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+[    0.992384] sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+[    1.002752] sunxi-ufs-pltfm 4520000.ufs: last intr at 924821 us, last intr status=0x404
+[    1.012614] sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.022265] sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+[    1.033610] sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+[    1.041555] host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+[    1.049471] host_regs: 00000010: 00000000 00000926 00000000 00000000
+[    1.057386] host_regs: 00000020: 00000000 e0000470 00000000 00000000
+[    1.065302] host_regs: 00000030: 00000008 00000001 00000000 00000000
+[    1.075162] host_regs: 00000040: 00000000 00000000 00000000 00000000
+[    1.083061] host_regs: 00000050: 00000000 00000000 00000000 00000000
+[    1.090970] host_regs: 00000060: 00000000 00000000 00000000 00000000
+[    1.098874] host_regs: 00000070: 00000000 00000000 00000000 00000000
+[    1.106780] host_regs: 00000080: 00000000 00000000 00000000 00000000
+[    1.114685] host_regs: 00000090: 00000000 00000000 00000000 00000000
+[    1.122589] sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+[    1.129716] sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+[    1.136838] sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+[    1.143956] sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+[    1.151079] sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+[    1.158295] sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+[    1.166392] sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+[    1.173802] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 926165 us
+[    1.182873] sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.191064] sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.198673] sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.206377] sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 405726 us
+[    1.214667] sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+[    1.222079] sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+[    1.229590] sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+[    1.419277] usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+[    1.623586] usb 1-1.2: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[    1.623609] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.623619] usb 1-1.2: Product: USB2.1 Hub
+[    1.623627] usb 1-1.2: Manufacturer: GenesysLogic
+[    1.631525] hub 1-1.2:1.0: USB hub found
+[    1.632050] hub 1-1.2:1.0: 4 ports detected
+[    1.791307] [drm] DSI-1 connection detected
+[    1.791420] [drm] DSI-1: Configuration mode 1080x2160@59Hz
+[    1.801931] Console: switching to colour frame buffer device 135x135
+[    1.811162] usb 1-1.4: new high-speed USB device number 4 using xhci-hcd
+[    1.828373] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    1.828444] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[    1.828451] [drm] sunxi_de_enable index 0
+[    1.828531] [drm] sunxi_de_enable finish sw en=0
+[    1.828560] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[    1.828566] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[    1.828732] [drm] [DSI] sunxi_lcd_pin_set_state start
+[    1.829086] [drm] [PHY] sunxi_dsi_combophy_configure start
+[    1.829091] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[    1.829101] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[    2.012933] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[    2.012954] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.012964] usb 1-1.4: Product: AIC Wlan
+[    2.012972] usb 1-1.4: Manufacturer: aicsemi
+[    2.012978] usb 1-1.4: SerialNumber: 20220103
+[    2.115276] usb 1-1.2.3: new full-speed USB device number 5 using xhci-hcd
+[    2.242173] usb 1-1.2.3: New USB device found, idVendor=1ea7, idProduct=0066, bcdDevice= 2.00
+[    2.242194] usb 1-1.2.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    2.242205] usb 1-1.2.3: Product: 2.4G Mouse
+[    2.257721] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+[    2.315886] hid-generic 0003:1EA7:0066.0001: input: USB HID v1.10 Keyboard [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input0
+[    2.320516] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+[    2.321015] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+[    2.321569] input: 2.4G Mouse Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+[    2.379912] input: 2.4G Mouse System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+[    2.380162] hid-generic 0003:1EA7:0066.0002: input: USB HID v1.10 Mouse [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input1
+[    2.483265] usb 1-1.2.4: new full-speed USB device number 6 using xhci-hcd
+[    2.591367] platform 2527014.pwm0: supply pwm not found, using dummy regulator
+[    2.591887] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[    2.600824] [drm] DSI-1: Configuration complete
+[    2.629787] usb 1-1.2.4: New USB device found, idVendor=3151, idProduct=3020, bcdDevice= 0.02
+[    2.629810] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.629820] usb 1-1.2.4: Product: 2.4G Receiver
+[    2.629828] usb 1-1.2.4: Manufacturer: YICHIP
+[    2.651718] input: YICHIP 2.4G Receiver as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+[    2.712034] hid-generic 0003:3151:3020.0003: input: USB HID v2.00 Keyboard [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input0
+[    2.728547] input: YICHIP 2.4G Receiver Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+[    2.729085] input: YICHIP 2.4G Receiver System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+[    2.787926] input: YICHIP 2.4G Receiver Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+[    2.788333] hid-generic 0003:3151:3020.0004: input: USB HID v2.00 Mouse [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input1
+[    2.900411] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[    2.908991] sunxi:pcie-rc-6000000.pcie:[INFO]: PCIe speed of Gen1
+[    2.909168] sunxi-pcie 6000000.pcie: PCI host bridge to bus 0000:00
+[    2.909177] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    2.909186] pci_bus 0000:00: root bus resource [??? 0x20000000-0x20ffffff flags 0x0]
+[    2.909195] pci_bus 0000:00: root bus resource [io  0x0000-0xffffff] (bus address [0x21000000-0x21ffffff])
+[    2.909202] pci_bus 0000:00: root bus resource [mem 0x22000000-0x27ffffff]
+[    2.909240] pci 0000:00:00.0: [1f6d:abcd] type 01 class 0x060400
+[    2.909257] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[    2.909269] pci 0000:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+[    2.909344] pci 0000:00:00.0: supports D1
+[    2.909349] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    2.922007] pci 0000:00:00.0: BAR 0: assigned [mem 0x22000000-0x220fffff]
+[    2.922025] pci 0000:00:00.0: BAR 6: assigned [mem 0x22100000-0x2210ffff pref]
+[    2.922033] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    2.922093] sunxi:pcie-6000000.pcie:[INFO]: driver version: 1.2.4
+[    2.922702] pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+[    2.922711] pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+[    2.922810] pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+[    2.922814] pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+[    2.925716] sunxi:ehci_sunxi:[INFO]: sunxi-ehci: EHCI SUNXI driver
+[    2.926330] sunxi:sunxi_hci:[INFO]: sunxi ehci0-controller don't init wakeup source
+[    2.926338] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: probe, pdev->name: 4101000.ehci0-controller, sunxi_ehci: 0xffff8000096a17a8, 0x:ffff80000a125000, irq_no:1b3
+[    2.926351] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: Not init ehci0
+[    2.926879] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci1]: probe, pdev->name: 4200000.ehci1-controller, sunxi_ehci: 0xffff8000096a1bd8, 0x:ffff80000a135000, irq_no:1b5
+[    2.927070] sunxi-ehci 4200000.ehci1-controller: supply hci not found, using dummy regulator
+[    2.928348] sunxi-ehci 4200000.ehci1-controller: EHCI Host Controller
+[    2.928371] sunxi-ehci 4200000.ehci1-controller: new USB bus registered, assigned bus number 3
+[    2.928473] sunxi-ehci 4200000.ehci1-controller: irq 437, io mem 0x04200000
+[    2.943168] sunxi-ehci 4200000.ehci1-controller: USB 2.0 started, EHCI 1.00
+[    2.943253] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+[    2.943259] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.943263] usb usb3: Product: EHCI Host Controller
+[    2.943267] usb usb3: Manufacturer: Linux 5.15.147-21-a733 ehci_hcd
+[    2.943270] usb usb3: SerialNumber: sunxi-ehci
+[    2.943718] hub 3-0:1.0: USB hub found
+[    2.943735] hub 3-0:1.0: 1 port detected
+[    2.944064] sunxi:ohci_sunxi:[INFO]: sunxi-ohci: OHCI SUNXI driver
+[    2.944451] sunxi:sunxi_hci:[INFO]: sunxi ohci0-controller don't init wakeup source
+[    2.944455] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: probe, pdev->name: 4101400.ohci0-controller, sunxi_ohci: 0xffff8000096a2438
+[    2.944460] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: Not init ohci0
+[    2.944703] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci1]: probe, pdev->name: 4200400.ohci1-controller, sunxi_ohci: 0xffff8000096a2868
+[    2.944788] sunxi-ohci 4200400.ohci1-controller: supply hci not found, using dummy regulator
+[    2.944874] sunxi-ohci 4200400.ohci1-controller: OHCI Host Controller
+[    2.944883] sunxi-ohci 4200400.ohci1-controller: new USB bus registered, assigned bus number 4
+[    2.944938] sunxi-ohci 4200400.ohci1-controller: irq 438, io mem 0x04200400
+[    3.007271] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+[    3.007284] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.007289] usb usb4: Product: OHCI Host Controller
+[    3.007293] usb usb4: Manufacturer: Linux 5.15.147-21-a733 ohci_hcd
+[    3.007295] usb usb4: SerialNumber: sunxi-ohci
+[    3.007991] hub 4-0:1.0: USB hub found
+[    3.008021] hub 4-0:1.0: 1 port detected
+[    3.011987] GTP driver init func = goodix_ts_init,line = 3190 
+[    3.012437] GTP driver init func = goodix_ts_init,line = 3213 
+[    3.012502] GTP driver init func = goodix_ts_init,line = 3215 
+[    3.012531] clk: Not disabling unused clocks
+[    3.017238] Freeing unused kernel memory: 3776K
+[    3.027362] Run /init as init process
+[    3.027371]   with arguments:
+[    3.027374]     /init
+[    3.027378]     splash
+[    3.027381]     earlycon
+[    3.027384]   with environment:
+[    3.027387]     HOME=/
+[    3.027390]     TERM=linux
+[    3.027393]     mac_addr=08:51:49:58:40:32
+[    3.027397]     mac1_addr=08:51:49:58:40:33
+[    3.027400]     cgroup_enable=memory
+[    3.027403]     cgroup_memory=1
+[    3.272136] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[    3.282386] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[    3.292273] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x51)
+[    3.302142] rtc-hym8563 14-0051: could not init device, -22
+[    3.309215] rtc-hym8563: probe of 14-0051 failed with error -22
+[    3.491049] raid6: neonx8   gen()  3050 MB/s
+[    3.559128] raid6: neonx8   xor()  2426 MB/s
+[    3.627125] raid6: neonx4   gen()  1880 MB/s
+[    3.695039] raid6: neonx4   xor()  7507 MB/s
+[    3.763041] raid6: neonx2   gen()  8648 MB/s
+[    3.830983] raid6: neonx2   xor()  7192 MB/s
+[    3.899043] raid6: neonx1   gen()  7049 MB/s
+[    3.967040] raid6: neonx1   xor()  5848 MB/s
+[    4.035041] raid6: int64x8  gen()  4270 MB/s
+[    4.103037] raid6: int64x8  xor()  2542 MB/s
+[    4.171039] raid6: int64x4  gen()  4884 MB/s
+[    4.239040] raid6: int64x4  xor()  2563 MB/s
+[    4.307044] raid6: int64x2  gen()  4126 MB/s
+[    4.375038] raid6: int64x2  xor()  2223 MB/s
+[    4.443049] raid6: int64x1  gen()  3385 MB/s
+[    4.511048] raid6: int64x1  xor()  1775 MB/s
+[    4.511054] raid6: using algorithm neonx2 gen() 8648 MB/s
+[    4.511056] raid6: .... xor() 7192 MB/s, rmw enabled
+[    4.511057] raid6: using neon recovery algorithm
+[    4.519882] xor: measuring software checksum speed
+[    4.520741]    8regs           : 11541 MB/sec
+[    4.521454]    32regs          : 13845 MB/sec
+[    4.522000]    arm64_neon      : 18128 MB/sec
+[    4.522002] xor: using function: arm64_neon (18128 MB/sec)
+[    4.583196] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+[    4.720219] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: disabled.
+[    5.054570] systemd[1]: System time before build time, advancing clock.
+[    5.089716] systemd[1]: Inserted module 'autofs4'
+[    5.141880] systemd[1]: systemd 247.3-7+deb11u8 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    5.142569] systemd[1]: Detected architecture arm64.
+[    5.144120] systemd[1]: Set hostname to <radxa-cubie-a7a>.
+[    5.379806] systemd[1]: /lib/systemd/system/plymouth-start.service:16: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+[    5.435472] systemd[1]: Queued start job for default target Graphical Interface.
+[    5.436970] systemd[1]: Created slice system-getty.slice.
+[    5.437391] systemd[1]: Created slice system-modprobe.slice.
+[    5.437741] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    5.437990] systemd[1]: Created slice User and Session Slice.
+[    5.438108] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    5.438378] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    5.438497] systemd[1]: Reached target User and Group Name Lookups.
+[    5.438527] systemd[1]: Reached target Remote Encrypted Volumes.
+[    5.438544] systemd[1]: Reached target Remote File Systems.
+[    5.438557] systemd[1]: Reached target Slices.
+[    5.438580] systemd[1]: Reached target Swap.
+[    5.438774] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    5.438860] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    5.439112] systemd[1]: Listening on Journal Audit Socket.
+[    5.439234] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.439378] systemd[1]: Listening on Journal Socket.
+[    5.439541] systemd[1]: Listening on udev Control Socket.
+[    5.439647] systemd[1]: Listening on udev Kernel Socket.
+[    5.440863] systemd[1]: Mounting Huge Pages File System...
+[    5.442367] systemd[1]: Mounting POSIX Message Queue File System...
+[    5.443801] systemd[1]: Mounting Kernel Debug File System...
+[    5.445262] systemd[1]: Mounting Kernel Trace File System...
+[    5.448600] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    5.450050] systemd[1]: Starting Load Kernel Module configfs...
+[    5.451554] systemd[1]: Starting Load Kernel Module drm...
+[    5.453006] systemd[1]: Starting Load Kernel Module fuse...
+[    5.468145] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    5.468272] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    5.471569] systemd[1]: Starting Journal Service...
+[    5.477422] systemd[1]: Starting Load Kernel Modules...
+[    5.479269] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    5.480943] systemd[1]: Starting Coldplug All udev Devices...
+[    5.483334] fuse: init (API version 7.34)
+[    5.484198] systemd[1]: Mounted Huge Pages File System.
+[    5.484501] systemd[1]: Mounted POSIX Message Queue File System.
+[    5.484714] systemd[1]: Mounted Kernel Debug File System.
+[    5.484895] systemd[1]: Mounted Kernel Trace File System.
+[    5.485488] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    5.486251] systemd[1]: modprobe@configfs.service: Succeeded.
+[    5.486619] systemd[1]: Finished Load Kernel Module configfs.
+[    5.487114] systemd[1]: modprobe@drm.service: Succeeded.
+[    5.487504] systemd[1]: Finished Load Kernel Module drm.
+[    5.488017] systemd[1]: modprobe@fuse.service: Succeeded.
+[    5.488380] systemd[1]: Finished Load Kernel Module fuse.
+[    5.490171] systemd[1]: Mounting FUSE Control File System...
+[    5.491668] systemd[1]: Mounting Kernel Configuration File System...
+[    5.496059] systemd[1]: Mounted FUSE Control File System.
+[    5.496875] systemd[1]: Mounted Kernel Configuration File System.
+[    5.502807] EXT4-fs (mmcblk0p3): re-mounted. Opts: (null). Quota mode: disabled.
+[    5.505349] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    5.510254] sgm37604a: loading out-of-tree module taints kernel.
+[    5.511503] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    5.511629] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    5.513394] systemd[1]: Starting Load/Save Random Seed...
+[    5.515374] systemd[1]: Starting Create System Users...
+[    5.552628] systemd[1]: Finished Load/Save Random Seed.
+[    5.552955] systemd[1]: Condition check resulted in First Boot Complete being skipped.
+[    5.553480] No Fault
+[    5.554080] No Fault
+[    5.560760] systemd[1]: Finished Create System Users.
+[    5.565530] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    5.569630] systemd[1]: Finished Load Kernel Modules.
+[    5.573467] systemd[1]: Starting Apply Kernel Variables...
+[    5.590907] systemd[1]: Started Journal Service.
+[    5.614675] systemd-journald[278]: Received client request to flush runtime journal.
+[    5.619310] systemd-journald[278]: File /var/log/journal/00fabf9df69847469ae6823ae69fc81a/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    6.070510] sunxi:sunxi_usbc:[INFO]: OTG can't find bcten-gpio, use default mode.
+[    6.070708] sunxi:sunxi_usbc:[INFO]: get id is fail, -84
+[    6.081929] platform 7023017.s_pwm0: supply pwm not found, using dummy regulator
+[    6.082475] sunxi:VE:[INFO]: 2215 sunxi_cedar_init(): sunxi cedar version 1.1
+[    6.082669] sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[    6.083114] sunxi:VE:[INFO]: 2137 sunxi_cedar_probe(): probe ve
+[    6.083956] sunxi-cedar 1c0e000.ve: supply ve not found, using dummy regulator
+[    6.084447] sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    6.084714] sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[    6.103580] No Fault
+[    6.104059] No Fault
+[    6.115476] sunxi:VE:[INFO]: 2140 sunxi_cedar_probe(): probe ve1
+[    6.123539] sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[    6.128075] sunxi-spi-ng 2540000.spi: supply spi not found, using dummy regulator
+[    6.128299] sunxi:spi-2540000.spi:[INFO]: bus num_0 mode_16 freq_8000000
+[    6.128306] sunxi:spi-2540000.spi:[INFO]: cs num_1 mode_1
+[    6.135410] npu[142][142] vipcore, platform driver init
+[    6.135429] npu[142][142] vipcore, insmod param cpu_physical=0x0
+[    6.135433] npu[142][142] vipcore, insmod param cpu_physical=0x0
+[    6.135436] npu[142][142] vipcore, insmod param cpu_physical=0x0
+[    6.135440] npu[142][142] vipcore, insmod param cpu_physical=0x0
+[    6.135444] npu[142][142] vipcore, platform device compatible=allwinner,npu
+[    6.135732] npu[142][142] vipcore, platform driver device=0xffff0000c0fa3410
+[    6.135812] npu[142][142] clock_rate: 26000000
+[    6.135839] npu[142][142] vipcore irq number is 431.
+[    6.135844] npu[142][142] npu power domains status: 0
+[    6.135860] NPU AXI CLK NULL
+[    6.135863] NPU AHB CLK NULL
+[    6.135866] NPU TZMA CLK NULL
+[    6.135899] npu[142][142] EXTRA: 0x, SID: 0x0, max_freq: 1200000000, default_freq: 1200000000
+[    6.135911] npu[142][142] current dvfs: 0, vf index: 0
+[    6.137666] sunxi:VE:[INFO]: 2143 sunxi_cedar_probe(): probe ve2
+[    6.161027] npu[142][142] successed to set opp regulator
+[    6.161121] npu[142][142] Supported vf list: 
+[    6.161136] npu[142][142]     freq: 492000000, vol: 800000
+[    6.161277] npu[142][142]     freq: 852000000, vol: 800000
+[    6.161359] npu[142][142]     freq: 1008000000, vol: 960000
+[    6.161429] npu[142][142] get freq list and add opp successfully
+[    6.161684] npu[142][142] target rate: 1008000000, vol: 960000, target_fscale: 100
+[    6.161694] npu[142][142] npu devfreq added
+[    6.162404] sunxi-cedar 1c10000.ve2: supply ve not found, using dummy regulator
+[    6.164025] spi-nor spi0.0: w25q64dw (8192 Kbytes)
+[    6.171174] npu[142][142] successed to register cooling device
+[    6.171189] npu[142][142] enable aw vip devfreq
+[    6.171219] npu[142][142] NPU Use VF0000, use freq 1008 MHz
+[    6.171437] sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    6.171522] npu[142][142] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[    6.171531] npu[142][142] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[    6.173012] npu[142][142] Get NPU Regulator Control FAIL!
+[    6.175055] npu[142][142] Want set npu vol(960000) now vol(800000)
+[    6.175095] npu[142][142] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[    6.175108] npu[142][142] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[    6.175162] npu[142][142] vipcore, device_cnt=1, core_cnt=1
+[    6.178473] npu[142][142] core_0, request irqline=431, name=vipcore_0
+[    6.178555] npu[142][142] vipcore, allocate page for video memory, size: 0x400000 bytes
+[    6.178585] npu[142][142] vipcore, heap_cnt=0, reserved video memory cpu_phy=0x103c00000, vip_phy=0x103c00000, size=0x400000
+[    6.178663] npu[142][142] VIPLite driver version 2.0.3.0-AW-2024-05-29
+[    6.180653] sunxipart: failed to parse sunxi_gpt!
+[    6.246752] sunxi:spi-2540000.spi:[INFO]: probe success (Version 2.5.4)
+[    6.313929] deinterlace 5400000.deinterlace: Adding to iommu group 0
+[    6.314077] [sunxi bxm]SysDevInit start!
+[    6.314086] pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[    6.314127] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[    6.314132] pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[    6.314350] sunxi:deinterlace:[INFO]: DI probe
+[    6.318628] pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[    6.318648] pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[    6.318738] pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[    6.319496] pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[    6.319516] pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[    6.319531] [sunxi bxm]SysDevInit end!
+[    6.319598] PVR_K:  327: Read BVNC 36.56.104.183 from HW device registers
+[    6.319626] PVR_K:  327: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[    6.329129] [Awinic] aw87xxx_pa_init:driver version: v2.14.0
+[    6.369144] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    6.410194] sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[    6.410209] sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+[    6.417383] sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[    6.417402] sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+[    6.420445] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    6.420527] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.423121] dwmac-sunxi 4500000.ethernet: IRQ eth_wake_irq not found
+[    6.430653] sunxi:stmmac-4500000.ethernet:[INFO]: Phy use soc fanout
+[    6.432719] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    6.432815] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.438874] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    6.459345] sunxi:stmmac-4500000.ethernet:[INFO]: Not found delay-maps in dts
+[    6.459887] sunxi:stmmac-4500000.ethernet:[INFO]: RGMII use internal transmit clock
+[    6.460231] dwmac-sunxi 4500000.ethernet: User ID: 0x20, Synopsys ID: 0x53
+[    6.460263] dwmac-sunxi 4500000.ethernet: 	DWMAC4/5
+[    6.460279] dwmac-sunxi 4500000.ethernet: DMA HW capability register supported
+[    6.460294] dwmac-sunxi 4500000.ethernet: RX Checksum Offload Engine supported
+[    6.460307] dwmac-sunxi 4500000.ethernet: TX Checksum insertion supported
+[    6.460417] dwmac-sunxi 4500000.ethernet: Wake-Up On Lan supported
+[    6.460867] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    6.460925] sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    6.463739] dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    6.471430] dwmac-sunxi 4500000.ethernet: Enabled RFS Flow TC (entries=8)
+[    6.471453] dwmac-sunxi 4500000.ethernet: Using 32 bits DMA width
+[    6.482685] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    6.486378] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[    6.548775] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[    6.557580] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+[    6.566752] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+[    6.609069] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[    6.664731] aic_bluetooth_mod_init 
+[    6.664746] RELEASE DATE:2026_0123_5f7be68d 
+[    6.677093] Aic high speed USB device detected
+[    6.678214] chip_id=7, chip_mcu_id = 0
+[    6.678224] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+[    6.693979] input: sunxi-ac101b Headphones as /devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card1/input21
+[    6.714648] file md5:54b15ce88b3b9ba14bf961e6f90839fc
+[    6.714671] ### Upload fw_patch_table_8800d80_u02.bin fw_patch_table, size=1384
+[    6.714778] addr_adid 0x201940, addr_patch 0x1e0000
+[    6.714788] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+[    6.717450] file md5:f546881a81b960d89a672578eb45a809
+[    6.717471] ### Upload fw_adid_8800d80_u02.bin firmware, @ = 201940  size=1708
+[    6.717940] fw download complete
+
+[    6.717957] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+[    6.725442] file md5:f5400db1d64e0150c3232eb53e7f78b6
+[    6.725468] ### Upload fw_patch_8800d80_u02.bin firmware, @ = 1e0000  size=32700
+[    6.735850] fw download complete
+
+[    6.735879] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+[    6.742766] file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+[    6.742789] ### Upload fw_patch_8800d80_u02_ext0.bin firmware, @ = 20b43c  size=16136
+[    6.746326] fw download complete
+
+[    6.754336] aicbt_patch_table_load bt btmode[4]:5
+[    6.754353] aicbt_patch_table_load bt btport[4]:1
+[    6.754357] aicbt_patch_table_load bt uart_baud[4]:1500000
+[    6.754362] aicbt_patch_table_load bt uart_flowctrl[4]:1
+[    6.754365] aicbt_patch_table_load bt lpm_enable[4]:0
+[    6.754368] aicbt_patch_table_load bt tx_pwr[4]:6F2F
+[    6.858193] patch version - Aug 01 2025 11:05:26 - git a26f071
+[    6.858241] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+[    6.903891] file md5:280bb388f3b44bf1cbe5ec072ba274da
+[    6.903900] ### Upload fmacfw_8800d80_u02.bin firmware, @ = 120000  size=358072
+[    6.960028] fw download complete
+
+[    6.960042] AICWFDBG(LOGERROR)	Read FW mem: 00120198
+[    6.960123] AICWFDBG(LOGERROR)	120198=177158
+[    6.960172] AICWFDBG(LOGERROR)	1201a0=177c00
+[    6.969915] usbcore: registered new interface driver aic_load_fw
+[    6.975465] app_cmp
+[    6.975527] app_cmp
+[    6.975700] app_cmp
+[    6.975776] app_cmp
+[    6.975858] app_cmp
+[    6.976098] app_cmp
+[    6.976170] app_cmp
+[    6.976254] app_cmp
+[    6.976374] app_cmp
+[    6.976810] app_cmp
+[    6.976828] app_cmp
+[    6.976888] app_cmp
+[    6.977005] app_cmp
+[    6.977389] app_cmp
+[    7.043042] maxio_mae0621aQ3C probe PHY_ID: 0x7b744412
+[    7.107016] sunxi:sunxi_usbc:[INFO]: insmod_device_driver
+
+[    7.107216] sunxi_usb_udc 4100000.udc-controller: supply udc not found, using dummy regulator
+[    7.129962] sunxi:sunxi_usbc:[INFO]: device_chose finished 337!
+[    7.183210] usb 1-1.4: USB disconnect, device number 4
+[    7.198886] sunxi:stmmac-4500000.ethernet:[INFO]: probe success (Version 0.3.2)
+[    7.216603] aicwf_usb_disconnect enter 
+[    7.216616] aicwf_bus_deinit
+[    7.318796] zram: Added device: zram0
+[    7.343743] zram0: detected capacity change from 0 to 4001536
+[    7.371350] Adding 2000764k swap on /dev/zram0.  Priority:100 extents:1 across:2000764k SS
+[    7.655005] sunxi:sound-ac101b:[INFO]: 386 sunxi_adv_headset_heasphone_det(): \x1b[31m headset_basedata:0 key_threshold:17\x1b[0m
+[    7.655978] [sound] jack report -> HEADSET
+[    7.716887] q_sz/max:  0 /  8 - next tkn: 559
+[    7.716904] q_sz/max:  0 /  8 - next tkn: 559
+[    7.716932] usb bustx thread will to stop
+[    7.716938] usb bustx thread stop
+[    7.716975] exit aicwf_bus_deinit
+[    7.717079] usb busrx thread will to stop
+[    7.729110] usb busrx thread stop
+[    8.024780] MAXIO_PHY_VER: v1.8.1.13 
+[    8.037708] dwmac-sunxi 4500000.ethernet eth0: PHY [stmmac-0:01] driver [MAE0621A/B-Q3C(I) Gigabit Ethernet] (irq=POLL)
+[    8.038290] dwmac-sunxi 4500000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[    8.050562] dwmac4: Master AXI performs fixed burst length
+[    8.050585] dwmac-sunxi 4500000.ethernet eth0: No Safety Features support found
+[    8.051022] usb 1-1.4: new high-speed USB device number 7 using xhci-hcd
+[    8.061217] dwmac-sunxi 4500000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[    8.061677] dwmac-sunxi 4500000.ethernet eth0: configuring for phy/rgmii link mode
+[    8.217687] PVR_K:  521: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[    8.223756] PVR_K:  521: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[    8.255582] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d81, bcdDevice= 1.00
+[    8.255602] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    8.255609] usb 1-1.4: Product: AIC 8800D80
+[    8.255615] usb 1-1.4: Manufacturer: AICSemi
+[    8.255620] usb 1-1.4: SerialNumber: 20220103
+[    8.263990] aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[    8.264337] aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[    8.264576] aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[    8.331845] Bluetooth: Core ver 2.22
+[    8.331952] NET: Registered PF_BLUETOOTH protocol family
+[    8.331956] Bluetooth: HCI device and connection manager initialized
+[    8.331970] Bluetooth: HCI socket layer initialized
+[    8.331978] Bluetooth: L2CAP socket layer initialized
+[    8.331990] Bluetooth: SCO socket layer initialized
+[    8.337789] aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+[    8.337803] aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+[    8.337806] aic_btusb: RELEASE DATE: 2023_1211_1958 
+
+[    8.337937] aic_btusb: btusb_probe: usb_interface 00000000c454f432, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+[    8.337948] aicwf_usb_chipmatch USE AIC8800D80
+[    8.337951] endpoint num 3
+[    8.337954] endpoint num 4
+[    8.337956] endpoint num 4
+[    8.337960] aic_btusb: firmware_info_init: Auto suspend is disabled
+[    8.337964] aic_btusb: btusb_probe: download begining...
+[    8.337966] aic_btusb: btusb_probe: download ending...
+[    8.338443] usbcore: registered new interface driver aic_btusb
+[    8.338478] aic_btusb: btusb_open: Start
+[    8.338487]  download_patch 0
+[    8.338523] aic_btusb: btusb_open: End
+[    8.357147] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    8.377485] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    8.378097] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+
+[    8.410993] **********************************************************
+[    8.410995] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    8.410996] **                                                      **
+[    8.410997] ** trace_printk() being used. Allocating extra memory.  **
+[    8.410999] **                                                      **
+[    8.411000] ** This means that this is a DEBUG kernel and it is     **
+[    8.411001] ** unsafe for production use.                           **
+[    8.411002] **                                                      **
+[    8.411003] ** If you see this message and you are not debugging    **
+[    8.411004] ** the kernel, report this immediately to your vendor!  **
+[    8.411005] **                                                      **
+[    8.411006] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    8.411007] **********************************************************
+[    8.454991] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[    8.560452] ========== tcp ack debug tcp_ack_init 
+[    9.091144] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[    9.985916] ieee80211 phy0: 
+               *******************************************************
+               ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+               *******************************************************
+[   10.015719] usbcore: registered new interface driver aic8800_fdrv
+[   10.055915] dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+[   10.160887] AICWFDBG(LOGERROR)	p2p dev addr=f2 ab 5c e1 db 2f
+[   10.182631] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   10.182647] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   10.182651] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   10.182949] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   10.200188] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   10.200197] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   10.200200] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   10.301806] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   10.301836] Bluetooth: BNEP socket layer initialized
+[   10.318246] NET: Registered PF_ALG protocol family
+[   10.411749] Bluetooth: RFCOMM TTY layer initialized
+[   10.411779] Bluetooth: RFCOMM socket layer initialized
+[   10.411799] Bluetooth: RFCOMM ver 1.11
+[   15.279329] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   24.880521] sunxi:sunxi_pd_test-soc@3000000:pd_vi_test@0:[WARN]: runtime_suspend disable clock
+[   24.880553] sunxi:sunxi_pd_test-soc@3000000:pd_ve_dec_test@0:[WARN]: runtime_suspend disable clock
+[   24.880569] sunxi:sunxi_pd_test-soc@3000000:pd_ve_enc_test@0:[WARN]: runtime_suspend disable clock
+[   24.880582] sunxi:sunxi_pd_test-soc@3000000:pd_npu_test@0:[WARN]: runtime_suspend disable clock
+[   24.880590] sunxi:sunxi_pd_test-soc@3000000:pd_pcie_test@0:[WARN]: runtime_suspend disable clock
+[   24.880598] sunxi:sunxi_pd_test-soc@3000000:pd_usb2_test@0:[WARN]: runtime_suspend disable clock
+[   24.880606] sunxi:sunxi_pd_test-soc@3000000:pd_de_sys_test@0:[WARN]: runtime_suspend disable clock
+[   24.880617] sunxi:sunxi_pd_test-soc@3000000:pd_vo_test@0:[WARN]: runtime_suspend disable clock
+[   24.880625] sunxi:sunxi_pd_test-soc@3000000:pd_vo1_test@0:[WARN]: runtime_suspend disable clock
+[   33.761151] axp8191-bldo5: disabling
+[   38.978562] rx eapol
+[   38.981997] rx eapol
+[   38.985222] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   39.180993] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   39.181007] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   39.181012] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   39.181197] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[   39.194804] [drm] sunxi-hdmi: hdmi drv audio set info done
+[   39.194819] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[   39.194823] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[   44.231404] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[  150.363612] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  152.575737] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  154.676705] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  156.776948] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  156.785311] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  156.825521] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  156.825537] [drm] sunxi_de_disable de 0
+[  156.825624] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  156.825776] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  156.825818] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  157.877477] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  157.877841] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  157.877853] [drm] sunxi_de_enable index 0
+[  157.877949] [drm] sunxi_de_enable finish sw en=0
+[  157.877978] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[  157.877985] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[  157.878080] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  157.878150] [drm] [PHY] sunxi_dsi_combophy_configure start
+[  157.878154] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[  157.878162] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[  158.633669] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[  158.668569] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  247.733490] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  247.773801] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  247.773813] [drm] sunxi_de_disable de 0
+[  247.773882] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  247.773983] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  247.774006] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  248.813454] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  248.813778] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  248.813789] [drm] sunxi_de_enable index 0
+[  248.813887] [drm] sunxi_de_enable finish sw en=0
+[  248.813921] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[  248.813928] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[  248.814026] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  248.814100] [drm] [PHY] sunxi_dsi_combophy_configure start
+[  248.814104] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[  248.814112] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[  249.570116] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[  249.604901] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  397.894669] No Fault
+[  397.895265] No Fault
+[  397.912944] No Fault
+[  397.913724] No Fault
+[  397.928691] No Fault
+[  397.929290] No Fault
+[  397.945197] No Fault
+[  397.945796] No Fault
+[  397.961106] No Fault
+[  397.961885] No Fault
+[  397.976828] No Fault
+[  397.977431] No Fault
+[  397.993746] No Fault
+[  397.994539] No Fault
+[  398.008501] No Fault
+[  398.009112] No Fault
+[  398.025032] No Fault
+[  398.025643] No Fault
+[  398.040816] No Fault
+[  398.041604] No Fault
+[  398.056612] No Fault
+[  398.057215] No Fault
+[  398.073412] No Fault
+[  398.074203] No Fault
+[  398.089187] No Fault
+[  398.089793] No Fault
+[  398.104703] No Fault
+[  398.105319] No Fault
+[  398.121482] No Fault
+[  398.122285] No Fault
+[  398.137251] No Fault
+[  398.137859] No Fault
+[  398.153105] No Fault
+[  398.153902] No Fault
+[  451.660104] No Fault
+[  451.660700] No Fault
+[  451.677971] No Fault
+[  451.678573] No Fault
+[  451.694928] No Fault
+[  451.695711] No Fault
+[  451.710676] No Fault
+[  451.711280] No Fault
+[  451.726458] No Fault
+[  451.727244] No Fault
+[  451.742155] No Fault
+[  451.742720] No Fault
+[  451.759043] No Fault
+[  451.759828] No Fault
+[  451.774749] No Fault
+[  451.775306] No Fault
+[  451.790243] No Fault
+[  451.790846] No Fault
+[  451.806768] No Fault
+[  451.807365] No Fault
+[  451.822316] No Fault
+[  451.822927] No Fault
+[  451.838865] No Fault
+[  451.839473] No Fault
+[  451.854417] No Fault
+[  451.855013] No Fault
+[  451.869930] No Fault
+[  451.870527] No Fault
+[  451.886451] No Fault
+[  451.887047] No Fault
+[  451.901960] No Fault
+[  451.902555] No Fault
+[  451.918483] No Fault
+[  451.919079] No Fault
+[  603.289223] No Fault
+[  603.289823] No Fault
+[  603.307466] No Fault
+[  603.308253] No Fault
+[  603.323211] No Fault
+[  603.323809] No Fault
+[  603.340121] No Fault
+[  603.340953] No Fault
+[  603.355842] No Fault
+[  603.356444] No Fault
+[  603.371354] No Fault
+[  603.371953] No Fault
+[  603.388313] No Fault
+[  603.389141] No Fault
+[  603.403115] No Fault
+[  603.403718] No Fault
+[  603.419647] No Fault
+[  603.420247] No Fault
+[  603.435177] No Fault
+[  603.435788] No Fault
+[  603.451974] No Fault
+[  603.452805] No Fault
+[  603.467785] No Fault
+[  603.468386] No Fault
+[  603.483746] No Fault
+[  603.484541] No Fault
+[  603.499483] No Fault
+[  603.500096] No Fault
+[  603.516410] No Fault
+[  603.517233] No Fault
+[  603.531197] No Fault
+[  603.531807] No Fault
+[  603.547727] No Fault
+[  603.548340] No Fault
+[  642.823824] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[  643.304030] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  643.304043] [drm] sunxi-hdmi: [error] hdmi drv plugin read edid failed
+[  643.400010] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp1x
+[  643.495992] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[  643.496012] [drm] sunxi-hdmi: hdmi drv audio set info done
+[  643.496020] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[  643.496027] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[  643.991888] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  643.991900] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  643.991904] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  644.471857] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  644.471871] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  644.471875] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  644.951837] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  644.951850] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  644.951853] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  645.606557] No Fault
+[  645.607131] No Fault
+[  645.624349] No Fault
+[  645.624956] No Fault
+[  645.640806] No Fault
+[  645.641346] No Fault
+[  645.657279] No Fault
+[  645.657879] No Fault
+[  645.672805] No Fault
+[  645.673407] No Fault
+[  645.688292] No Fault
+[  645.688853] No Fault
+[  645.704964] No Fault
+[  645.705636] No Fault
+[  645.720883] No Fault
+[  645.721673] No Fault
+[  645.736660] No Fault
+[  645.737260] No Fault
+[  645.753407] No Fault
+[  645.754177] No Fault
+[  645.769343] No Fault
+[  645.769940] No Fault
+[  645.781144] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  645.781273] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  645.781280] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[  645.781284] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[  645.781310] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[  645.781323] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[  645.781328] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  645.781334] [drm] sunxi_de_enable index 1
+[  645.781359] [drm] sunxi_de_enable finish sw en=0
+[  645.781376] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[  645.781450] [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[  645.781518] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[  645.781522] [drm] sunxi-hdmi: dw packet unset when dvi mode
+[  645.784921] No Fault
+[  645.785515] No Fault
+[  645.800714] No Fault
+[  645.801497] No Fault
+[  645.802167] [drm] sunxi-hdmi: [top phy]
+[  645.802178] [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+[  645.802182] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[  645.802209] [drm] sunxi-hdmi: top phy config done
+[  645.802543] [drm] sunxi-hdmi: [snps phy]
+[  645.802545] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[  645.802548] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[  645.802552] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[  645.802555] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[  645.803066] [drm] sunxi-hdmi: snps phy state: lock
+[  645.816474] No Fault
+[  645.817069] No Fault
+[  645.832997] No Fault
+[  645.833592] No Fault
+[  645.848340] No Fault
+[  645.848824] No Fault
+[  645.853078] [drm] sunxi-hdmi: hdmi drv enable output done
+[  645.853084] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[  645.864554] No Fault
+[  645.865044] No Fault
+[  645.871545] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  645.871556] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  646.379495] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  646.379508] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  646.379513] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  646.875606] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  646.875619] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  646.875623] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  663.809590] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  666.033825] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  668.257677] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  670.481633] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[  670.490938] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  670.530421] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  670.530436] [drm] sunxi_de_disable de 0
+[  670.530526] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  670.530695] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  670.575182] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  670.575194] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  670.591140] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  670.591148] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  670.607155] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  670.627300] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  670.627310] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  670.641133] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  670.641141] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  671.145319] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  671.145332] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  671.145336] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  671.633204] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  671.633217] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  671.633221] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  672.117233] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  672.117245] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  672.117249] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  672.601190] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  672.601202] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  672.601206] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  673.081151] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  673.081164] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  673.081168] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  673.573192] [drm] sunxi-hdmi: [error] hdmi drv i2c read edid failed
+[  673.573215] [drm] sunxi-hdmi: [error] drm get mode read edid failed
+[  673.573223] [drm] sunxi-hdmi: [warn] hdmi drv use default edid modes
+[  686.075119] [drm] sunxi-hdmi: hdmi drv detect hpd disconnect
+[  686.672835] rx eapol
+[  686.678910] rx eapol
+[  686.807936] [drm] sunxi-hdmi: hdmi drv select dvi output
+[  686.807951] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[  686.807955] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[  686.807981] [drm] sunxi-hdmi: hdmi drv has been disable!
+[  686.808006] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[  686.808066] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  686.808072] [drm] sunxi_de_disable de 1
+[  686.808139] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[  686.808148] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[  686.808176] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  686.808231] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  686.808280] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  686.823824] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[  686.823978] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  686.823982] [drm] sunxi_de_enable index 0
+[  686.824052] [drm] sunxi_de_enable finish sw en=0
+[  686.824071] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[  686.824075] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[  686.824136] [drm] [DSI] sunxi_lcd_pin_set_state start
+[  686.824182] [drm] [PHY] sunxi_dsi_combophy_configure start
+[  686.824184] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[  686.824190] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[  687.580006] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[  687.613839] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  695.574866] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[  696.099326] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[  696.099341] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[  696.099345] [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[  696.099355] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[  696.099360] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[  696.099364] [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[  696.115161] [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[  696.131150] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[  696.131167] [drm] sunxi-hdmi: hdmi drv audio set info done
+[  696.131174] [drm] sunxi-hdmi: dw audio unset when hdmi_on(0) audio_on(0)
+[  696.131181] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[  696.146969] [drm] sunxi-hdmi: cec drv clock enable done
+[  696.147027] [drm] sunxi-hdmi: sunxi cec drv enable finish
+[  696.147314] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  696.147980] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  696.150111] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  696.970159] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  696.970273] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[  696.970278] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[  696.970296] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[  696.970305] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[  696.970309] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  696.970314] [drm] sunxi_de_enable index 1
+[  696.970331] [drm] sunxi_de_enable finish sw en=0
+[  696.970345] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[  696.970386] [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[  696.970448] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[  696.992854] [drm] sunxi-hdmi: [top phy]
+[  696.992860] [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+[  696.992863] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[  696.992886] [drm] sunxi-hdmi: top phy config done
+[  696.993214] [drm] sunxi-hdmi: [snps phy]
+[  696.993215] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[  696.993217] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[  696.993219] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[  696.993221] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[  696.993736] [drm] sunxi-hdmi: snps phy state: lock
+[  697.043745] [drm] sunxi-hdmi: hdmi drv enable output done
+[  697.043748] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[  697.055099] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  697.075689] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  697.078401] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.030416] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  707.048371] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  707.082091] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[  707.082160] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[  707.082415] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  707.082422] [drm] sunxi_de_disable de 1
+[  707.082465] [drm] sunxi-hdmi: sunxi hdmi select vic 100 use hdmi14 vsif
+[  707.082490] [drm] sunxi-hdmi: drm hdmi mode set: 4096*2160 >>>>>>>>>>>>>>>>
+[  707.082496] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  707.082501] [drm] sunxi_de_enable index 1
+[  707.082519] [drm] sunxi_de_enable finish sw en=0
+[  707.082535] [drm] suxni tcon hdmi set rate: 297000000Hz and get diff: 297000000Hz
+[  707.082584] [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[  707.082646] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[  707.103691] [drm] sunxi-hdmi: [top phy]
+[  707.103699] [drm] sunxi-hdmi:  - 297000KHz, tmds clock
+[  707.103705] [drm] sunxi-hdmi:    - pll: 0xE807B602, 0x00035000, 0x00000000, 0x30000000
+[  707.103731] [drm] sunxi-hdmi: top phy config done
+[  707.104065] [drm] sunxi-hdmi: [snps phy]
+[  707.104067] [drm] sunxi-hdmi:  - refer clock: 297000KHz, color bits: 8, repeat: 0
+[  707.104070] [drm] sunxi-hdmi:     - mpll: 0x0000, 0x3041, 0x0205
+[  707.104073] [drm] sunxi-hdmi:  - refer clock: 297000KHz. [185625KHz~340000KHz]
+[  707.104077] [drm] sunxi-hdmi:     - drive: 0x0004, 0x8040, 0x8e85
+[  707.104498] [drm] sunxi-hdmi: snps phy state: lock
+[  707.155646] [drm] sunxi-hdmi: hdmi drv enable output done
+[  707.155653] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[  707.162165] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  707.198423] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.208592] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  707.208782] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[  707.208911] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[  707.208922] [drm] sunxi_de_disable de 1
+[  707.209074] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  707.209275] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  707.329738] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[  707.330160] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[  707.330167] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[  707.330231] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[  707.330250] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[  707.330257] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[  707.330265] [drm] sunxi_de_enable index 1
+[  707.330292] [drm] sunxi_de_enable finish sw en=0
+[  707.330315] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[  707.330376] [drm] sunxi-hdmi: [error] tcon clock rate is 0
+[  707.330442] [drm] sunxi-hdmi: [error] dw audio check params is invalid!
+[  707.352563] [drm] sunxi-hdmi: [top phy]
+[  707.352567] [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+[  707.352572] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[  707.352596] [drm] sunxi-hdmi: top phy config done
+[  707.352929] [drm] sunxi-hdmi: [snps phy]
+[  707.352931] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[  707.352934] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[  707.352938] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[  707.352941] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[  707.353455] [drm] sunxi-hdmi: snps phy state: lock
+[  707.404609] [drm] sunxi-hdmi: hdmi drv enable output done
+[  707.404611] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[  707.410246] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[  707.429389] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.434408] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.435646] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.436516] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.437686] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  707.440863] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  712.454727] [drm] sunxi-hdmi: drm get edid support modes: 48
+[  736.015952] rx eapol
+[  736.021005] rx eapol

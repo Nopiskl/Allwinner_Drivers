@@ -1,0 +1,42 @@
+COMMAND: sh -c 
+    date -Is
+    hostnamectl 2>/dev/null || true
+    uname -a
+    cat /etc/os-release
+    uptime
+    id
+    printf "\n/proc/cmdline:\n"
+    cat /proc/cmdline
+    printf "\nboot_id:\n"
+    cat /proc/sys/kernel/random/boot_id
+
+
+2026-07-31T12:47:46+00:00
+ Static hostname: radxa-cubie-a7a
+       Icon name: computer
+      Machine ID: 47b16f4234204dfe93a6539cab7c0555
+         Boot ID: 7a8fe62ed15a4392ad59a74c783e215a
+Operating System: Debian GNU/Linux 13 (trixie)
+          Kernel: Linux 6.6.98-3-aw2511
+    Architecture: arm64
+Linux radxa-cubie-a7a 6.6.98-3-aw2511 #3 SMP Thu Jun 11 12:38:49 UTC 2026 aarch64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.5
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+ 12:47:46 up 31 min,  2 users,  load average: 0.01, 0.03, 0.04
+uid=0(root) gid=0(root) groups=0(root)
+
+/proc/cmdline:
+root=UUID=653db195-501c-4b19-a720-2fc8f1382665 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr= mac1_addr= quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+
+boot_id:
+7a8fe62e-d15a-4392-ad59-a74c783e215a
+
+EXIT_CODE=0

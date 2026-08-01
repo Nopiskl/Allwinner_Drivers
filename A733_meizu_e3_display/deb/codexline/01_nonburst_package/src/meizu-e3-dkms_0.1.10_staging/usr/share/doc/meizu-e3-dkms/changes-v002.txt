@@ -1,0 +1,34 @@
+Meizu E3 A7A overlay v002
+==========================
+
+Baseline:
+- v001, including Radxa's official dsi0 port@1 graph fix.
+- Radxa's official Cubie A7A 8HD and 10FHD overlays, which both use
+  MIPI_DSI_MODE_VIDEO without MIPI_DSI_MODE_VIDEO_BURST.
+
+Single device-tree behavior change:
+- Remove only MIPI_DSI_MODE_VIDEO_BURST from dsi,flags.
+
+Reason:
+- v001 completed panel initialization and displayed the LightDM greeter.
+- Plasma/KScreen then applied an extended DSI + HDMI layout.
+- The persistent journal recorded 116 sunxi_de_atomic_flush timeouts before
+  DE0 started reading unmapped IOVA 0xfae77000 and then 0xfa000000.
+- In this BSP, VIDEO_BURST selects multiple dedicated register paths and
+  multiplies the DSI pixel/HS clock by 10/9. Both official A7A display
+  overlays avoid that path.
+
+Intentionally unchanged:
+- MIPI_DSI_MODE_LPM and MIPI_DSI_MODE_NO_EOT_PACKET remain set.
+- Meizu's native 1080x2160 timing and 157 MHz pixel clock remain unchanged.
+- Panel reset GPIO/delays, supplies, SEC touch, SGM37604A backlight and
+  GPIO-I2C topology remain unchanged.
+- HDMI remains enabled.
+- No kernel code is modified.
+
+Deployment:
+- The package installs cubie-a7a-meizu-e3-display-v002.dtbo.disabled.
+- It does not enable the overlay or edit extlinux.conf.
+- Enable it only through the Radxa rsetup/u-boot-update mechanism after
+  offline fdtoverlay validation.
+- The l0r rescue entry remains free of overlays.

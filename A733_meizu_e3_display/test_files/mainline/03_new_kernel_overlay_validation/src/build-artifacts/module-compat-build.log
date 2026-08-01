@@ -1,0 +1,46 @@
+=== kernel config ===
+--- /boot/config-6.6.98-3-aw2511
+CONFIG_I2C_GPIO=y
+CONFIG_BACKLIGHT_PWM=y
+--- /proc/config.gz
+CONFIG_I2C_GPIO=y
+CONFIG_BACKLIGHT_PWM=y
+=== installed module lookup ===
+/bin/sh: 17: modinfo: not found
+/bin/sh: 18: modinfo: not found
+=== source compatibility build ===
+992d1cba7de359b2baa736a8e5a65ad2978804bf46c6b2d54002c011e23aedd0  /tmp/meizu-e3-dkms_0.1.9_all.deb
+make: Entering directory '/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9'
+make -C /lib/modules/6.6.98-3-aw2511/build M=/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts clean
+make[1]: Entering directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+make[1]: Leaving directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+make -C /lib/modules/6.6.98-3-aw2511/build M=/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/backlight clean
+make[1]: Entering directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+make[1]: Leaving directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+make: Leaving directory '/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9'
+make: Entering directory '/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9'
+make -C /lib/modules/6.6.98-3-aw2511/build M=/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts modules
+make[1]: Entering directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: aarch64-linux-gnu-gcc (Debian 14.2.0-19) 14.2.0
+  You are using:           gcc (Debian 14.2.0-19) 14.2.0
+  CC [M]  /tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.o
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c: In function ‘sec_ts_parse_dt’:
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c:1329:28: error: implicit declaration of function ‘devm_gpiod_get_from_of_node’; did you mean ‘devm_gpiod_get_array_optional’? [-Wimplicit-function-declaration]
+ 1329 |         pdata->irq_gpiod = devm_gpiod_get_from_of_node(dev, np, "sec,irq_gpio", 0,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                            devm_gpiod_get_array_optional
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c:1329:26: error: assignment to ‘struct gpio_desc *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+ 1329 |         pdata->irq_gpiod = devm_gpiod_get_from_of_node(dev, np, "sec,irq_gpio", 0,
+      |                          ^
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c: At top level:
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c:2199:26: error: initialization of ‘int (*)(struct i2c_client *)’ from incompatible pointer type ‘int (*)(struct i2c_client *, const struct i2c_device_id *)’ [-Wincompatible-pointer-types]
+ 2199 |                 .probe = sec_ts_probe,
+      |                          ^~~~~~~~~~~~
+/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.c:2199:26: note: (near initialization for ‘sec_ts_driver.probe’)
+make[3]: *** [scripts/Makefile.build:243: /tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts/sec_ts_main.o] Error 1
+make[2]: *** [/usr/src/linux-headers-6.6.98-3-aw2511/Makefile:1936: /tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9/drivers/sec_ts] Error 2
+make[1]: *** [Makefile:234: __sub-make] Error 2
+make[1]: Leaving directory '/usr/src/linux-headers-6.6.98-3-aw2511'
+make: *** [Makefile:10: modules] Error 2
+make: Leaving directory '/tmp/codex-meizu-e3-dkms-0.1.9-t4/usr/src/meizu-e3-dkms-0.1.9'

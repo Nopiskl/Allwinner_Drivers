@@ -1,0 +1,22 @@
+Package: meizu-e3-dkms
+Version: 0.1.7
+Architecture: all
+Maintainer: Meizu E3 Port <maintainer@localhost>
+Installed-Size: 799
+Depends: dkms (>= 2.1.0.0), xinput, x11-xserver-utils
+Recommends: device-tree-compiler
+Section: kernel
+Priority: optional
+Homepage: https://github.com/
+Description: Meizu E3 display and touch integration (DKMS)
+ Driver and device-tree overlay sources live under /usr/src/meizu-e3-dkms-<ver>/
+ (Makefile, drivers/, overlay/). DKMS builds kernel modules on the target at
+ configure time; postinst compiles the overlay to /boot/dtbo/*.dtbo.disabled
+ when dtc is available.
+ The desktop autostart helper maps the touchscreen to DSI-1 and reapplies the
+ mapping after display layout changes.
+ .
+ This package does not depend on Debian/Ubuntu archive kernel headers: install
+ linux-headers matching your running kernel (uname -r) from your vendor or
+ board image repository (e.g. Radxa) before expecting DKMS or overlay build to
+ succeed.

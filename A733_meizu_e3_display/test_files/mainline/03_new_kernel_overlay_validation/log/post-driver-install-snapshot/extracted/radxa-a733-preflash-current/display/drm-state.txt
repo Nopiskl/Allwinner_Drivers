@@ -1,0 +1,385 @@
+COMMAND: sh -c 
+    for f in /sys/kernel/debug/dri/*/state; do
+        if [ -r "$f" ]; then
+            printf "\n===== %s =====\n" "$f"
+            cat "$f"
+        fi
+    done
+
+
+
+===== /sys/kernel/debug/dri/0/state =====
+plane[92]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=166
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001011cd
+				size=25923584
+				imported=no
+				dma_addr=0x00000000fc000000
+				vaddr=00000000945a6c6b
+	crtc-pos=1080x2160+0+0
+	src-pos=1080.000000x2160.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  166  | 1080x2160+   0+   0 | 1080x2160+   0+   0 |      none  |   255  | 0x00000000
+
+	ovl@  101000: enable
+		(1080x2160+   0+   0) = (1080x2160) ==> (1080x2160) 
+	afbd@  105000: disable
+
+	tfbd@  105400: disable
+
+	scaler@  104000: disable
+
+	snr@  106400: disable
+
+	sharp@  106000: disable
+
+	cdc@  108000: disable
+
+	gtm disable
+	vch0_cdc_icsc@       0: disable
+	vch0_cdc_icsc@       0: disable
+
+	dlc@  115000: disable
+	gamma0@  116000:
+		gamma_tbl off
+
+	fcm@  111000: disable csc: disable
+	vch0_fcm_icsc@       0: disable
+	vch0_fcm_ocsc@       0: disable
+
+	vch0_csc@  100800: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+plane[100]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=1
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  121000: disable
+		
+	tfbd@  125400: disable
+
+	scaler@  124000: disable
+
+	vch1_csc@  120800: disable
+plane[106]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=2
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  1c1000: disable
+		
+	tfbd@  1c5400: disable
+
+	scaler@  1c4000: disable
+
+	cdc@  1c8000: disable
+
+	uch0_csc@  1c0800: disable
+plane[112]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=3
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  201000: disable
+		
+	scaler@  204000: disable
+
+	uch2_csc@  200800: disable
+blender@  281000: enable
+	 pipe_id | enable | channel | premult |       crtc-pos      
+	---------+--------+---------+---------+---------------------
+	     0   |   true |    0    |  false  | 1080x2160+   0+   0 
+
+
+
+	deband@  287000: disable
+	smbl0@  28b000:
+		smbl_tbl off
+	gamma0@  289000:
+		gamma_tbl on
+	disp0_gamma_csc@       0: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		bcsh: 50 50 50 50
+	dither@  288000: disable
+	fmt@  285000: disable
+
+plane[119]: plane-0-vch2(1)
+	crtc=DE-1
+	fb=166
+		allocated by = X
+		refcount=3
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=3000x2160
+		layers:
+			size[0]=3000x2160
+			pitch[0]=12000
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=001011cd
+				size=25923584
+				imported=no
+				dma_addr=0x00000000fc000000
+				vaddr=00000000945a6c6b
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+1080.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  166  | 1920x1080+1080+   0 | 1920x1080+   0+   0 |   premult  |   255  | 0x00000000
+
+	ovl@  141000: enable
+		(1920x1080+   0+   0) = (1920x1080) ==> (1920x1080) 
+	scaler@  144000: disable
+
+	snr@  146400: disable
+
+	fcm@  151000: disable csc: disable
+	vch2_fcm_icsc@       0: disable
+	vch2_fcm_ocsc@       0: disable
+
+	vch2_csc@  140800: enable
+		in:  colorfmt: rgb, eotf: bt709, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+plane[126]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=1
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  1e1000: disable
+		
+	tfbd@  1e5400: disable
+
+	scaler@  1e4000: disable
+
+	uch1_csc@  1e0800: disable
+plane[132]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=2
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+
+	ovl@  221000: disable
+		
+	scaler@  224000: disable
+
+	uch3_csc@  220800: disable
+blender@  2a1000: enable
+	 pipe_id | enable | channel | premult |       crtc-pos      
+	---------+--------+---------+---------+---------------------
+	     0   |   true |    0    |  false  | 1920x1080+   0+   0 
+
+
+	smbl1@  2ab000:
+		smbl_tbl off
+	gamma1@  2a9000:
+		gamma_tbl on
+	disp1_gamma_csc@       0: enable
+		in:  colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+		out: colorfmt: rgb, eotf: gamma22, colorspace: BT709, range: full
+		bcsh: 50 50 50 50
+	dither@  2a8000: disable
+	fmt@  2a5000: disable
+
+crtc[99]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=1
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0	irqcnt:96860	err:0	fps:59.790
+		format_space:0	yuv_sampling:0	eotf:1	cs:1	color_range:1	data_bits:0
+	offline composite fps:98.17	timeout:96860
+	    vsync: 96860 last rcq at vsync: 81160 offline: disable
+	wb off
+crtc[125]: DE-1
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=1
+	plane_mask=10
+	connector_mask=4
+	encoder_mask=4
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+	on: 1920x1080@60&600Mhz->tcon4	irqcnt:96426	err:0	fps:59.747
+		format_space:0	yuv_sampling:0	eotf:4	cs:1	color_range:1	data_bits:0
+	offline composite fps:99.84	timeout:96426
+	    vsync: 96426 last rcq at vsync: 80729 offline: disable
+	wb off
+connector[144]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+connector[146]: DSI-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+	on:
+	interface type: Single DSI
+	dsi_mode: master-dsi, 	 3dfifo: disabled
+	irqcnt:96873	vblank_cnt:96873	Refresh Rate:59.789
+	clk and data lane work mode:
+		 data0 | data1 | data2 | data3 | clk 
+		-------+-------+-------+-------+------
+		  HS   |  HS   |  HS   |  HS   |  HS   
+	clk source: displl
+		 pixel_clk rate to be set:174444KHz, real pixel_clk rate:175500KHz
+	 hsync-len | hback-porch |  hactive  | hfront-porch | vsync-len | vback-porch | vactive | vfront-porch 
+	-----------+-------------+-----------+--------------+-----------+-------------+---------+--------------
+	      3    |      12     |   1078    |        4     |      4    |      10     |   2160  |       10
+******* tcon reg dump ********
+0x05501000: 80000000 00008a02 00000000 00000000 
+0x05501010: 00000000 00000000 00000000 00000000 
+0x05501020: 00000000 00000000 00000000 00000000 
+0x05501030: 00000000 00000000 00000000 00000000 
+0x05501040: 81000020 f0000001 0437086f 04ba000f 
+0x05501050: 1110000d 00020003 00000000 00000000 
+0x05501060: 10410005 00000000 00000000 00000000 
+0x05501070: 00000000 00000000 00000000 00000000 
+0x05501080: 00000000 00000000 00000000 00000000 
+0x05501090: 00000000 00000000 00000000 00000000 
+0x055010a0: 00000000 00000000 00000000 00000000 
+0x055010b0: 00000000 00000000 00000000 00000000 
+0x055010c0: 00000000 00000000 00000000 00000000 
+0x055010d0: 00000000 00000000 00000000 00000000 
+0x055010e0: 00000000 00000000 00000000 00000000 
+0x055010f0: 00000000 00000000 00000000 04014000 
+0x05501100: 00000000 00000000 00000000 00000000 
+0x05501110: 00000000 00000000 00000000 00000000 
+0x05501120: 00000000 00000000 00000000 00000000 
+0x05501130: 00000000 00000000 00000000 00000000 
+0x05501140: 00000000 00000000 00000000 00000000 
+0x05501150: 00000000 00000000 00000000 00000000 
+0x05501160: 005b0437 06b7086f 01c5000a 00000000 
+0x05501170: 00000000 00000000 00000000 
+0x05501220: 00000000 00000000 00000000 00000000 
+0x05501230: 00000000 00000000 00000000 00000000 
+0x05501240: 00000000 00000000 00000000 00000000 
+******* dsi reg dump ********
+0x05506000: 01010001 000a0004 00000000 00000003 
+0x05506010: 00070001 00f20017 000a0004 08880870 
+0x05506020: 0000001f 10000001 20000010 2000000f 
+0x05506030: 30100001 40000010 0000000f 5000001f 
+0x05506040: 30000002 00000031 63f07602 00560001 
+0x05506050: 00000000 00000031 00000000 00000000 
+0x05506060: 0000000a 00000000 00000000 00000000 
+0x05506070: 00000000 00000000 00000000 10000000 
+0x05506080: 00010008 00000000 00000000 00000000 
+0x05506090: 220ca83e 00000000 0000ffff ffffffff 
+0x055060a0: 00000000 00000000 00000000 00000000 
+0x055060b0: 12000021 01000031 07000001 12000021 
+0x055060c0: 1a000019 ffff0000 3a001c19 f9350000 
+0x055060d0: 1a000019 ffff0000 00000000 00000000 
+0x055060e0: 290cca19 3f630000 1a000019 ffff0000 
+0x055060f0: 002803f0 036d02c5 00000000 00000000 
+0x05506100: 00000000 00000000 00000000 00000000 
+0x05506110: 00000000 00000000 00000000 00000000 
+0x05506120: 0000001f 20000010 6000000f 30100001 
+0x05506130: 40000010 0000000f 5000001f 00000000 
+0x05506140: 03000002 00000000 00000000 
+0x055061f0: 00000000 00000000 00000000 00000000 
+0x05506200: 00000203 00000000 00000000 00000000 
+0x05506210: 00000000 00000000 00000000 00000000 
+0x05506220: 00000000 00000000 00000000 00000000 
+0x05506230: 00000000 00000000 00000000 00000000 
+0x05506240: 00000000 00000000 00000000 00000000 
+0x05506250: 00000000 00000000 00000000 00000000 
+0x05506260: 00000000 00000000 00000000 00000000 
+0x05506270: 00000000 00000000 00000000 00000000 
+0x05506280: 00000000 00000000 00000000 00000000 
+0x05506290: 00000000 00000000 00000000 00000000 
+0x055062a0: 00000000 00000000 00000000 00000000 
+0x055062b0: 00000000 00000000 00000000 00000000 
+0x055062c0: 00000000 00000000 00000000 00000000 
+0x055062d0: 00000000 00000000 00000000 00000000 
+0x055062e0: 00000708 000a4602 00000000 00000000 
+0x055062f0: 00700000 f07e0000 000000ff 
+0x05507000: 00000031 10000000 00000000 00000000 
+0x05507010: 0906000e 0a033207 0000001e 00000000 
+0x05507020: 00000303 00000000 00000000 00000000 
+0x05507030: 00000000 00000000 00000001 00000000 
+0x05507040: 00000000 00000000 00000000 00777777 
+0x05507050: 80000000 0f000012 ff040000 e4b4327f 
+0x05507060: 00000000 00000000 00000000 00000000 
+0x05507070: ffc00000 000002f0 00000000 00000000 
+0x05507080: 00000000 00000000 00000000 00000000 
+0x05507090: 00000000 00000000 00000000 00000000 
+0x055070a0: 00000000 00000000 00000000 00000000 
+0x055070b0: 00000000 00000000 00000000 00000000 
+0x055070c0: 00000000 00000000 00000000 00000000 
+0x055070d0: 00000000 00000000 00000000 00000000 
+0x055070e0: 15fd5555 00000000 00000000 00000000 
+0x055070f0: 00000000 00000000 00000000 00000000 
+0x05507100: 00000000 23f05181 006f1480 00032800 
+0x05507110: 00001f0b 00000053 00000014 00000000 
+0x05507120: 00000000 00f05181 00000000 00000000 
+0x05507130: 00000000 30200000 40000001 
+connector[148]: HDMI-A-1
+	crtc=DE-1
+	self_refresh_aware=0
+	max_requested_bpc=0
+	colorspace=Default
+
+EXIT_CODE=0

@@ -1,0 +1,21 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+	metadata {
+		title = "Temporarily disable HDMI while debugging Meizu E3 DSI";
+		compatible = "radxa,cubie-a7a";
+		category = "display";
+		exclusive = "hdmi0";
+		description = "DSI-only diagnostic overlay; remove this overlay to restore HDMI";
+	};
+};
+
+/*
+ * Keep the first boot to a single DRM output.  The #21 display driver still
+ * calls de_top_update_force_by_ahb(), so dual-CRTC testing is deferred until
+ * DSI, backlight and touch have each been verified in isolation.
+ */
+&hdmi0 {
+	status = "disabled";
+};

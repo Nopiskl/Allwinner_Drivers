@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Meizu E3 Touch Mapping
+Comment=Keep the touchscreen mapped to the DSI display
+Exec=/usr/lib/meizu-e3-dkms/map-touch-to-dsi.sh
+TryExec=/usr/lib/meizu-e3-dkms/map-touch-to-dsi.sh
+OnlyShowIn=KDE;
+Terminal=false
+NoDisplay=true
+X-KDE-autostart-phase=1

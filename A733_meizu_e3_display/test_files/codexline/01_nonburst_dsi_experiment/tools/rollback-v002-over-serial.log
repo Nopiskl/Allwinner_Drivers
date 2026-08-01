@@ -1,0 +1,34 @@
+--- rollback serial session 2026-07-31T14:59:13.5341149+08:00 ---
+radxa
+Password: 
+Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Jul 31 05:59:12 UTC 2026 on ttyAS0
+[?2004hradxa@radxa-cubie-a7a:~$ sudo -S -p '__SUDO_PASSWORD__' -v
+[?2004lradxa
+__SUDO_PASSWORD__
+[?2004hradxa@radxa-cubie-a7a:~$ sudo -n sh -c 'set -eu; A=/boot/dtbo/cubie-a7a-meizu-e3-display-v002.dtbo; D=$A.disabled; test -f "$A"; test ! -e "$D"; mv "$A" "$D"; /usr/sbin/u-boot-update; sync'
+[?2004lP: Checking for EXTLINUX directory... found.
+P: Writing config for vmlinuz-5.15.147-21-a733...
+P: Updating /boot/extlinux/extlinux.conf...
+[?2004hradxa@radxa-cubie-a7a:~$ echo __VERIFY_BEGIN__; cat /proc/cmdline; printf "active-count="; find /boot/dtbo -maxdepth 1 -type f -name "*.dtbo" | wc -l; find /boot/dtbo -maxdepth 1 -type f -name "cubie-a7a-meizu-e3*" -printf "%f\n" | sort; sh a256sum /boot/dtbo/cubie-a7a-meizu-e3-display-v002.dtbo.disabled; awk '/^label |^[[:space:]]*fdtoverlays|^[[:space:]]*append /{print NR ":" $0}' /boot/extlinux/extlinux.conf; echo __VERIFY_DONE__
+[?2004l__VERIFY_BEGIN__
+root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 splash loglevel=4 rw earlycon consolebecho __CHECK_BEGIN__; cat /proc/cmdline; printf "active-count="; find /boot/dtbo -maxdepth 1 -type f -name "*.dtbo" | wc -l; find /boot/dtbo -maxdepth 1 -type f -name "cubie-a7a-meizu-e3*" -printf "%f\n" | sort; sha256sum /boot/dtbo/cubie-a7a-meizu-e3-display-v002.dtbo.disabled; awk '/^label |^[[:space:]]*fdtoverlays|^[[:space:]]*append /{print NR ":" $0}' /boot/extlinux/extlinux.conf; echo __VERIFY_''DONE__
+[?2004l__CHECK_BEGIN__
+root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+active-count=0
+cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+cubie-a7a-meizu-e3-display-v002.dtbo.disabled
+b05d2220b31452a46ffb83940f349d1827be0d4c8e352f36b9e04fb9b0db3be2  /boot/dtbo/cubie-a7a-meizu-e3-display-v002.dtbo.disabled
+14:label l0
+20:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+22:label l0r
+27:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+__VERIFY_DONE__
+[?2004hradxa@radxa-cubie-a7a:~$ 

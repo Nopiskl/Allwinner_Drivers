@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Map Meizu E3 touch panel to DSI
+TryExec=/usr/local/libexec/meizu-e3-map-touch-once
+Exec=/usr/local/libexec/meizu-e3-map-touch-once
+StartupNotify=false
+NoDisplay=true
+
+X-GNOME-Autostart-Phase=Application
+X-KDE-autostart-phase=2

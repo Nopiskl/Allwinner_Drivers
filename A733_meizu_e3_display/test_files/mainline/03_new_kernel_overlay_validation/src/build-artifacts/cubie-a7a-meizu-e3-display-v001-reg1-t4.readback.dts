@@ -1,0 +1,267 @@
+/dts-v1/;
+
+/ {
+
+	metadata {
+		title = "Enable Meizu E3 Panel for Radxa A7A (v001)";
+		compatible = "radxa,cubie-a7a";
+		category = "display";
+		exclusive = "dlcd0", "dsi0", "dsi0combophy", "PD18", "PD19", "PD16", "PD17", "PD21", "PD23";
+		description = "Meizu E3 panel based on the official Radxa Cubie A7A DSI overlay topology; includes the official dsi0 port@1 graph fix";
+	};
+
+	fragment@0 {
+		target-path = "/";
+
+		__overlay__ {
+
+			backlight0 {
+				compatible = "pwm-backlight";
+				status = "okay";
+				enable-gpio = <0xffffffff 0x03 0x17 0x00>;
+				brightness-levels = <0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f 0x10 0x11 0x12 0x13 0x14 0x15 0x16 0x17 0x18 0x19 0x1a 0x1b 0x1c 0x1d 0x1e 0x1f 0x20 0x21 0x22 0x23 0x24 0x25 0x26 0x27 0x28 0x29 0x2a 0x2b 0x2c 0x2d 0x2e 0x2f 0x30 0x31 0x32 0x33 0x34 0x35 0x36 0x37 0x38 0x39 0x3a 0x3b 0x3c 0x3d 0x3e 0x3f 0x40 0x41 0x42 0x43 0x44 0x45 0x46 0x47 0x48 0x49 0x4a 0x4b 0x4c 0x4d 0x4e 0x4f 0x50 0x51 0x52 0x53 0x54 0x55 0x56 0x57 0x58 0x59 0x5a 0x5b 0x5c 0x5d 0x5e 0x5f 0x60 0x61 0x62 0x63 0x64 0x65 0x66 0x67 0x68 0x69 0x6a 0x6b 0x6c 0x6d 0x6e 0x6f 0x70 0x71 0x72 0x73 0x74 0x75 0x76 0x77 0x78 0x79 0x7a 0x7b 0x7c 0x7d 0x7e 0x7f 0x80 0x81 0x82 0x83 0x84 0x85 0x86 0x87 0x88 0x89 0x8a 0x8b 0x8c 0x8d 0x8e 0x8f 0x90 0x91 0x92 0x93 0x94 0x95 0x96 0x97 0x98 0x99 0x9a 0x9b 0x9c 0x9d 0x9e 0x9f 0xa0 0xa1 0xa2 0xa3 0xa4 0xa5 0xa6 0xa7 0xa8 0xa9 0xaa 0xab 0xac 0xad 0xae 0xaf 0xb0 0xb1 0xb2 0xb3 0xb4 0xb5 0xb6 0xb7 0xb8 0xb9 0xba 0xbb 0xbc 0xbd 0xbe 0xbf 0xc0 0xc1 0xc2 0xc3 0xc4 0xc5 0xc6 0xc7 0xc8 0xc9 0xca 0xcb 0xcc 0xcd 0xce 0xcf 0xd0 0xd1 0xd2 0xd3 0xd4 0xd5 0xd6 0xd7 0xd8 0xd9 0xda 0xdb 0xdc 0xdd 0xde 0xdf 0xe0 0xe1 0xe2 0xe3 0xe4 0xe5 0xe6 0xe7 0xe8 0xe9 0xea 0xeb 0xec 0xed 0xee 0xef 0xf0 0xf1 0xf2 0xf3 0xf4 0xf5 0xf6 0xf7 0xf8 0xf9 0xfa 0xfb 0xfc 0xfd 0xfe 0xff>;
+				default-brightness-level = <0x49>;
+				pwms = <0xffffffff 0x04 0x61a8 0x01>;
+				phandle = <0x01>;
+			};
+
+			dsi_panel@1 {
+				compatible = "allwinner,panel-dsi";
+				status = "okay";
+				power-delay-ms = <0x78>;
+				power0-supply = <0xffffffff>;
+				power1-supply = <0xffffffff>;
+				reset-num = <0x01>;
+				reset-delay-ms = <0x78>;
+				reset-gpios = <0xffffffff 0x03 0x13 0x06>;
+				backlight = <0x01>;
+				dsi,flags = <0xa03>;
+				dsi,lanes = <0x04>;
+				enable-delay-ms = <0x78>;
+				dsi,format = <0x00>;
+				panel-init-sequence = <0x5780111 0x50a0129>;
+				panel-exit-sequence = <0x5000128 0x5000110>;
+				phandle = <0x07>;
+
+				display-timings {
+					native-mode = <0x02>;
+					phandle = <0x08>;
+
+					timing0 {
+						clock-frequency = <0x95ba140>;
+						hback-porch = <0x0d>;
+						hactive = <0x438>;
+						hfront-porch = <0x73>;
+						hsync-len = <0x03>;
+						vback-porch = <0x0a>;
+						vactive = <0x870>;
+						vfront-porch = <0x0a>;
+						vsync-len = <0x04>;
+						phandle = <0x02>;
+					};
+				};
+
+				port {
+
+					endpoint@0 {
+						reg = <0x00>;
+						remote-endpoint = <0x03>;
+						phandle = <0x06>;
+					};
+				};
+			};
+
+			gpio-i2c0 {
+				status = "okay";
+				compatible = "i2c-gpio";
+				scl-gpios = <0xffffffff 0x03 0x10 0x06>;
+				sda-gpios = <0xffffffff 0x03 0x11 0x06>;
+				i2c-gpio,delay-us = <0x02>;
+				#address-cells = <0x01>;
+				#size-cells = <0x00>;
+				phandle = <0x09>;
+
+				backlight@36 {
+					compatible = "sgmicro,sgm37604a";
+					reg = <0x36>;
+					sgmicro,led-channels = <0x07>;
+					sgmicro,max-current = <0x00>;
+					default-brightness-level = <0x7d0>;
+					enable-gpios = <0xffffffff 0x03 0x15 0x00>;
+					phandle = <0x0a>;
+				};
+
+				sec_ts@48 {
+					compatible = "sec,sec_ts";
+					reg = <0x48>;
+					status = "okay";
+					sec,irq_gpio = <0xffffffff 0x03 0x12 0x01>;
+					sec,max_coords = <0x438 0x870>;
+					phandle = <0x0b>;
+				};
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@2 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@3 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pinctrl-0 = <0xffffffff>;
+			pinctrl-1 = <0xffffffff>;
+			pinctrl-names = "active", "sleep";
+
+			ports {
+
+				port@1 {
+					reg = <0x01>;
+					phandle = <0x0c>;
+
+					endpoint {
+						remote-endpoint = <0x04>;
+						phandle = <0x05>;
+					};
+				};
+			};
+
+			panel@0 {
+				compatible = "allwinner,virtual-panel";
+				status = "okay";
+				reg = <0x00>;
+				phandle = <0x0d>;
+
+				ports {
+
+					port@0 {
+						reg = <0x00>;
+						phandle = <0x0e>;
+
+						endpoint@0 {
+							reg = <0x00>;
+							remote-endpoint = <0x05>;
+							phandle = <0x04>;
+						};
+					};
+
+					port@1 {
+						reg = <0x01>;
+						phandle = <0x0f>;
+
+						endpoint@0 {
+							reg = <0x00>;
+							remote-endpoint = <0x06>;
+							phandle = <0x03>;
+						};
+					};
+				};
+			};
+		};
+	};
+
+	__symbols__ {
+		backlight0 = "/fragment@0/__overlay__/backlight0";
+		dsi_panel = "/fragment@0/__overlay__/dsi_panel@1";
+		disp_timings0 = "/fragment@0/__overlay__/dsi_panel@1/display-timings";
+		dsi1_timing0 = "/fragment@0/__overlay__/dsi_panel@1/display-timings/timing0";
+		panel0_in = "/fragment@0/__overlay__/dsi_panel@1/port/endpoint@0";
+		gpio_i2c0 = "/fragment@0/__overlay__/gpio-i2c0";
+		sgm37604_bl = "/fragment@0/__overlay__/gpio-i2c0/backlight@36";
+		sec_ts = "/fragment@0/__overlay__/gpio-i2c0/sec_ts@48";
+		dsi0_out = "/fragment@3/__overlay__/ports/port@1";
+		dsi_out_panel = "/fragment@3/__overlay__/ports/port@1/endpoint";
+		panel = "/fragment@3/__overlay__/panel@0";
+		panel_in = "/fragment@3/__overlay__/panel@0/ports/port@0";
+		panel_input = "/fragment@3/__overlay__/panel@0/ports/port@0/endpoint@0";
+		panel_out = "/fragment@3/__overlay__/panel@0/ports/port@1";
+		panel_output_0 = "/fragment@3/__overlay__/panel@0/ports/port@1/endpoint@0";
+	};
+
+	__fixups__ {
+		pio = "/fragment@0/__overlay__/backlight0:enable-gpio:0", "/fragment@0/__overlay__/dsi_panel@1:reset-gpios:0", "/fragment@0/__overlay__/gpio-i2c0:scl-gpios:0", "/fragment@0/__overlay__/gpio-i2c0:sda-gpios:0", "/fragment@0/__overlay__/gpio-i2c0/backlight@36:enable-gpios:0", "/fragment@0/__overlay__/gpio-i2c0/sec_ts@48:sec,irq_gpio:0";
+		pwm0 = "/fragment@0/__overlay__/backlight0:pwms:0";
+		reg_dc1sw1 = "/fragment@0/__overlay__/dsi_panel@1:power0-supply:0";
+		reg_bldo2 = "/fragment@0/__overlay__/dsi_panel@1:power1-supply:0";
+		dsi0combophy = "/fragment@1:target:0";
+		dlcd0 = "/fragment@2:target:0";
+		dsi0 = "/fragment@3:target:0";
+		dsi0_4lane_pins_a = "/fragment@3/__overlay__:pinctrl-0:0";
+		dsi0_4lane_pins_b = "/fragment@3/__overlay__:pinctrl-1:0";
+	};
+
+	__local_fixups__ {
+
+		fragment@0 {
+
+			__overlay__ {
+
+				dsi_panel@1 {
+					backlight = <0x00>;
+
+					display-timings {
+						native-mode = <0x00>;
+					};
+
+					port {
+
+						endpoint@0 {
+							remote-endpoint = <0x00>;
+						};
+					};
+				};
+			};
+		};
+
+		fragment@3 {
+
+			__overlay__ {
+
+				ports {
+
+					port@1 {
+
+						endpoint {
+							remote-endpoint = <0x00>;
+						};
+					};
+				};
+
+				panel@0 {
+
+					ports {
+
+						port@0 {
+
+							endpoint@0 {
+								remote-endpoint = <0x00>;
+							};
+						};
+
+						port@1 {
+
+							endpoint@0 {
+								remote-endpoint = <0x00>;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};

@@ -1,0 +1,59 @@
+=== exact merged values ===
+flags=a01
+lanes=4
+format=0
+timing: clock-frequency=157000000
+hactive=1080
+hback-porch=13
+hfront-porch=115
+hsync-len=3
+vactive=2160
+vback-porch=10
+vfront-porch=10
+vsync-len=4
+dsi-status=okay
+phy-status=okay
+dsi-port1-reg=1
+virtual-panel-reg=0
+virtual-panel-port0-reg=0
+virtual-panel-port1-reg=1
+hdmi-status=okay
+=== endpoint reciprocity (phandle, remote) ===
+/soc@3000000/dsi0@5506000/ports/port@1/endpoint phandle=23e
+/soc@3000000/dsi0@5506000/ports/port@1/endpoint remote=23d
+/soc@3000000/dsi0@5506000/panel@0/ports/port@0/endpoint@0 phandle=23d
+/soc@3000000/dsi0@5506000/panel@0/ports/port@0/endpoint@0 remote=23e
+/soc@3000000/dsi0@5506000/panel@0/ports/port@1/endpoint@0 phandle=23c
+/soc@3000000/dsi0@5506000/panel@0/ports/port@1/endpoint@0 remote=23f
+/dsi_panel@1/port/endpoint@0 phandle=23f
+/dsi_panel@1/port/endpoint@0 remote=23c
+=== v001 vs v002 compiled readback diff ===
+--- /tmp/v001-readback.dts	2026-07-31 06:34:29.104172205 +0000
++++ /tmp/v002-readback.dts	2026-07-31 06:34:29.108172131 +0000
+@@ -3,11 +3,11 @@
+ / {
+ 
+ 	metadata {
+-		title = "Enable Meizu E3 Panel for Radxa A7A (v001)";
++		title = "Enable Meizu E3 Panel for Radxa A7A (v002)";
+ 		compatible = "radxa,cubie-a7a";
+ 		category = "display";
+ 		exclusive = "dlcd0\0dsi0\0dsi0combophy\0PD18\0PD19\0PD16\0PD17\0PD21\0PD23";
+-		description = "Meizu E3 panel based on the official Radxa Cubie A7A DSI overlay topology; includes the official dsi0 port@1 graph fix";
++		description = "Meizu E3 panel using the official Radxa Cubie A7A non-burst DSI path and dsi0 port@1 graph fix";
+ 	};
+ 
+ 	fragment@0 {
+@@ -35,7 +35,7 @@
+ 				reset-delay-ms = <0x78>;
+ 				reset-gpios = <0xffffffff 0x03 0x13 0x06>;
+ 				backlight = <0x01>;
+-				dsi,flags = <0xa03>;
++				dsi,flags = <0xa01>;
+ 				dsi,lanes = <0x04>;
+ 				enable-delay-ms = <0x78>;
+ 				dsi,format = <0x00>;
+=== hashes ===
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /boot/dtbo/cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+b05d2220b31452a46ffb83940f349d1827be0d4c8e352f36b9e04fb9b0db3be2  /tmp/cubie-a7a-meizu-e3-display-v002.dtbo
+RC 0

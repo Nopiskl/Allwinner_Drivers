@@ -1,0 +1,28 @@
+Meizu E3 A7A overlay v001
+==========================
+
+Baseline:
+- Radxa official cubie-a7a-radxa-display-8hd/10fhd overlay topology.
+- Existing Meizu E3 0.1.8 panel timing, reset, SEC touch, SGM37604A
+  backlight and DSI flags that previously produced a working display.
+
+Change:
+- Add reg = <1> to dsi0_out: port@1.
+
+Reason:
+- This is the same OF graph correction made by Radxa commit
+  4349013e00f21b703a75d620d8589f301ffc0493 for both official Cubie A7A
+  display overlays.
+
+Deployment:
+- The package installs cubie-a7a-meizu-e3-display-v001.dtbo.disabled.
+- It does not enable the overlay or edit extlinux.conf.
+- Enable it through the Radxa rsetup/u-boot-update mechanism only after
+  offline fdtoverlay validation.
+- u-boot-update applies overlays to the normal l0 entry and intentionally
+  omits them from the l0r rescue entry.
+
+Not included:
+- No HDMI disable overlay.
+- No kernel DRM/DSI modification.
+- No speculative timing, DSI flag, delay, GPIO or I2C topology change.

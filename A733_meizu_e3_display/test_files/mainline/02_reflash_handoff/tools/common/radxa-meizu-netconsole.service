@@ -1,0 +1,16 @@
+[Unit]
+Description=Meizu E3 kernel netconsole capture
+Wants=network-online.target
+After=network-online.target
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/modprobe netconsole netconsole=6665@192.168.0.107/wlan0,6666@192.168.0.102/54:6c:eb:8d:10:58
+ExecStartPost=/bin/dmesg -n 8
+ExecStartPost=/bin/sh -c "printf '<3>MEIZU_NETCONSOLE_READY\n' > /dev/kmsg"
+ExecStop=/sbin/modprobe -r netconsole
+
+[Install]
+WantedBy=multi-user.target

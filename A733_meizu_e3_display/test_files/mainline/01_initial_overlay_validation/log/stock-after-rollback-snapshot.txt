@@ -1,0 +1,716 @@
+
+===== IDENTITY =====
+2026-07-31T06:25:52,124737755+00:00
+ 06:25:52 up 2 min,  1 user,  load average: 0.20, 0.17, 0.07
+133.20 997.11
+Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64 GNU/Linux
+running
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+
+===== CMDLINE =====
+root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+
+===== OVERLAY =====
+-rw-r--r-- 1 root root 6464 Jul 31 05:54 /boot/dtbo/cubie-a7a-meizu-e3-display-v001.dtbo.disabled
+8:default l0
+14:label l0
+20:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+22:label l0r
+27:	append root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=${mac} mac1_addr=${mac1} splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+
+===== MODULES =====
+
+===== BOOTS =====
+-2 798c7d7583c444b4a785f04b608f4be9 Mon 2026-04-13 07:18:40 UTC—Fri 2026-07-31 06:12:18 UTC
+-1 7363d425323144ed89955bb88f20c3a9 Fri 2026-07-31 06:15:38 UTC—Fri 2026-07-31 06:20:11 UTC
+ 0 068d17387e14463eadfac186e293a526 Fri 2026-07-31 06:20:11 UTC—Fri 2026-07-31 06:25:52 UTC
+
+===== CURRENT_FAULT_COUNTS =====
+sunxi_de_atomic_flush timeout=0
+L1 PageTable Invalid=0
+L2 PageTable Invalid=0
+Bug is in DE=0
+rcu.*stall=0
+NULL pointer=0
+kernel panic=0
+
+===== CURRENT_DRM =====
+--- /sys/class/drm/card0-HDMI-A-1
+connected
+enabled
+1920x1080
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+4096x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+3840x2160
+2560x1440
+2560x1440
+1920x1080
+1920x1080
+1920x1080i
+1920x1080i
+1920x1080
+1920x1080i
+1920x1080
+1920x1080
+1920x1080
+1920x1080
+1920x1080
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1280x720
+1024x768
+800x600
+640x480
+640x480
+--- /sys/class/drm/card0-Writeback-1
+unknown
+disabled
+--- /sys/kernel/debug/dri/0/state
+plane[93]: plane-0-vch0(0)
+	crtc=DE-0
+	fb=163
+		allocated by = X
+		refcount=2
+		format=XR24 little-endian (0x34325258)
+		modifier=0x0
+		size=1920x1080
+		layers:
+			size[0]=1920x1080
+			pitch[0]=7680
+			offset[0]=0
+			obj[0]:
+				name=0
+				refcount=3
+				start=00100fd2
+				size=8294400
+				imported=no
+				paddr=0x00000000fd800000
+				vaddr=00000000559f5350
+	crtc-pos=1920x1080+0+0
+	src-pos=1920.000000x1080.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+		 layer_id | fb_id |       src-pos       |       crtc-pos      | blend_mode |  alpha |   color 
+		 ---------+-------+---------------------+---------------------+------------+--------+---------
+		     0    |  163  | 1920x1080+   0+   0 | 1920x1080+   0+   0 |      none  |   255  | 0x00000000
+plane[101]: plane-1-vch1(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[107]: plane-2-uch0(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[113]: plane-3-uch2(0)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[120]: plane-0-vch2(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[127]: plane-1-uch1(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+plane[133]: plane-2-uch3(1)
+	crtc=(null)
+	fb=0
+	crtc-pos=0x0+0+0
+	src-pos=0.000000x0.000000+0.000000+0.000000
+	rotation=1
+	normalized-zpos=0
+	color-encoding=ITU-R BT.601 YCbCr
+	color-range=YCbCr limited range
+crtc[100]: DE-0
+	enable=1
+	active=1
+	self_refresh_active=0
+	planes_changed=1
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=1
+	connector_mask=2
+	encoder_mask=2
+	mode: "": 60 148500 1920 2008 2052 2200 1080 1084 1089 1125 0x0 0x5
+	on: 1920x1080@60&600Mhz->tcon4 irqcnt=7874 err=0
+	    format_space: 0 yuv_sampling: 0 eotf:4 cs: 1 color_range: 1 data_bits: 0
+	    vsync: 7874 last rcq at vsync: 1408
+	wb off
+crtc[126]: DE-1
+	enable=0
+	active=0
+	self_refresh_active=0
+	planes_changed=0
+	mode_changed=0
+	active_changed=0
+	connectors_changed=0
+	color_mgmt_changed=0
+	plane_mask=0
+	connector_mask=0
+	encoder_mask=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+	self_refresh_aware=0
+	max_requested_bpc=0
+connector[147]: HDMI-A-1
+	crtc=DE-0
+	self_refresh_aware=0
+	max_requested_bpc=0
+
+===== XFCE_CONFIG =====
+
+===== XORG_FILES =====
+-rw-r--r-- 1 root root 41652 Jul 31 06:20 /var/log/Xorg.0.log
+-rw-r--r-- 1 root root 37449 Jul 31 06:20 /var/log/Xorg.0.log.old
+--- /var/log/Xorg.0.log.old
+[    27.506] (--) Log file renamed from "/var/log/Xorg.pid-586.log" to "/var/log/Xorg.0.log"
+[    27.508] 
+X.Org X Server 1.21.1.2
+X Protocol Version 11, Revision 0
+[    27.508] Current Operating System: Linux radxa-cubie-a7a 5.15.147-21-a733 #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026 aarch64
+[    27.509] Kernel command line: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off single
+[    27.509]  
+[    27.509] Current version of pixman: 0.40.0
+[    27.509] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    27.509] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    27.509] (==) Log file: "/var/log/Xorg.0.log", Time: Fri Jul 31 05:57:35 2026
+[    27.513] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[    27.513] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    27.518] (==) No Layout section.  Using the first Screen section.
+[    27.518] (**) |-->Screen "Default Screen" (0)
+[    27.518] (**) |   |-->Monitor "Default Monitor"
+[    27.519] (**) |   |-->Device "Allwinner Graphics"
+[    27.519] (==) Automatically adding devices
+[    27.519] (==) Automatically enabling devices
+[    27.519] (==) Automatically adding GPU devices
+[    27.519] (==) Automatically binding GPU devices
+[    27.519] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    27.532] (WW) The directory "/usr/share/fonts/X11//TTF/" does not exist.
+[    27.532] 	Entry deleted from font path.
+[    27.532] (WW) The directory "/usr/share/fonts/X11//OTF/" does not exist.
+[    27.532] 	Entry deleted from font path.
+[    27.538] (==) FontPath set to:
+	/usr/share/fonts/X11//misc/,
+	/usr/share/fonts/X11//Type1/,
+	/usr/share/fonts/X11//100dpi/,
+	/usr/share/fonts/X11//75dpi/
+[    27.539] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    27.539] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    27.539] (II) Loader magic: 0xaaaad80dc010
+[    27.539] (II) Module ABI versions:
+[    27.539] 	X.Org ANSI C Emulation: 0.4
+[    27.539] 	X.Org Video Driver: 25.2
+[    27.539] 	X.Org XInput driver : 24.4
+[    27.539] 	X.Org Server Extension : 10.0
+[    27.542] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    27.542] (II) Platform probe for /sys/devices/platform/soc@3000000/1800000.gpu/drm/card1
+[    27.543] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    27.543] (II) Platform probe for /sys/devices/platform/soc@3000000/soc@3000000:sunxi-drm/drm/card0
+[    27.545] (II) no primary bus or device found
+[    27.545] 	falling back to /sys/devices/platform/soc@3000000/1800000.gpu/drm/card1
+[    27.545] (II) LoadModule: "modesetting"
+[    27.548] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    27.556] (II) Module modesetting: vendor="X.Org Foundation"
+[    27.556] 	compiled for 1.21.1.2, module version = 1.21.1
+[    27.556] 	Module class: X.Org Video Driver
+[    27.556] 	ABI class: X.Org Video Driver, version 25.2
+[    27.556] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    27.556] (++) using VT number 7
+
+[    27.584] (II) modeset(0): using drv /dev/dri/card0
+[    27.584] (II) modeset(G0): using drv /dev/dri/card1
+[    27.584] (II) modeset(0): Creating default Display subsection in Screen section
+	"Default Screen" for depth/fbbpp 24/32
+[    27.584] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    27.584] (**) modeset(0): Option "kmsdev" "/dev/dri/card0"
+[    27.584] (**) modeset(0): Option "AccelMethod" "glamor"
+[    27.584] (==) modeset(0): RGB weight 888
+[    27.584] (==) modeset(0): Default visual is TrueColor
+[    27.584] (II) Loading sub module "glamoregl"
+[    27.584] (II) LoadModule: "glamoregl"
+[    27.585] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    27.616] (II) Module glamoregl: vendor="X.Org Foundation"
+[    27.617] 	compiled for 1.21.1.2, module version = 1.0.1
+[    27.617] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    27.785] (II) modeset(0): glamor X acceleration enabled on PowerVR B-Series BXM-4-64
+[    27.785] (II) modeset(0): glamor initialized
+[    27.785] (==) modeset(0): VariableRefresh: disabled
+[    27.785] (==) modeset(0): AsyncFlipSecondaries: disabled
+[    27.785] (II) modeset(0): Output HDMI-1 using monitor section Default Monitor
+[    27.785] (**) modeset(0): Option "Rotate" "normal"
+[    27.786] (II) modeset(0): EDID for output HDMI-1
+[    27.786] (II) modeset(0): Manufacturer: HJW  Model: 2109  Serial#: 20240314
+[    27.786] (II) modeset(0): Year: 2024  Week: 15
+[    27.786] (II) modeset(0): EDID Version: 1.3
+[    27.786] (II) modeset(0): Digital Display Input
+[    27.786] (II) modeset(0): Max Image Size [cm]: horiz.: 70  vert.: 39
+[    27.786] (II) modeset(0): Gamma: 2.20
+[    27.786] (II) modeset(0): No DPMS capabilities specified
+[    27.786] (II) modeset(0): Supported color encodings: RGB 4:4:4 
+[    27.786] (II) modeset(0): First detailed timing is preferred mode
+[    27.786] (II) modeset(0): redX: 0.652 redY: 0.334   greenX: 0.307 greenY: 0.637
+[    27.786] (II) modeset(0): blueX: 0.150 blueY: 0.060   whiteX: 0.313 whiteY: 0.329
+[    27.786] (II) modeset(0): Supported established timings:
+[    27.786] (II) modeset(0): 640x480@60Hz
+[    27.786] (II) modeset(0): 800x600@60Hz
+[    27.786] (II) modeset(0): 1024x768@60Hz
+[    27.786] (II) modeset(0): Manufacturer's mask: 0
+[    27.786] (II) modeset(0): Supported standard timings:
+[    27.786] (II) modeset(0): #0: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    27.786] (II) modeset(0): #1: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    27.786] (II) modeset(0): Supported detailed timing:
+[    27.786] (II) modeset(0): clock: 148.5 MHz   Image Size:  708 x 398 mm
+[    27.786] (II) modeset(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[    27.786] (II) modeset(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    27.786] (II) modeset(0): Ranges: V min: 24 V max: 85 Hz, H min: 30 H max: 100 kHz, PixClock max 305 MHz
+[    27.786] (II) modeset(0): Monitor name: UGREEN-UHD
+[    27.786] (II) modeset(0): Supported detailed timing:
+[    27.786] (II) modeset(0): clock: 241.7 MHz   Image Size:  944 x 531 mm
+[    27.786] (II) modeset(0): h_active: 2560  h_sync: 2608  h_sync_end 2640 h_blank_end 2720 h_border: 0
+[    27.786] (II) modeset(0): v_active: 1440  v_sync: 1442  v_sync_end 1447 v_blanking: 1481 v_border: 0
+[    27.786] (II) modeset(0): Supported detailed timing:
+[    27.786] (II) modeset(0): clock: 256.2 MHz   Image Size:  944 x 531 mm
+[    27.786] (II) modeset(0): h_active: 2560  h_sync: 2736  h_sync_end 3008 h_blank_end 3456 h_border: 0
+[    27.786] (II) modeset(0): v_active: 1440  v_sync: 1443  v_sync_end 1448 v_blanking: 1484 v_border: 0
+[    27.786] (II) modeset(0): Number of EDID sections to follow: 1
+[    27.786] (II) modeset(0): EDID (in hex):
+[    27.787] (II) modeset(0): 	00ffffffffffff0021570921bad73401
+[    27.787] (II) modeset(0): 	0f22010380462778022895a7554ea326
+[    27.787] (II) modeset(0): 	0f5054210800d1c081c0010001000100
+[    27.787] (II) modeset(0): 	010001000100023a801871382d40582c
+[    27.787] (II) modeset(0): 	4500c48e2100001e000000fd0018551e
+[    27.787] (II) modeset(0): 	641e000a202020202020000000fc0055
+[    27.787] (II) modeset(0): 	475245454e2d5548440a202000000010
+[    27.787] (II) modeset(0): 	0000000000000000000000000000013b
+[    27.787] (II) modeset(0): 	020331714f101f22212004133e3d3c5f
+[    27.787] (II) modeset(0): 	6405143f23090707830100006e030c00
+[    27.787] (II) modeset(0): 	1000003c20008001020304e50e616066
+[    27.787] (II) modeset(0): 	656a5e00a0a0a0295030202500b01332
+[    27.787] (II) modeset(0): 	00001819640080a3a02c50b0103510b0
+[    27.787] (II) modeset(0): 	13320000180000000000000000000000
+[    27.787] (II) modeset(0): 	00000000000000000000000000000000
+[    27.787] (II) modeset(0): 	0000000000000000000000000000006e
+[    27.787] (--) modeset(0): HDMI max TMDS frequency 300000KHz
+[    27.787] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Not using mode "4096x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Not using mode "3840x2160" (bad mode clock/interlace/doublescan)
+[    27.787] (II) modeset(0): Printing probed modes for output HDMI-1
+[    27.787] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[    27.787] (II) modeset(0): Modeline "4096x2160"x30.0  297.00  4096 4184 4272 4400  2160 2168 2178 2250 +hsync +vsync (67.5 kHz e)
+[    27.787] (II) modeset(0): Modeline "4096x2160"x24.0  297.00  4096 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (54.0 kHz e)
+[    27.787] (II) modeset(0): Modeline "4096x2160"x30.0  296.70  4096 4184 4272 4400  2160 2168 2178 2250 +hsync +vsync (67.4 kHz e)
+[    27.787] (II) modeset(0): Modeline "4096x2160"x24.0  296.70  4096 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (53.9 kHz e)
+[    27.787] (II) modeset(0): Modeline "3840x2160"x30.0  297.00  3840 4016 4104 4400  2160 2168 2178 2250 +hsync +vsync (67.5 kHz e)
+[    27.787] (II) modeset(0): Modeline "3840x2160"x25.0  297.00  3840 4896 4984 5280  2160 2168 2178 2250 +hsync +vsync (56.2 kHz e)
+[    27.787] (II) modeset(0): Modeline "3840x2160"x24.0  297.00  3840 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (54.0 kHz e)
+[    27.787] (II) modeset(0): Modeline "3840x2160"x30.0  296.70  3840 4016 4104 4400  2160 2168 2178 2250 +hsync +vsync (67.4 kHz e)
+[    27.787] (II) modeset(0): Modeline "3840x2160"x24.0  296.70  3840 5116 5204 5500  2160 2168 2178 2250 +hsync +vsync (53.9 kHz e)
+[    27.787] (II) modeset(0): Modeline "2560x1440"x50.0  256.25  2560 2736 3008 3456  1440 1443 1448 1484 -hsync -vsync (74.1 kHz e)
+[    27.787] (II) modeset(0): Modeline "2560x1440"x60.0  241.70  2560 2608 2640 2720  1440 1442 1447 1481 -hsync -vsync (88.9 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080i"x60.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080i"x50.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x30.0   74.25  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (33.8 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x25.0   74.25  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (28.1 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x24.0   74.25  1920 2558 2602 2750  1080 1084 1089 1125 +hsync +vsync (27.0 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080i"x59.9   74.18  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.7 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x30.0   74.18  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (33.7 kHz e)
+[    27.787] (II) modeset(0): Modeline "1920x1080"x24.0   74.18  1920 2558 2602 2750  1080 1084 1089 1125 +hsync +vsync (27.0 kHz e)
+[    27.787] (II) modeset(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    27.787] (II) modeset(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    27.787] (II) modeset(0): Modeline "1280x720"x30.0   74.25  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (22.5 kHz e)
+[    27.787] (II) modeset(0): Modeline "1280x720"x25.0   74.25  1280 3700 3740 3960  720 725 730 750 +hsync +vsync (18.8 kHz e)
+[    27.788] (II) modeset(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    27.788] (II) modeset(0): Modeline "1280x720"x30.0   74.18  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (22.5 kHz e)
+[    27.788] (II) modeset(0): Modeline "1280x720"x24.0   59.40  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (18.0 kHz e)
+[    27.788] (II) modeset(0): Modeline "1280x720"x24.0   59.34  1280 3040 3080 3300  720 725 730 750 +hsync +vsync (18.0 kHz e)
+[    27.788] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    27.788] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    27.788] (II) modeset(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    27.788] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    27.788] (II) modeset(0): Output HDMI-1 connected
+[    27.788] (II) modeset(0): Using exact sizes for initial modes
+[    27.788] (II) modeset(0): Output HDMI-1 using initial mode 1920x1080 +0+0
+[    27.788] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    27.788] (==) modeset(0): DPI set to (96, 96)
+[    27.788] (II) Loading sub module "fb"
+[    27.788] (II) LoadModule: "fb"
+[    27.788] (II) Module "fb" already built-in
+[    27.788] (II) modeset(G0): Using 24bpp hw front buffer with 32bpp shadow
+[    27.788] (==) modeset(G0): Depth 24, (==) framebuffer bpp 32
+[    27.788] (==) modeset(G0): RGB weight 888
+[    27.788] (==) modeset(G0): Default visual is TrueColor
+[    27.788] (**) modeset(G0): Cannot use glamor with 24bpp packed fb
+[    27.788] (II) modeset(G0): ShadowFB: preferred YES, enabled FORCE
+[    27.788] (II) modeset(G0): Double-buffered shadow updates: off
+[    27.788] (EE) modeset(G0): KMS doesn't support dumb interface
+[    27.788] (EE) modeset(G0): KMS setup failed
+[    27.788] (II) UnloadModule: "modesetting"
+[    27.837] glamor: Implementation returned 0x1908/0x1401 read format/type for depth 30, expected 0x1908/0x8368.  Falling back to software.
+[    27.910] (==) modeset(0): Backing store enabled
+[    27.910] (==) modeset(0): Silken mouse enabled
+[    27.962] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+[    27.962] (==) modeset(0): DPMS enabled
+[    27.962] (WW) modeset(0): Option "DRI" is not used
+[    27.962] (WW) modeset(0): Option "Rotate" is not used
+[    27.962] (II) modeset(0): [DRI2] Setup complete
+[    27.962] (II) modeset(0): [DRI2]   DRI driver: sunxi-drm
+[    27.962] (II) modeset(0): [DRI2]   VDPAU driver: sunxi-drm
+[    27.962] (II) Initializing extension Generic Event Extension
+[    27.963] (II) Initializing extension SHAPE
+[    27.963] (II) Initializing extension MIT-SHM
+[    27.963] (II) Initializing extension XInputExtension
+[    27.964] (II) Initializing extension XTEST
+[    27.964] (II) Initializing extension BIG-REQUESTS
+[    27.964] (II) Initializing extension SYNC
+[    27.964] (II) Initializing extension XKEYBOARD
+[    27.964] (II) Initializing extension XC-MISC
+[    27.964] (II) Initializing extension XFIXES
+[    27.964] (II) Initializing extension RENDER
+[    27.964] (II) Initializing extension RANDR
+[    27.965] (II) Initializing extension COMPOSITE
+[    27.965] (II) Initializing extension DAMAGE
+[    27.965] (II) Initializing extension DOUBLE-BUFFER
+[    27.965] (II) Initializing extension RECORD
+[    27.965] (II) Initializing extension DPMS
+[    27.965] (II) Initializing extension Present
+[    27.965] (II) Initializing extension DRI3
+[    27.965] (II) Initializing extension X-Resource
+[    27.965] (II) Initializing extension XVideo
+[    27.965] (II) Initializing extension XVideo-MotionCompensation
+[    27.965] (II) Initializing extension XFree86-VidModeExtension
+[    27.965] (II) Initializing extension XFree86-DGA
+[    27.965] (II) Initializing extension DRI2
+[    27.966] (II) modeset(0): Damage tracking initialized
+[    27.966] (II) modeset(0): Setting screen physical size to 508 x 285
+[    28.128] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event10)
+[    28.128] (**) 2.4G Mouse: Applying InputClass "libinput keyboard catchall"
+[    28.128] (II) LoadModule: "libinput"
+[    28.128] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    28.138] (II) Module libinput: vendor="X.Org Foundation"
+[    28.138] 	compiled for 1.20.8, module version = 0.30.0
+[    28.138] 	Module class: X.Org XInput Driver
+[    28.138] 	ABI class: X.Org XInput driver, version 24.1
+[    28.138] (II) Using input driver 'libinput' for '2.4G Mouse'
+[    28.138] (**) 2.4G Mouse: always reports core events
+[    28.138] (**) Option "Device" "/dev/input/event10"
+[    28.139] (**) Option "_source" "server/udev"
+[    28.165] (II) event10 - 2.4G Mouse: is tagged by udev as: Keyboard
+[    28.165] (II) event10 - 2.4G Mouse: device is a keyboard
+[    28.166] (II) event10 - 2.4G Mouse: device removed
+[    28.196] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10/event10"
+[    28.196] (II) XINPUT: Adding extended input device "2.4G Mouse" (type: KEYBOARD, id 6)
+[    28.196] (**) Option "xkb_model" "pc105"
+[    28.196] (**) Option "xkb_layout" "us"
+[    28.205] (II) event10 - 2.4G Mouse: is tagged by udev as: Keyboard
+[    28.205] (II) event10 - 2.4G Mouse: device is a keyboard
+[    28.210] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event11)
+[    28.210] (II) No input driver specified, ignoring this device.
+[    28.210] (II) This device may have been added with another device file.
+[    28.215] (II) config/udev: Adding input device 2.4G Mouse (/dev/input/event12)
+[    28.215] (**) 2.4G Mouse: Applying InputClass "libinput pointer catchall"
+[    28.215] (II) Using input driver 'libinput' for '2.4G Mouse'
+[    28.215] (**) 2.4G Mouse: always reports core events
+[    28.215] (**) Option "Device" "/dev/input/event12"
+[    28.215] (**) Option "_source" "server/udev"
+[    28.217] (II) event12 - 2.4G Mouse: is tagged by udev as: Mouse
+[    28.217] (II) event12 - 2.4G Mouse: device is a pointer
+[    28.217] (II) event12 - 2.4G Mouse: device removed
+[    28.268] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12/event12"
+[    28.268] (II) XINPUT: Adding extended input device "2.4G Mouse" (type: MOUSE, id 7)
+[    28.269] (**) Option "AccelerationScheme" "none"
+[    28.269] (**) 2.4G Mouse: (accel) selected scheme none/0
+[    28.269] (**) 2.4G Mouse: (accel) acceleration factor: 2.000
+[    28.269] (**) 2.4G Mouse: (accel) acceleration threshold: 4
+[    28.277] (II) event12 - 2.4G Mouse: is tagged by udev as: Mouse
+[    28.277] (II) event12 - 2.4G Mouse: device is a pointer
+[    28.283] (II) config/udev: Adding input device 2.4G Mouse Consumer Control (/dev/input/event13)
+[    28.283] (**) 2.4G Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    28.283] (II) Using input driver 'libinput' for '2.4G Mouse Consumer Control'
+[    28.283] (**) 2.4G Mouse Consumer Control: always reports core events
+[    28.283] (**) Option "Device" "/dev/input/event13"
+[    28.283] (**) Option "_source" "server/udev"
+[    28.285] (II) event13 - 2.4G Mouse Consumer Control: is tagged by udev as: Keyboard
+[    28.285] (II) event13 - 2.4G Mouse Consumer Control: device is a keyboard
+[    28.285] (II) event13 - 2.4G Mouse Consumer Control: device removed
+[    28.316] (II) libinput: 2.4G Mouse Consumer Control: needs a virtual subdevice
+[    28.316] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13/event13"
+[    28.316] (II) XINPUT: Adding extended input device "2.4G Mouse Consumer Control" (type: MOUSE, id 8)
+[    28.317] (**) Option "AccelerationScheme" "none"
+[    28.317] (**) 2.4G Mouse Consumer Control: (accel) selected scheme none/0
+[    28.317] (**) 2.4G Mouse Consumer Control: (accel) acceleration factor: 2.000
+[    28.317] (**) 2.4G Mouse Consumer Control: (accel) acceleration threshold: 4
+[    28.325] (II) event13 - 2.4G Mouse Consumer Control: is tagged by udev as: Keyboard
+[    28.325] (II) event13 - 2.4G Mouse Consumer Control: device is a keyboard
+[    28.331] (II) config/udev: Adding input device 2.4G Mouse System Control (/dev/input/event14)
+[    28.331] (**) 2.4G Mouse System Control: Applying InputClass "libinput keyboard catchall"
+[    28.331] (II) Using input driver 'libinput' for '2.4G Mouse System Control'
+[    28.331] (**) 2.4G Mouse System Control: always reports core events
+[    28.331] (**) Option "Device" "/dev/input/event14"
+[    28.331] (**) Option "_source" "server/udev"
+[    28.333] (II) event14 - 2.4G Mouse System Control: is tagged by udev as: Keyboard
+[    28.333] (II) event14 - 2.4G Mouse System Control: device is a keyboard
+[    28.333] (II) event14 - 2.4G Mouse System Control: device removed
+[    28.360] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14/event14"
+[    28.360] (II) XINPUT: Adding extended input device "2.4G Mouse System Control" (type: KEYBOARD, id 9)
+[    28.360] (**) Option "xkb_model" "pc105"
+[    28.360] (**) Option "xkb_layout" "us"
+[    28.365] (II) event14 - 2.4G Mouse System Control: is tagged by udev as: Keyboard
+[    28.365] (II) event14 - 2.4G Mouse System Control: device is a keyboard
+[    28.367] (II) config/udev: Adding input device YICHIP 2.4G Receiver (/dev/input/event15)
+[    28.367] (**) YICHIP 2.4G Receiver: Applying InputClass "libinput keyboard catchall"
+[    28.368] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver'
+[    28.368] (**) YICHIP 2.4G Receiver: always reports core events
+[    28.368] (**) Option "Device" "/dev/input/event15"
+[    28.368] (**) Option "_source" "server/udev"
+[    28.372] (II) event15 - YICHIP 2.4G Receiver: is tagged by udev as: Keyboard
+[    28.372] (II) event15 - YICHIP 2.4G Receiver: device is a keyboard
+[    28.372] (II) event15 - YICHIP 2.4G Receiver: device removed
+[    28.408] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16/event15"
+[    28.408] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver" (type: KEYBOARD, id 10)
+[    28.408] (**) Option "xkb_model" "pc105"
+[    28.408] (**) Option "xkb_layout" "us"
+[    28.416] (II) event15 - YICHIP 2.4G Receiver: is tagged by udev as: Keyboard
+[    28.417] (II) event15 - YICHIP 2.4G Receiver: device is a keyboard
+[    28.421] (II) config/udev: Adding input device YICHIP 2.4G Receiver Mouse (/dev/input/event16)
+[    28.421] (**) YICHIP 2.4G Receiver Mouse: Applying InputClass "libinput pointer catchall"
+[    28.421] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Mouse'
+[    28.421] (**) YICHIP 2.4G Receiver Mouse: always reports core events
+[    28.421] (**) Option "Device" "/dev/input/event16"
+[    28.421] (**) Option "_source" "server/udev"
+[    28.424] (II) event16 - YICHIP 2.4G Receiver Mouse: is tagged by udev as: Mouse
+[    28.424] (II) event16 - YICHIP 2.4G Receiver Mouse: device is a pointer
+[    28.424] (II) event16 - YICHIP 2.4G Receiver Mouse: device removed
+[    28.480] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17/event16"
+[    28.480] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Mouse" (type: MOUSE, id 11)
+[    28.480] (**) Option "AccelerationScheme" "none"
+[    28.480] (**) YICHIP 2.4G Receiver Mouse: (accel) selected scheme none/0
+[    28.480] (**) YICHIP 2.4G Receiver Mouse: (accel) acceleration factor: 2.000
+[    28.480] (**) YICHIP 2.4G Receiver Mouse: (accel) acceleration threshold: 4
+[    28.488] (II) event16 - YICHIP 2.4G Receiver Mouse: is tagged by udev as: Mouse
+[    28.489] (II) event16 - YICHIP 2.4G Receiver Mouse: device is a pointer
+[    28.495] (II) config/udev: Adding input device YICHIP 2.4G Receiver System Control (/dev/input/event17)
+[    28.495] (**) YICHIP 2.4G Receiver System Control: Applying InputClass "libinput keyboard catchall"
+[    28.495] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver System Control'
+[    28.495] (**) YICHIP 2.4G Receiver System Control: always reports core events
+[    28.495] (**) Option "Device" "/dev/input/event17"
+[    28.495] (**) Option "_source" "server/udev"
+[    28.497] (II) event17 - YICHIP 2.4G Receiver System Control: is tagged by udev as: Keyboard
+[    28.497] (II) event17 - YICHIP 2.4G Receiver System Control: device is a keyboard
+[    28.497] (II) event17 - YICHIP 2.4G Receiver System Control: device removed
+[    28.532] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18/event17"
+[    28.532] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver System Control" (type: KEYBOARD, id 12)
+[    28.532] (**) Option "xkb_model" "pc105"
+[    28.532] (**) Option "xkb_layout" "us"
+[    28.541] (II) event17 - YICHIP 2.4G Receiver System Control: is tagged by udev as: Keyboard
+[    28.541] (II) event17 - YICHIP 2.4G Receiver System Control: device is a keyboard
+[    28.547] (II) config/udev: Adding input device YICHIP 2.4G Receiver Consumer Control (/dev/input/event18)
+[    28.547] (**) YICHIP 2.4G Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    28.547] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Consumer Control'
+[    28.547] (**) YICHIP 2.4G Receiver Consumer Control: always reports core events
+[    28.547] (**) Option "Device" "/dev/input/event18"
+[    28.547] (**) Option "_source" "server/udev"
+[    28.549] (II) event18 - YICHIP 2.4G Receiver Consumer Control: is tagged by udev as: Keyboard
+[    28.549] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device is a keyboard
+[    28.549] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device removed
+[    28.580] (II) libinput: YICHIP 2.4G Receiver Consumer Control: needs a virtual subdevice
+[    28.580] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19/event18"
+[    28.580] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Consumer Control" (type: MOUSE, id 13)
+[    28.580] (**) Option "AccelerationScheme" "none"
+[    28.580] (**) YICHIP 2.4G Receiver Consumer Control: (accel) selected scheme none/0
+[    28.580] (**) YICHIP 2.4G Receiver Consumer Control: (accel) acceleration factor: 2.000
+[    28.580] (**) YICHIP 2.4G Receiver Consumer Control: (accel) acceleration threshold: 4
+[    28.589] (II) event18 - YICHIP 2.4G Receiver Consumer Control: is tagged by udev as: Keyboard
+[    28.589] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device is a keyboard
+[    28.592] (II) config/udev: Adding input device sunxi-gpadc0/channel0/input0 (/dev/input/event0)
+[    28.592] (II) No input driver specified, ignoring this device.
+[    28.592] (II) This device may have been added with another device file.
+[    28.595] (II) config/udev: Adding input device sunxi-gpadc0/channel1/input0 (/dev/input/event1)
+[    28.595] (II) No input driver specified, ignoring this device.
+[    28.595] (II) This device may have been added with another device file.
+[    28.595] (II) config/udev: Adding input device sunxi-gpadc0/channel2/input0 (/dev/input/event2)
+[    28.595] (II) No input driver specified, ignoring this device.
+[    28.595] (II) This device may have been added with another device file.
+[    28.596] (II) config/udev: Adding input device sunxi-gpadc0/channel3/input0 (/dev/input/event3)
+[    28.596] (II) No input driver specified, ignoring this device.
+[    28.596] (II) This device may have been added with another device file.
+[    28.596] (II) config/udev: Adding input device sunxi-gpadc0/channel4/input0 (/dev/input/event4)
+[    28.596] (II) No input driver specified, ignoring this device.
+[    28.596] (II) This device may have been added with another device file.
+[    28.596] (II) config/udev: Adding input device sunxi-gpadc0/channel5/input0 (/dev/input/event5)
+[    28.596] (II) No input driver specified, ignoring this device.
+[    28.596] (II) This device may have been added with another device file.
+[    28.597] (II) config/udev: Adding input device sunxi-gpadc0/channel6/input0 (/dev/input/event6)
+[    28.597] (II) No input driver specified, ignoring this device.
+[    28.597] (II) This device may have been added with another device file.
+[    28.597] (II) config/udev: Adding input device sunxi-gpadc0/channel7/input0 (/dev/input/event7)
+[    28.597] (II) No input driver specified, ignoring this device.
+[    28.597] (II) This device may have been added with another device file.
+[    28.597] (II) config/udev: Adding input device sunxi_cec (/dev/input/event9)
+[    28.597] (**) sunxi_cec: Applying InputClass "libinput keyboard catchall"
+[    28.597] (II) Using input driver 'libinput' for 'sunxi_cec'
+[    28.597] (**) sunxi_cec: always reports core events
+[    28.597] (**) Option "Device" "/dev/input/event9"
+[    28.597] (**) Option "_source" "server/udev"
+[    28.598] (II) event9  - sunxi_cec: is tagged by udev as: Keyboard Pointingstick
+[    28.598] (II) event9  - sunxi_cec: device is a pointer
+[    28.598] (II) event9  - sunxi_cec: device is a keyboard
+[    28.599] (II) event9  - sunxi_cec: device removed
+[    28.624] (II) libinput: sunxi_cec: needs a virtual subdevice
+[    28.624] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9/event9"
+[    28.624] (II) XINPUT: Adding extended input device "sunxi_cec" (type: MOUSE, id 14)
+[    28.624] (**) Option "AccelerationScheme" "none"
+[    28.624] (**) sunxi_cec: (accel) selected scheme none/0
+[    28.624] (**) sunxi_cec: (accel) acceleration factor: 2.000
+[    28.624] (**) sunxi_cec: (accel) acceleration threshold: 4
+[    28.626] (II) event9  - sunxi_cec: is tagged by udev as: Keyboard Pointingstick
+[    28.627] (II) event9  - sunxi_cec: device is a pointer
+[    28.627] (II) event9  - sunxi_cec: device is a keyboard
+[    28.629] (II) config/udev: Adding input device axp8191-pek (/dev/input/event8)
+[    28.629] (**) axp8191-pek: Applying InputClass "libinput keyboard catchall"
+[    28.629] (II) Using input driver 'libinput' for 'axp8191-pek'
+[    28.629] (**) axp8191-pek: always reports core events
+[    28.629] (**) Option "Device" "/dev/input/event8"
+[    28.629] (**) Option "_source" "server/udev"
+[    28.631] (II) event8  - axp8191-pek: is tagged by udev as: Keyboard
+[    28.632] (II) event8  - axp8191-pek: device is a keyboard
+[    28.632] (II) event8  - axp8191-pek: device removed
+[    28.664] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8/event8"
+[    28.664] (II) XINPUT: Adding extended input device "axp8191-pek" (type: KEYBOARD, id 15)
+[    28.664] (**) Option "xkb_model" "pc105"
+[    28.664] (**) Option "xkb_layout" "us"
+[    28.667] (II) event8  - axp8191-pek: is tagged by udev as: Keyboard
+[    28.667] (II) event8  - axp8191-pek: device is a keyboard
+[    28.668] (II) config/udev: Adding input device sunxi-ac101b Headphones (/dev/input/event19)
+[    28.668] (**) sunxi-ac101b Headphones: Applying InputClass "libinput keyboard catchall"
+[    28.668] (II) Using input driver 'libinput' for 'sunxi-ac101b Headphones'
+[    28.668] (**) sunxi-ac101b Headphones: always reports core events
+[    28.668] (**) Option "Device" "/dev/input/event19"
+[    28.669] (**) Option "_source" "server/udev"
+[    28.670] (II) event19 - sunxi-ac101b Headphones: is tagged by udev as: Keyboard Switch
+[    28.670] (II) event19 - sunxi-ac101b Headphones: device is a keyboard
+[    28.670] (II) event19 - sunxi-ac101b Headphones: device removed
+[    28.708] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21/event19"
+[    28.708] (II) XINPUT: Adding extended input device "sunxi-ac101b Headphones" (type: KEYBOARD, id 16)
+[    28.708] (**) Option "xkb_model" "pc105"
+[    28.708] (**) Option "xkb_layout" "us"
+[    28.712] (II) event19 - sunxi-ac101b Headphones: is tagged by udev as: Keyboard Switch
+[    28.712] (II) event19 - sunxi-ac101b Headphones: device is a keyboard
+[    28.732] (**) 2.4G Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    28.732] (II) Using input driver 'libinput' for '2.4G Mouse Consumer Control'
+[    28.732] (**) 2.4G Mouse Consumer Control: always reports core events
+[    28.732] (**) Option "Device" "/dev/input/event13"
+[    28.732] (**) Option "_source" "_driver/libinput"
+[    28.732] (II) libinput: 2.4G Mouse Consumer Control: is a virtual subdevice
+[    28.732] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13/event13"
+[    28.732] (II) XINPUT: Adding extended input device "2.4G Mouse Consumer Control" (type: KEYBOARD, id 17)
+[    28.732] (**) Option "xkb_model" "pc105"
+[    28.732] (**) Option "xkb_layout" "us"
+[    28.733] (**) YICHIP 2.4G Receiver Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    28.733] (II) Using input driver 'libinput' for 'YICHIP 2.4G Receiver Consumer Control'
+[    28.733] (**) YICHIP 2.4G Receiver Consumer Control: always reports core events
+[    28.733] (**) Option "Device" "/dev/input/event18"
+[    28.733] (**) Option "_source" "_driver/libinput"
+[    28.733] (II) libinput: YICHIP 2.4G Receiver Consumer Control: is a virtual subdevice
+[    28.733] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19/event18"
+[    28.733] (II) XINPUT: Adding extended input device "YICHIP 2.4G Receiver Consumer Control" (type: KEYBOARD, id 18)
+[    28.733] (**) Option "xkb_model" "pc105"
+[    28.733] (**) Option "xkb_layout" "us"
+[    28.733] (**) sunxi_cec: Applying InputClass "libinput keyboard catchall"
+[    28.733] (II) Using input driver 'libinput' for 'sunxi_cec'
+[    28.733] (**) sunxi_cec: always reports core events
+[    28.733] (**) Option "Device" "/dev/input/event9"
+[    28.733] (**) Option "_source" "_driver/libinput"
+[    28.733] (II) libinput: sunxi_cec: is a virtual subdevice
+[    28.733] (**) Option "config_info" "udev:/sys/devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9/event9"
+[    28.733] (II) XINPUT: Adding extended input device "sunxi_cec" (type: KEYBOARD, id 19)
+[    28.733] (**) Option "xkb_model" "pc105"
+[    28.733] (**) Option "xkb_layout" "us"
+[    28.838] (II) modeset(0): Disabling kernel dirty updates, not required.
+[   403.797] (II) event10 - 2.4G Mouse: device removed
+[   403.832] (II) event12 - 2.4G Mouse: device removed
+[   403.904] (II) event14 - 2.4G Mouse System Control: device removed
+[   403.928] (II) event15 - YICHIP 2.4G Receiver: device removed
+[   403.960] (II) event16 - YICHIP 2.4G Receiver Mouse: device removed
+[   404.036] (II) event17 - YICHIP 2.4G Receiver System Control: device removed
+[   404.068] (II) event8  - axp8191-pek: device removed
+[   404.096] (II) event19 - sunxi-ac101b Headphones: device removed
+[   404.156] (II) event13 - 2.4G Mouse Consumer Control: device removed
+[   404.180] (II) event18 - YICHIP 2.4G Receiver Consumer Control: device removed
+[   404.204] (II) event9  - sunxi_cec: device removed
+[   404.244] (II) UnloadModule: "libinput"
+[   404.244] (II) UnloadModule: "libinput"
+[   404.245] (II) UnloadModule: "libinput"
+[   404.245] (II) UnloadModule: "libinput"
+[   404.246] (II) UnloadModule: "libinput"
+[   404.246] (II) UnloadModule: "libinput"
+[   404.246] (II) UnloadModule: "libinput"
+[   404.247] (II) UnloadModule: "libinput"
+[   404.247] (II) UnloadModule: "libinput"
+[   404.247] (II) UnloadModule: "libinput"
+[   404.248] (II) UnloadModule: "libinput"
+[   404.248] (II) UnloadModule: "libinput"
+[   404.248] (II) UnloadModule: "libinput"
+[   404.259] (II) UnloadModule: "libinput"
+[   404.355] (II) Server terminated successfully (0). Closing log file.
+
+===== STDERR =====

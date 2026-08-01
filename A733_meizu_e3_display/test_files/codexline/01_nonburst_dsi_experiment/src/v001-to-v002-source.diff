@@ -1,0 +1,29 @@
+﻿warning: in the working copy of '.\meizu-e3-dkms_0.1.9_staging\usr\src\meizu-e3-dkms-0.1.9\overlay\cubie-a7a-meizu-e3-display.dtso', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.\meizu-e3-dkms_0.1.10_staging\usr\src\meizu-e3-dkms-0.1.10\overlay\cubie-a7a-meizu-e3-display.dtso', LF will be replaced by CRLF the next time Git touches it
+diff --git "a/.\\meizu-e3-dkms_0.1.9_staging\\usr\\src\\meizu-e3-dkms-0.1.9\\overlay\\cubie-a7a-meizu-e3-display.dtso" "b/.\\meizu-e3-dkms_0.1.10_staging\\usr\\src\\meizu-e3-dkms-0.1.10\\overlay\\cubie-a7a-meizu-e3-display.dtso"
+index 0ddfd37..691c6d0 100644
+--- "a/.\\meizu-e3-dkms_0.1.9_staging\\usr\\src\\meizu-e3-dkms-0.1.9\\overlay\\cubie-a7a-meizu-e3-display.dtso"
++++ "b/.\\meizu-e3-dkms_0.1.10_staging\\usr\\src\\meizu-e3-dkms-0.1.10\\overlay\\cubie-a7a-meizu-e3-display.dtso"
+@@ -9,11 +9,11 @@
+ 
+ / {
+ 	metadata {
+-		title = "Enable Meizu E3 Panel for Radxa A7A (v001)";
++		title = "Enable Meizu E3 Panel for Radxa A7A (v002)";
+ 		compatible = "radxa,cubie-a7a";
+ 		category = "display";
+ 		exclusive = "dlcd0", "dsi0", "dsi0combophy", "PD18", "PD19", "PD16", "PD17", "PD21", "PD23";
+-		description = "Meizu E3 panel based on the official Radxa Cubie A7A DSI overlay topology; includes the official dsi0 port@1 graph fix";
++		description = "Meizu E3 panel using the official Radxa Cubie A7A non-burst DSI path and dsi0 port@1 graph fix";
+ 	};
+ };
+ 
+@@ -70,7 +70,7 @@
+ 		reset-delay-ms = <120>;
+ 		reset-gpios = <&pio PD 19 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN)>;
+ 		backlight = <&backlight0>;
+-		dsi,flags = <(MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST | (1 << 11) | MIPI_DSI_MODE_NO_EOT_PACKET)>;
++		dsi,flags = <(MIPI_DSI_MODE_VIDEO | (1 << 11) | MIPI_DSI_MODE_NO_EOT_PACKET)>;
+ 		dsi,lanes = <4>;
+ 		enable-delay-ms = <120>;
+ 		dsi,format = <0>;

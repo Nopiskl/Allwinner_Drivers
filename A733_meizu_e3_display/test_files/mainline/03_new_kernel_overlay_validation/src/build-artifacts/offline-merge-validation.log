@@ -1,0 +1,29 @@
+=== status ===
+dsi0=okay
+dsi0_combophy=okay
+dlcd0=okay
+virtual_panel=okay
+real_panel=okay
+=== DSI properties ===
+dsi_port1_reg=1
+dsi_flags=a03
+dsi_lanes=4
+clock_frequency=157000000
+hactive=1080
+vactive=2160
+=== endpoint reciprocity ===
+dsi_ep_phandle=db
+dsi_ep_remote=da
+vp_in_phandle=da
+vp_in_remote=db
+vp_out_phandle=23d
+vp_out_remote=240
+panel_in_phandle=240
+panel_in_remote=23d
+=== HDMI preservation ===
+hdmi0_symbol=/soc@3000000/hdmi0@5520000
+hdmi0_status=okay
+root_compatible=radxa,cubie-a7a arm,sun60iw2p1
+=== hashes ===
+31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  /tmp/codex-meizu-e3-v001-reg1-t4.dtbo
+d6a7e279315e2a1bcf03c5c2173a1fcbde6c60d0c16a970a9d8e7f544e3439fa  /tmp/codex-meizu-e3-v001-reg1-t4.merged.dtb

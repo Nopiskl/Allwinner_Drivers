@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+active=/boot/dtbo/cubie-a7a-meizu-e3-display-v001-reg1-5.15.dtbo
+disabled=${active}.disabled
+stamp=$(date -u +%Y%m%dT%H%M%SZ)
+
+if [ -f /boot/extlinux/extlinux.conf ]; then
+	cp -a /boot/extlinux/extlinux.conf "/boot/extlinux/extlinux.conf.before-crosscheck-rollback.${stamp}"
+fi
+
+if [ -f "$active" ]; then
+	mv "$active" "$disabled"
+fi
+
+u-boot-update
+
+if grep -Eq '^[[:space:]]*fdtoverlays[[:space:]].*cubie-a7a-meizu-e3-display-v001-reg1-5\.15\.dtbo' /boot/extlinux/extlinux.conf; then
+	echo "ERROR: test overlay is still present in extlinux.conf" >&2
+	exit 1
+fi
+
+echo "Test overlay disabled. Reboot with l0, or keep using l0r for rescue."

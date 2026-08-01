@@ -1,0 +1,103 @@
+COMMAND: sh -c 
+    dkms status 2>&1 || true
+    printf "\nLoaded modules:\n"
+    lsmod
+    printf "\nModule metadata:\n"
+    for m in sec_ts sgm37604a; do
+        modinfo "$m" 2>&1 || true
+    done
+
+
+aic8800-usb/5.0+git20260123.5f7be68d-5, 6.6.98-3-aw2511, aarch64: installed
+img-bxm-dkms/0.1.0-3, 6.6.98-3-aw2511, aarch64: installed
+meizu-e3-drivers-t4/0.1.10, 6.6.98-3-aw2511, aarch64: installed
+radxa-overlays/0.2.25, 6.6.98-3-aw2511, aarch64: installed
+
+Loaded modules:
+Module                  Size  Used by
+sgm37604a              12288  0
+rfcomm                 53248  8
+cmac                   12288  3
+algif_hash             12288  1
+aes_generic            32768  3
+ecb                    12288  1
+algif_skcipher         12288  1
+af_alg                 24576  6 algif_hash,algif_skcipher
+bnep                   20480  2
+aic8800_fdrv          638976  0
+cfg80211              991232  1 aic8800_fdrv
+aic_btusb              40960  0
+bluetooth             634880  30 aic_btusb,bnep,rfcomm
+libaes                 12288  2 bluetooth,aes_generic
+lz4                    12288  8
+lz4_compress           24576  1 lz4
+lz4_decompress         32768  1 lz4
+zram                   24576  2
+zsmalloc               28672  1 zram
+vfat                   20480  2
+fat                    86016  1 vfat
+binfmt_misc            16384  1
+snd_soc_sunxi_i2s      57344  4
+snd_soc_ac101b         77824  1
+snd_soc_sunxi_pcm      28672  1 snd_soc_sunxi_i2s
+snd_soc_sunxi_machine    45056  6
+snd_soc_sunxi_codec_hdmi    16384  1
+snd_soc_sunxi_common   114688  5 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_i2s,snd_soc_sunxi_machine
+snd_soc_aw87x_pa       98304  1 snd_soc_sunxi_common
+snd_soc_core          274432  7 snd_soc_sunxi_codec_hdmi,snd_soc_sunxi_pcm,snd_soc_ac101b,snd_soc_sunxi_common,snd_soc_sunxi_i2s,snd_soc_sunxi_machine,snd_soc_aw87x_pa
+pvrsrvkm             1495040  161
+snd_pcm_dmaengine      16384  2 snd_soc_sunxi_pcm,snd_soc_core
+snd_pcm               139264  4 snd_soc_sunxi_pcm,snd_soc_core,snd_soc_sunxi_machine,snd_pcm_dmaengine
+snd_timer              40960  1 snd_pcm
+snd                   102400  17 snd_timer,snd_soc_core,snd_soc_sunxi_common,snd_pcm,snd_soc_sunxi_i2s
+soundcore              12288  1 snd
+deinterlace           102400  0
+aic_load_fw            86016  1 aic8800_fdrv
+sunxi_ve               49152  0
+sunxi_usbc             36864  0
+pwm_fan                16384  0
+ledtrig_netdev         20480  0
+ledtrig_timer          12288  0
+ledtrig_pattern        12288  0
+ledtrig_heartbeat      12288  0
+ledtrig_default_on     12288  0
+libcomposite           73728  0
+fuse                  151552  5
+nfnetlink              20480  1
+ip_tables              24576  0
+x_tables               40960  1 ip_tables
+autofs4                45056  4
+btrfs                1609728  0
+blake2b_generic        20480  0
+xor                    12288  1 btrfs
+xor_neon               16384  1 xor
+lzo_compress           16384  1 btrfs
+zlib_deflate           32768  1 btrfs
+raid6_pq              102400  1 btrfs
+libcrc32c              12288  1 btrfs
+lzo_decompress         12288  1 btrfs
+rtc_hym8563            12288  1
+
+Module metadata:
+filename:       /lib/modules/6.6.98-3-aw2511/updates/dkms/sec_ts.ko.xz
+license:        GPL
+description:    Samsung Electronics TouchScreen driver
+author:         Younghee, Won<younghee46.won@samsung.com>
+alias:          of:N*T*Csec,sec_tsC*
+alias:          of:N*T*Csec,sec_ts
+alias:          i2c:sec_ts
+depends:        
+name:           sec_ts
+vermagic:       6.6.98-3-aw2511 SMP mod_unload aarch64
+filename:       /lib/modules/6.6.98-3-aw2511/updates/dkms/sgm37604a.ko.xz
+license:        GPL
+description:    SGM37604A Driver
+author:         YeQiang Li <liyeqiang.com>
+alias:          of:N*T*Csgmicro,sgm37604aC*
+alias:          of:N*T*Csgmicro,sgm37604a
+alias:          i2c:sgm37604a
+depends:        
+name:           sgm37604a
+vermagic:       6.6.98-3-aw2511 SMP mod_unload aarch64
+
+EXIT_CODE=0

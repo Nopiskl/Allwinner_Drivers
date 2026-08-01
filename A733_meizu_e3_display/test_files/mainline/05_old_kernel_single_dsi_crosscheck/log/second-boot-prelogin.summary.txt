@@ -1,0 +1,281 @@
+=== identity ===
+5.15.147-21-a733
+0ef6b00f-1b9a-4515-8384-03f9d6f4c9be
+up 5 minutes
+=== toggle state ===
+disabled
+=== Fri 31 Jul 2026 05:41:02 PM UTC === start
++ PATH=/usr/sbin:/usr/bin:/sbin:/bin
++ FORCE_ARG=force
++ ATTR_NODE=/sys/class/hdmi/hdmi/attr/hdmi_source
++ TRIGGER_MIN_WIDTH=0
++ LOCK=/run/hdmi-toggle-once.lock
++ [ force != force ]
++ MODESET=
++ [ -r /sys/class/hdmi/hdmi/attr/hdmi_source ]
++ awk -F| /\| *state *\|/ {gsub(/^ +| +$/,"",$8); print $8; exit} /sys/class/hdmi/hdmi/attr/hdmi_source
++ MODESET=no
++ echo mode_set_from_attr=no
+mode_set_from_attr=no
++ [ force != force ]
++ XAUTH=
++ i=0
++ [ 0 -lt 40 ]
++ + ls -1t /var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca}
+head -n1
++ XAUTH=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca}
++ [ -n /var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --query
++ break
++ [ -n /var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} ]
++ XR=env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr
++ i=0
++ [ 0 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=1
++ sleep 0.5
++ [ 1 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=2
++ sleep 0.5
++ [ 2 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=3
++ sleep 0.5
++ [ 3 -lt 20 ]
++ + headcat -n1 /sys/class/drm/card0-HDMI-A-1/status
+
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=4
++ sleep 0.5
++ [ 4 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=5
++ sleep 0.5
++ [ 5 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=6
++ sleep 0.5
++ [ 6 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=7
++ sleep 0.5
++ [ 7 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=8
++ sleep 0.5
++ [ 8 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=9
++ sleep 0.5
++ [ 9 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=10
++ sleep 0.5
++ [ 10 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=11
++ sleep 0.5
++ [ 11 -lt 20 ]
++ + head -n1
+cat /sys/class/drm/card0-HDMI-A-1/status
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=12
++ sleep 0.5
++ [ 12 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=13
++ sleep 0.5
++ [ 13 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=14
++ sleep 0.5
++ [ 14 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=15
++ sleep 0.5
++ [ 15 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=16
++ sleep 0.5
++ [ 16 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=17
++ sleep 0.5
++ [ 17 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=18
++ sleep 0.5
++ [ 18 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=19
++ sleep 0.5
++ [ 19 -lt 20 ]
++ + cat /sys/class/drm/card0-HDMI-A-1/status
+head -n1
++ STAT=disconnected
++ [ disconnected = connected ]
++ i=20
++ sleep 0.5
++ [ 20 -lt 20 ]
++ OUT=HDMI-1
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --query
++ grep -q ^HDMI-1 connected
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --query
++ awk $2=="connected"{print $1; exit}
++ OUT=DSI-1
++ [ -n DSI-1 ]
++ [ 0 -gt 0 ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --query
++ awk -v o=DSI-1 
+  $1==o && $2=="connected"{in=1; next}
+  in && NF==0 {exit}
+  in && $1 ~ /^[0-9]+x[0-9]+$/ {print $0}
+
+awk: line 2: syntax error at or near in
+awk: line 3: syntax error at or near in
+awk: line 4: syntax error at or near in
++ MODES=
++ printf %s\n 
++ awk  !seen[$1]++ { n++; if (n==2){print $1; exit} }
++ SECOND=
++ [ -n  ]
++ SECOND=1280x720
++ printf %s\n 
++ awk -v r=1280x720 $1==r{print; exit}
++ LINE2=
++ echo SECOND_LINE=
+SECOND_LINE=
++ echo 
++ grep -Eq (^|[[:space:]])60(\.[0-9]+)?
++ RATE2=
++ [ -n  ]
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --output DSI-1 --mode 1280x720
+xrandr: cannot find mode 1280x720
++ true
++ sleep 0.3
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xrandr --output DSI-1 --auto
++ env -i PATH=/usr/sbin:/usr/bin:/sbin:/bin DISPLAY=:0 XAUTHORITY=/var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} xset -dpms s off s noblank
++ date
++ echo === Fri 31 Jul 2026 05:41:13 PM UTC === end
+=== Fri 31 Jul 2026 05:41:13 PM UTC === end
+=== sessions/processes ===
+1  112 sddm  seat0 
+3 1000 radxa       ttyAS0
+6 1000 radxa       
+    459     338 sddm            /usr/bin/sddm
+    510     338 X               /usr/bin/X -nolisten tcp -auth /var/run/sddm/{7b5b17c2-59fe-4021-bc7a-88e1e75ca5ca} -background none -noreset -displayfd 17 -seat seat0 vt7
+    573     336 sddm-helper     /usr/lib/aarch64-linux-gnu/sddm/sddm-helper --socket /tmp/sddm-auth16136c9f-1dc5-471e-bf9f-e86ba446eff6 --id 2 --start /usr/bin/sddm-greeter --socket /tmp/sddm-:0-VxsxrR --theme /usr/share/sddm/themes/debian-theme --user sddm --greeter
+    583     336 sddm-greeter    /usr/bin/sddm-greeter --socket /tmp/sddm-:0-VxsxrR --theme /usr/share/sddm/themes/debian-theme
+=== xrandr ===
+Invalid MIT-MAGIC-COOKIE-1 keyCan't open display :0
+=== backlight ===
+backlight0 brightness=73
+backlight0 actual=73
+sgm37604a brightness=2000
+sgm37604a actual=2000
+=== DRM ===
+card0-DSI-1 status=connected
+card0-DSI-1 enabled=enabled
+card0-HDMI-A-1 status=disconnected
+card0-HDMI-A-1 enabled=disabled
+card0-Writeback-1 status=unknown
+card0-Writeback-1 enabled=disabled
+	crtc=DE-0
+	crtc=(null)
+	crtc=(null)
+	crtc=(null)
+	crtc=(null)
+	crtc=(null)
+	crtc=(null)
+crtc[100]: DE-0
+	enable=1
+	active=1
+	mode: "": 59 157000 1080 1195 1198 1211 2160 2170 2174 2184 0x0 0x0
+	on: 1080x2160@59&600Mhz->tcon0 irqcnt=20485 err=0
+crtc[126]: DE-1
+	enable=0
+	active=0
+	mode: "": 0 0 0 0 0 0 0 0 0 0 0x0 0x0
+	off
+connector[145]: Writeback-1
+	crtc=(null)
+connector[147]: DSI-1
+	crtc=DE-0
+connector[149]: HDMI-A-1
+	crtc=(null)
+=== fatal signatures ===
+=== display tail ===
+[    0.775483] [drm] start DSI-1 monitor monitoring, interval: 100ms
+[    1.791213] [drm] DSI-1 connection detected
+[    1.791324] [drm] DSI-1: Configuration mode 1080x2160@59Hz
+[    1.828262] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    2.600740] [drm] DSI-1: Configuration complete
+[    5.461128] sgm37604a: loading out-of-tree module taints kernel.
+[    6.223704] pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[    6.223746] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[    6.223752] pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[    6.228852] pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[    6.228870] pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[    6.228970] pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[    6.229712] pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[    6.229730] pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[    6.229777] PVR_K:  300: Read BVNC 36.56.104.183 from HW device registers
+[    6.229796] PVR_K:  300: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[    6.252482] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    8.255757] PVR_K:  510: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[    8.261670] PVR_K:  510: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[    9.191377] [drm] sunxi_de_atomic_flush de 1 not enable, skip

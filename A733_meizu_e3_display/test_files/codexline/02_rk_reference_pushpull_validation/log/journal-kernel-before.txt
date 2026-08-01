@@ -1,0 +1,1320 @@
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Linux version 5.15.147-21-a733 (vscode@719ff648175a) (aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #21 SMP PREEMPT Thu Apr 30 12:14:04 UTC 2026
+Apr 13 07:18:40 radxa-cubie-a7a kernel: random: crng init done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Machine model: sun60iw2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: printk: bootconsole [earlycon0] enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: efi: UEFI not found.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Zone ranges:
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   DMA      [mem 0x0000000040000000-0x00000000ffffffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   DMA32    empty
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Movable zone start for each node
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Early memory node ranges
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   node   0: [mem 0x0000000040000000-0x000000013fffffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Initmem setup node 0 [mem 0x0000000040000000-0x000000013fffffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cma: Reserved 16 MiB at 0x00000000ff000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: psci: probing for conduit method from DT.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: psci: PSCIv1.1 detected in firmware.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: psci: Using standard PSCI v0.2 function IDs
+Apr 13 07:18:40 radxa-cubie-a7a kernel: psci: MIGRATE_INFO_TYPE not supported.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: psci: SMC Calling Convention v1.2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: percpu: Embedded 29 pages/cpu s78360 r8192 d32232 u118784
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pcpu-alloc: s78360 r8192 d32232 u118784 alloc=29*4096
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: GIC system register CPU interface
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Kernel command line: root=UUID=2a1371bc-7ff5-43a2-a3f9-7778b6d70186 console=ttyAS0,115200n8 earlyprintk=sunxi-uart,0x2500000 rootwait clk_ignore_unused mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 quiet splash loglevel=4 rw earlycon consoleblank=0 console=tty1 coherent_pool=2M irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 kasan=off
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Unknown kernel command line parameters "splash earlycon mac_addr=08:51:49:58:40:32 mac1_addr=08:51:49:58:40:33 cgroup_enable=memory cgroup_memory=1", will be passed to user space.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Apr 13 07:18:40 radxa-cubie-a7a kernel: software IO TLB: mapped [mem 0x00000000fb000000-0x00000000ff000000] (64MB)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Memory: 3949560K/4194304K available (11776K kernel code, 2910K rwdata, 4180K rodata, 3776K init, 481K bss, 228360K reserved, 16384K cma-reserved)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ftrace: allocating 38759 entries in 152 pages
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ftrace: allocated 152 pages with 3 groups
+Apr 13 07:18:40 radxa-cubie-a7a kernel: trace event string verifier disabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rcu: Preemptible hierarchical RCU implementation.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rcu:         RCU event tracing is enabled.
+Apr 13 07:18:40 radxa-cubie-a7a kernel:         Trampoline variant of Tasks RCU enabled.
+Apr 13 07:18:40 radxa-cubie-a7a kernel:         Rude variant of Tasks RCU enabled.
+Apr 13 07:18:40 radxa-cubie-a7a kernel:         Tracing variant of Tasks RCU enabled.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: 256 SPIs implemented
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: 0 Extended SPIs implemented
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: Distributor has no Range Selector support
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Root IRQ handler: gic_handle_irq
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: 16 PPIs implemented
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU0: found redistributor 0 region 0:0x0000000003460000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ITS: No ITS available, not enabling LPIs
+Apr 13 07:18:40 radxa-cubie-a7a kernel: AW BSP version: 18dcb68d3d, 2026-04-30 12:13:15, RadxaOS SDK
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: ccu will stop clk in init process
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: ccu: sunxi ccu init OK
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: sunxi ccu common driver version: 1.2.4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 1.0.15
+Apr 13 07:18:40 radxa-cubie-a7a kernel: arch_timer: cp15 timer(s) running at 24.00MHz (virt).
+Apr 13 07:18:40 radxa-cubie-a7a kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:timer_sun50i:[INFO]: sun50i timer init:0xffffff00000002, driver version: 1.1.3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: clocksource: timer: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Console: colour dummy device 80x25
+Apr 13 07:18:40 radxa-cubie-a7a kernel: printk: console [tty1] enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: printk: bootconsole [earlycon0] disabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pid_max: default: 32768 minimum: 301
+Apr 13 07:18:40 radxa-cubie-a7a kernel: LSM: Security Framework initializing
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rcu: Hierarchical SRCU implementation.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: EFI services will not be available.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: smp: Bringing up secondary CPUs ...
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU1: found redistributor 100 region 0:0x0000000003480000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU2: found redistributor 200 region 0:0x00000000034a0000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU3: found redistributor 300 region 0:0x00000000034c0000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU4: found redistributor 400 region 0:0x00000000034e0000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU4: Booted secondary processor 0x0000000400 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected VIPT I-cache on CPU5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU5: found redistributor 500 region 0:0x0000000003500000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU5: Booted secondary processor 0x0000000500 [0x412fd050]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Spectre-v4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Spectre-BHB
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected PIPT I-cache on CPU6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU6: found redistributor 600 region 0:0x0000000003520000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU6: Booted secondary processor 0x0000000600 [0x414fd0b1]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Detected PIPT I-cache on CPU7
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GICv3: CPU7: found redistributor 700 region 0:0x0000000003540000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU7: Booted secondary processor 0x0000000700 [0x414fd0b1]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: smp: Brought up 1 node, 8 CPUs
+Apr 13 07:18:40 radxa-cubie-a7a kernel: SMP: Total of 8 processors activated.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: 32-bit EL0 Support
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Common not Private translations
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: CRC32 instructions
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Privileged Access Never
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: RAS Extension Support
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: CPU: All CPU(s) started at EL1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: alternatives: patching kernel code
+Apr 13 07:18:40 radxa-cubie-a7a kernel: devtmpfs: initialized
+Apr 13 07:18:40 radxa-cubie-a7a kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Apr 13 07:18:40 radxa-cubie-a7a kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pinctrl core: initialized pinctrl subsystem
+Apr 13 07:18:40 radxa-cubie-a7a kernel: DMI not present or invalid.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Apr 13 07:18:40 radxa-cubie-a7a kernel: DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+Apr 13 07:18:40 radxa-cubie-a7a kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Apr 13 07:18:40 radxa-cubie-a7a kernel: DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Apr 13 07:18:40 radxa-cubie-a7a kernel: audit: initializing netlink subsys (disabled)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: audit: type=2000 audit(0.020:1): state=initialized audit_enabled=0 res=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal_sys: Registered thermal governor 'fair_share'
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal_sys: Registered thermal governor 'step_wise'
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal_sys: Registered thermal governor 'user_space'
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal thermal_zone3: power_allocator: sustainable_power will be estimated
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+Apr 13 07:18:40 radxa-cubie-a7a kernel: thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpuidle: using governor menu
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ASID allocator initialised with 65536 entries
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: sunxi rtc-ccu version: 0.5.5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: rtc_ccu: sunxi ccu init OK
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: cpupll_ccu: sunxi ccu init OK
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: sunxi pll_cpu driver version: 0.0.5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: r_ccu: sunxi ccu init OK
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu-ng:[INFO]: sunxi ccu driver version: 0.5.6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin:[INFO]: sunxi pinctrl version: 0.6.8
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin:[INFO]: sunxi pinctrl core driver version: 1.4.9
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin:[INFO]: sunxi r-pinctrl version: 0.0.2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-7025000.pinctrl:[INFO]: pinctrl withstand voltage config mode=auto_hard
+Apr 13 07:18:40 radxa-cubie-a7a kernel: platform 5730000.tcon3: Fixing up cyclic dependency with 5000000.de
+Apr 13 07:18:40 radxa-cubie-a7a kernel: platform 5731000.tcon4: Fixing up cyclic dependency with 5000000.de
+Apr 13 07:18:40 radxa-cubie-a7a kernel: platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+Apr 13 07:18:40 radxa-cubie-a7a kernel: HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+Apr 13 07:18:40 radxa-cubie-a7a kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Apr 13 07:18:40 radxa-cubie-a7a kernel: HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-7025000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: iommu: Default domain type: Translated 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: iommu: DMA domain TLB invalidation policy: strict mode 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: vgaarb: loaded
+Apr 13 07:18:40 radxa-cubie-a7a kernel: SCSI subsystem initialized
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usbcore: registered new interface driver usbfs
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usbcore: registered new interface driver hub
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usbcore: registered new device driver usb
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mc: Linux media interface: v0.10
+Apr 13 07:18:40 radxa-cubie-a7a kernel: videodev: Linux video capture interface: v2.00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sun6i-dma 4601000.dma-controller: sunxi dma probed, driver version: 1.2.6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: iommu_master csi_iommu: attach fail:-517
+Apr 13 07:18:40 radxa-cubie-a7a kernel: fbcon: Taking over console
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-twi 7083000.twi: supply twi not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:axp2101-13-0036:[INFO]: AXP20x variant AXP8191 found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc6: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc7: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc8: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dcdc9: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dc1sw1: supplied by axp8191-dcdc1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dc1sw2: supplied by axp8191-dcdc1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-aldo6: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-bldo1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-bldo2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-bldo3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-bldo4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-bldo5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-cldo1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-cldo2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-cldo3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-cldo4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-cldo5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-dldo6: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo1: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo2: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo3: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo4: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo5: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-eldo6: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-rtcldo: supplied by regulator-dummy
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp8191-temp-ctrl: Failed to locate of_node [id: 0]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:axp2101-13-0036:[INFO]: AXP20X driver loaded
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:twi_sunxi-7083000.twi:[INFO]: v2.6.9 probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-twi 7084000.twi: supply twi not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:twi_sunxi-7084000.twi:[INFO]: v2.6.9 probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-twi 7085000.twi: supply twi not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:twi_sunxi-7085000.twi:[INFO]: v2.6.9 probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pwm-2527000.pwm:[INFO]: pwmchip probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pwm-2528000.pwm:[INFO]: pwmchip probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pwm-7023000.pwm:[INFO]: pwmchip probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: clocksource: Switched to clocksource arch_sys_counter
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi_usb_udc 4100000.udc-controller: sunxi:sunxi_usb_udc UDC Inner DMA Feature - wordaddr: 1, extend: enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NET: Registered PF_INET protocol family
+Apr 13 07:18:40 radxa-cubie-a7a kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: MPTCP token hash table entries: 4096 (order: 4, 98304 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Apr 13 07:18:40 radxa-cubie-a7a kernel: PCI: CLS 0 bytes, default 64
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Trying to unpack rootfs image as initramfs...
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+Apr 13 07:18:40 radxa-cubie-a7a kernel: kvm [1]: HYP mode not available
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Initialise system trusted keyrings
+Apr 13 07:18:40 radxa-cubie-a7a kernel: workingset: timestamp_bits=46 max_order=20 bucket_order=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Key type asymmetric registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Asymmetric key parser 'x509' registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: io scheduler mq-deadline registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: io scheduler kyber registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.0.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.1.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.2.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.3.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.4.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.5.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.6.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.7.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.8.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.9.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.10.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.11.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.12.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.13.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.14.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.15.auto: supply bldo1 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.16.auto: supply bldo2 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.17.auto: supply bldo3 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.18.auto: supply bldo4 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.19.auto: supply bldo5 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.20.auto: supply cldo1 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.21.auto: supply cldo2 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.22.auto: supply cldo3 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.23.auto: supply cldo4 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.24.auto: supply cldo5 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.25.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.26.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.27.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.28.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.29.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.30.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.31.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.32.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.33.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.34.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.35.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.36.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.37.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.38.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.38.auto: supply dc1sw1 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.39.auto: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: reg-virt-consumer reg-virt-consumer.39.auto: supply dc1sw2 not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cacheinfo: Unable to detect cache hierarchy for CPU 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ehci-pci: EHCI PCI platform driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ehci-platform: EHCI generic platform driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ohci-pci: OHCI PCI platform driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ohci-platform: OHCI generic platform driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: i2c_dev: i2c /dev entries driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Apr 13 07:18:40 radxa-cubie-a7a kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usbcore: registered new interface driver usbhid
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usbhid: USB HID core driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu_ddr:[ERR]: dram_clk:2400
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ccu_ddr:[ERR]: dram_div:0x170b0703
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: uart-ng 2500000.uart: there is not valid maps for state default
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[ERR]: unknown pin 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: uart-ng 2500000.uart: there is not valid maps for state sleep
+Apr 13 07:18:40 radxa-cubie-a7a kernel: uart-ng uart-ng0: supply uart not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the TX DMA channel!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: cannot get the RX DMA channel!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: uart-ng0: ttyAS0 at MMIO 0x2500000 (irq = 420, base_baud = 1500000) is a SUNXI
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_uart_ng-uart-ng0:[INFO]: console setup baud 115200 parity n bits 8, flow n
+Apr 13 07:18:40 radxa-cubie-a7a kernel: printk: console [ttyAS0] enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NSI_PMU 2020000.nsi-controller: Get support-ecc failed
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-wdt 2050000.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: ctl-spec-caps 328
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vmmc regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vqmmc regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vdmmc regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd33sw regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vd18sw regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq33sw regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: No vq18sw regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: manual set ocr
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get uart0 pinstate,check if needed
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[WARN]: Cann't get pin bias hs pinstate,check if needed
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-mmc 4022000.sdmmc: sunxi:sunxi_mmc_host***ctl-cmdq-md*** 20
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: cq_host:ffff0000c1c7be80, mmc:ffff0000c1c60000, host:ffff0000c1c60580
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mmc1: CQHCI version 0.00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: detmode:alway in(non removable)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: SD/MMC/SDIO Host Controller Driver(v5.59 2025-01-21 15:50  -- v5.66 2025-04-02 16:14)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ctl-spec-caps 428
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vqmmc regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: No vdmmc regulator found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-mmc 4020000.sdmmc: Got CD GPIO
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostcd-set-debounce is 0x1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-mmc 4020000.sdmmc: sunxi:sunxi_mmc_hostexecute tuning in kernel, retune_period=3600
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm UP vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm OD pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000080
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000282
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000484
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000686
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: detmode:gpio irq
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Sunxi ufs driver version 0.0.16 2025.1.20 10:40
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000888
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: freq-table-hz property not specified
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq-max-microamp
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: ufshcd_populate_vreg: unable to find vccq2-max-microamp
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000a8a
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: fore use int ref 26m
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: scsi host0: ufshcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000c8c
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00000e8e
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:g2d_sunxi:[INFO]: [G2D]: rcq version initialized.major:241
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:g2d_sunxi:[INFO]: [G2D]: g2d_module_init
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_init start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [DSI-PANEL] dsi driver regsiter finsh
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_drm_platform_probe start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_sidefuse init success!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001090
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-cadence-combophy 6c00000.serdes: Sub System Version v2.0.0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: resistance calibration supported - enabled, mode - V2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:phy_sunxi_plat-6b00000.phy:[INFO]: phy provider register success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-cadence-combophy 6c00000.serdes: combophy0 set power ON
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001292
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001494
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001696
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001898
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001a9a
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001c9c
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00001e9e
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: no vqmmc,Check if there is regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pin-2000000.pinctrl:[INFO]: Auto power withstand voltage configuration detected, automatically exit!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000020a0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000022a2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: hcc params 0x0118ffc5 hci version 0x120 quirks 0x0000000000010010
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: irq 491, io mem 0x06a00000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: xHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: new USB bus registered, assigned bus number 2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xhci-hcd xhci-hcd.40.auto: Host supports USB 3.1 Enhanced SuperSpeed
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb1: Product: xHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb1: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb1: SerialNumber: xhci-hcd.40.auto
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-0:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-0:1.0: 1 port detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.15
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: Product: xHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: Manufacturer: Linux 5.15.147-21-a733 xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb2: SerialNumber: xhci-hcd.40.auto
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 2-0:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000024a4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 2-0:1.0: 1 port detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:dwc3_sunxi_plat-12.usbc2:[INFO]: DesignWare USB3 Allwinner Glue Layer Driver(v1.0.23 2024-11-25 14:00)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000026a6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi_gpadc_init(): 1806: gpadc class register success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-gpadc 2521000.gpadc: warn: sample rate not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-gpadc 2521000.gpadc: sunxi_gpadc_dts_parse: warn: keyadc not select
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel0/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000028a8
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel1/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel2/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel3/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel4/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002aaa
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel5/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel6/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi-gpadc0/channel7/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input7
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-gpadc 2521000.gpadc: sunxi_gpadc probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002cac
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: axp2101-pek axp2101-pek.0: DMA mask not set
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00002eae
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mmc0: host does not support reading read-only switch, assuming write-enable
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000030b0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 400000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: sdc set ios:clk 200000000Hz bm PP pm ON vdd 21 width 4 timing UHS-SDR104 dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: used kernel tuning, delay = 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: change sample method
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: start tuning, tuning clk = 200000000  opcode=19
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: ----speed mode = 6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000032b2
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000034b4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: axp8191-pek as /devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000036b6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x000038b8
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (408000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (720000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (792000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1008000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1104000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1200000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1296000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1392000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003aba
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1416000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1512000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1608000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1704000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1800000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (728000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1092000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1300000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003cbc
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: _opp_add: OPP not supported by regulators (1586000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (408000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (720000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (792000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: RETRY: REG_SAMP_DL: 0x00003ebe
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: *****retry:re-send cmd*****
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1008000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1200000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1296000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1392000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1512000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1608000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1704000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1800000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1896000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1920000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: smc 1 p2 err, cmd 1, RTO !!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: retry:start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1944000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sunxi v4p5x/v4p6x retry give up!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1992000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:give up
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (728000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[INFO]: sdc set ios:clk 0Hz bm PP pm OFF vdd 0 width 1 timing LEGACY(SDR12) dt B
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1300000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1586000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1690000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: _opp_add: OPP not supported by regulators (1976000000)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: EM: OPP:416000 is inefficient
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu0: EM: created perf domain
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: EM: OPP:1014000 is inefficient
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: EM: OPP:416000 is inefficient
+Apr 13 07:18:40 radxa-cubie-a7a kernel: cpu cpu6: EM: created perf domain
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sun55iw3_devfreq:[INFO]: F0:400000000, F1:800000000, F2:1200000000, F3:2400000000, up:50, down:30
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [ADDR_MGT] addr_mgt_probe: module version: v1.0.11
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [ADDR_MGT] addr_mgt_probe: success.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NET: Registered PF_INET6 protocol family
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Segment Routing with IPv6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: In-situ OAM (IOAM) with IPv6
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: NET: Registered PF_PACKET protocol family
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Key type dns_resolver registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: registered taskstats version 1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Loading compiled-in X.509 certificates
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Key type .fscrypt registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Key type fscrypt-provisioning registered
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[ERR]: wait dma hold bit clear timeout
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi iommu: irq = 16
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi iommu: irq = 17
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:twi_sunxi-2510000.twi:[INFO]: v2.6.9 probe success
+Apr 13 07:18:40 radxa-cubie-a7a kernel: g2d 5440000.g2d: Adding to iommu group 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: Adding to iommu group 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] de use no display sys
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_drm_bind start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [SUNXI-DE] sunxi_de_bind start
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 0 ok
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 1 ok
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init dts done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable resource done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init resource done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Registered IR keymap rc-cec
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi connector create finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] start HDMI-A-1 monitor monitoring, interval: 100ms
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_drm_bind ok
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-pcie 6000000.pcie: host bridge /soc@3000000/pcie@6000000 ranges:
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-pcie 6000000.pcie:      err 0x0020000000..0x0020ffffff -> 0x0020000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-pcie 6000000.pcie:       IO 0x0021000000..0x0021ffffff -> 0x0021000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-pcie 6000000.pcie:      MEM 0x0022000000..0x0027ffffff -> 0x0022000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning section: 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [0-19|20] 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: [24-63|40] 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4020000.sdmmc:[INFO]: tuning result: 24 - 63,  best: 44
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mmc0: new ultra high speed SDR104 SDHC card at address aaaa
+Apr 13 07:18:40 radxa-cubie-a7a kernel: mmcblk0: mmc0:aaaa SD32G 29.7 GiB 
+Apr 13 07:18:40 radxa-cubie-a7a kernel:  mmcblk0: p1 p2 p3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1: new high-speed USB device number 2 using xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Cal words efuse addr 0x60 value 0x92510000, addr 0x64 value 0x53279661
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Freeing initrd memory: 31828K
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: UFS Host state=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: outstanding reqs=0x0 tasks=0x0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: saved_err=0x0, saved_uic_err=0x0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Device power mode=1, UIC link state=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1: Product: USB 2.0 Hub
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: PM in progress=0, sys. suspended=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-1:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Auto BKOPS=0, Host self-block=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-1:1.0: 4 ports detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: Clk gate=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: last_hibern8_exit_tstamp at 0 us, hibern8_exit_cnt=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: last intr at 904244 us, last intr status=0x404
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: hba->ufs_version=0x300, Host capabilities=0x11870f1f, caps=0x0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: quirks=0x0, dev. quirks=0x0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000000: 11870f1f 00000000 00000300 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000010: 00000000 00000926 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000020: 00000000 e0000470 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000030: 00000008 00000001 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000040: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000050: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000060: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000070: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000080: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: host_regs: 00000090: 00000000 00000000 00000000 00000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of pa_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of dl_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of nl_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of tl_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of dme_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of auto_hibern8_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of fatal_err
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 905532 us
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: dev_reset[0] = 0x0 at 407152 us
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: dev_reset: total cnt=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of host_reset
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of task_abort
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2: Product: USB2.1 Hub
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2: Manufacturer: GenesysLogic
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-1.2:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 1-1.2:1.0: 4 ports detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: new high-speed USB device number 4 using xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: Product: AIC Wlan
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: Manufacturer: aicsemi
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.4: SerialNumber: 20220103
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.3: new full-speed USB device number 5 using xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.3: New USB device found, idVendor=1ea7, idProduct=0066, bcdDevice= 2.00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.3: Product: 2.4G Mouse
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hid-generic 0003:1EA7:0066.0001: input: USB HID v1.10 Keyboard [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: 2.4G Mouse Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv detect hpd connect
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: 2.4G Mouse System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hid-generic 0003:1EA7:0066.0002: input: USB HID v1.10 Mouse [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.4: new full-speed USB device number 6 using xhci-hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.4: New USB device found, idVendor=3151, idProduct=3020, bcdDevice= 0.02
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.4: Product: 2.4G Receiver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb 1-1.2.4: Manufacturer: YICHIP
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: YICHIP 2.4G Receiver as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hid-generic 0003:3151:3020.0003: input: USB HID v2.00 Keyboard [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: YICHIP 2.4G Receiver Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: YICHIP 2.4G Receiver System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+Apr 13 07:18:40 radxa-cubie-a7a kernel: input: YICHIP 2.4G Receiver Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hid-generic 0003:3151:3020.0004: input: USB HID v2.00 Mouse [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pcie-rc-6000000.pcie:[INFO]: PCIe speed of Gen1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-pcie 6000000.pcie: PCI host bridge to bus 0000:00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci_bus 0000:00: root bus resource [??? 0x20000000-0x20ffffff flags 0x0]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci_bus 0000:00: root bus resource [io  0x0000-0xffffff] (bus address [0x21000000-0x21ffffff])
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci_bus 0000:00: root bus resource [mem 0x22000000-0x27ffffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: [1f6d:abcd] type 01 class 0x060400
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: supports D1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] HDMI-A-1 connection detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: cec drv clock enable done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi cec drv enable finish
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] HDMI-A-1: Configuration mode 1920x1080@60Hz
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Console: switching to colour frame buffer device 240x67
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: BAR 0: assigned [mem 0x22000000-0x220fffff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: BAR 6: assigned [mem 0x22100000-0x2210ffff pref]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:pcie-6000000.pcie:[INFO]: driver version: 1.2.4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+Apr 13 07:18:40 radxa-cubie-a7a kernel: pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ehci_sunxi:[INFO]: sunxi-ehci: EHCI SUNXI driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_hci:[INFO]: sunxi ehci0-controller don't init wakeup source
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: probe, pdev->name: 4101000.ehci0-controller, sunxi_ehci: 0xffff8000096a17a8, 0x:ffff80000a10d000, irq_no:1b3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: Not init ehci0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ehci_sunxi:[INFO]: [sunxi-ehci1]: probe, pdev->name: 4200000.ehci1-controller, sunxi_ehci: 0xffff8000096a1bd8, 0x:ffff80000a11d000, irq_no:1b5
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ehci 4200000.ehci1-controller: supply hci not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ehci 4200000.ehci1-controller: EHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ehci 4200000.ehci1-controller: new USB bus registered, assigned bus number 3
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ehci 4200000.ehci1-controller: irq 437, io mem 0x04200000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] tcon clock rate is 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6144
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ehci 4200000.ehci1-controller: USB 2.0 started, EHCI 1.00
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.15
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb3: Product: EHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb3: Manufacturer: Linux 5.15.147-21-a733 ehci_hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb3: SerialNumber: sunxi-ehci
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 3-0:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 3-0:1.0: 1 port detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ohci_sunxi:[INFO]: sunxi-ohci: OHCI SUNXI driver
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:sunxi_hci:[INFO]: sunxi ohci0-controller don't init wakeup source
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: probe, pdev->name: 4101400.ohci0-controller, sunxi_ohci: 0xffff8000096a2438
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: Not init ohci0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi:ohci_sunxi:[INFO]: [sunxi-ohci1]: probe, pdev->name: 4200400.ohci1-controller, sunxi_ohci: 0xffff8000096a2868
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ohci 4200400.ohci1-controller: supply hci not found, using dummy regulator
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ohci 4200400.ohci1-controller: OHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ohci 4200400.ohci1-controller: new USB bus registered, assigned bus number 4
+Apr 13 07:18:40 radxa-cubie-a7a kernel: sunxi-ohci 4200400.ohci1-controller: irq 438, io mem 0x04200400
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [top phy]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: top phy config done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [snps phy]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: snps phy state: lock
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.15
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb4: Product: OHCI Host Controller
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb4: Manufacturer: Linux 5.15.147-21-a733 ohci_hcd
+Apr 13 07:18:40 radxa-cubie-a7a kernel: usb usb4: SerialNumber: sunxi-ohci
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 4-0:1.0: USB hub found
+Apr 13 07:18:40 radxa-cubie-a7a kernel: hub 4-0:1.0: 1 port detected
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable output done
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GTP driver init func = goodix_ts_init,line = 3190 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GTP driver init func = goodix_ts_init,line = 3213 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: GTP driver init func = goodix_ts_init,line = 3215 
+Apr 13 07:18:40 radxa-cubie-a7a kernel: clk: Not disabling unused clocks
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Freeing unused kernel memory: 3776K
+Apr 13 07:18:40 radxa-cubie-a7a kernel: [drm] HDMI-A-1: Configuration complete
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Run /init as init process
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   with arguments:
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     /init
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     splash
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     earlycon
+Apr 13 07:18:40 radxa-cubie-a7a kernel:   with environment:
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     HOME=/
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     TERM=linux
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     mac_addr=08:51:49:58:40:32
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     mac1_addr=08:51:49:58:40:33
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     cgroup_enable=memory
+Apr 13 07:18:40 radxa-cubie-a7a kernel:     cgroup_memory=1
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rtc-hym8563 14-0051: no valid clock/calendar values available
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rtc-hym8563 14-0051: registered as rtc0
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rtc-hym8563 14-0051: no valid clock/calendar values available
+Apr 13 07:18:40 radxa-cubie-a7a kernel: rtc-hym8563 14-0051: hctosys: unable to read the hardware clock
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx8   gen()  3213 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx8   xor()  2427 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx4   gen()  1883 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx4   xor()  7500 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx2   gen()  8652 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx2   xor()  7211 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx1   gen()  7044 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: neonx1   xor()  5883 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x8  gen()  4270 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x8  xor()  2540 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x4  gen()  4924 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x4  xor()  2556 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x2  gen()  4123 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x2  xor()  2221 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x1  gen()  3385 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: int64x1  xor()  1775 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: using algorithm neonx2 gen() 8652 MB/s
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: .... xor() 7211 MB/s, rmw enabled
+Apr 13 07:18:40 radxa-cubie-a7a kernel: raid6: using neon recovery algorithm
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xor: measuring software checksum speed
+Apr 13 07:18:40 radxa-cubie-a7a kernel:    8regs           : 11539 MB/sec
+Apr 13 07:18:40 radxa-cubie-a7a kernel:    32regs          : 13855 MB/sec
+Apr 13 07:18:40 radxa-cubie-a7a kernel:    arm64_neon      : 18112 MB/sec
+Apr 13 07:18:40 radxa-cubie-a7a kernel: xor: using function: arm64_neon (18112 MB/sec)
+Apr 13 07:18:40 radxa-cubie-a7a kernel: Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+Apr 13 07:18:40 radxa-cubie-a7a kernel: EXT4-fs (mmcblk0p3): recovery complete
+Apr 13 07:18:40 radxa-cubie-a7a kernel: EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: disabled.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: System time before build time, advancing clock.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Inserted module 'autofs4'
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: systemd 247.3-7+deb11u8 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Detected architecture arm64.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Set hostname to <radxa-cubie-a7a>.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: /lib/systemd/system/plymouth-start.service:16: Unit configured to use KillMode=none. This is unsafe, as it disables systemd's process lifecycle management for the service. Please update your service to use a safer KillMode=, such as 'mixed' or 'control-group'. Support for KillMode=none is deprecated and will eventually be removed.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Queued start job for default target Graphical Interface.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Created slice system-getty.slice.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Created slice system-modprobe.slice.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Created slice system-serial\x2dgetty.slice.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Created slice User and Session Slice.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Reached target User and Group Name Lookups.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Reached target Remote Encrypted Volumes.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Reached target Remote File Systems.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Reached target Slices.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Reached target Swap.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on fsck to fsckd communication Socket.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on initctl Compatibility Named Pipe.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on Journal Audit Socket.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on Journal Socket (/dev/log).
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on Journal Socket.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on udev Control Socket.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Listening on udev Kernel Socket.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting Huge Pages File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting POSIX Message Queue File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting Kernel Debug File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting Kernel Trace File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Create list of static device nodes for the current kernel...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Load Kernel Module configfs...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Load Kernel Module drm...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Load Kernel Module fuse...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Journal Service...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Load Kernel Modules...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Remount Root and Kernel File Systems...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Coldplug All udev Devices...
+Apr 13 07:18:40 radxa-cubie-a7a kernel: fuse: init (API version 7.34)
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted Huge Pages File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted POSIX Message Queue File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted Kernel Debug File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted Kernel Trace File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Create list of static device nodes for the current kernel.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: modprobe@configfs.service: Succeeded.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Load Kernel Module configfs.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: modprobe@drm.service: Succeeded.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Load Kernel Module drm.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: modprobe@fuse.service: Succeeded.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Load Kernel Module fuse.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting FUSE Control File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounting Kernel Configuration File System...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted FUSE Control File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Mounted Kernel Configuration File System.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Load Kernel Modules.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: EXT4-fs (mmcblk0p3): re-mounted. Opts: (null). Quota mode: disabled.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Apply Kernel Variables...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Remount Root and Kernel File Systems.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Load/Save Random Seed...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Create System Users...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Apply Kernel Variables.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Load/Save Random Seed.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Condition check resulted in First Boot Complete being skipped.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Finished Create System Users.
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Starting Create Static Device Nodes in /dev...
+Apr 13 07:18:40 radxa-cubie-a7a systemd[1]: Started Journal Service.
+Apr 13 07:18:40 radxa-cubie-a7a kernel: platform 7023017.s_pwm0: supply pwm not found, using dummy regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[INFO]: 2215 sunxi_cedar_init(): sunxi cedar version 1.1
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[INFO]: 2137 sunxi_cedar_probe(): probe ve
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:sunxi_usbc:[INFO]: OTG can't find bcten-gpio, use default mode.
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:sunxi_usbc:[INFO]: get id is fail, -84
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-cedar 1c0e000.ve: supply ve not found, using dummy regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[INFO]: 2140 sunxi_cedar_probe(): probe ve1
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[INFO]: 2143 sunxi_cedar_probe(): probe ve2
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-cedar 1c10000.ve2: supply ve not found, using dummy regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi-spi-ng 2540000.spi: supply spi not found, using dummy regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: pvrsrvkm: loading out-of-tree module taints kernel.
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:spi-2540000.spi:[INFO]: bus num_0 mode_16 freq_8000000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: sunxi:spi-2540000.spi:[INFO]: cs num_1 mode_1
+Jul 31 07:04:23 radxa-cubie-a7a kernel: at24 0-0050: supply vcc not found, using dummy regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, platform driver init
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, insmod param cpu_physical=0x0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, insmod param cpu_physical=0x0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, insmod param cpu_physical=0x0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, insmod param cpu_physical=0x0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, platform device compatible=allwinner,npu
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, platform driver device=0xffff0000c0fa1010
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] clock_rate: 26000000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore irq number is 431.
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] npu power domains status: 0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: NPU AXI CLK NULL
+Jul 31 07:04:23 radxa-cubie-a7a kernel: NPU AHB CLK NULL
+Jul 31 07:04:23 radxa-cubie-a7a kernel: NPU TZMA CLK NULL
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] EXTRA: 0x, SID: 0x0, max_freq: 1200000000, default_freq: 1200000000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] current dvfs: 0, vf index: 0
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] successed to set opp regulator
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Supported vf list: 
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141]     freq: 492000000, vol: 800000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141]     freq: 852000000, vol: 800000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141]     freq: 1008000000, vol: 960000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] get freq list and add opp successfully
+Jul 31 07:04:23 radxa-cubie-a7a kernel: at24 0-0050: 2048 byte 24c16 EEPROM, writable, 1 bytes/write
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] target rate: 1008000000, vol: 960000, target_fscale: 100
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] npu devfreq added
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] successed to register cooling device
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] enable aw vip devfreq
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] NPU Use VF0000, use freq 1008 MHz
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Get NPU Regulator Control FAIL!
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Want set npu vol(960000) now vol(800000)
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+Jul 31 07:04:23 radxa-cubie-a7a kernel: npu[141][141] vipcore, device_cnt=1, core_cnt=1
+Jul 31 07:04:23 radxa-cubie-a7a kernel: [sunxi bxm]SysDevInit start!
+Jul 31 07:04:23 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxi_platform_init start
+Jul 31 07:04:23 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+Jul 31 07:04:23 radxa-cubie-a7a kernel: spi-nor spi0.0: w25q64dw (8192 Kbytes)
+Jul 31 07:04:24 radxa-cubie-a7a kernel: npu[141][141] core_0, request irqline=431, name=vipcore_0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: npu[141][141] vipcore, allocate page for video memory, size: 0x400000 bytes
+Jul 31 07:04:24 radxa-cubie-a7a kernel: npu[141][141] vipcore, heap_cnt=0, reserved video memory cpu_phy=0x103800000, vip_phy=0x103800000, size=0x400000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: npu[141][141] VIPLite driver version 2.0.3.0-AW-2024-05-29
+Jul 31 07:04:24 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+Jul 31 07:04:24 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: pvrsrvkm 1800000.gpu: sunxi_platform_init end
+Jul 31 07:04:24 radxa-cubie-a7a kernel: [sunxi bxm]SysDevInit end!
+Jul 31 07:04:24 radxa-cubie-a7a kernel: PVR_K:  305: Read BVNC 36.56.104.183 from HW device registers
+Jul 31 07:04:24 radxa-cubie-a7a kernel: PVR_K:  305: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxipart: failed to parse sunxi_gpt!
+Jul 31 07:04:24 radxa-cubie-a7a kernel: [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+Jul 31 07:04:24 radxa-cubie-a7a kernel: deinterlace 5400000.deinterlace: Adding to iommu group 0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:deinterlace:[INFO]: DI probe
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:spi-2540000.spi:[INFO]: probe success (Version 2.5.4)
+Jul 31 07:04:24 radxa-cubie-a7a kernel: [Awinic] aw87xxx_pa_init:driver version: v2.14.0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-i2s:[WARN]: 2208 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-i2s:[WARN]: 2216 snd_sunxi_dts_params_init(): clk-keep missing
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_bluetooth_mod_init 
+Jul 31 07:04:24 radxa-cubie-a7a kernel: RELEASE DATE:2026_0123_5f7be68d 
+Jul 31 07:04:24 radxa-cubie-a7a kernel: Aic high speed USB device detected
+Jul 31 07:04:24 radxa-cubie-a7a kernel: chip_id=7, chip_mcu_id = 0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+Jul 31 07:04:24 radxa-cubie-a7a kernel: file md5:54b15ce88b3b9ba14bf961e6f90839fc
+Jul 31 07:04:24 radxa-cubie-a7a kernel: ### Upload fw_patch_table_8800d80_u02.bin fw_patch_table, size=1384
+Jul 31 07:04:24 radxa-cubie-a7a kernel: addr_adid 0x201940, addr_patch 0x1e0000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+Jul 31 07:04:24 radxa-cubie-a7a kernel: debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+Jul 31 07:04:24 radxa-cubie-a7a kernel: file md5:f546881a81b960d89a672578eb45a809
+Jul 31 07:04:24 radxa-cubie-a7a kernel: ### Upload fw_adid_8800d80_u02.bin firmware, @ = 201940  size=1708
+Jul 31 07:04:24 radxa-cubie-a7a kernel: fw download complete
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+Jul 31 07:04:24 radxa-cubie-a7a kernel: file md5:f5400db1d64e0150c3232eb53e7f78b6
+Jul 31 07:04:24 radxa-cubie-a7a kernel: ### Upload fw_patch_8800d80_u02.bin firmware, @ = 1e0000  size=32700
+Jul 31 07:04:24 radxa-cubie-a7a kernel: fw download complete
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+Jul 31 07:04:24 radxa-cubie-a7a kernel: file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+Jul 31 07:04:24 radxa-cubie-a7a kernel: ### Upload fw_patch_8800d80_u02_ext0.bin firmware, @ = 20b43c  size=16136
+Jul 31 07:04:24 radxa-cubie-a7a kernel: fw download complete
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt btmode[4]:5
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt btport[4]:1
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt uart_baud[4]:1500000
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt uart_flowctrl[4]:1
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt lpm_enable[4]:0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicbt_patch_table_load bt tx_pwr[4]:6F2F
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: IRQ eth_wake_irq not found
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:stmmac-4500000.ethernet:[INFO]: Phy use soc fanout
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:stmmac-4500000.ethernet:[INFO]: Not found delay-maps in dts
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:stmmac-4500000.ethernet:[INFO]: RGMII use internal transmit clock
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: User ID: 0x20, Synopsys ID: 0x53
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet:         DWMAC4/5
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: DMA HW capability register supported
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: RX Checksum Offload Engine supported
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: TX Checksum insertion supported
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: Wake-Up On Lan supported
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: Enabled RFS Flow TC (entries=8)
+Jul 31 07:04:24 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet: Using 32 bits DMA width
+Jul 31 07:04:24 radxa-cubie-a7a kernel: input: sunxi-ac101b Headphones as /devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+Jul 31 07:04:24 radxa-cubie-a7a kernel: debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+Jul 31 07:04:24 radxa-cubie-a7a kernel: patch version - Aug 01 2025 11:05:26 - git a26f071
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+Jul 31 07:04:24 radxa-cubie-a7a kernel: file md5:280bb388f3b44bf1cbe5ec072ba274da
+Jul 31 07:04:24 radxa-cubie-a7a kernel: ### Upload fmacfw_8800d80_u02.bin firmware, @ = 120000  size=358072
+Jul 31 07:04:24 radxa-cubie-a7a kernel: fw download complete
+Jul 31 07:04:24 radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        Read FW mem: 00120198
+Jul 31 07:04:24 radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        120198=177158
+Jul 31 07:04:24 radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        1201a0=177c00
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: app_cmp
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usbcore: registered new interface driver aic_load_fw
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usb 1-1.4: USB disconnect, device number 4
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicwf_usb_disconnect enter 
+Jul 31 07:04:24 radxa-cubie-a7a kernel: aicwf_bus_deinit
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sunxi_usbc:[INFO]: insmod_device_driver
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi_usb_udc 4100000.udc-controller: supply udc not found, using dummy regulator
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sunxi_usbc:[INFO]: device_chose finished 337!
+Jul 31 07:04:24 radxa-cubie-a7a kernel: maxio_mae0621aQ3C probe PHY_ID: 0x7b744412
+Jul 31 07:04:24 radxa-cubie-a7a kernel: zram: Added device: zram0
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:stmmac-4500000.ethernet:[INFO]: probe success (Version 0.3.2)
+Jul 31 07:04:24 radxa-cubie-a7a kernel: zram0: detected capacity change from 0 to 4001552
+Jul 31 07:04:24 radxa-cubie-a7a kernel: Adding 2000772k swap on /dev/zram0.  Priority:100 extents:1 across:2000772k SS
+Jul 31 07:04:24 radxa-cubie-a7a kernel: q_sz/max:  0 /  8 - next tkn: 559
+Jul 31 07:04:24 radxa-cubie-a7a kernel: q_sz/max:  0 /  8 - next tkn: 559
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usb bustx thread will to stop
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usb bustx thread stop
+Jul 31 07:04:24 radxa-cubie-a7a kernel: exit aicwf_bus_deinit
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usb busrx thread will to stop
+Jul 31 07:04:24 radxa-cubie-a7a kernel: usb busrx thread stop
+Jul 31 07:04:24 radxa-cubie-a7a kernel: sunxi:sound-ac101b:[INFO]: 386 sunxi_adv_headset_heasphone_det():  headset_basedata:0 key_threshold:17
+Jul 31 07:04:24 radxa-cubie-a7a kernel: [sound] jack report -> HEADSET
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: new high-speed USB device number 7 using xhci-hcd
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d81, bcdDevice= 1.00
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: Product: AIC 8800D80
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: Manufacturer: AICSemi
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usb 1-1.4: SerialNumber: 20220103
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+Jul 31 07:04:25 radxa-cubie-a7a kernel: MAXIO_PHY_VER: v1.8.1.13 
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: PHY [stmmac-0:01] driver [MAE0621A/B-Q3C(I) Gigabit Ethernet] (irq=POLL)
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac4: Master AXI performs fixed burst length
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: No Safety Features support found
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+Jul 31 07:04:25 radxa-cubie-a7a kernel: dwmac-sunxi 4500000.ethernet eth0: configuring for phy/rgmii link mode
+Jul 31 07:04:25 radxa-cubie-a7a kernel: Bluetooth: Core ver 2.22
+Jul 31 07:04:25 radxa-cubie-a7a kernel: NET: Registered PF_BLUETOOTH protocol family
+Jul 31 07:04:25 radxa-cubie-a7a kernel: Bluetooth: HCI device and connection manager initialized
+Jul 31 07:04:25 radxa-cubie-a7a kernel: Bluetooth: HCI socket layer initialized
+Jul 31 07:04:25 radxa-cubie-a7a kernel: Bluetooth: L2CAP socket layer initialized
+Jul 31 07:04:25 radxa-cubie-a7a kernel: Bluetooth: SCO socket layer initialized
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: RELEASE DATE: 2023_1211_1958 
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: btusb_probe: usb_interface 00000000cb279d06, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aicwf_usb_chipmatch USE AIC8800D80
+Jul 31 07:04:25 radxa-cubie-a7a kernel: endpoint num 3
+Jul 31 07:04:25 radxa-cubie-a7a kernel: endpoint num 4
+Jul 31 07:04:25 radxa-cubie-a7a kernel: endpoint num 4
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: firmware_info_init: Auto suspend is disabled
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: btusb_probe: download begining...
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: btusb_probe: download ending...
+Jul 31 07:04:25 radxa-cubie-a7a kernel: usbcore: registered new interface driver aic_btusb
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: btusb_open: Start
+Jul 31 07:04:25 radxa-cubie-a7a kernel:  download_patch 0
+Jul 31 07:04:25 radxa-cubie-a7a kernel: aic_btusb: btusb_open: End
+Jul 31 07:04:25 radxa-cubie-a7a kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Jul 31 07:04:25 radxa-cubie-a7a kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Jul 31 07:04:25 radxa-cubie-a7a kernel: cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Jul 31 07:04:25 radxa-cubie-a7a kernel: 
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **********************************************************
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **                                                      **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ** trace_printk() being used. Allocating extra memory.  **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **                                                      **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ** This means that this is a DEBUG kernel and it is     **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ** unsafe for production use.                           **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **                                                      **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ** If you see this message and you are not debugging    **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ** the kernel, report this immediately to your vendor!  **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **                                                      **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Jul 31 07:04:25 radxa-cubie-a7a kernel: **********************************************************
+Jul 31 07:04:25 radxa-cubie-a7a kernel: PVR_K:  515: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+Jul 31 07:04:25 radxa-cubie-a7a kernel: PVR_K:  515: Shader binary image 'rgx.sh.36.56.104.183' loaded
+Jul 31 07:04:25 radxa-cubie-a7a kernel: ========== tcp ack debug tcp_ack_init 
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+Jul 31 07:04:25 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:04:26 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 1 not enable, skip
+Jul 31 07:04:27 radxa-cubie-a7a kernel: ieee80211 phy0: 
+                                        *******************************************************
+                                        ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+                                        *******************************************************
+Jul 31 07:04:27 radxa-cubie-a7a kernel: usbcore: registered new interface driver aic8800_fdrv
+Jul 31 07:04:27 radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        p2p dev addr=f2 ab 5c e1 db 2f
+Jul 31 07:04:27 radxa-cubie-a7a kernel: Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Jul 31 07:04:27 radxa-cubie-a7a kernel: Bluetooth: BNEP socket layer initialized
+Jul 31 07:04:27 radxa-cubie-a7a kernel: NET: Registered PF_ALG protocol family
+Jul 31 07:04:27 radxa-cubie-a7a kernel: dma dma0chan2: The timeout func is not suportted or chan->private is NULL, timeout mode not used
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+Jul 31 07:04:27 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 07:04:27 radxa-cubie-a7a kernel: Bluetooth: RFCOMM TTY layer initialized
+Jul 31 07:04:27 radxa-cubie-a7a kernel: Bluetooth: RFCOMM socket layer initialized
+Jul 31 07:04:27 radxa-cubie-a7a kernel: Bluetooth: RFCOMM ver 1.11
+Jul 31 07:04:32 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vi_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_ve_dec_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_ve_enc_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_npu_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_pcie_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_usb2_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_de_sys_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vo_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:42 radxa-cubie-a7a kernel: sunxi:sunxi_pd_test-soc@3000000:pd_vo1_test@0:[WARN]: runtime_suspend disable clock
+Jul 31 07:04:50 radxa-cubie-a7a kernel: axp8191-bldo2: disabling
+Jul 31 07:04:50 radxa-cubie-a7a kernel: axp8191-bldo5: disabling
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi_de_disable de 0
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+Jul 31 07:14:26 radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 0
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] tcon clock rate is 0
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [top phy]
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - 148500KHz, tmds clock
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: top phy config done
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [snps phy]
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: snps phy state: lock
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable output done
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+Jul 31 07:43:00 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set info done
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw audio get n = 6272
+Jul 31 07:43:06 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set enable done
+Jul 31 07:43:08 radxa-cubie-a7a kernel: rx eapol
+Jul 31 07:43:08 radxa-cubie-a7a kernel: rx eapol
+Jul 31 07:43:08 radxa-cubie-a7a kernel: IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+Jul 31 07:43:09 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+Jul 31 07:43:10 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm get edid support modes: 48
+Jul 31 07:43:10 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:43:10 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:43:10 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+Jul 31 07:43:11 radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv audio set disable done

@@ -1,0 +1,32 @@
+Captured: 2026-07-31
+
+radxa-overlays-official
+  origin=https://github.com/radxa-pkg/radxa-overlays.git
+  branch=main
+  head=c79b70822a314a7c828d361cbe976780af45c0a3
+  status=clean
+
+radxa-allwinner-bsp
+  origin=https://github.com/radxa/allwinner-bsp.git
+  branch=cubie-aiot-v1.4.6
+  head=2045a3ca2a01f088c0314dc924bda59d154e363e
+  status=clean
+
+radxa-allwinner-device-a733
+  origin=https://github.com/radxa/allwinner-device.git
+  branch=device-a733-v1.4.6
+  head=79d54f44e14111db3845096cef0639a6c9222707
+  status=clean
+
+radxa-kernel-a733
+  origin=https://github.com/radxa/kernel.git
+  branch=allwinner-aiot-linux-5.15
+  head=e41499895c17074874f4c48ff04041c57d8dfd99
+  status=INCOMPLETE CHECKOUT; 73680 tracked deletions; do not build from it
+
+radxa-meizu-e3
+  status=not a Git repository; preserve the directory itself
+
+Allwinner BSP v1.4.8 comparison
+  release_commit=e1524a9
+  url=https://github.com/radxa/allwinner-bsp/commit/e1524a9

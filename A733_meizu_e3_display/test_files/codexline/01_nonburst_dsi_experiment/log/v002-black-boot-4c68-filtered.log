@@ -1,0 +1,176 @@
+echo __V2J_BEGIN__; timeout 20s sudo -n journalctl -b 4c68a65b0087408385661fba98c7c793 -k --no-pager -o short-monotonic > /tmp/v002-black-kernel-journal.txt; grep -iE "dsi|drm|display|panel|backlight|sec_ts|sgm|iommu|atomic_flush|tcon|hdmi|rcu.*stall|NULL pointer|panic|fail|error" /tmp/v002-black-kernel-journal.txt > /tmp/v002-black-kernel-filtered.txt; echo __COUNTS__; wc -l /tmp/v002-black-kernel-journal.txt /tmp/v002-black-kernel-filtered.txt; grep -Ec "sunxi_de_atomic_flush.*timeout|L[12] Page table invalid|Bug in DE|rcu.*stall|NULL pointer|Kernel panic" /tmp/v002-black-kernel-journal.txt || true; echo __FILTER__; tail -n 500 /tmp/v002-black-kernel-filtered.txt; echo __V2J_''DONE__
+[?2004l__V2J_BEGIN__
+__COUNTS__
+  1287 /tmp/v002-black-kernel-journal.txt
+   166 /tmp/v002-black-kernel-filtered.txt
+  1453 total
+0
+__FILTER__
+[    0.000000] radxa-cubie-a7a kernel: printk: bootconsole [earlycon0] enabled
+[    0.001607] radxa-cubie-a7a kernel: printk: bootconsole [earlycon0] disabled
+[    0.059759] radxa-cubie-a7a kernel: platform 5501000.tcon0: Fixing up cyclic dependency with 5000000.de
+[    0.059892] radxa-cubie-a7a kernel: platform 5506000.dsi0: Fixing up cyclic dependency with 5501000.tcon0
+[    0.060072] radxa-cubie-a7a kernel: platform 5730000.tcon3: Fixing up cyclic dependency with 5000000.de
+[    0.060158] radxa-cubie-a7a kernel: platform 5731000.tcon4: Fixing up cyclic dependency with 5000000.de
+[    0.060245] radxa-cubie-a7a kernel: platform 5520000.hdmi0: Fixing up cyclic dependency with 5730000.tcon3
+[    0.077535] radxa-cubie-a7a kernel: iommu: Default domain type: Translated 
+[    0.077538] radxa-cubie-a7a kernel: iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.082228] radxa-cubie-a7a kernel: iommu_master csi_iommu: attach fail:-517
+[    0.082290] radxa-cubie-a7a kernel: sunxi-iommu-v2 3900000.iommu: master probe failed with -517
+[    0.161885] radxa-cubie-a7a kernel: axp8191-temp-ctrl: Failed to locate of_node [id: 0]
+[    0.163029] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163060] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163089] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163119] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163148] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163178] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163206] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163236] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163265] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.163296] radxa-cubie-a7a kernel: reg-virt-consumer: Failed to locate of_node [id: -2]
+[    0.220218] radxa-cubie-a7a kernel: pwm-backlight backlight0: supply power not found, using dummy regulator
+[    0.292832] radxa-cubie-a7a kernel: NSI_PMU 2020000.nsi-controller: Get support-ecc failed
+[    0.420199] radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_init start
+[    0.420276] radxa-cubie-a7a kernel: [drm] [DSI-PANEL] dsi driver regsiter finsh
+[    0.420423] radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.420485] radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_probe start
+[    0.420804] radxa-cubie-a7a kernel: [drm] [PHY] sunxi_dsi_combophy_probe start
+[    0.420970] radxa-cubie-a7a kernel: [drm] [PHY]sunxi_dsi_combophy_probe finish
+[    0.421245] radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_probe start
+[    0.421413] radxa-cubie-a7a kernel: [drm] Loading esd watchdog module...
+[    0.421425] radxa-cubie-a7a kernel: [drm] TE GPIO not configured
+[    0.421426] radxa-cubie-a7a kernel: [drm:sunxi_drm_dsi_probe] *ERROR* Failed to request TE IRQ
+[    0.421516] radxa-cubie-a7a kernel: mipi-dsi 5506000.dsi0.0: Fixing up cyclic dependency with dsi_panel@1
+[    0.421545] radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_probe ok
+[    0.422039] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+[    0.422091] radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.422195] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422266] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+[    0.422295] radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.422374] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422435] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe start
+[    0.422462] radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 5
+[    0.422510] radxa-cubie-a7a kernel: [drm] [TCON] sunxi_tcon_probe ret = 0
+[    0.422632] radxa-cubie-a7a kernel: [drm] sunxi_drm_platform_probe start
+[    0.422634] radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add start
+[    0.423496] radxa-cubie-a7a kernel: [drm] sunxi_drm_match_add finish
+[    0.423898] radxa-cubie-a7a kernel: sunxi:sunxi_smcdrm config service not available: FFFFFFFF
+[    0.696541] radxa-cubie-a7a kernel: sunxi:sunxi_mmc_host-4022000.sdmmc:[ERR]: retry:set phase failed or over retry times
+[    0.759225] radxa-cubie-a7a kernel: sunxi iommu: irq = 16
+[    0.759283] radxa-cubie-a7a kernel: sunxi iommu: irq = 17
+[    0.761172] radxa-cubie-a7a kernel: sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[    0.769275] radxa-cubie-a7a kernel: sunxi-twi: probe of 2510000.twi failed with error -16
+[    0.769692] radxa-cubie-a7a kernel: g2d 5440000.g2d: Adding to iommu group 0
+[    0.771540] radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: Adding to iommu group 0
+[    0.772193] radxa-cubie-a7a kernel: [drm] de use no display sys
+[    0.772825] radxa-cubie-a7a kernel: sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[    0.773211] radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_probe start
+[    0.773257] radxa-cubie-a7a kernel: [drm] reset-on-sequence property not found
+[    0.773817] radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_host_attach start
+[    0.773836] radxa-cubie-a7a kernel: [drm] sunxi_drm_bind start
+[    0.774116] radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.774250] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[    0.774273] radxa-cubie-a7a kernel: [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[    0.774341] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[    0.774358] radxa-cubie-a7a kernel: [drm] [SUNXI-DE] sunxi_de_bind start
+[    0.774402] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[    0.774921] radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 0 ok
+[    0.775004] radxa-cubie-a7a kernel: [drm] sunxi_de_bind crtc init for de 1 ok
+[    0.775379] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[    0.775401] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+[    0.775411] radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_bind start
+[    0.775481] radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[    0.775706] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+[    0.775773] radxa-cubie-a7a kernel: [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[    0.776171] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init dts done
+[    0.777046] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv enable resource done
+[    0.777052] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init resource done
+[    0.777364] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[    0.778141] radxa-cubie-a7a kernel: rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[    0.778320] radxa-cubie-a7a kernel: input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[    0.778574] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[    0.780034] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: drm hdmi connector create finish
+[    0.780051] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+[    0.780066] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[    0.780089] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+[    0.780102] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[    0.780113] radxa-cubie-a7a kernel: sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[    0.780181] radxa-cubie-a7a kernel: [drm] start DSI-1 monitor monitoring, interval: 100ms
+[    0.780681] radxa-cubie-a7a kernel: [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[    0.780702] radxa-cubie-a7a kernel: [drm] sunxi_drm_bind ok
+[    0.780709] radxa-cubie-a7a kernel: [drm] [DSI]sunxi_drm_dsi_host_attach finish
+[    0.780713] radxa-cubie-a7a kernel: [drm] [DSI-PANEL] panel_dsi_probe finish
+[    0.922548] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link startup failed 1
+[    1.008665] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: error handling flags=0x0, req. abort count=0
+[    1.167820] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail[0] = 0x1 at 919495 us
+[    1.176888] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: link_startup_fail: total cnt=1
+[    1.185078] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of resume_fail
+[    1.192684] radxa-cubie-a7a kernel: sunxi-ufs-pltfm 4520000.ufs: No record of suspend_fail
+[    1.791252] radxa-cubie-a7a kernel: [drm] DSI-1 connection detected
+[    1.791352] radxa-cubie-a7a kernel: [drm] DSI-1: Configuration mode 1080x2160@59Hz
+[    1.842216] radxa-cubie-a7a kernel: [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[    1.842307] radxa-cubie-a7a kernel: [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[    1.842316] radxa-cubie-a7a kernel: [drm] sunxi_de_enable index 0
+[    1.842401] radxa-cubie-a7a kernel: [drm] sunxi_de_enable finish sw en=0
+[    1.842442] radxa-cubie-a7a kernel: [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[    1.842451] radxa-cubie-a7a kernel: [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[    1.842638] radxa-cubie-a7a kernel: [drm] [DSI] sunxi_lcd_pin_set_state start
+[    1.843107] radxa-cubie-a7a kernel: [drm] [PHY] sunxi_dsi_combophy_configure start
+[    1.843115] radxa-cubie-a7a kernel: [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[    2.282539] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[    2.807264] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[    2.807275] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[    2.807280] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[    2.807289] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.807295] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[    2.807299] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[    2.823260] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[    2.839259] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[    2.949300] radxa-cubie-a7a kernel: pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+[    2.949511] radxa-cubie-a7a kernel: pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+[    5.800796] radxa-cubie-a7a systemd[1]: Starting Load Kernel Module drm...
+[    5.851626] radxa-cubie-a7a systemd[1]: modprobe@drm.service: Succeeded.
+[    5.852779] radxa-cubie-a7a systemd[1]: Finished Load Kernel Module drm.
+[    6.629320] radxa-cubie-a7a kernel: sec_ts: loading out-of-tree module taints kernel.
+[    6.672351] radxa-cubie-a7a kernel: sec_ts 0-0048: SEC_TS Driver [g_6ft0.v00]
+[    6.672439] radxa-cubie-a7a kernel: sec_ts 0-0048: skipped to get num_lines property
+[    6.672448] radxa-cubie-a7a kernel: sec_ts 0-0048: skipped to get project_name property
+[    6.672455] radxa-cubie-a7a kernel: sec_ts 0-0048: skipped to get model_name property
+[    6.672462] radxa-cubie-a7a kernel: sec_ts 0-0048: irq:114,irq_type:0x2008,max[x,y]:[1080,2160],project/model_name:(null)/(null),panel_revision:0
+[    6.675822] radxa-cubie-a7a kernel: sunxi:sunxi_usbc:[INFO]: get id is fail, -84
+[    6.682029] radxa-cubie-a7a kernel: sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[    6.752766] radxa-cubie-a7a kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    6.754213] radxa-cubie-a7a kernel: sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[    6.758131] radxa-cubie-a7a kernel: sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[    6.799109] radxa-cubie-a7a kernel: sec_ts 0-0048: sec_ts_i2c_probe_read
+[    6.846405] radxa-cubie-a7a kernel: sunxi:VE:[WARN]: 390 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[    6.870368] radxa-cubie-a7a kernel: sgm37604a 0-0036: register 0x11 did not latch: wrote 0x00, read 0x00, mask 0x60
+[    6.881042] radxa-cubie-a7a kernel: sgm37604a 0-0036: backlight initialization failed: -5
+[    6.889427] radxa-cubie-a7a kernel: sgm37604a: probe of 0-0036 failed with error -5
+[    6.896496] radxa-cubie-a7a kernel: sec_ts 0-0048: sec_ts_i2c_probe_read: I2C write over retry limit
+[    6.906781] radxa-cubie-a7a kernel: sec_ts 0-0048: sec_ts_i2c_probe_read: I2C write failed ret=-6
+[    6.915908] radxa-cubie-a7a kernel: sec_ts 0-0048: sec_ts_read_device_id: failed to read device id(-5)
+[    6.926810] radxa-cubie-a7a kernel: sec_ts 0-0048: sec_ts_probe: touch IC not responding on I2C (check power/reset/addr)
+[    6.937981] radxa-cubie-a7a kernel: sec_ts: probe of 0-0048 failed with error -5
+[    6.951516] radxa-cubie-a7a kernel: npu[144][144] Get NPU Regulator Control FAIL!
+[    6.973513] radxa-cubie-a7a kernel: sunxipart: failed to parse sunxi_gpt!
+[    6.980963] radxa-cubie-a7a kernel: [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[    7.096933] radxa-cubie-a7a kernel: deinterlace 5400000.deinterlace: Adding to iommu group 0
+[    7.404265] radxa-cubie-a7a kernel: sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[    7.418434] radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.443759] radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.443759] radxa-cubie-a7a kernel: sunxi:sound-mach:[ERR]: 535 simple_parse_of(): simple_dai_link_of failed
+[    7.948020] radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        Read FW mem: 00120198
+[    7.948471] radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        120198=177158
+[    7.948555] radxa-cubie-a7a kernel: AICWFDBG(LOGERROR)        1201a0=177c00
+[    9.234833] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[    9.235471] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[    9.235853] radxa-cubie-a7a kernel: aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[   23.798942] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.798986] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.799021] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.799088] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.799125] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+[   23.799160] radxa-cubie-a7a kernel: [drm] sunxi-hdmi: dw phy i2m read has error!!!
+__V2J_DONE__
+[?2004hradxa@radxa-cubie-a7a:~$ 

@@ -1,0 +1,4 @@
+client=0x400009 frame=0x1200019 chain=['0x400009', '0x120001a', '0x1200019'] geometry=932x848+1760+181
+raised=yes
+XWD size=25923179 owner=radxa:radxa path=/tmp/t4-root-restored.xwd
+c196b4e93157e5e9edb1f559b8ad618e8b74c033a597411574ec293a58f8cb0c  /tmp/t4-root-restored.xwd

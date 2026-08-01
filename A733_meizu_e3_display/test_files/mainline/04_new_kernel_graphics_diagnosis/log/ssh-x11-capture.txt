@@ -1,0 +1,55 @@
+=== time / boot ===
+2026-07-31T13:29:33+00:00
+b117f8c6-71c8-4416-8bfa-770f126123af
+ 13:29:33 up 11 min,  6 users,  load average: 0.08, 0.24, 0.22
+=== stock HDMI toggle service ===
+● hdmi-toggle-once.service - HDMI toggle (1280x1024 -> 1920x1080) once after boot
+     Loaded: loaded (/usr/lib/systemd/system/hdmi-toggle-once.service; enabled; preset: enabled)
+     Active: active (exited) since Fri 2026-07-31 13:17:05 UTC; 12min ago
+ Invocation: 052f3da92e534c558364c3023de9f07e
+    Process: 829 ExecStartPre=/bin/sleep 15 (code=exited, status=0/SUCCESS)
+    Process: 961 ExecStart=/usr/bin/hdmi-toggle-once (code=exited, status=0/SUCCESS)
+   Main PID: 961 (code=exited, status=0/SUCCESS)
+   Mem peak: 2M
+        CPU: 67ms
+
+Jul 31 13:16:49 radxa-cubie-a7a systemd[1]: Starting hdmi-toggle-once.service - HDMI toggle (1280x1024 -> 1920x1080) once after boot...
+Jul 31 13:17:05 radxa-cubie-a7a systemd[1]: Finished hdmi-toggle-once.service - HDMI toggle (1280x1024 -> 1920x1080) once after boot.
+# /usr/lib/systemd/system/hdmi-toggle-once.service
+[Unit]
+Description=HDMI toggle (1280x1024 -> 1920x1080) once after boot
+After=display-manager.service
+Wants=display-manager.service
+
+[Service]
+Type=oneshot
+# Give X/SDDM Some Time to Get Ready; If Not Enough, Adjust to 12~15.
+ExecStartPre=/bin/sleep 15
+ExecStart=/usr/bin/hdmi-toggle-once
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+  File: /usr/lib/systemd/system/hdmi-toggle-once.service
+  Size: 347       	Blocks: 8          IO Block: 4096   regular file
+Device: 179,3	Inode: 278581      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-07-31 09:10:59.931862901 +0000
+Modify: 2026-06-12 06:32:17.000000000 +0000
+Change: 2026-06-12 08:56:51.863842630 +0000
+ Birth: 2026-06-12 08:56:51.863842630 +0000
+=== session processes and environment ===
+radxa               1119     651 /usr/bin/kwin_x11 --replace
+radxa               1135     649 /usr/bin/plasmashell --no-respawn
+DISPLAY=:0
+XAUTHORITY=/tmp/xauth_kEfYpP
+XDG_SESSION_TYPE=x11
+=== GLX/KWin live confirmation ===
+Error: couldn't find RGB GLX visual or fbconfig
+name of display: :0
+
+=== capture shared X11 root pixmap ===
+XWD size=25923179 mode=644 owner=radxa:radxa path=/tmp/t4-root-current.xwd
+b87f53234da14976b6bf609acf1c710df745a06c3a4228e3505021b9cd5d151a  /tmp/t4-root-current.xwd
+=== fatal display/kernel counters after capture ===
+0

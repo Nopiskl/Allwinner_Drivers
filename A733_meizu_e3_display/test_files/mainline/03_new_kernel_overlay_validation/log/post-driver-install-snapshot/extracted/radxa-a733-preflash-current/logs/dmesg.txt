@@ -1,0 +1,1167 @@
+COMMAND: dmesg -T
+
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel1/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input1
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel2/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input2
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel3/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input3
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel4/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input4
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel5/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input5
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel6/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input6
+[Fri Jul 31 12:16:33 2026] [      T1] input: sunxi-gpadc0/channel7/input0 as /devices/platform/soc@3000000/2521000.gpadc/input/input7
+[Fri Jul 31 12:16:33 2026] [      T1] sunxi:gpadc-2521000.gpadc:[INFO]: sunxi_gpadc probe success
+[Fri Jul 31 12:16:33 2026] [      T1] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 12:16:33 2026] [      T1] thermal thermal_zone2: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 12:16:33 2026] [      T1] thermal thermal_zone5: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 12:16:33 2026] [      T1] thermal thermal_zone6: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 12:16:33 2026] [      T1] thermal thermal_zone7: power_allocator: sustainable_power will be estimated
+[Fri Jul 31 12:16:33 2026] [      T1] sunxi:axp8191_temp_ctrl:[ERR]: axp8191-temp-ctrl device is not configed
+[Fri Jul 31 12:16:33 2026] [      T1] axp2101-pek axp2101-pek.0: DMA mask not set
+[Fri Jul 31 12:16:33 2026] [      T1] input: axp8191-pek as /devices/platform/soc@3000000/7083000.twi/i2c-13/13-0036/axp2101-pek.0/input/input8
+[Fri Jul 31 12:16:33 2026] [      T1] sunxi:sunxi_sid:[ERR]: Fail to read 'dvfs2_ori' in dts
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (408000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (720000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (792000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1008000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1104000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1200000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1296000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1392000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1416000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1512000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1608000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1704000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1800000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (728000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1092000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1300000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: _opp_add: OPP not supported by regulators (1586000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (408000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (720000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (792000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1008000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1200000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1296000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1392000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1512000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1608000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1704000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1800000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1896000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1920000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1944000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1992000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (728000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1300000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1586000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1690000000)
+[Fri Jul 31 12:16:33 2026] [      T1] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: _opp_add: OPP not supported by regulators (1976000000)
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu0: EM: created perf domain
+[Fri Jul 31 12:16:33 2026] [      T1] cpu cpu6: EM: created perf domain
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, platform driver init
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, insmod param cpu_physical=0x0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, platform device compatible=allwinner,npu
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, platform driver device=0xffff0000c0d58010
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] clock_rate: 26000000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore irq number is 459.
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] npu power domains status: 1
+[Fri Jul 31 12:16:33 2026] [      T1] NPU AXI CLK NULL
+[Fri Jul 31 12:16:33 2026] [      T1] NPU AHB CLK NULL
+[Fri Jul 31 12:16:33 2026] [      T1] NPU TZMA CLK NULL
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] EXTRA: 0x, SID: 0x0, max_freq: 1200000000, default_freq: 1200000000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] current dvfs: 0, vf index: 0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] successed to set opp regulator
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] Supported vf list: 
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1]     freq: 492000000, vol: 800000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1]     freq: 852000000, vol: 800000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1]     freq: 1008000000, vol: 960000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] get freq list and add opp successfully
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] target rate: 1008000000, vol: 960000, target_fscale: 100
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] npu devfreq added
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] successed to register cooling device
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] enable aw vip devfreq
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] NPU Use VF0000, use freq 1008 MHz
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] Want set pclk rate(1008000000) support(1008000000) real(1008000000)
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] Want set mclk rate(1008000000) support(1008000000) real(1008000000)
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] Get NPU Regulator Control FAIL!
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] Want set npu vol(960000) now vol(800000)
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, device_cnt=1, core_cnt=1
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] core_0, request irqline=459, name=vipcore_0
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, allocate page for video memory, size: 0x400000 bytes
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] vipcore, heap_cnt=0, reserved video memory cpu_phy=0xfa400000, vip_phy=0xfa400000, size=0x400000
+[Fri Jul 31 12:16:33 2026] [      T1] npu[1][1] VIPLite driver version 2.0.3.4-AW-2025-10-27
+[Fri Jul 31 12:16:33 2026] [      T1] [ADDR_MGT] addr_mgt_probe: module version: v1.0.13
+[Fri Jul 31 12:16:33 2026] [      T1] [ADDR_MGT] addr_mgt_probe: success.
+[Fri Jul 31 12:16:33 2026] [      T1] registered taskstats version 1
+[Fri Jul 31 12:16:33 2026] [      T1] Loading compiled-in X.509 certificates
+[Fri Jul 31 12:16:33 2026] [      T1] Key type .fscrypt registered
+[Fri Jul 31 12:16:33 2026] [      T1] Key type fscrypt-provisioning registered
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi iommu: irq = 460
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi iommu: irq = 461
+[Fri Jul 31 12:16:33 2026] [     T60] ------------[ cut here ]------------
+[Fri Jul 31 12:16:33 2026] [     T60] couldn't get idr
+[Fri Jul 31 12:16:33 2026] [     T60] WARNING: CPU: 2 PID: 60 at drivers/i2c/i2c-core-base.c:1623 __i2c_add_numbered_adapter+0x8c/0xc0
+[Fri Jul 31 12:16:33 2026] [     T60] Modules linked in:
+[Fri Jul 31 12:16:33 2026] [     T60] CPU: 2 PID: 60 Comm: kworker/u16:1 Not tainted 6.6.98-3-aw2511 #3
+[Fri Jul 31 12:16:33 2026] [     T60] Hardware name: sun60iw2 (DT)
+[Fri Jul 31 12:16:33 2026] [     T60] Workqueue: events_unbound deferred_probe_work_func
+[Fri Jul 31 12:16:33 2026] [     T60] pstate: 60400009 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[Fri Jul 31 12:16:33 2026] [     T60] pc : __i2c_add_numbered_adapter+0x8c/0xc0
+[Fri Jul 31 12:16:33 2026] [     T60] lr : __i2c_add_numbered_adapter+0x8c/0xc0
+[Fri Jul 31 12:16:33 2026] [     T60] sp : ffff800082133ae0
+[Fri Jul 31 12:16:33 2026] [     T60] x29: ffff800082133ae0 x28: ffff0000c0108000 x27: ffff8000817a6e60
+[Fri Jul 31 12:16:33 2026] [     T60] x26: ffff8000817a6000 x25: ffff8000816d1c00 x24: ffff8000816d1c00
+[Fri Jul 31 12:16:33 2026] [     T60] x23: ffff8000816d1b60 x22: ffff0000c0b9e410 x21: ffff800081575040
+[Fri Jul 31 12:16:33 2026] [     T60] x20: ffff0000c0908880 x19: 00000000ffffffe4 x18: 0000000000000010
+[Fri Jul 31 12:16:33 2026] [     T60] x17: 000000000000001a x16: 000000005095e200 x15: 0000000000000000
+[Fri Jul 31 12:16:33 2026] [     T60] x14: fffffffffffcf307 x13: 7264692074656720 x12: 74276e646c756f63
+[Fri Jul 31 12:16:33 2026] [     T60] x11: ffff800081484020 x10: 0000000000000000 x9 : ffff80008010f6f8
+[Fri Jul 31 12:16:33 2026] [     T60] x8 : 0000000000017fe8 x7 : 00000000fffff31d x6 : ffff8000814dc020
+[Fri Jul 31 12:16:33 2026] [     T60] x5 : 000000000000031d x4 : 40000000fffff31d x3 : 0000000000000000
+[Fri Jul 31 12:16:33 2026] [     T60] x2 : 0000000000000000 x1 : 0000000000000000 x0 : ffff0000c080d280
+[Fri Jul 31 12:16:33 2026] [     T60] Call trace:
+[Fri Jul 31 12:16:33 2026] [     T60]  __i2c_add_numbered_adapter+0x8c/0xc0
+[Fri Jul 31 12:16:33 2026] [     T60]  i2c_add_numbered_adapter+0x24/0x48
+[Fri Jul 31 12:16:33 2026] [     T60]  sunxi_twi_probe+0x458/0x8f8
+[Fri Jul 31 12:16:33 2026] [     T60]  platform_probe+0x70/0xe8
+[Fri Jul 31 12:16:33 2026] [     T60]  really_probe+0x150/0x2c0
+[Fri Jul 31 12:16:33 2026] [     T60]  __driver_probe_device+0x80/0x140
+[Fri Jul 31 12:16:33 2026] [     T60]  driver_probe_device+0x44/0x168
+[Fri Jul 31 12:16:33 2026] [     T60]  __device_attach_driver+0xc0/0x148
+[Fri Jul 31 12:16:33 2026] [     T60]  bus_for_each_drv+0x90/0xf8
+[Fri Jul 31 12:16:33 2026] [     T60]  __device_attach+0xa8/0x1a0
+[Fri Jul 31 12:16:33 2026] [     T60]  device_initial_probe+0x1c/0x30
+[Fri Jul 31 12:16:33 2026] [     T60]  bus_probe_device+0xb4/0xc0
+[Fri Jul 31 12:16:33 2026] [     T60]  deferred_probe_work_func+0x8c/0xd0
+[Fri Jul 31 12:16:33 2026] [     T60]  process_one_work+0x160/0x3b8
+[Fri Jul 31 12:16:33 2026] [     T60]  worker_thread+0x2b8/0x4d8
+[Fri Jul 31 12:16:33 2026] [     T60]  kthread+0xe8/0xf8
+[Fri Jul 31 12:16:33 2026] [     T60]  ret_from_fork+0x10/0x20
+[Fri Jul 31 12:16:33 2026] [     T60] ---[ end trace 0000000000000000 ]---
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi:twi_sunxi-2510000.twi:[ERR]: failed to add adapter
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-twi: probe of 2510000.twi failed with error -16
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-display-engine 5000000.de: Adding to iommu group 0
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [SUNXI-DE] chn_cfg_mode not found, used def val
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] de use no display sys
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-display-engine 5000000.de: register iommu fault callback for sunxi-drm, master=8
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_drm_bind start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5500000.vo0 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [TCON_TOP]sunxi_tcon_top_bind start
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5510000.vo1 (ops sunxi_tcon_top_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [SUNXI-DE] sunxi_de_bind start
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: Adding to iommu group 0
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_de_bind crtc init for de 0 ok
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_de_bind crtc init for de 1 ok
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5000000.de (ops sunxi_de_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5507000.phy (ops sunxi_cphy_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [DSI]sunxi_drm_dsi_bind start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 0
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] Loading esd watchdog module...
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] TE GPIO not configured
+[Fri Jul 31 12:16:33 2026] [     T60] [drm:sunxi_drm_dsi_bind] *ERROR* Failed to request TE IRQ
+[Fri Jul 31 12:16:33 2026] [     T60] [drm:sunxi_drm_dsi_bind] *ERROR* esd watchdog init failed!
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5506000.dsi0 (ops sunxi_drm_dsi_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [SUNXI-TCON] sunxi_tcon_of_get_id 4
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi drv init dts done
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi drv enable resource done
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi drv init resource done
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi drv init i2c adapter finish
+[Fri Jul 31 12:16:33 2026] [     T60] Registered IR keymap rc-cec
+[Fri Jul 31 12:16:33 2026] [     T60] rc rc0: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0
+[Fri Jul 31 12:16:33 2026] [     T60] input: sunxi_cec as /devices/platform/soc@3000000/5520000.hdmi0/rc/rc0/input9
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi drv init cec adapter finish
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: drm hdmi connector create finish
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi-hdmi: hdmi devices bind done <<<<<<<<<<
+
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5520000.hdmi0 (ops sunxi_hdmi_compoent_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5501000.tcon0 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5730000.tcon3 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] sunxi-drm soc@3000000:sunxi-drm: bound 5731000.tcon4 (ops sunxi_tcon_component_ops)
+[Fri Jul 31 12:16:33 2026] [     T60] Console: switching to colour frame buffer device 135x135
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_de_enable index 0
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [DSI] sunxi_lcd_pin_set_state start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [PHY] sunxi_dsi_combophy_configure start
+[Fri Jul 31 12:16:33 2026] [     T60] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[Fri Jul 31 12:16:33 2026] [     T60] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: hdmi drv detect hpd connect
+[Fri Jul 31 12:16:33 2026] [     T74] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Fri Jul 31 12:16:33 2026] [     T74] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[Fri Jul 31 12:16:33 2026] [     T74] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[Fri Jul 31 12:16:33 2026] [     T74] usb 1-1: Product: USB 2.0 Hub
+[Fri Jul 31 12:16:33 2026] [     T74] hub 1-1:1.0: USB hub found
+[Fri Jul 31 12:16:33 2026] [     T74] hub 1-1:1.0: 4 ports detected
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 253
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: dw edid unsupport parser desc type: 16
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: sunxi hdmi edid parse block0 finish
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: [error] dw edid parse dtd timing pixel clock[0KHz] invalid!
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: sunxi hdmi edid parse block1 finish
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: sunxi hdmi get sink support hdcp1x
+[Fri Jul 31 12:16:33 2026] [    T129] [drm] sunxi-hdmi: sunxi hdmi get sink unsupport hdcp2x
+[Fri Jul 31 12:16:34 2026] [     T60] platform 2527014.pwm0: supply pwm not found, using dummy regulator
+[Fri Jul 31 12:16:34 2026] [     T60] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[Fri Jul 31 12:16:34 2026] [    T129] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 12:16:34 2026] [     T60] [drm] Initialized sunxi-drm 3.0.0 20230901 for soc@3000000:sunxi-drm on minor 0
+[Fri Jul 31 12:16:34 2026] [     T60] [drm] sunxi_drm_bind ok
+[Fri Jul 31 12:16:34 2026] [     T60] sunxi-pcie 6000000.pcie: host bridge /soc@3000000/pcie@6000000 ranges:
+[Fri Jul 31 12:16:34 2026] [     T60] sunxi-pcie 6000000.pcie:      err 0x0020000000..0x0020ffffff -> 0x0020000000
+[Fri Jul 31 12:16:34 2026] [     T60] sunxi-pcie 6000000.pcie:       IO 0x0021000000..0x0021ffffff -> 0x0021000000
+[Fri Jul 31 12:16:34 2026] [     T60] sunxi-pcie 6000000.pcie:      MEM 0x0022000000..0x0027ffffff -> 0x0022000000
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.2: new high-speed USB device number 3 using xhci-hcd
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.2: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice= 6.63
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.2: Product: USB2.1 Hub
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.2: Manufacturer: GenesysLogic
+[Fri Jul 31 12:16:34 2026] [     T47] hub 1-1.2:1.0: USB hub found
+[Fri Jul 31 12:16:34 2026] [     T47] hub 1-1.2:1.0: 4 ports detected
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: new high-speed USB device number 4 using xhci-hcd
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d80, bcdDevice= 1.00
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: Product: AIC Wlan
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: Manufacturer: aicsemi
+[Fri Jul 31 12:16:34 2026] [     T47] usb 1-1.4: SerialNumber: 20220103
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.3: new full-speed USB device number 5 using xhci-hcd
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.3: New USB device found, idVendor=1ea7, idProduct=0066, bcdDevice= 2.00
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.3: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.3: Product: 2.4G Mouse
+[Fri Jul 31 12:16:35 2026] [     T76] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.0/0003:1EA7:0066.0001/input/input10
+[Fri Jul 31 12:16:35 2026] [     T76] hid-generic 0003:1EA7:0066.0001: input: USB HID v1.10 Keyboard [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input0
+[Fri Jul 31 12:16:35 2026] [     T76] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input11
+[Fri Jul 31 12:16:35 2026] [     T76] input: 2.4G Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input12
+[Fri Jul 31 12:16:35 2026] [     T76] input: 2.4G Mouse Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input13
+[Fri Jul 31 12:16:35 2026] [     T76] input: 2.4G Mouse System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.3/1-1.2.3:1.1/0003:1EA7:0066.0002/input/input14
+[Fri Jul 31 12:16:35 2026] [     T76] hid-generic 0003:1EA7:0066.0002: input: USB HID v1.10 Mouse [2.4G Mouse] on usb-xhci-hcd.40.auto-1.2.3/input1
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.4: new full-speed USB device number 6 using xhci-hcd
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.4: New USB device found, idVendor=3151, idProduct=3020, bcdDevice= 0.02
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.4: Product: 2.4G Receiver
+[Fri Jul 31 12:16:35 2026] [     T76] usb 1-1.2.4: Manufacturer: YICHIP
+[Fri Jul 31 12:16:35 2026] [     T76] input: YICHIP 2.4G Receiver as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.0/0003:3151:3020.0003/input/input16
+[Fri Jul 31 12:16:35 2026] [     T76] hid-generic 0003:3151:3020.0003: input: USB HID v2.00 Keyboard [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input0
+[Fri Jul 31 12:16:35 2026] [     T76] input: YICHIP 2.4G Receiver Mouse as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input17
+[Fri Jul 31 12:16:35 2026] [     T76] input: YICHIP 2.4G Receiver System Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input18
+[Fri Jul 31 12:16:35 2026] [     T76] input: YICHIP 2.4G Receiver Consumer Control as /devices/platform/soc@3000000/12.usbc2/6a00000.xhci2-controller/xhci-hcd.40.auto/usb1/1-1/1-1.2/1-1.2.4/1-1.2.4:1.1/0003:3151:3020.0004/input/input19
+[Fri Jul 31 12:16:35 2026] [     T76] hid-generic 0003:3151:3020.0004: input: USB HID v2.00 Mouse [YICHIP 2.4G Receiver] on usb-xhci-hcd.40.auto-1.2.4/input1
+[Fri Jul 31 12:16:36 2026] [     T60] sunxi:pcie-rc-6000000.pcie:[ERR]: Speed change timeout
+[Fri Jul 31 12:16:36 2026] [     T60] sunxi:pcie-rc-6000000.pcie:[INFO]: PCIe speed of Gen1
+[Fri Jul 31 12:16:36 2026] [     T60] sunxi-pcie 6000000.pcie: PCI host bridge to bus 0000:00
+[Fri Jul 31 12:16:36 2026] [     T60] pci_bus 0000:00: root bus resource [bus 00-ff]
+[Fri Jul 31 12:16:36 2026] [     T60] pci_bus 0000:00: root bus resource [??? 0x20000000-0x20ffffff flags 0x0]
+[Fri Jul 31 12:16:36 2026] [     T60] pci_bus 0000:00: root bus resource [io  0x0000-0xffffff] (bus address [0x21000000-0x21ffffff])
+[Fri Jul 31 12:16:36 2026] [     T60] pci_bus 0000:00: root bus resource [mem 0x22000000-0x27ffffff]
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: [1f6d:abcd] type 01 class 0x060400
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: supports D1
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: BAR 0: assigned [mem 0x22000000-0x220fffff]
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: BAR 6: assigned [mem 0x22100000-0x2210ffff pref]
+[Fri Jul 31 12:16:36 2026] [     T60] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Jul 31 12:16:36 2026] [     T60] sunxi:pcie-6000000.pcie:[INFO]: driver version: 1.2.5
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ehci_sunxi:[INFO]: sunxi-ehci: EHCI SUNXI driver
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:sunxi_hci:[INFO]: sunxi ehci0-controller don't init wakeup source
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: probe, pdev->name: 4101000.ehci0-controller, sunxi_ehci: 0xffff8000817a4490, 0x:ffff80008222d000, irq_no:1dc
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci0]: Not init ehci0
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ehci_sunxi:[INFO]: [sunxi-ehci1]: probe, pdev->name: 4200000.ehci1-controller, sunxi_ehci: 0xffff8000817a48c0, 0x:ffff80008223d000, irq_no:1dd
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: supply hci not found, using dummy regulator
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: EHCI Host Controller
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: new USB bus registered, assigned bus number 3
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: irq 477, io mem 0x04200000
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ehci 4200000.ehci1-controller: USB 2.0 started, EHCI 1.00
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.06
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb3: Product: EHCI Host Controller
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb3: Manufacturer: Linux 6.6.98-3-aw2511 ehci_hcd
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb3: SerialNumber: sunxi-ehci
+[Fri Jul 31 12:16:36 2026] [      T1] hub 3-0:1.0: USB hub found
+[Fri Jul 31 12:16:36 2026] [      T1] hub 3-0:1.0: 1 port detected
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ohci_sunxi:[INFO]: sunxi-ohci: OHCI SUNXI driver
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:sunxi_hci:[INFO]: sunxi ohci0-controller don't init wakeup source
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: probe, pdev->name: 4101400.ohci0-controller, sunxi_ohci: 0xffff8000817a5120
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci0]: Not init ohci0
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi:ohci_sunxi:[INFO]: [sunxi-ohci1]: probe, pdev->name: 4200400.ohci1-controller, sunxi_ohci: 0xffff8000817a5550
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: supply hci not found, using dummy regulator
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: OHCI Host Controller
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: new USB bus registered, assigned bus number 4
+[Fri Jul 31 12:16:36 2026] [      T1] sunxi-ohci 4200400.ohci1-controller: irq 479, io mem 0x04200400
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.06
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb4: Product: OHCI Host Controller
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb4: Manufacturer: Linux 6.6.98-3-aw2511 ohci_hcd
+[Fri Jul 31 12:16:36 2026] [      T1] usb usb4: SerialNumber: sunxi-ohci
+[Fri Jul 31 12:16:36 2026] [      T1] hub 4-0:1.0: USB hub found
+[Fri Jul 31 12:16:36 2026] [      T1] hub 4-0:1.0: 1 port detected
+[Fri Jul 31 12:16:36 2026] [      T1] clk: Not disabling unused clocks
+[Fri Jul 31 12:16:36 2026] [      T1] Freeing unused kernel memory: 1920K
+[Fri Jul 31 12:16:36 2026] [      T1] Run /init as init process
+[Fri Jul 31 12:16:36 2026] [      T1]   with arguments:
+[Fri Jul 31 12:16:36 2026] [      T1]     /init
+[Fri Jul 31 12:16:36 2026] [      T1]     splash
+[Fri Jul 31 12:16:36 2026] [      T1]     earlycon
+[Fri Jul 31 12:16:36 2026] [      T1]   with environment:
+[Fri Jul 31 12:16:36 2026] [      T1]     HOME=/
+[Fri Jul 31 12:16:36 2026] [      T1]     TERM=linux
+[Fri Jul 31 12:16:36 2026] [      T1]     mac_addr=
+[Fri Jul 31 12:16:36 2026] [      T1]     mac1_addr=
+[Fri Jul 31 12:16:36 2026] [      T1]     cgroup_enable=memory
+[Fri Jul 31 12:16:36 2026] [      T1]     cgroup_memory=1
+[Fri Jul 31 12:16:36 2026] [    T172] dwmac-sunxi 4500000.ethernet end0: renamed from eth0
+[Fri Jul 31 12:16:36 2026] [    T165] rtc-hym8563 14-0051: no valid clock/calendar values available
+[Fri Jul 31 12:16:36 2026] [    T165] rtc-hym8563 14-0051: registered as rtc0
+[Fri Jul 31 12:16:36 2026] [    T165] rtc-hym8563 14-0051: no valid clock/calendar values available
+[Fri Jul 31 12:16:36 2026] [    T165] rtc-hym8563 14-0051: hctosys: unable to read the hardware clock
+[Fri Jul 31 12:16:36 2026] [    T209] raid6: neonx8   gen()  2657 MB/s
+[Fri Jul 31 12:16:36 2026] [    T209] raid6: neonx4   gen()  2601 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: neonx2   gen()  2546 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: neonx1   gen()  2219 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: int64x8  gen()  1648 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: int64x4  gen()  1832 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: int64x2  gen()  1746 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: int64x1  gen()  1341 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: using algorithm neonx8 gen() 2657 MB/s
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: .... xor() 1973 MB/s, rmw enabled
+[Fri Jul 31 12:16:37 2026] [    T209] raid6: using neon recovery algorithm
+[Fri Jul 31 12:16:37 2026] [    T209] xor: measuring software checksum speed
+[Fri Jul 31 12:16:37 2026] [    T209]    8regs           :  3623 MB/sec
+[Fri Jul 31 12:16:37 2026] [    T209]    32regs          :  3664 MB/sec
+[Fri Jul 31 12:16:37 2026] [    T209]    arm64_neon      :  3707 MB/sec
+[Fri Jul 31 12:16:37 2026] [    T209] xor: using function: arm64_neon (3707 MB/sec)
+[Fri Jul 31 12:16:37 2026] [    T209] Btrfs loaded, zoned=no, fsverity=no
+[Fri Jul 31 12:16:38 2026] [    T223] EXT4-fs (mmcblk1p3): recovery complete
+[Fri Jul 31 12:16:38 2026] [    T223] EXT4-fs (mmcblk1p3): mounted filesystem 653db195-501c-4b19-a720-2fc8f1382665 r/w with ordered data mode. Quota mode: disabled.
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: System time advanced to timestamp on /var/lib/systemd/timesync/clock: Fri 2026-07-31 12:15:33 UTC
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: Inserted module 'autofs4'
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: Detected architecture arm64.
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: Hostname set to <radxa-cubie-a7a>.
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+[Fri Jul 31 12:16:38 2026] [      T1] systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Queued start job for default target graphical.target.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Created slice system-kmsconvt.slice - Slice /system/kmsconvt.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Created slice user.slice - User and Session Slice.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Expecting device dev-ttyAS0.device - /dev/ttyAS0...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Reached target slices.target - Slice Units.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Reached target swap.target - Swaps.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting tmp.mount - Temporary Directory /tmp...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-fsck-root.service - File System Check on Root Device skipped, unmet condition check ConditionPathIsReadWrite=!/
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-journald.service - Journal Service...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[Fri Jul 31 12:16:39 2026] [    T276] fuse: init (API version 7.39)
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted tmp.mount - Temporary Directory /tmp.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[Fri Jul 31 12:16:39 2026] [    T288] EXT4-fs (mmcblk1p3): re-mounted 653db195-501c-4b19-a720-2fc8f1382665.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-file-system.service - Lock File Systems to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-machine-id.service - Lock Machine ID to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-firmware-code.service - Lock Firmware Code to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-firmware-config.service - Lock Firmware Configuration to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-secureboot-authority.service - Lock UEFI SecureBoot Authority to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-secureboot-policy.service - Lock UEFI SecureBoot Policy to TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-pcrlock-make-policy.service - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[Fri Jul 31 12:16:39 2026] [    T277] systemd-journald[277]: Collecting audit messages is enabled.
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.035:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev-early comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1334 audit(1785500135.075:3): prog-id=19 op=LOAD
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-timesyncd.service - Network Time Synchronization...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.087:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-modules-load comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[Fri Jul 31 12:16:39 2026] [      T1] systemd[1]: Started systemd-journald.service - Journal Service.
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.103:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.123:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1334 audit(1785500135.219:7): prog-id=20 op=LOAD
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1334 audit(1785500135.219:8): prog-id=21 op=LOAD
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.227:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-timesyncd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.231:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [     T58] audit: type=1130 audit(1785500135.235:11): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:39 2026] [    T277] systemd-journald[277]: Received client request to flush runtime journal.
+[Fri Jul 31 12:16:39 2026] [    T277] systemd-journald[277]: File /var/log/journal/47b16f4234204dfe93a6539cab7c0555/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[Fri Jul 31 12:16:40 2026] [      C3] random: crng init done
+[Fri Jul 31 12:16:40 2026] [    T358] platform 7023017.s_pwm0: supply pwm not found, using dummy regulator
+[Fri Jul 31 12:16:40 2026] [    T354] sunxi:sunxi_usbc:[INFO]: OTG can't find bcten-gpio, use default mode.
+[Fri Jul 31 12:16:40 2026] [    T354] sunxi:sunxi_usbc:[INFO]: get id is fail, -61
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[INFO]: 2215 sunxi_cedar_init(): sunxi cedar version 1.1
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi-cedar 1c0e000.ve: Adding to iommu group 0
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[INFO]: 2137 sunxi_cedar_probe(): probe ve
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi-cedar 1c0e000.ve: supply ve not found, using dummy regulator
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[WARN]: 392 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi-cedar soc@3000000:ve1@1c0e000: Adding to iommu group 0
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[INFO]: 2140 sunxi_cedar_probe(): probe ve1
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi-cedar 1c10000.ve2: Adding to iommu group 0
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[INFO]: 2143 sunxi_cedar_probe(): probe ve2
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi-cedar 1c10000.ve2: supply ve not found, using dummy regulator
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_fw: loading out-of-tree module taints kernel.
+[Fri Jul 31 12:16:40 2026] [    T352] aic_bluetooth_mod_init 
+[Fri Jul 31 12:16:40 2026] [    T352] RELEASE DATE:2026_0123_5f7be68d 
+[Fri Jul 31 12:16:40 2026] [    T346] sunxi:VE:[WARN]: 392 ve_dvfs_get_attr(): get vf table failed, default 624MHz
+[Fri Jul 31 12:16:40 2026] [    T352] Aic high speed USB device detected
+[Fri Jul 31 12:16:40 2026] [    T352] chip_id=7, chip_mcu_id = 0
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_table_8800d80_u02.bin  
+[Fri Jul 31 12:16:40 2026] [    T358] deinterlace 5400000.deinterlace: Adding to iommu group 0
+[Fri Jul 31 12:16:40 2026] [    T358] sunxi:deinterlace:[INFO]: DI probe
+[Fri Jul 31 12:16:40 2026] [    T352] file md5:54b15ce88b3b9ba14bf961e6f90839fc
+[Fri Jul 31 12:16:40 2026] [    T352] ### Upload fw_patch_table_8800d80_u02.bin fw_patch_table, size=1384
+[Fri Jul 31 12:16:40 2026] [    T352] addr_adid 0x201940, addr_patch 0x1e0000
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_adid_8800d80_u02.bin  
+[Fri Jul 31 12:16:40 2026] [    T352] file md5:f546881a81b960d89a672578eb45a809
+[Fri Jul 31 12:16:40 2026] [    T352] ### Upload fw_adid_8800d80_u02.bin firmware, @ = 201940  size=1708
+[Fri Jul 31 12:16:40 2026] [    T352] fw download complete
+
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02.bin  
+[Fri Jul 31 12:16:40 2026] [    T352] file md5:f5400db1d64e0150c3232eb53e7f78b6
+[Fri Jul 31 12:16:40 2026] [    T352] ### Upload fw_patch_8800d80_u02.bin firmware, @ = 1e0000  size=32700
+[Fri Jul 31 12:16:40 2026] [    T352] fw download complete
+
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fw_patch_8800d80_u02_ext0.bin  
+[Fri Jul 31 12:16:40 2026] [    T352] file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+[Fri Jul 31 12:16:40 2026] [    T352] ### Upload fw_patch_8800d80_u02_ext0.bin firmware, @ = 20b43c  size=16136
+[Fri Jul 31 12:16:40 2026] [    T352] fw download complete
+
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt btmode[4]:5
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt btport[4]:1
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt uart_baud[4]:1500000
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt uart_flowctrl[4]:1
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt lpm_enable[4]:0
+[Fri Jul 31 12:16:40 2026] [    T352] aicbt_patch_table_load bt tx_pwr[4]:6F2F
+[Fri Jul 31 12:16:40 2026] [    T341] [sunxi bxm]SysDevInit start!
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxi_platform_init start
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: warning: default clk_rate is NOT set in DTS, set it to default:600000000
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxi_parse_dts clk_rate:600000000
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: succeed to get gpu regulator, default volt value:800000
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxi_parse_dts finished
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxi_set_device_clk_rate:600000000
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxiSetVoltage:800000
+[Fri Jul 31 12:16:40 2026] [    T341] pvrsrvkm 1800000.gpu: sunxi_platform_init end
+[Fri Jul 31 12:16:40 2026] [    T341] [sunxi bxm]SysDevInit end!
+[Fri Jul 31 12:16:40 2026] [    T341] PVR_K:  341: Read BVNC 36.56.104.183 from HW device registers
+[Fri Jul 31 12:16:40 2026] [    T341] PVR_K:  341: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[Fri Jul 31 12:16:40 2026] [    T341] [drm] Initialized pvr 24.2.6603887 20170530 for 1800000.gpu on minor 1
+[Fri Jul 31 12:16:40 2026] [    T342] [Awinic] aw87xxx_pa_init:driver version: v2.14.0
+[Fri Jul 31 12:16:40 2026] [    T342] sunxi:sound-codec-hdmi:[ERR]: 442 sunxi_codec_dev_probe(): register codec-hdmi success
+[Fri Jul 31 12:16:40 2026] [    T358] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 12:16:40 2026] [    T358] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 12:16:40 2026] [    T352] patch version - Aug 01 2025 11:05:26 - git a26f071
+[Fri Jul 31 12:16:40 2026] [    T352] aic_load_firmware :firmware path = /lib/firmware/aic8800_fw/USB/aic8800D80/fmacfw_8800d80_u02.bin  
+[Fri Jul 31 12:16:40 2026] [    T351] sunxi:sound-i2s:[WARN]: 2237 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[Fri Jul 31 12:16:40 2026] [    T351] sunxi:sound-i2s:[WARN]: 2245 snd_sunxi_dts_params_init(): clk-keep missing
+[Fri Jul 31 12:16:40 2026] [    T358] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 12:16:40 2026] [    T358] sunxi:sound-mach:[ERR]: 534 simple_parse_of(): simple_dai_link_of failed
+[Fri Jul 31 12:16:40 2026] [    T352] file md5:280bb388f3b44bf1cbe5ec072ba274da
+[Fri Jul 31 12:16:40 2026] [    T352] ### Upload fmacfw_8800d80_u02.bin firmware, @ = 120000  size=358072
+[Fri Jul 31 12:16:40 2026] [    T351] sunxi:sound-i2s:[WARN]: 2237 snd_sunxi_dts_params_init(): clk-en-post-delay missing
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 12:16:40 2026] [    T351] sunxi:sound-i2s:[WARN]: 2245 snd_sunxi_dts_params_init(): clk-keep missing
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HS MIC Jack
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi-snd-mach soc@3000000:i2s0_mach: ASoC: DAPM unknown pin HP Jack
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi:sound-ac101b:[INFO]: 269 ac101b_bg_hdata_cal(): BG voltage set to 1.48V
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi:sound-ac101b:[INFO]: 281 ac101b_bg_hdata_cal(): codec adc offset: -2\x1b[0m
+[Fri Jul 31 12:16:40 2026] [    T352] fw download complete
+
+[Fri Jul 31 12:16:40 2026] [    T352] AICWFDBG(LOGERROR)	Read FW mem: 00120198
+[Fri Jul 31 12:16:40 2026] [    T352] AICWFDBG(LOGERROR)	120198=177158
+[Fri Jul 31 12:16:40 2026] [    T352] AICWFDBG(LOGERROR)	1201a0=177c00
+[Fri Jul 31 12:16:40 2026] [    T352] usbcore: registered new interface driver aic_load_fw
+[Fri Jul 31 12:16:40 2026] [    T367] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [      T8] app_cmp
+[Fri Jul 31 12:16:40 2026] [    T367] app_cmp
+[Fri Jul 31 12:16:40 2026] [     T11] debugfs: Directory '2532000.i2s0_plat' with parent 'sunxi-ac101b' already present!
+[Fri Jul 31 12:16:40 2026] [      T8] sunxi:sound-jack:[ERR]: 241 sunxi_jack_det_scan_work(): jack_adv or extdev is null
+[Fri Jul 31 12:16:40 2026] [     T11] input: sunxi-ac101b Headphones as /devices/platform/soc@3000000/soc@3000000:i2s0_mach/sound/card0/input21
+[Fri Jul 31 12:16:40 2026] [     T11] sunxi:sound-mach:[WARN]: 372 asoc_simple_parse_ucfmt(): set data late to default
+[Fri Jul 31 12:16:40 2026] [     T11] debugfs: Directory '2535000.i2s3_plat' with parent 'allwinner-hdmi' already present!
+[Fri Jul 31 12:16:40 2026] [      T8] usb 1-1.4: USB disconnect, device number 4
+[Fri Jul 31 12:16:40 2026] [      T8] aicwf_usb_disconnect enter 
+[Fri Jul 31 12:16:40 2026] [      T8] aicwf_bus_deinit
+[Fri Jul 31 12:16:41 2026] [      T8] q_sz/max:  0 /  8 - next tkn: 559
+[Fri Jul 31 12:16:41 2026] [      T8] q_sz/max:  0 /  8 - next tkn: 559
+[Fri Jul 31 12:16:41 2026] [    T394] usb bustx thread will to stop
+[Fri Jul 31 12:16:41 2026] [    T394] usb bustx thread stop
+[Fri Jul 31 12:16:41 2026] [      T8] exit aicwf_bus_deinit
+[Fri Jul 31 12:16:41 2026] [    T395] usb busrx thread will to stop
+[Fri Jul 31 12:16:41 2026] [    T395] usb busrx thread stop
+[Fri Jul 31 12:16:41 2026] [    T392] sunxi:sunxi_usbc:[INFO]: insmod_device_driver
+
+[Fri Jul 31 12:16:41 2026] [    T392] sunxi_usb_udc 4100000.udc-controller: supply udc not found, using dummy regulator
+[Fri Jul 31 12:16:41 2026] [    T392] sunxi:sunxi_usbc:[INFO]: device_chose finished 340!
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: new high-speed USB device number 7 using xhci-hcd
+[Fri Jul 31 12:16:41 2026] [    T564] zram: Added device: zram0
+[Fri Jul 31 12:16:41 2026] [    T533] zram0: detected capacity change from 0 to 4005088
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: New USB device found, idVendor=a69c, idProduct=8d81, bcdDevice= 1.00
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: Product: AIC 8800D80
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: Manufacturer: AICSemi
+[Fri Jul 31 12:16:41 2026] [      T8] usb 1-1.4: SerialNumber: 20220103
+[Fri Jul 31 12:16:41 2026] [      T8] aic_load_fw: probe of 1-1.4:1.0 failed with error -1
+[Fri Jul 31 12:16:41 2026] [      T8] aic_load_fw: probe of 1-1.4:1.1 failed with error -1
+[Fri Jul 31 12:16:41 2026] [      T8] aic_load_fw: probe of 1-1.4:1.2 failed with error -1
+[Fri Jul 31 12:16:41 2026] [    T603] Adding 2002540k swap on /dev/zram0.  Priority:100 extents:1 across:2002540k SS
+[Fri Jul 31 12:16:41 2026] [    T347] Bluetooth: Core ver 2.22
+[Fri Jul 31 12:16:41 2026] [    T347] NET: Registered PF_BLUETOOTH protocol family
+[Fri Jul 31 12:16:41 2026] [    T347] Bluetooth: HCI device and connection manager initialized
+[Fri Jul 31 12:16:41 2026] [    T347] Bluetooth: HCI socket layer initialized
+[Fri Jul 31 12:16:41 2026] [    T347] Bluetooth: L2CAP socket layer initialized
+[Fri Jul 31 12:16:41 2026] [    T347] Bluetooth: SCO socket layer initialized
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: AICBT_RELEASE_NAME: 202012_ANDROID
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: AicSemi Bluetooth USB driver module init, version 2.1.0
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: RELEASE DATE: 2023_1211_1958 
+
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: btusb_probe: usb_interface 00000000f2d589e5, bInterfaceNumber 0, idVendor 0xa69c, idProduct 0x8d81
+[Fri Jul 31 12:16:41 2026] [    T370] aicwf_usb_chipmatch USE AIC8800D80
+[Fri Jul 31 12:16:41 2026] [    T370] endpoint num 3
+[Fri Jul 31 12:16:41 2026] [    T370] endpoint num 4
+[Fri Jul 31 12:16:41 2026] [    T370] endpoint num 4
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: firmware_info_init: Auto suspend is disabled
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: btusb_probe: download begining...
+[Fri Jul 31 12:16:41 2026] [    T370] aic_btusb: btusb_probe: download ending...
+[Fri Jul 31 12:16:41 2026] [    T370] usbcore: registered new interface driver aic_btusb
+[Fri Jul 31 12:16:41 2026] [    T124] aic_btusb: btusb_open: Start
+[Fri Jul 31 12:16:41 2026] [    T124]  download_patch 0
+[Fri Jul 31 12:16:41 2026] [    T124] aic_btusb: btusb_open: End
+[Fri Jul 31 12:16:41 2026] [    T355] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[Fri Jul 31 12:16:41 2026] [    T355] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[Fri Jul 31 12:16:41 2026] [    T355] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+
+[Fri Jul 31 12:16:42 2026] [    T355] **********************************************************
+[Fri Jul 31 12:16:42 2026] [    T355] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Fri Jul 31 12:16:42 2026] [    T355] **                                                      **
+[Fri Jul 31 12:16:42 2026] [    T355] ** trace_printk() being used. Allocating extra memory.  **
+[Fri Jul 31 12:16:42 2026] [    T355] **                                                      **
+[Fri Jul 31 12:16:42 2026] [    T355] ** This means that this is a DEBUG kernel and it is     **
+[Fri Jul 31 12:16:42 2026] [    T355] ** unsafe for production use.                           **
+[Fri Jul 31 12:16:42 2026] [    T355] **                                                      **
+[Fri Jul 31 12:16:42 2026] [    T355] ** If you see this message and you are not debugging    **
+[Fri Jul 31 12:16:42 2026] [    T355] ** the kernel, report this immediately to your vendor!  **
+[Fri Jul 31 12:16:42 2026] [    T355] **                                                      **
+[Fri Jul 31 12:16:42 2026] [    T355] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Fri Jul 31 12:16:42 2026] [    T355] **********************************************************
+[Fri Jul 31 12:16:42 2026] [    T355] ========== tcp ack debug tcp_ack_init 
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: PHY [stmmac-0:01] driver [Generic PHY] (irq=POLL)
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac4: Master AXI performs fixed burst length
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: No Safety Features support found
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: registered PTP clock
+[Fri Jul 31 12:16:42 2026] [    T613] dwmac-sunxi 4500000.ethernet end0: configuring for phy/rgmii link mode
+[Fri Jul 31 12:16:43 2026] [    T355] ieee80211 phy0: 
+                                      *******************************************************
+                                      ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+                                      *******************************************************
+[Fri Jul 31 12:16:43 2026] [    T355] usbcore: registered new interface driver aic8800_fdrv
+[Fri Jul 31 12:16:43 2026] [    T837] PVR_K:  837: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[Fri Jul 31 12:16:43 2026] [    T837] PVR_K:  837: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[Fri Jul 31 12:16:43 2026] [    T614] AICWFDBG(LOGERROR)	p2p dev addr=f2 ab 5c e1 db 2f
+[Fri Jul 31 12:16:43 2026] [    T847] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[Fri Jul 31 12:16:43 2026] [    T847] Bluetooth: BNEP socket layer initialized
+[Fri Jul 31 12:16:43 2026] [    T840] Bluetooth: MGMT ver 1.22
+[Fri Jul 31 12:16:44 2026] [    T848] NET: Registered PF_ALG protocol family
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 12:16:44 2026] [    T124] aic btusb_shutdown
+[Fri Jul 31 12:16:44 2026] [    T124] aic_btusb: btusb_close: hci running 0
+[Fri Jul 31 12:16:44 2026] [    T861] Bluetooth: RFCOMM TTY layer initialized
+[Fri Jul 31 12:16:44 2026] [    T861] Bluetooth: RFCOMM socket layer initialized
+[Fri Jul 31 12:16:44 2026] [    T861] Bluetooth: RFCOMM ver 1.11
+[Fri Jul 31 12:16:44 2026] [    T124] aic_btusb: btusb_open: Start
+[Fri Jul 31 12:16:44 2026] [    T124]  download_patch 0
+[Fri Jul 31 12:16:44 2026] [    T124] aic_btusb: btusb_open: End
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: [error] hdmi drv set dynamic range 1 unsupport!
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi_de_enable index 1
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[Fri Jul 31 12:16:44 2026] [    T837] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:  - pixel clock 148500KHz
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: dw audio check: triger cts re-calculate
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 12:16:45 2026] [    T837] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:16:45 2026] [     T58] kauditd_printk_skb: 58 callbacks suppressed
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1100 audit(1785500140.555:70): pid=873 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1101 audit(1785500140.575:71): pid=873 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1103 audit(1785500140.575:72): pid=873 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1006 audit(1785500140.579:73): pid=873 uid=0 old-auid=4294967295 auid=103 tty=(none) old-ses=4294967295 ses=1 res=1
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1300 audit(1785500140.579:73): arch=c00000b7 syscall=64 success=yes exit=3 a0=c a1=ffffdcd308a0 a2=3 a3=0 items=0 ppid=804 pid=873 auid=103 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=1 comm="sddm-helper" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" key=(null)
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1327 audit(1785500140.579:73): proctitle=2F7573722F6C69622F616172636836342D6C696E75782D676E752F7364646D2F7364646D2D68656C706572002D2D736F636B6574002F746D702F7364646D2D617574682D30666439343962352D336562652D343731382D383532382D646165356634343462666430002D2D69640032002D2D7374617274002F7573722F62696E
+[Fri Jul 31 12:16:45 2026] [    T663] rx eapol
+[Fri Jul 31 12:16:45 2026] [    T663] rx eapol
+[Fri Jul 31 12:16:45 2026] [     T58] audit: type=1130 audit(1785500141.227:74): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@103 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:46 2026] [     T58] audit: type=1101 audit(1785500141.343:75): pid=877 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="sddm" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:46 2026] [     T58] audit: type=1103 audit(1785500141.347:76): pid=877 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="sddm" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:46 2026] [     T58] audit: type=1006 audit(1785500141.347:77): pid=877 uid=0 old-auid=4294967295 auid=103 tty=(none) old-ses=4294967295 ses=2 res=1
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 12:16:47 2026] [    T891] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:16:47 2026] [    T889] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:16:47 2026] [    T889] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:16:47 2026] [    T889] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:16:52 2026] [     T58] kauditd_printk_skb: 10 callbacks suppressed
+[Fri Jul 31 12:16:52 2026] [     T58] audit: type=1131 audit(1785500147.999:86): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:16:53 2026] [     T60] pdtest soc@3000000:pd_gpu_top_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 12:16:53 2026] [     T60] pdtest: probe of soc@3000000:pd_gpu_top_test@0 failed with error -110
+[Fri Jul 31 12:16:53 2026] [     T60] pdtest soc@3000000:pd_gpu_core_test@0: deferred probe timeout, ignoring dependency
+[Fri Jul 31 12:16:53 2026] [     T60] pdtest: probe of soc@3000000:pd_gpu_core_test@0 failed with error -110
+[Fri Jul 31 12:16:53 2026] [    T263] platform a020000.dmcfreq: deferred probe pending
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_vi_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_ve_dec_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_ve_enc_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_npu_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_pcie_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_usb2_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_de_sys_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_vo_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:56 2026] [     T76] sunxi:sunxi_pd_test-soc@3000000:pd_vo1_test@0:[WARN]: runtime_suspend disable clock
+[Fri Jul 31 12:16:58 2026] [     T58] audit: type=1130 audit(1785500153.567:87): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=hdmi-toggle-once comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:17:07 2026] [     T76] axp8191-bldo5: disabling
+[Fri Jul 31 12:17:07 2026] [     T76] axp8191-dldo2: disabling
+[Fri Jul 31 12:17:07 2026] [     T76] axp8191-dldo3: disabling
+[Fri Jul 31 12:17:14 2026] [     T58] audit: type=1131 audit(1785500169.323:88): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:17:14 2026] [     T58] audit: type=1334 audit(1785500169.443:89): prog-id=33 op=UNLOAD
+[Fri Jul 31 12:17:18 2026] [     T58] audit: type=1131 audit(1785500238.758:90): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:17:18 2026] [     T58] audit: type=1334 audit(1785500238.866:91): prog-id=38 op=UNLOAD
+[Fri Jul 31 12:17:18 2026] [     T58] audit: type=1334 audit(1785500238.866:92): prog-id=37 op=UNLOAD
+[Fri Jul 31 12:17:18 2026] [     T58] audit: type=1334 audit(1785500238.866:93): prog-id=36 op=UNLOAD
+[Fri Jul 31 12:23:55 2026] [     T58] audit: type=1130 audit(1785500635.772:94): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=NetworkManager-wait-online comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:23:56 2026] [     T58] audit: type=1130 audit(1785500636.184:95): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@sd_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:23:56 2026] [     T58] audit: type=1131 audit(1785500636.184:96): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@sd_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:23:56 2026] [     T58] audit: type=1334 audit(1785500636.240:97): prog-id=39 op=LOAD
+[Fri Jul 31 12:23:57 2026] [     T58] audit: type=1130 audit(1785500637.196:98): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:23:57 2026] [     T58] audit: type=1130 audit(1785500637.244:99): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:23:57 2026] [     T58] audit: type=1131 audit(1785500637.244:100): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=fwupd-refresh comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:26:47 2026] [    T837] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[Fri Jul 31 12:26:49 2026] [    T837] [drm:displl_clk_enable] *ERROR* displl clk unable to lock
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] [DSI] sunxi_lcd_pin_set_state start
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi_de_disable de 0
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi_de_atomic_flush de 0 not enable, skip
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi-hdmi: drm hdmi check mode: unchange >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi-hdmi: drm hdmi atomic disable done >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_disable
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi_de_disable de 1
+[Fri Jul 31 12:26:49 2026] [    T837] [drm] sunxi_de_atomic_flush de 1 not enable, skip
+[Fri Jul 31 12:31:45 2026] [     T58] audit: type=1130 audit(1785501105.774:101): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:31:45 2026] [     T58] audit: type=1131 audit(1785501105.774:102): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1100 audit(1785501902.839:103): pid=813 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/login" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1101 audit(1785501902.851:104): pid=813 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/login" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1103 audit(1785501902.855:105): pid=813 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/login" hostname=radxa-cubie-a7a addr=? terminal=/dev/ttyAS0 res=success'
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1006 audit(1785501902.855:106): pid=813 uid=0 old-auid=4294967295 auid=1000 tty=ttyAS0 old-ses=4294967295 ses=3 res=1
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1300 audit(1785501902.855:106): arch=c00000b7 syscall=64 success=yes exit=4 a0=3 a1=ffffe4df6410 a2=4 a3=0 items=0 ppid=1 pid=813 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=1000 fsgid=0 tty=ttyAS0 ses=3 comm="login" exe="/usr/bin/login" key=(null)
+[Fri Jul 31 12:45:02 2026] [     T58] audit: type=1327 audit(1785501902.855:106): proctitle=2F62696E2F6C6F67696E002D2D
+[Fri Jul 31 12:45:03 2026] [     T58] audit: type=1130 audit(1785501903.223:107): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=user-runtime-dir@1000 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:45:03 2026] [     T58] audit: type=1101 audit(1785501903.323:108): pid=1051 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:45:03 2026] [     T58] audit: type=1103 audit(1785501903.327:109): pid=1051 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/systemd/systemd-executor" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:45:03 2026] [     T58] audit: type=1006 audit(1785501903.327:110): pid=1051 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=4 res=1
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set info done
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set enable done
+[Fri Jul 31 12:45:04 2026] [   T1066] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:45:04 2026] [   T1064] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:45:04 2026] [   T1064] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:45:04 2026] [   T1064] [drm] sunxi-hdmi: hdmi drv audio set disable done
+[Fri Jul 31 12:46:51 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1100 audit(1785502011.895:116): pid=1101 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1101 audit(1785502011.943:117): pid=1101 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1103 audit(1785502011.955:118): pid=1101 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1006 audit(1785502011.955:119): pid=1101 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=5 res=1
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1300 audit(1785502011.955:119): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffc744a2c0 a2=4 a3=0 items=0 ppid=821 pid=1101 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=5 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:46:51 2026] [     T58] audit: type=1327 audit(1785502011.955:119): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:46:52 2026] [     T58] audit: type=1105 audit(1785502012.071:120): pid=1101 uid=0 auid=1000 ses=5 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:52 2026] [     T58] audit: type=1103 audit(1785502012.075:121): pid=1111 uid=0 auid=1000 ses=5 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:52 2026] [     T58] audit: type=1106 audit(1785502012.511:122): pid=1101 uid=0 auid=1000 ses=5 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:46:52 2026] [     T58] audit: type=1104 audit(1785502012.511:123): pid=1101 uid=0 auid=1000 ses=5 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1100 audit(1785502046.560:124): pid=1162 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1101 audit(1785502046.588:125): pid=1162 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1103 audit(1785502046.596:126): pid=1162 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1006 audit(1785502046.596:127): pid=1162 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=6 res=1
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1300 audit(1785502046.596:127): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffd7d57570 a2=4 a3=0 items=0 ppid=821 pid=1162 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=6 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1327 audit(1785502046.596:127): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1105 audit(1785502046.724:128): pid=1162 uid=0 auid=1000 ses=6 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:26 2026] [     T58] audit: type=1103 audit(1785502046.728:129): pid=1172 uid=0 auid=1000 ses=6 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:27 2026] [     T58] audit: type=1100 audit(1785502047.000:130): pid=1173 uid=1000 auid=1000 ses=6 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:27 2026] [     T58] audit: type=1101 audit(1785502047.012:131): pid=1173 uid=1000 auid=1000 ses=6 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:45 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1100 audit(1785502065.792:139): pid=1203 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1101 audit(1785502065.844:140): pid=1203 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1103 audit(1785502065.852:141): pid=1203 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1006 audit(1785502065.852:142): pid=1203 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=7 res=1
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1300 audit(1785502065.852:142): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffe55c1910 a2=4 a3=0 items=0 ppid=821 pid=1203 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=7 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1327 audit(1785502065.852:142): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1105 audit(1785502065.972:143): pid=1203 uid=0 auid=1000 ses=7 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:45 2026] [     T58] audit: type=1103 audit(1785502065.976:144): pid=1213 uid=0 auid=1000 ses=7 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:46 2026] [     T58] audit: type=1100 audit(1785502066.376:145): pid=1215 uid=1000 auid=1000 ses=7 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:46 2026] [     T58] audit: type=1101 audit(1785502066.388:146): pid=1215 uid=1000 auid=1000 ses=7 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:51 2026] [     T58] kauditd_printk_skb: 9 callbacks suppressed
+[Fri Jul 31 12:47:51 2026] [     T58] audit: type=1106 audit(1785502071.736:156): pid=1215 uid=1000 auid=1000 ses=7 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:51 2026] [     T58] audit: type=1104 audit(1785502071.736:157): pid=1215 uid=1000 auid=1000 ses=7 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:47:52 2026] [     T58] audit: type=1106 audit(1785502072.056:158): pid=1203 uid=0 auid=1000 ses=7 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:47:52 2026] [     T58] audit: type=1104 audit(1785502072.056:159): pid=1203 uid=0 auid=1000 ses=7 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:16 2026] [     T58] audit: type=1131 audit(1785502096.652:160): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:48:16 2026] [     T58] audit: type=1334 audit(1785502096.796:161): prog-id=40 op=UNLOAD
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1100 audit(1785502134.484:162): pid=1709 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1101 audit(1785502134.512:163): pid=1709 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1103 audit(1785502134.520:164): pid=1709 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1006 audit(1785502134.520:165): pid=1709 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=8 res=1
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1300 audit(1785502134.520:165): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=fffff91acb70 a2=4 a3=0 items=0 ppid=821 pid=1709 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=8 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1327 audit(1785502134.520:165): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1105 audit(1785502134.672:166): pid=1709 uid=0 auid=1000 ses=8 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1103 audit(1785502134.676:167): pid=1719 uid=0 auid=1000 ses=8 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1100 audit(1785502134.944:168): pid=1720 uid=1000 auid=1000 ses=8 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:48:54 2026] [     T58] audit: type=1101 audit(1785502134.956:169): pid=1720 uid=1000 auid=1000 ses=8 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] sunxi_de_enable index 0
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable vrr_setp:0 start
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [DSI] sunxi_tcon_dsi_mode_init start
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [DSI] sunxi_lcd_pin_set_state start
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [PHY] sunxi_dsi_combophy_configure start
+[Fri Jul 31 12:49:04 2026] [    T837] [drm] [PHY] phy_config:0 Unset the lvl,Use the default cfg.
+[Fri Jul 31 12:49:04 2026] [    T837] [lowlevel] x:1080, y:2160, vt:2184, vbp:10, vspw:4, ht:1211, hbp:13, hspw:3
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] [DSI] sunxi_drm_dsi_encoder_atomic_enable finish
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: drm hdmi set mode change when disp info change
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: drm hdmi check mode: change >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: sunxi hdmi select vic 16 use hdmi14 vsif
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: drm hdmi mode set: 1920*1080 >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] [SUNXI-CRTC]sunxi_crtc_atomic_enable
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi_de_enable index 1
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi_de_enable finish sw en=0
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] suxni tcon hdmi set rate: 148500000Hz and get diff: 148500000Hz
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: dw audio get n = 6144
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: [top phy]
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:  - pixel clock 148500KHz
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:    - pll: 0xE80F5A00, 0x00035000, 0x80000000, 0x30000000
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: top phy config done
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: [snps phy]
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:  - refer clock: 148500KHz, color bits: 8, repeat: 0
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:     - mpll: 0x0001, 0x2080, 0x020a
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:  - refer clock: 148500KHz. [25000KHz~185625KHz]
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi:     - drive: 0x0007, 0x8160, 0x8188
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: snps phy state: lock
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: hdmi drv enable output done
+[Fri Jul 31 12:49:05 2026] [    T837] [drm] sunxi-hdmi: drm hdmi atomic enable >>>>>>>>>>>>>>>>
+[Fri Jul 31 12:49:19 2026] [     T58] kauditd_printk_skb: 13 callbacks suppressed
+[Fri Jul 31 12:49:19 2026] [     T58] audit: type=1100 audit(1785502159.928:183): pid=1743 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1101 audit(1785502160.032:184): pid=1743 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1103 audit(1785502160.040:185): pid=1743 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1006 audit(1785502160.040:186): pid=1743 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=9 res=1
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1300 audit(1785502160.040:186): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffe16e1200 a2=4 a3=0 items=0 ppid=821 pid=1743 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=9 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1327 audit(1785502160.040:186): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1105 audit(1785502160.192:187): pid=1743 uid=0 auid=1000 ses=9 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1103 audit(1785502160.196:188): pid=1753 uid=0 auid=1000 ses=9 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1100 audit(1785502160.436:189): pid=1754 uid=1000 auid=1000 ses=9 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:49:20 2026] [     T58] audit: type=1101 audit(1785502160.448:190): pid=1754 uid=1000 auid=1000 ses=9 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:50:23 2026] [     T58] kauditd_printk_skb: 25 callbacks suppressed
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1100 audit(1785502223.672:216): pid=1793 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1101 audit(1785502223.692:217): pid=1793 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1103 audit(1785502223.696:218): pid=1793 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1006 audit(1785502223.696:219): pid=1793 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=10 res=1
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1300 audit(1785502223.696:219): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffd1d7c130 a2=4 a3=0 items=0 ppid=821 pid=1793 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=10 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1327 audit(1785502223.696:219): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1105 audit(1785502223.816:220): pid=1793 uid=0 auid=1000 ses=10 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:23 2026] [     T58] audit: type=1103 audit(1785502223.820:221): pid=1804 uid=0 auid=1000 ses=10 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:24 2026] [     T58] audit: type=1100 audit(1785502224.072:222): pid=1805 uid=1000 auid=1000 ses=10 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:50:24 2026] [     T58] audit: type=1101 audit(1785502224.084:223): pid=1805 uid=1000 auid=1000 ses=10 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] kauditd_printk_skb: 13 callbacks suppressed
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1100 audit(1785502257.168:237): pid=1822 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1101 audit(1785502257.196:238): pid=1822 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1103 audit(1785502257.204:239): pid=1822 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1006 audit(1785502257.204:240): pid=1822 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=11 res=1
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1300 audit(1785502257.204:240): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffe7fb2500 a2=4 a3=0 items=0 ppid=821 pid=1822 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=11 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1327 audit(1785502257.204:240): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1105 audit(1785502257.328:241): pid=1822 uid=0 auid=1000 ses=11 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1103 audit(1785502257.332:242): pid=1833 uid=0 auid=1000 ses=11 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1100 audit(1785502257.564:243): pid=1834 uid=1000 auid=1000 ses=11 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:50:57 2026] [     T58] audit: type=1101 audit(1785502257.576:244): pid=1834 uid=1000 auid=1000 ses=11 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] kauditd_printk_skb: 13 callbacks suppressed
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1100 audit(1785502292.160:258): pid=1883 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1101 audit(1785502292.280:259): pid=1883 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1103 audit(1785502292.288:260): pid=1883 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1006 audit(1785502292.288:261): pid=1883 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=12 res=1
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1300 audit(1785502292.288:261): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffebf7b6f0 a2=4 a3=0 items=0 ppid=821 pid=1883 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=12 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1327 audit(1785502292.288:261): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1105 audit(1785502292.416:262): pid=1883 uid=0 auid=1000 ses=12 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1103 audit(1785502292.420:263): pid=1893 uid=0 auid=1000 ses=12 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1100 audit(1785502292.664:264): pid=1894 uid=1000 auid=1000 ses=12 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:51:32 2026] [     T58] audit: type=1101 audit(1785502292.672:265): pid=1894 uid=1000 auid=1000 ses=12 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 12:56:58 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 12:56:58 2026] [     T58] audit: type=1112 audit(1785502618.700:273): pid=1927 uid=0 auid=4294967295 ses=4294967295 msg='op=login acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=? addr=192.168.0.102 terminal=sshd res=failed'
+[Fri Jul 31 12:56:58 2026] [     T58] audit: type=1109 audit(1785502618.712:274): pid=1927 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:bad_ident grantors=? acct="?" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=failed'
+[Fri Jul 31 12:57:24 2026] [     T58] audit: type=1112 audit(1785502644.388:275): pid=1933 uid=0 auid=4294967295 ses=4294967295 msg='op=login acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=? addr=192.168.0.102 terminal=sshd res=failed'
+[Fri Jul 31 12:57:24 2026] [     T58] audit: type=1109 audit(1785502644.396:276): pid=1933 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:bad_ident grantors=? acct="?" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=failed'
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1100 audit(1785502679.772:277): pid=1937 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1101 audit(1785502679.852:278): pid=1937 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1103 audit(1785502679.856:279): pid=1937 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1006 audit(1785502679.860:280): pid=1937 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=13 res=1
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1300 audit(1785502679.860:280): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffc549f220 a2=4 a3=0 items=0 ppid=821 pid=1937 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=13 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1327 audit(1785502679.860:280): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1105 audit(1785502679.984:281): pid=1937 uid=0 auid=1000 ses=13 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:57:59 2026] [     T58] audit: type=1103 audit(1785502679.988:282): pid=1948 uid=0 auid=1000 ses=13 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:58:00 2026] [     T58] audit: type=1106 audit(1785502680.576:283): pid=1937 uid=0 auid=1000 ses=13 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:58:00 2026] [     T58] audit: type=1104 audit(1785502680.576:284): pid=1937 uid=0 auid=1000 ses=13 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1100 audit(1785502763.279:285): pid=1983 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1101 audit(1785502763.311:286): pid=1983 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1103 audit(1785502763.315:287): pid=1983 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1006 audit(1785502763.315:288): pid=1983 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=14 res=1
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1300 audit(1785502763.315:288): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffc92271d0 a2=4 a3=0 items=0 ppid=821 pid=1983 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=14 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1327 audit(1785502763.315:288): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1105 audit(1785502763.447:289): pid=1983 uid=0 auid=1000 ses=14 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:23 2026] [     T58] audit: type=1103 audit(1785502763.451:290): pid=1993 uid=0 auid=1000 ses=14 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:36 2026] [     T58] audit: type=1106 audit(1785502776.807:291): pid=1983 uid=0 auid=1000 ses=14 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 12:59:36 2026] [     T58] audit: type=1104 audit(1785502776.807:292): pid=1983 uid=0 auid=1000 ses=14 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1100 audit(1785502841.339:293): pid=2707 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1101 audit(1785502841.387:294): pid=2707 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1103 audit(1785502841.399:295): pid=2707 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1006 audit(1785502841.399:296): pid=2707 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=15 res=1
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1300 audit(1785502841.399:296): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffd08b7020 a2=4 a3=0 items=0 ppid=821 pid=2707 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=15 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1327 audit(1785502841.399:296): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1105 audit(1785502841.551:297): pid=2707 uid=0 auid=1000 ses=15 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:41 2026] [     T58] audit: type=1103 audit(1785502841.555:298): pid=2717 uid=0 auid=1000 ses=15 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:42 2026] [     T58] audit: type=1100 audit(1785502842.235:299): pid=2719 uid=1000 auid=1000 ses=15 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:00:42 2026] [     T58] audit: type=1101 audit(1785502842.239:300): pid=2719 uid=1000 auid=1000 ses=15 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:00:58 2026] [     T58] kauditd_printk_skb: 3 callbacks suppressed
+[Fri Jul 31 13:00:58 2026] [     T58] audit: type=1106 audit(1785502858.567:304): pid=2719 uid=1000 auid=1000 ses=15 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:00:58 2026] [     T58] audit: type=1104 audit(1785502858.567:305): pid=2719 uid=1000 auid=1000 ses=15 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:00:58 2026] [     T58] audit: type=1106 audit(1785502858.583:306): pid=2707 uid=0 auid=1000 ses=15 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:00:58 2026] [     T58] audit: type=1104 audit(1785502858.583:307): pid=2707 uid=0 auid=1000 ses=15 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1100 audit(1785502871.439:308): pid=4280 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1101 audit(1785502871.487:309): pid=4280 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1103 audit(1785502871.495:310): pid=4280 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1006 audit(1785502871.495:311): pid=4280 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=16 res=1
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1300 audit(1785502871.495:311): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffdfdc6a10 a2=4 a3=0 items=0 ppid=821 pid=4280 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=16 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1327 audit(1785502871.495:311): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1105 audit(1785502871.651:312): pid=4280 uid=0 auid=1000 ses=16 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1103 audit(1785502871.655:313): pid=4290 uid=0 auid=1000 ses=16 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1100 audit(1785502871.899:314): pid=4291 uid=1000 auid=1000 ses=16 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:11 2026] [     T58] audit: type=1101 audit(1785502871.911:315): pid=4291 uid=1000 auid=1000 ses=16 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:12 2026] [   T4299] No Fault
+[Fri Jul 31 13:01:12 2026] [   T4299] No Fault
+[Fri Jul 31 13:01:12 2026] [   T4304] No Fault
+[Fri Jul 31 13:01:12 2026] [   T4304] No Fault
+[Fri Jul 31 13:01:28 2026] [     T58] kauditd_printk_skb: 8 callbacks suppressed
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1100 audit(1785502888.127:324): pid=4327 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_succeed_if,pam_permit,pam_cap acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1101 audit(1785502888.139:325): pid=4327 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1103 audit(1785502888.139:326): pid=4327 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1006 audit(1785502888.139:327): pid=4327 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=17 res=1
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1300 audit(1785502888.139:327): arch=c00000b7 syscall=64 success=yes exit=4 a0=c a1=ffffe45f3e60 a2=4 a3=0 items=0 ppid=804 pid=4327 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=17 comm="sddm-helper" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" key=(null)
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1327 audit(1785502888.139:327): proctitle=2F7573722F6C69622F616172636836342D6C696E75782D676E752F7364646D2F7364646D2D68656C706572002D2D736F636B6574002F746D702F7364646D2D617574682D30666439343962352D336562652D343731382D383532382D646165356634343462666430002D2D69640031002D2D7374617274002F7573722F62696E
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1105 audit(1785502888.267:328): pid=4327 uid=0 auid=1000 ses=17 msg='op=PAM:session_open grantors=pam_selinux,pam_keyinit,pam_limits,pam_loginuid,pam_permit,pam_umask,pam_unix,pam_systemd,pam_selinux,pam_env,pam_env acct="radxa" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1106 audit(1785502888.499:329): pid=873 uid=0 auid=103 ses=1 msg='op=PAM:session_close grantors=pam_selinux,pam_keyinit,pam_limits,pam_loginuid,pam_permit,pam_umask,pam_unix,pam_systemd,pam_selinux,pam_env,pam_env acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 13:01:28 2026] [     T58] audit: type=1104 audit(1785502888.499:330): pid=873 uid=0 auid=103 ses=1 msg='op=PAM:setcred grantors=pam_permit acct="sddm" exe="/usr/lib/aarch64-linux-gnu/sddm/sddm-helper" hostname=radxa-cubie-a7a addr=? terminal=/dev/tty2 res=success'
+[Fri Jul 31 13:01:31 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:31 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:32 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:32 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7083000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7083000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:33 2026] [   T4492] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: SLA+W has been transmitted; ACK not received
+[Fri Jul 31 13:01:33 2026] [      C0] sunxi:twi_sunxi-7084000.twi:[ERR]: engine mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:34 2026] [   T4492] sunxi:twi_sunxi-7084000.twi:[ERR]: engine-mode: xfer failed(dev addr:0x50)
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:34 2026] [   T4492] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:34 2026] [   T4492] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:34 2026] [   T4492] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: Address + Write bit transmitted,ACK not received
+[Fri Jul 31 13:01:34 2026] [      C0] sunxi:twi_sunxi-7085000.twi:[ERR]: drv mode: TWI BUS error state is 0x20
+[Fri Jul 31 13:01:34 2026] [   T4492] sunxi:twi_sunxi-7085000.twi:[ERR]: drv-mode: xfer failed (dev addr:0x50)
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1100 audit(1785502895.159:331): pid=4542 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1101 audit(1785502895.235:332): pid=4542 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1103 audit(1785502895.239:333): pid=4542 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1006 audit(1785502895.239:334): pid=4542 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=18 res=1
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1300 audit(1785502895.239:334): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffc691bc00 a2=4 a3=0 items=0 ppid=821 pid=4542 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=18 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1327 audit(1785502895.239:334): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1105 audit(1785502895.391:335): pid=4542 uid=0 auid=1000 ses=18 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1103 audit(1785502895.395:336): pid=4556 uid=0 auid=1000 ses=18 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1100 audit(1785502895.763:337): pid=4559 uid=1000 auid=1000 ses=18 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:35 2026] [     T58] audit: type=1101 audit(1785502895.767:338): pid=4559 uid=1000 auid=1000 ses=18 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: SEC_TS Driver [g_6ft0.v00]
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: skipped to get num_lines property
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: skipped to get project_name property
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: skipped to get model_name property
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: irq:114,irq_type:0x2008,max[x,y]:[1080,2160],project/model_name:(null)/(null),panel_revision:0
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_i2c_probe_read
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_read_device_id: AC, 6F, 70 ret=1
+[Fri Jul 31 13:01:35 2026] [   T4581] input: Samsung Electronics Touchscreen 1223 as /devices/platform/gpio-i2c0/i2c-0/0-0048/input/input22
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_probe request_irq = 107
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_probe request_irq done
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: create /proc/self_test Succeeded!
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_probe: FB notifier disabled to prevent backlight control
+[Fri Jul 31 13:01:35 2026] [   T4581] sec_ts 0-0048: sec_ts_probe done
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:01:36 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:01:38 2026] [   T4632] warning: `kdeconnectd' uses wireless extensions which will stop working for Wi-Fi 7 hardware; use nl80211
+[Fri Jul 31 13:01:40 2026] [   T1914] sec_ts 0-0048: sec_ts_fwupdate_work start
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_wait_for_ready: Time Over
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_wait_for_ready: 00, 00, 00, 00, 00, 00, 00, 00 [102]
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_firmwarei_update_on_probe: initial firmware update with i file
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_firmwarei_update_on_probe: request firmware done! size = 120400
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_check_firmware_version: AC, 6F, 70
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_check_firmware_version: [IC] Image version info : 8.20.1.23 // [BIN] 10012008
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_check_firmware_version: [FW] IMG version : 1.10. [IC] IMG version 1.23.
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_fwupdate_work: fw update success, ret = 0!
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_read_information: AC, 6F, 70
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_read_information: AP/BL(AC), DEV1:6F, DEV2:70, nT:12, nR:20, rY:1080, rX:2160
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_read_calibration_report: count:0, pass count:0, fail count:0, status:0x50
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_read_information: cal info (80)
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_read_information: 20
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_fwupdate_work: S6SSEC_TS Tx : 18, Rx : 32
+[Fri Jul 31 13:01:43 2026] [   T1914] sec_ts 0-0048: sec_ts_fwupdate_work done
+[Fri Jul 31 13:01:48 2026] [     T58] kauditd_printk_skb: 6 callbacks suppressed
+[Fri Jul 31 13:01:48 2026] [     T58] audit: type=1106 audit(1785502908.107:345): pid=4559 uid=1000 auid=1000 ses=18 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:48 2026] [     T58] audit: type=1104 audit(1785502908.107:346): pid=4559 uid=1000 auid=1000 ses=18 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:01:48 2026] [     T58] audit: type=1106 audit(1785502908.119:347): pid=4542 uid=0 auid=1000 ses=18 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:48 2026] [     T58] audit: type=1104 audit(1785502908.119:348): pid=4542 uid=0 auid=1000 ses=18 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:01:54 2026] [   T4594] sched: RT throttling activated
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1100 audit(1785502928.607:349): pid=5163 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1101 audit(1785502928.631:350): pid=5163 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1103 audit(1785502928.635:351): pid=5163 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1006 audit(1785502928.639:352): pid=5163 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=19 res=1
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1300 audit(1785502928.639:352): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffd4a35fe0 a2=4 a3=0 items=0 ppid=821 pid=5163 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=19 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1327 audit(1785502928.639:352): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1105 audit(1785502928.771:353): pid=5163 uid=0 auid=1000 ses=19 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:08 2026] [     T58] audit: type=1103 audit(1785502928.775:354): pid=5173 uid=0 auid=1000 ses=19 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:09 2026] [     T58] audit: type=1100 audit(1785502928.999:355): pid=5174 uid=1000 auid=1000 ses=19 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:02:09 2026] [     T58] audit: type=1101 audit(1785502929.003:356): pid=5174 uid=1000 auid=1000 ses=19 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm hdmi detect: connect
+[Fri Jul 31 13:02:09 2026] [    T837] [drm] sunxi-hdmi: drm get edid support modes: 49
+[Fri Jul 31 13:02:35 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1100 audit(1785502955.015:364): pid=5227 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1101 audit(1785502955.103:365): pid=5227 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1103 audit(1785502955.107:366): pid=5227 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1006 audit(1785502955.107:367): pid=5227 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=20 res=1
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1300 audit(1785502955.107:367): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffe4ec2dc0 a2=4 a3=0 items=0 ppid=821 pid=5227 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=20 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1327 audit(1785502955.107:367): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1105 audit(1785502955.211:368): pid=5227 uid=0 auid=1000 ses=20 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1103 audit(1785502955.215:369): pid=5237 uid=0 auid=1000 ses=20 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1100 audit(1785502955.439:370): pid=5238 uid=1000 auid=1000 ses=20 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:02:35 2026] [     T58] audit: type=1101 audit(1785502955.447:371): pid=5238 uid=1000 auid=1000 ses=20 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:05 2026] [     T58] kauditd_printk_skb: 3 callbacks suppressed
+[Fri Jul 31 13:03:05 2026] [     T58] audit: type=1106 audit(1785502985.631:375): pid=5238 uid=1000 auid=1000 ses=20 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:05 2026] [     T58] audit: type=1104 audit(1785502985.631:376): pid=5238 uid=1000 auid=1000 ses=20 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:05 2026] [     T58] audit: type=1106 audit(1785502985.639:377): pid=5227 uid=0 auid=1000 ses=20 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:05 2026] [     T58] audit: type=1104 audit(1785502985.643:378): pid=5227 uid=0 auid=1000 ses=20 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1100 audit(1785503010.875:379): pid=5276 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1101 audit(1785503010.963:380): pid=5276 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1103 audit(1785503010.967:381): pid=5276 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1006 audit(1785503010.971:382): pid=5276 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=21 res=1
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1300 audit(1785503010.971:382): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffd326e560 a2=4 a3=0 items=0 ppid=821 pid=5276 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=21 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:03:30 2026] [     T58] audit: type=1327 audit(1785503010.971:382): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:03:31 2026] [     T58] audit: type=1105 audit(1785503011.091:383): pid=5276 uid=0 auid=1000 ses=21 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:31 2026] [     T58] audit: type=1103 audit(1785503011.095:384): pid=5286 uid=0 auid=1000 ses=21 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:31 2026] [     T58] audit: type=1100 audit(1785503011.291:385): pid=5287 uid=1000 auid=1000 ses=21 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:31 2026] [     T58] audit: type=1101 audit(1785503011.295:386): pid=5287 uid=1000 auid=1000 ses=21 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:36 2026] [     T58] kauditd_printk_skb: 3 callbacks suppressed
+[Fri Jul 31 13:03:36 2026] [     T58] audit: type=1106 audit(1785503016.435:390): pid=5287 uid=1000 auid=1000 ses=21 msg='op=PAM:session_close grantors=pam_limits,pam_permit,pam_umask,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:36 2026] [     T58] audit: type=1104 audit(1785503016.435:391): pid=5287 uid=1000 auid=1000 ses=21 msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:03:36 2026] [     T58] audit: type=1106 audit(1785503016.451:392): pid=5276 uid=0 auid=1000 ses=21 msg='op=PAM:session_close grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:03:36 2026] [     T58] audit: type=1104 audit(1785503016.451:393): pid=5276 uid=0 auid=1000 ses=21 msg='op=PAM:setcred grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1100 audit(1785503063.343:394): pid=5306 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1101 audit(1785503063.427:395): pid=5306 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1103 audit(1785503063.431:396): pid=5306 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1006 audit(1785503063.431:397): pid=5306 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=22 res=1
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1300 audit(1785503063.431:397): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffee6ecf90 a2=4 a3=0 items=0 ppid=821 pid=5306 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=22 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1327 audit(1785503063.431:397): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1105 audit(1785503063.547:398): pid=5306 uid=0 auid=1000 ses=22 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1103 audit(1785503063.547:399): pid=5316 uid=0 auid=1000 ses=22 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1100 audit(1785503063.751:400): pid=5317 uid=1000 auid=1000 ses=22 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:04:23 2026] [     T58] audit: type=1101 audit(1785503063.755:401): pid=5317 uid=1000 auid=1000 ses=22 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:05:27 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1100 audit(1785503127.507:409): pid=5337 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1101 audit(1785503127.591:410): pid=5337 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1103 audit(1785503127.595:411): pid=5337 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1006 audit(1785503127.595:412): pid=5337 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=23 res=1
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1300 audit(1785503127.595:412): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=fffff9291710 a2=4 a3=0 items=0 ppid=821 pid=5337 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=23 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1327 audit(1785503127.595:412): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1105 audit(1785503127.699:413): pid=5337 uid=0 auid=1000 ses=23 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:27 2026] [     T58] audit: type=1103 audit(1785503127.703:414): pid=5347 uid=0 auid=1000 ses=23 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:28 2026] [     T58] audit: type=1100 audit(1785503128.127:415): pid=5349 uid=1000 auid=1000 ses=23 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:05:28 2026] [     T58] audit: type=1101 audit(1785503128.135:416): pid=5349 uid=1000 auid=1000 ses=23 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:05:28 2026] [   T5357] sec_ts_do_remove
+[Fri Jul 31 13:05:49 2026] [     T58] kauditd_printk_skb: 7 callbacks suppressed
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1100 audit(1785503149.795:424): pid=5522 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1101 audit(1785503149.851:425): pid=5522 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1103 audit(1785503149.855:426): pid=5522 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1006 audit(1785503149.855:427): pid=5522 uid=0 old-auid=4294967295 auid=1000 tty=(none) old-ses=4294967295 ses=24 res=1
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1300 audit(1785503149.855:427): arch=c00000b7 syscall=64 success=yes exit=4 a0=6 a1=ffffcf26ed60 a2=4 a3=0 items=0 ppid=821 pid=5522 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=24 comm="sshd-session" exe="/usr/lib/openssh/sshd-session" key=(null)
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1327 audit(1785503149.855:427): proctitle=737368642D73657373696F6E3A207261647861205B707269765D
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1105 audit(1785503149.967:428): pid=5522 uid=0 auid=1000 ses=24 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_keyinit,pam_permit,pam_umask,pam_unix,pam_systemd,pam_mail,pam_limits,pam_env,pam_env,pam_selinux acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:49 2026] [     T58] audit: type=1103 audit(1785503149.975:429): pid=5532 uid=0 auid=1000 ses=24 msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="radxa" exe="/usr/lib/openssh/sshd-session" hostname=192.168.0.102 addr=192.168.0.102 terminal=ssh res=success'
+[Fri Jul 31 13:05:50 2026] [     T58] audit: type=1100 audit(1785503150.295:430): pid=5534 uid=1000 auid=1000 ses=24 msg='op=PAM:authentication grantors=pam_permit,pam_cap acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+[Fri Jul 31 13:05:50 2026] [     T58] audit: type=1101 audit(1785503150.303:431): pid=5534 uid=1000 auid=1000 ses=24 msg='op=PAM:accounting grantors=pam_permit acct="radxa" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
+
+EXIT_CODE=0
