@@ -1,5 +1,7 @@
 # Meizu E3 DEB：两条构建路线
 
+> 先阅读 [`SOLUTION_TIMELINE.md`](SOLUTION_TIMELINE.md)。它按问题解决顺序说明为什么 `0.1.10` non-burst 是失败实验，而最终稳定方案是新 BSP/6.6 加最初的 `reg = <1>` 方向；当前没有重新生成一个经过验证的最终一体化 DEB。
+
 ```text
 deb/
 ├── mainline/
@@ -9,6 +11,8 @@ deb/
 └── codexline/
     └── 01_nonburst_package/
 ```
+
+这里的编号只在各自路线内部生效。`codexline/01_nonburst_package` 不是全局第一步，也不是最终推荐包。
 
 每个阶段内部再分为：
 

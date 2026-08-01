@@ -1,5 +1,7 @@
 # 测试资料：两条验证路线
 
+> 跨两条路线的实际问题解决顺序见 [`SOLUTION_TIMELINE.md`](SOLUTION_TIMELINE.md)。目录中的编号只表示 Mainline 或 Codexline 内部顺序。
+
 ```text
 test_files/
 ├── mainline/   官方结构和正常验证流程
