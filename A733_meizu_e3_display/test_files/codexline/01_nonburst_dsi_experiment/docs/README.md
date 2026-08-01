@@ -68,7 +68,8 @@ The expected compiled `dsi,flags` value is `0x0a01`:
 
 ### Package and disabled installation
 
-- Package: `meizu-e3-dkms_0.1.10_all.deb`
+- Current archive name: `meizu-e3-dkms_codexline-01-nonburst-dsi-experiment_all.deb`
+- Historical test filename: `meizu-e3-dkms_0.1.10_all.deb`
 - Package SHA256:
   `998700ce97de18ae5fc07a754151c7d9893ef885b5abe83342af83e2191476d9`
 - `meizu-e3-dkms 0.1.10` installed successfully.

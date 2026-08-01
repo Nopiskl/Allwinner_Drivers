@@ -17,7 +17,7 @@ deb/
 
 外层编号表达测试阶段。`00_package_foundation` 是实验开始前的包和驱动基础；它内部的 `01`、`02` 只表达包的历史演化，不参与两条测试路线的编号。
 
-实际文件名、staging 目录和 Debian `Version` 字段仍保留 `0.1.6`～`0.1.10`。这些是包管理所需的真实版本，不再承担外层目录排序含义。
+仓库中的 DEB 归档文件名使用 `mainline/codexline + 实验编号`，不再使用 `0.1.x` 作为文件名。staging 目录、包内 Debian `Version` 字段、DKMS 版本和 `/usr/src` 安装路径仍保留实测时的 `0.1.6`～`0.1.10`；修改这些内部值会产生一个未经实机验证的新包，而不只是归档重命名。
 
 有实际构建产物的阶段内部再分为：
 
@@ -33,7 +33,7 @@ deb/
 原始 `0.1.6` 包及解包源码，是后续驱动修改的基础，不是一次显示验证实验。
 
 ```text
-68905732276f644ba93218f7d4197f73eb200d4f6be4c4b45bf7440b78a4bfec  meizu-e3-dkms_0.1.6_all.deb
+68905732276f644ba93218f7d4197f73eb200d4f6be4c4b45bf7440b78a4bfec  meizu-e3-dkms_mainline-00-foundation-01-original_all.deb
 ```
 
 ### `00_package_foundation/02_driver_integration`
@@ -41,8 +41,8 @@ deb/
 `0.1.7`、`0.1.8` 驱动和安装流程迭代。主要涉及 SEC 触摸、SGM37604A 背光、DKMS 和桌面触摸映射等集成工作；尚未形成后来的官方 graph 版 overlay。
 
 ```text
-af3dc37981d7f07816de67b1c50948d0d72f07302bc83e3b1de117fd420b5f80  meizu-e3-dkms_0.1.7_all.deb
-360996af0cce2a1d89ee69da4e98c5fb53643bca1d4e3c0423cb9227718a1f10  meizu-e3-dkms_0.1.8_all.deb
+af3dc37981d7f07816de67b1c50948d0d72f07302bc83e3b1de117fd420b5f80  meizu-e3-dkms_mainline-00-foundation-02-driver-integration-r1_all.deb
+360996af0cce2a1d89ee69da4e98c5fb53643bca1d4e3c0423cb9227718a1f10  meizu-e3-dkms_mainline-00-foundation-02-driver-integration-r2_all.deb
 ```
 
 ### `01_initial_overlay_validation`
@@ -50,10 +50,10 @@ af3dc37981d7f07816de67b1c50948d0d72f07302bc83e3b1de117fd420b5f80  meizu-e3-dkms_
 对应 `test_files/mainline/01_initial_overlay_validation`。其中 `0.1.9` 在最初 overlay 基础上加入官方 A7A `dsi0 port@1 reg = <1>` graph 修正，是 Mainline 的首次受控验证包。
 
 ```text
-992d1cba7de359b2baa736a8e5a65ad2978804bf46c6b2d54002c011e23aedd0  meizu-e3-dkms_0.1.9_all.deb
+992d1cba7de359b2baa736a8e5a65ad2978804bf46c6b2d54002c011e23aedd0  meizu-e3-dkms_mainline-01-initial-overlay-validation_all.deb
 ```
 
-`meizu-e3-dkms_0.1.9_initial-test-copy.deb` 是首次实验现场副本，与主包 SHA-256 相同。
+`meizu-e3-dkms_mainline-01-initial-overlay-validation_initial-test-copy.deb` 是首次实验现场副本，与主包 SHA-256 相同。
 
 ### `03_new_kernel_overlay_validation`
 
@@ -66,7 +66,7 @@ af3dc37981d7f07816de67b1c50948d0d72f07302bc83e3b1de117fd420b5f80  meizu-e3-dkms_
 对应 `test_files/codexline/01_nonburst_dsi_experiment`。其中 `0.1.10` 将 DSI flags 从 burst 改为 non-burst，同时保留官方 `port@1 reg = <1>`。该实验没有修复旧内核 hard lock，已被否定，不是最终推荐包。
 
 ```text
-998700ce97de18ae5fc07a754151c7d9893ef885b5abe83342af83e2191476d9  meizu-e3-dkms_0.1.10_all.deb
+998700ce97de18ae5fc07a754151c7d9893ef885b5abe83342af83e2191476d9  meizu-e3-dkms_codexline-01-nonburst-dsi-experiment_all.deb
 ```
 
 后续旧内核严格单 DSI 测试只复用了 `0.1.10` 中已经验证的 SGM37604A 背光源码，并没有采用 non-burst overlay。
@@ -74,3 +74,13 @@ af3dc37981d7f07816de67b1c50948d0d72f07302bc83e3b1de117fd420b5f80  meizu-e3-dkms_
 ### `02_rk_reference_pushpull_validation`
 
 对应 `test_files/codexline/02_rk_reference_pushpull_validation`。该组合实验只保存 overlay、源码、脚本和日志，没有生成独立 DEB；push-pull 假设也没有成为最终方案。
+
+## 从 `src` 重建
+
+每个包含可重建 staging 的阶段都提供 `src/build-deb.sh` 或 `src/build-debs.sh`。脚本中的输出目标已经同步为上述路线名；例如 Codexline 01 会直接生成：
+
+```text
+packages/meizu-e3-dkms_codexline-01-nonburst-dsi-experiment_all.deb
+```
+
+历史实验日志中的 `meizu-e3-dkms_0.1.x_all.deb` 是测试发生时的原始文件名，作为证据保持不改。归档文件重命名没有改变 DEB 二进制内容，因此原 SHA-256 仍然有效。

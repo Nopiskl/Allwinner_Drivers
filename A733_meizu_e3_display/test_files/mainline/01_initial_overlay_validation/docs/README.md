@@ -49,7 +49,7 @@ SHA256：
 31fc84eabcecaaf075215e06f67edf75dcf04d2bb67cb4f94f3a693036a74832  cubie-a7a-meizu-e3-display-v001.dtbo
 2c8028a5498abece4f97ff9b8cdab60e9717141a505304b2879273ecef511dcd  stock base DTB
 502fc5d193c591cba003b90847d1b46dbb570f699a457b7ae13a3ced0a923458  merged DTB
-992d1cba7de359b2baa736a8e5a65ad2978804bf46c6b2d54002c011e23aedd0  meizu-e3-dkms_0.1.9_all.deb
+992d1cba7de359b2baa736a8e5a65ad2978804bf46c6b2d54002c011e23aedd0  meizu-e3-dkms_mainline-01-initial-overlay-validation_all.deb
 ```
 
 ## 回退机制
