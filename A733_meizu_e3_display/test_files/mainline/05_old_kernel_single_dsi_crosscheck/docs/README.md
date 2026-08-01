@@ -18,7 +18,7 @@
 
 ## 原始输入
 
-- SGM37604A 源文件：`../../../../deb/codexline/01_nonburst_package/src/meizu-e3-dkms_0.1.10_staging/usr/src/meizu-e3-dkms-0.1.10/drivers/backlight/sgm37604a.c`
+- SGM37604A 源文件：`../../../../deb/codexline/01_nonburst_dsi_experiment/src/meizu-e3-dkms_0.1.10_staging/usr/src/meizu-e3-dkms-0.1.10/drivers/backlight/sgm37604a.c`
 - 源文件 SHA-256：`674F614B35827C95CCF8D87A858F4DC7D8B5E81E12F1F17335A9676840165941`
 - overlay：`../../03_new_kernel_overlay_validation/src/build-artifacts/cubie-a7a-meizu-e3-display-v001-reg1-t4.dtso`
 

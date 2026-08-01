@@ -30,15 +30,17 @@ BSP 1.4.8 / T4 / Linux 6.6
 ## 现有目录怎样对应这条线
 
 ```text
-mainline/01_original_package                 0.1.6：包基础
-mainline/02_driver_integration               0.1.7/0.1.8：驱动基础
-mainline/03_official_graph_package           0.1.9：旧内核 reg=1 方案
-codexline/01_nonburst_package                0.1.10：被否定的 non-burst 实验
-../test_files/mainline/03_new_kernel_overlay_validation
-                                               新内核重新采用 reg=1 的最终方向
+mainline/00_package_foundation/
+├── 01_original_package                      0.1.6：实验前的包基础
+└── 02_driver_integration                    0.1.7/0.1.8：实验前的驱动基础
+mainline/01_initial_overlay_validation       0.1.9：对应 Mainline 01，旧内核 reg=1
+mainline/03_new_kernel_overlay_validation    对应 Mainline 03，新内核 reg=1 最终方向；无新 DEB
+codexline/01_nonburst_dsi_experiment         0.1.10：对应 Codexline 01，被否定的 non-burst
+codexline/02_rk_reference_pushpull_validation
+                                               对应 Codexline 02；未生成独立 DEB
 ```
 
-`codexline/01_nonburst_package` 中的 `01` 只表示“Codexline 内第一个包”，既不是整个解决流程的第一步，也不是最终推荐顺序。
+外层目录编号与 `test_files` 的实验编号对应；`00_package_foundation` 内部的两个编号只描述包准备历史。`codexline/01_nonburst_dsi_experiment` 是第一项 Codexline 假设实验，不是最终推荐顺序。
 
 ## 为什么后续日志会引用 `0.1.10` 的背光源码
 
