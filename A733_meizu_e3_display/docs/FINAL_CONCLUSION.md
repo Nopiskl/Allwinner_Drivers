@@ -26,8 +26,9 @@
 ### 1.2 原厂 FAE 最终澄清
 
 - BSP 1.4.6 使用的也是旧 DRM；不能再描述成“原厂旧系统只走 disp2”。当时主要在 Android/SurfaceFlinger/HWC 用户态验证，而不是 Debian+X11。
-- 1.4.6 DRM 的产品定位是试用版本。原厂确认双 MIPI、LVDS 等同类 LCD-TCON 路径正常，但 `TCON-LCD + TCON-TV` 配合存在问题。
-- 1.4.8 才是原厂转入稳定验证的新 DRM 路径；双 DSI、DSI+LVDS/RGB 以及包含 eDP 的产品组合在该版本验证稳定。
+- 1.4.6 DRM 的产品定位是试用版本。FAE 明确指出 `TCON-LCD + TCON-TV` 配合存在问题。
+- **撤回旧表述：**“原厂确认双 MIPI、LVDS 等同类 LCD-TCON 路径正常”并不准确。现有信息只支持这些组合在 Android 测试中曾正常运行，不能外推为原厂对同类 LCD-TCON 在 Debian、其他用户态或全部 DRM 事务下的通用确认。
+- 1.4.8 才是原厂转入稳定验证的新 DRM 路径；本机 Meizu E3 和 Radxa 官方 DSI 屏呈现相同的版本改善边界。涉及双 DSI、DSI+LVDS/RGB/eDP 的原厂运行信息仍须限定在 Android 测试范围内。
 - DE 有自己的更新和完成时序，因此部分函数按设计必须默认 complete。这个设计事实不能被简化成“所有提交都必须等待通用 CRTC vblank”。
 - 新驱动完整接入 extcon；CRTC 发生变化时会刷新相关状态。extcon/刷新解决的是连接、mode/timing 与完成判断的一致性。
 - Radxa 官方 DSI 屏在 1.4.6 也遇到同类问题，切换到 1.4.8 后解决；Meizu E3 呈现相同版本边界。
@@ -140,7 +141,7 @@ SHA-256：
 |---|---:|---|
 | DE0 正在读取已经解除 IOMMU 映射的旧 scanout framebuffer | 100% | 驱动 map/unmap 追踪、故障地址范围和 IOMMU 日志直接互证 |
 | 本机 #21 故障属于 sunxi DRM/DE 的 atomic、RCQ 完成判定与 framebuffer 生命周期同步 | 95% | 源码中存在明确的完成错误不上传、跳过 vblank 等待、立即清理旧 FB 的组合缺口；该判断不外推为所有 v1.4.6 产品均会失败 |
-| 1.4.6 试用版 DRM 的 `TCON-LCD + TCON-TV` 混合提交是首要拓扑触发条件 | 很高 | 原厂明确说明双 MIPI、LVDS 路径正常而 LCD-TCON 与 TV-TCON 配合有问题；A733 DTS 和 TCON 驱动又证明 DSI/LVDS/RGB 与 HDMI 分属两套时序、IRQ 和扫描线判定路径；与单 DSI、单 HDMI、冷启动双屏和桌面后热插实验矩阵完全一致 |
+| 1.4.6 试用版 DRM 的 `TCON-LCD + TCON-TV` 混合提交是首要拓扑触发条件 | 很高 | FAE 明确指出 LCD-TCON 与 TV-TCON 配合有问题；A733 DTS 和 TCON 驱动证明 DSI/LVDS/RGB 与 HDMI 分属两套时序、IRQ 和扫描线判定路径；本机单 DSI、单 HDMI、冷启动双屏和桌面后热插实验矩阵与此一致。Android 下双 MIPI/LVDS 的运行现象仅作范围受限的旁证，不作为通用正常性证明 |
 | HDMI 开机存在、SDDM 切换到 Plasma 的双 CRTC 重配置是主要放大窗口 | 90% | 同一内核、DTBO 和背光下，单 DSI 与桌面后热插 HDMI 均通过，只有冷启动双屏登录稳定复现 |
 | v1.4.8 阻止了 DE352 上不受支持的 DFS/共享 RCQ-control 强写 | 源码差异确定；故障因果高 | DE352 两版都未声明 `support_dfs`；1.4.6 却无条件 dirty DFS shadow，并在每个 CRTC flush 时把无 display 偏移的整块 RCQ control 强写到 disp0；1.4.8 先按能力返回且取消 force-by-AHB。Radxa 官方屏与本机屏均表现为 1.4.6 复现、1.4.8 消失，显著提高版本级因果置信度；具体由哪一项子改动解决仍需单变量 A/B |
 | v1.4.8 删除 `current_line > 0` 的 RCQ control 整寄存器直写 | 中高 | A733/DE352 直接调用该函数；新版只在 DE busy 条件成立后做 read-modify-write，避免绕过条件并覆盖同寄存器其他位 |
@@ -189,7 +190,7 @@ RCU grace-period 线程饥饿，HDMI、DSI、SSH、心跳一起冻结
 
 ### 2.3 版本结论
 
-- 工程上可以判断 BSP 1.4.8 已解决或避开本次实际触发链；依据是两块不同 panel 的同一版本边界、原厂稳定验证、本机 T4 实测以及可见的 DE/RCQ/CRTC 状态改动。
+- 工程上可以判断 BSP 1.4.8 已解决或避开本次实际触发链；依据是 Radxa 官方屏与本机 panel 的同一版本边界、本机 T4 实测以及可见的 DE/RCQ/CRTC 状态改动。Android 产品测试信息仅作为辅助证据。
 - 不能把改善简单归因于 Linux 通用内核从 5.15 升到 6.6；关键判别变量位于 Allwinner BSP 显示驱动。
 - 也不能声称 1.4.8 已形式化消灭所有 stale-FB 风险：其 `sunxi_de_atomic_flush()` 仍为 `void`，厂商 tail 仍没有恢复通用 vblank wait。新版更像把主触发路径修到稳定，而非建立了完整的失败传播和 old-FB 保活防线。
 
@@ -207,8 +208,9 @@ A733 设备树和驱动把输出明确分成两类：
 
 源码位置为 `configs/linux-5.15/sun60iw2p1.dtsi:3838-4218`。其中 `tcon0` 的输出端点直接
 列出 DSI0、DSI1、LVDS0 和 RGB0；`tcon3` 只连接 HDMI0，`tcon4` 连接 eDP0。这里也修正
-一个容易混淆的表述：eDP 在 A733 上属于 `TCON-TV`，所以“DSI+eDP 稳定”只能作为
-1.4.8 已修好混合 TCON 路径的证据，不能反推 1.4.6 的 LCD+TV 本来就稳定。
+一个容易混淆的表述：eDP 在 A733 上属于 `TCON-TV`。Android 中观察到的 DSI+eDP
+运行结果只能作为特定产品路径的辅助证据，不能外推为 Debian 下混合 TCON 已被普遍验证，
+更不能反推 1.4.6 的 LCD+TV 本来就稳定。
 
 `sunxi_tcon.c` 并不是只给两类输出换一个名字。它根据 compatible 设置 `TCON_LCD` 或
 `TCON_TV`（26～81 行），随后分别使用：
@@ -228,7 +230,7 @@ TV-TCON 变成同一硬件时钟、同一 vblank 或一个 group-latch。helper 
 
 - HDMI-only 只有 `TCON-TV`，正常；
 - DSI-only 只有 `TCON-LCD`，连续启动和 full modeset 正常；
-- 双 MIPI、DSI+LVDS/RGB 主要是 `TCON-LCD + TCON-LCD`，原厂确认正常；
+- 双 MIPI、DSI+LVDS/RGB 主要是 `TCON-LCD + TCON-LCD`；本项目没有在 Debian 下完成这些组合的交叉实验，现有“可运行”信息只来自 Android 测试；
 - HDMI+DSI 是 `TCON-TV + TCON-LCD`，旧版在冷启动登录交接稳定触发；
 - 桌面稳定后再热插 HDMI 能运行，说明混合 TCON 的稳态输出并非硬件上不可实现，缺陷在
   混合域的重配置/完成事务，而不是两种接口电气上不能并存。
@@ -785,16 +787,15 @@ else if (disp == 1)
 - **状态层：**extcon/hotplug 完整接线、CRTC change 时刷新 adjusted timing、输出驱动使用
   atomic mode state，并改进 HDMI boot/HPD/EDID 状态管理。
 
-原厂在 1.4.8 已稳定验证包含 `TCON-LCD + TCON-TV` 的产品组合；Radxa 官方屏与 Meizu E3
-跨 panel 都从“1.4.6 同类故障”变为“1.4.8 稳定”，再加上本机
+Radxa 官方屏与 Meizu E3 跨 panel 都从“1.4.6 同类故障”变为“1.4.8 稳定”，再加上本机
 6.6/T4 长时间无 IOMMU/RCU 链，已经足以在工程上判断：**1.4.8 避免或解决了本次实际
-触发路径。**仍需谨慎的是，1.4.8 的 `sunxi_de_atomic_flush()` 仍返回 `void`、custom tail
+触发路径。**原厂双 MIPI/LVDS 等组合的 Android 结果只作辅助参考，不承担 Linux 通用验证结论。仍需谨慎的是，1.4.8 的 `sunxi_de_atomic_flush()` 仍返回 `void`、custom tail
 仍跳过标准 vblank wait，所以它更像把 DE 自有完成语义和状态刷新修到可用，而不是从形式
 上加入了一层永不可能 use-after-unmap 的通用保护。
 
 需要特别区分：FAE 所说“新驱动接入 extcon”是完整产品配置和状态链路的信息；两个最终源码树里都能找到受 `CONFIG_EXTCON` 控制的 HDMI/eDP 代码，因此不能仅凭“源码中出现 extcon”判断版本。能直接从源码确认的新增关键行为，是 CRTC mode/connector change 时刷新 timing，以及输出侧改用本次 atomic mode state；它们与 DE/RCQ 修正共同生效。
 
-## 六、Android 同样走 DRM，为什么原厂较少暴露
+## 六、Android 同样走 DRM，为什么 Android 测试较少暴露
 
 Android 与 X11 都能调用 DRM atomic，但上层提交和 buffer 生命周期不同。
 
@@ -809,8 +810,9 @@ release 和 present fence 管理 buffer。release fence 的定义就是“旧 bu
 - 旧 gralloc buffer 仍有 SurfaceFlinger/HWC/BufferQueue 引用，IOVA 仍合法；
 - 多显示一帧旧内容，下一次 present/RCQ 可能自愈；
 - buffer 被归还池中等待复用，而不是马上 RMFB 并解除映射；
-- 原厂主要量产/验证的双 MIPI、LVDS 等同类 LCD-TCON 拓扑本就避开了已知的混合 TCON
-  缺口；Android 产品路径又缺少本机 HDMI+SDDM→Plasma 的动态重建窗口。
+- 已知 Android 双 MIPI、LVDS 测试中的部分拓扑没有进入本机的 LCD+TV 混合事务；这只能
+  解释特定 Android 现象，不能证明同类 LCD-TCON 在其他用户态普遍正常。Android 产品路径
+  还缺少本机 HDMI+SDDM→Plasma 的动态重建窗口。
 
 X11/Plasma 本次则确实销毁了 3000×2160 old FB；驱动日志记录 `map:0/unmap_ts` 后，DE0
 继续访问它。也就是说 Android 稳定主要是**没有把潜伏的地址漏切升级为 use-after-unmap**，
@@ -819,13 +821,14 @@ signal，长期 gralloc buffer pool 仍可能让地址保持映射，只产生�
 
 这部分关于 Android 通用 fence/BufferQueue 语义由 AOSP 文档和 drm_hwcomposer 实现支持；
 工作区没有原厂具体 HWC 源码，因此“其实际 HWC 是否逐帧等待哪个 out-fence”不能写成已
-核实事实。但同类 TCON 拓扑、buffer pool 与无 SDDM 会话切换已经足以显著降低复现条件。
+核实事实。同类 TCON 拓扑、buffer pool 与无 SDDM 会话切换可以合理解释复现率降低，但前者
+只在 Android 测试范围内有现象支持，不能提升为原厂通用确认。
 
 因此应按优先级解释：
 
-1. **首要原因是测试拓扑不同。**原厂 1.4.6 主测的双 MIPI/LVDS 主要属于同类 LCD-TCON，避开了已知的 LCD+TV 缺口。
-2. **其次是用户态提交窗口不同。**Android 没有 SDDM→Plasma 的整套 root-FB 销毁和布局重建。
-3. **最后才是 buffer 生命周期的掩蔽作用。**HWC/BufferQueue/fence 往往让旧 gralloc buffer 保持映射更久，可能把漏切表现降级为旧帧而不是立即 IOMMU fault。
+1. **首要原因是用户态提交窗口不同。**Android 没有 SDDM→Plasma 的整套 root-FB 销毁和布局重建。
+2. **拓扑差异是范围受限的解释。**已有 Android 双 MIPI/LVDS 现象主要涉及同类 LCD-TCON，没有进入本机 LCD+TV 事务；这不是 Linux/Debian 普遍稳定性证明。
+3. **buffer 生命周期具有掩蔽作用。**HWC/BufferQueue/fence 往往让旧 gralloc buffer 保持映射更久，可能把漏切表现降级为旧帧而不是立即 IOMMU fault。
 
 ## 七、GPU、背光、触摸及其他相邻现象
 

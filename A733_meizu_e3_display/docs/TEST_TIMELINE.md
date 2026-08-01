@@ -112,7 +112,7 @@
 ## 2026-08-01：加入原厂 v1.4.6/v1.4.8 双输出信息（后续已修正范围）
 
 - 初始信息一度被理解为原厂双 DSI 或 DSI+LVDS/RGB/eDP 在 v1.4.6、v1.4.8 的 Debian/X11 路径均完成验证；后续 FAE 信息澄清：1.4.6 测试使用旧 DRM + Android，1.4.8 才是当前稳定的新 DRM 路径。
-- 该证据反证“A733 多显示硬件不可用”和“所有 v1.4.6 多输出均失败”；后续原厂又明确指出 1.4.6 DRM 是试用版本，同类 TCON-LCD 组合可用，但 TCON-LCD 与 TCON-TV 配合存在已知问题。
+- 修正证据边界：双 MIPI、LVDS 等组合可运行的信息只来自 Android 测试，只能说明对应 Android 配置当时曾正常运行，不能证明同类 TCON-LCD 在 Debian 或全部 DRM 事务下普遍正常。FAE 明确确认的是 1.4.6 DRM 为试用版本，以及 TCON-LCD 与 TCON-TV 配合存在问题。
 - 本机 #21 的 stale-framebuffer/IOMMU 日志不是原厂测试的反例，而是对该已知混合 TCON 缺陷的具体 Debian/X11 复现和失效后果记录。
 - 直接比较 BSP 1.4.6 与 BSP 1.4.8 最终源码，两版均采用相同的静态 RTMX line-buffer 实现；它不是稳定性差异项。后续判断只依据两个 BSP 源码树的实际行为差异。
 - BSP 对比进一步收窄到 A733/DE352：两版 DE352 都声明 `support_dfs=false`；1.4.6 的 `de_top_freq_div_apply()` 却无条件 dirty DFS/RCQ-control shadow，并在每个 CRTC flush 用无 display 偏移的 `reg_blks[0].reg_addr` 强写 disp0 RCQ control。1.4.8 先按能力返回，同时停用 force-by-AHB。
@@ -129,16 +129,16 @@
 - DSI/LVDS/RGB panel 的拓扑和 mode 通常固定，无 HDMI 的 HPD、EDID、颜色/格式协商和运行时 connector 状态变化；源码确认 BSP dual-channel DSI 只有 master 创建 DRM connector/encoder，是一个逻辑 connector/CRTC。
 - HDMI 可在 `atomic_check()` 触发 `mode_changed`，并在 DE flush 后执行 HDMI `smooth_config()`；开机连接、SDDM→Plasma 会产生更密集且不对称的双 CRTC 重配置。
 - 完整固定接口 modeset 会先 disable 相应 CRTC；本机更危险的是 HDMI 被强制 `mode_changed`、DSI 仍 active 但同时更换 root FB 的不对称 atomic 事务。
-- 因此原厂 v1.4.6 双 MIPI、DSI+LVDS 等同类 LCD-TCON 输出可用，与本机旧 #21 HDMI+DSI 登录硬锁并不矛盾；后者正是原厂指出的 LCD-TCON+TV-TCON 已知问题。
+- 因此 Android 中观察到的 v1.4.6 双 MIPI、DSI+LVDS 等输出可运行，与本机旧 #21 HDMI+DSI 登录硬锁并不矛盾；但该现象只能按 Android 用户态和具体拓扑解释，不能写成原厂对同类 LCD-TCON 的通用正常性确认。后者仍符合 FAE 指出的 LCD-TCON+TV-TCON 已知问题。
 
-## 2026-08-01：为什么双 MIPI/LVDS 测试不会暴露混合 TCON 缺陷
+## 2026-08-01：为什么 Android 双 MIPI/LVDS 测试可能未暴露混合 TCON 缺陷
 
 - 双 DSI 的 slave 在 `sunxi_drm_dsi_bind()` 直接返回，只有 master 创建 DRM connector/encoder；它是一个 CRTC 的双物理链路，不会触发跨 CRTC force 覆盖。
 - DSI/LVDS/RGB connector 无 `.detect`，mode 来自 panel；内部 eDP detect 固定返回 connected。HDMI 则有 HPD/EDID、hotplug event，并可在 `atomic_check()` 主动设置 `mode_changed`。
 - bug 的致命条件不只是 modeset，而是“LCD-TCON 与 TV-TCON 两个独立完成域参加同一 atomic 更新 + 一路 RCQ 请求被后续 force 覆盖 + old FB 最后引用立即释放”。
 - 常规模式/老化测试若复用静态 dumb FB 或长期保留多缓冲池，即使偶尔漏一次 RCQ，也只会短暂显示旧帧；映射仍合法，下一次 flip 可自愈，不会产生 IOMMU fault。
 - 本机 SDDM→Plasma 使用两个 CRTC 共用的 3000×2160 X framebuffer，并在会话交接中销毁旧 FB；日志的 `map:0/unmap_ts` 证明它命中了普通 modeset 测试通常不覆盖的 framebuffer-lifetime 条件。
-- 原厂后来明确承认 LCD-TCON 与 TV-TCON 配合有问题，因此不能再描述成“原厂未发现”；正确说法是 1.4.6 试用版已经知道该拓扑受限，而双 MIPI/LVDS 的合格测试没有进入相同缺陷路径。
+- FAE 后来明确指出 LCD-TCON 与 TV-TCON 配合有问题，因此不能再描述成“原厂未发现”。Android 双 MIPI/LVDS 测试没有观察到同类故障，只能说明它没有命中本机这条混合 TCON+FB 生命周期链，不能据此证明同类 LCD-TCON 路径普遍正常。
 
 ## 2026-08-01：FAE 信息与 Android DRM 路径后的最终修正
 
@@ -152,8 +152,8 @@
 
 ## 2026-08-01：原厂确认 1.4.6 试用 DRM 的混合 TCON 限制
 
-- 原厂确认双 MIPI、LVDS 路径正常，但 `TCON-LCD + TCON-TV` 配合有问题；1.4.6 DRM 的产品定位是试用版本。
+- **撤回旧表述：**原厂没有确认双 MIPI、LVDS 等同类 LCD-TCON 路径普遍正常；现有正常运行信息仅限 Android 测试。FAE 明确确认的是 `TCON-LCD + TCON-TV` 配合有问题，以及 1.4.6 DRM 的产品定位是试用版本。
 - A733 DTS 与 `sunxi_tcon.c` 复核：DSI/LVDS/RGB 使用 `TCON-LCD`，HDMI 使用 `TCON-TV`，eDP 也使用另一条 `TCON-TV`；两类 TCON 分别查询 vblank IRQ、current line、start delay、FIFO 和 vblank enable。
-- 实验矩阵与此完全一致：单 DSI、单 HDMI 正常；双 MIPI/DSI+LVDS 属同类 TCON；HDMI+DSI 冷启动登录属于混合 TCON 且触发；桌面后热插可稳定说明故障在混合域重配置事务而非稳态硬件不可共存。
+- 本机实验矩阵支持：单 DSI、单 HDMI 正常；HDMI+DSI 冷启动登录属于混合 TCON 且触发；桌面后热插可稳定说明故障在混合域重配置事务而非稳态硬件不可共存。本项目没有在 Debian 下实测双 MIPI/DSI+LVDS，不能把 Android 结果并入本机验证矩阵。
 - 因果层级更新：混合 TCON 是首要拓扑触发器；旧 DE352 RCQ/DFS/force 路径是错误锁存机制；HDMI HPD 与登录 modeset 是放大器；X11 及时 unmap old FB 使其升级为 IOMMU/RCU 硬锁。
-- eDP 属于 TCON-TV，因此 DSI+eDP 在 1.4.8 稳定反而是新版已经修复混合 TCON 路径的旁证，不能用于证明 1.4.6 混合路径稳定。
+- eDP 属于 TCON-TV；任何 DSI+eDP 的 1.4.8 Android 运行结果都只能作为特定产品路径的旁证，不能升级为 Debian/Linux 混合 TCON 的通用验证，也不能用于证明 1.4.6 混合路径稳定。
