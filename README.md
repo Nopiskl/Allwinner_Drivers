@@ -16,10 +16,23 @@ End-to-end Meizu E3 1080x2160 MIPI-DSI display adaptation for Radxa Cubie A7A
 versioned DKMS packages, controlled `l0`/`l0r` rollback, test logs, and a
 source-backed analysis of the BSP 1.4.6 mixed TCON-LCD/TCON-TV DRM hard lock.
 
+### V821_drivers
+
+Validated V821 Tina Linux bring-up records for two board configurations:
+
+- `avaota_f1`: P169H002-CTP ST7789V-compatible 240x280 SPI/DBI LCD driver,
+  DTS/Kconfig/LVGL integration, source snapshot, tested boot/modules/userspace
+  artifacts, and controlled ADB deployment/rollback.
+- `perf2b`: RTL8201F RMII link diagnosis, 100Base-FX strap root cause, runtime
+  UTP recovery script, and permanent hardware/configuration guidance.
+
+See [`V821_drivers/README.md`](V821_drivers/README.md) for hardware-scope and
+pinmux warnings before using these adaptations together.
+
 ## Requirements
 
 - Allwinner TinaSDK or compatible build environment
-- Target hardware: A133, A733, or V851s based boards
+- Target hardware: A133, A733, V821, or V851s based boards
 
 ## License
 

@@ -18,6 +18,11 @@
 *.bmp binary
 *.xwd binary
 *.gz binary
+*.img binary
+*.ipk binary
+*.ko binary
+*.pdf binary
+V821_drivers/lcd/reference/*.txt binary
 A733_meizu_e3_display/test_files/**/log/** binary
 A733_meizu_e3_display/bsp/** whitespace=-trailing-space,-space-before-tab
 A733_meizu_e3_display/deb/** whitespace=-trailing-space,-space-before-tab
