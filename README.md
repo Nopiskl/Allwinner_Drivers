@@ -29,10 +29,19 @@ Validated V821 Tina Linux bring-up records for two board configurations:
 See [`V821_drivers/README.md`](V821_drivers/README.md) for hardware-scope and
 pinmux warnings before using these adaptations together.
 
+### VE_drivers
+
+Cedrus Linux V4L2 hardware video decoder drivers for Allwinner A733, T527, and
+F101. Each platform directory contains codec implementations, hardware control,
+and Kbuild configuration. F101 also includes a dedicated JPEG decoder.
+
+See [`VE_drivers/README.md`](VE_drivers/README.md) for platform capabilities,
+directory layout, and kernel integration requirements.
+
 ## Requirements
 
-- Allwinner TinaSDK or compatible build environment
-- Target hardware: A133, A733, V821, or V851s based boards
+- Allwinner TinaSDK or a compatible target Linux kernel build environment
+- Target hardware: A133, A733, T527, F101, V821, or V851s based boards
 
 ## License
 
